@@ -1,16 +1,16 @@
 {
-  "generated_for": "2026-06-05",
+  "generated_for": "2026-06-06",
   "accuracy": {
     "overall": {
-      "graded": 2,
+      "graded": 4,
       "accuracy": 0.5,
-      "brier": 0.2173
+      "brier": 0.2752
     },
     "by_game": {
       "cs2": {
-        "graded": 2,
+        "graded": 4,
         "accuracy": 0.5,
-        "brier": 0.2173
+        "brier": 0.2752
       },
       "lol": {
         "graded": 0,
@@ -21,11 +21,11 @@
   },
   "training": {
     "cs2": {
-      "n_train": 2,
+      "n_train": 4,
       "trained": true,
-      "shrinkage": 0.048,
-      "l2_to_prior": 0.591,
-      "in_sample_acc": 1.0
+      "shrinkage": 0.091,
+      "l2_to_prior": 0.565,
+      "in_sample_acc": 0.5
     },
     "lol": {
       "n_train": 0,
@@ -40,8 +40,8 @@
         "event": "IEM Cologne Major 2026 (Stage 1 final day)",
         "team_a": "TyLoo",
         "team_b": "Lynn Vision",
-        "p_map_a": 0.589,
-        "p_a": 0.632,
+        "p_map_a": 0.5844,
+        "p_a": 0.6255,
         "fmt": "BO3",
         "confidence": "lean",
         "features": {
@@ -57,10 +57,10 @@
         "event": "IEM Cologne Major 2026 (Stage 1 final day)",
         "team_a": "Liquid",
         "team_b": "FlyQuest",
-        "p_map_a": 0.6575,
-        "p_a": 0.7285,
+        "p_map_a": 0.5806,
+        "p_a": 0.6199,
         "fmt": "BO3",
-        "confidence": "moderate",
+        "confidence": "lean",
         "features": {
           "rating_diff": 0.7673,
           "form_diff": 0.1,
@@ -74,8 +74,8 @@
         "event": "IEM Cologne Major 2026 (Stage 1 final day)",
         "team_a": "NRG",
         "team_b": "BIG",
-        "p_map_a": 0.5028,
-        "p_a": 0.5043,
+        "p_map_a": 0.4883,
+        "p_a": 0.4824,
         "fmt": "BO3",
         "confidence": "coin-flip",
         "features": {

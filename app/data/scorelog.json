@@ -81,8 +81,8 @@
         "h2h_diff": 0.4
       },
       "pick": "TyLoo",
-      "result": null,
-      "correct": null
+      "result": "a",
+      "correct": true
     },
     {
       "match_id": "iem-cologne-2026-s1-liquid-flyquest",
@@ -102,8 +102,8 @@
         "h2h_diff": 0.2
       },
       "pick": "Liquid",
-      "result": null,
-      "correct": null
+      "result": "b",
+      "correct": false
     },
     {
       "match_id": "iem-cologne-2026-s1-nrg-big",
@@ -129,15 +129,15 @@
   ],
   "accuracy": {
     "overall": {
-      "graded": 2,
+      "graded": 4,
       "accuracy": 0.5,
-      "brier": 0.2173
+      "brier": 0.2752
     },
     "by_game": {
       "cs2": {
-        "graded": 2,
+        "graded": 4,
         "accuracy": 0.5,
-        "brier": 0.2173
+        "brier": 0.2752
       },
       "lol": {
         "graded": 0,

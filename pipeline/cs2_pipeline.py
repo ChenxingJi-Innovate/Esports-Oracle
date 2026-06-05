@@ -24,10 +24,14 @@ from .predictor import LinearModel, best_of, confidence_band
 ROOT = Path(__file__).resolve().parents[1]
 
 # damped priors: a disciplined step above the market, never a runaway.
+# World rank is DE-EMPHASISED on purpose: it is a slow, lagging aggregate that
+# misreads volatile teams (e.g. Liquid #26 lost 0-2 to FlyQuest #56 at IEM
+# Cologne 2026 despite a 73% rank-driven call). Recent form + map-pool edge are
+# more proximate predictors of a single match, so they now carry the most weight.
 _CS2_MODEL = LinearModel(
     intercept=0.0,
-    weights={"rating_diff": 0.35, "form_diff": 0.22, "map_diff": 0.17,
-             "player_diff": 0.17, "h2h_diff": 0.11},
+    weights={"rating_diff": 0.18, "form_diff": 0.28, "map_diff": 0.24,
+             "player_diff": 0.16, "h2h_diff": 0.12},
     mean={k: 0.0 for k in ["rating_diff", "form_diff", "map_diff", "player_diff", "h2h_diff"]},
     std={"rating_diff": 1.0, "form_diff": 0.15, "map_diff": 0.12, "player_diff": 0.12, "h2h_diff": 0.80},
 )
