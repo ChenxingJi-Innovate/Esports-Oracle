@@ -1,0 +1,53 @@
+{
+  "generated_for": "2026-06-05",
+  "window_days": 4,
+  "next_dates": [
+    {
+      "date": "2026-06-05",
+      "cs2_matches": [
+        {
+          "match_id": "iem-cologne-2026-s1-tyloo-lvg",
+          "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+          "league": null,
+          "fmt": "BO3",
+          "team_a": "TyLoo",
+          "team_b": "Lynn Vision",
+          "p_a": 0.632,
+          "confidence": "lean"
+        },
+        {
+          "match_id": "iem-cologne-2026-s1-liquid-flyquest",
+          "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+          "league": null,
+          "fmt": "BO3",
+          "team_a": "Liquid",
+          "team_b": "FlyQuest",
+          "p_a": 0.7285,
+          "confidence": "moderate"
+        },
+        {
+          "match_id": "iem-cologne-2026-s1-nrg-big",
+          "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+          "league": null,
+          "fmt": "BO3",
+          "team_a": "NRG",
+          "team_b": "BIG",
+          "p_a": 0.5043,
+          "confidence": "coin-flip"
+        }
+      ],
+      "lol_matches": [
+        {
+          "match_id": "lpl-2026-s2-lbqf-al-lgd",
+          "event": "LPL 2026 Split 2 Playoffs (LB QF)",
+          "league": "LPL",
+          "fmt": "BO5",
+          "team_a": "Anyone's Legend",
+          "team_b": "LGD Gaming",
+          "p_a": 0.9321,
+          "confidence": "strong"
+        }
+      ]
+    }
+  ]
+}

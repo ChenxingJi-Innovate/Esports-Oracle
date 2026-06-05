@@ -23,6 +23,7 @@ from datetime import date
 from pathlib import Path
 
 from . import scorelog, trainer
+from .build_schedule import schedule_3days
 from .cs2_pipeline import predict as predict_cs2, _CS2_MODEL
 from .lol_pipeline import predict as predict_lol, _LOL_MODEL
 
@@ -30,6 +31,7 @@ ROOT = Path(__file__).resolve().parents[1]
 APP_DATA = ROOT / "app" / "data"
 SCORELOG = APP_DATA / "scorelog.json"
 PREDICTIONS = APP_DATA / "predictions.json"
+SCHEDULE = APP_DATA / "schedule.json"
 RESULTS = ROOT / "data" / "results.json"
 
 
@@ -81,6 +83,11 @@ def run(today: date) -> dict:
             "p_a = probability the first-listed team wins the series.",
         ],
     }, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    # 7. publish the upcoming-fixtures schedule (reads the predictions just
+    #    written for win %), grouped by date over today + next 3 days.
+    SCHEDULE.write_text(json.dumps(schedule_3days(today), indent=2,
+                                   ensure_ascii=False), encoding="utf-8")
 
     summary = {
         "date": day, "graded": graded, "purged": purged,

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Upcoming Matches — Esports Oracle</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--ink:#e8ebf0;--mut:#9aa3b2;
+    --good:#3ad29f;--warn:#f0b35b;--hot:#ff5d5d;--accent:#6ea8fe;--cs:#f0b35b;--lol:#6ea8fe;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:38px 22px 90px}
+  h1{font-size:28px;letter-spacing:-.02em;margin:0 0 2px}
+  .sub{color:var(--mut);margin:0 0 26px}
+  .sub a{color:var(--accent);text-decoration:none}
+  .datehead{font-size:15px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);
+    margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:1fr;gap:10px}
+  @media(min-width:680px){.grid{grid-template-columns:1fr 1fr}}
+  .row{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .row.cs{border-left:3px solid var(--cs)} .row.lol{border-left:3px solid var(--lol)}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px}
+  .ev{color:var(--mut);font-size:12.5px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .band{font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+  .side{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:16px;font-weight:600}
+  .logo{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:700;color:#0f1115;flex-shrink:0}
+  .name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .vs{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin:4px 0 4px 40px}
+  .pick{font-size:11px;color:var(--good);font-weight:600}
+  .bar{height:12px;border-radius:7px;background:#222732;overflow:hidden;display:flex;margin-top:12px}
+  .bar>span{height:100%}
+  .fa{background:linear-gradient(90deg,#6ea8fe,#3ad29f)} .fb{background:#3a4150}
+  .pct{display:flex;justify-content:space-between;font-size:13px;font-variant-numeric:tabular-nums;margin-top:5px}
+  .pa{color:var(--good)} .pb{color:var(--mut)}
+  .nopred{color:var(--mut);font-size:12.5px;margin-top:12px}
+  .empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px}
+  .foot{color:var(--mut);font-size:12px;margin-top:34px;line-height:1.7}
+  .foot a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Upcoming Matches</h1>
+  <p class="sub">Tier-1 CS2 + LoL fixtures · next 3 days · model win % per match · <a href="index.html">← Today's board</a> · <a href="predict.html">Ask any matchup →</a></p>
+
+  <div id="sched"></div>
+
+  <p class="foot" id="foot"></p>
+</div>
+
+<script>
+const pct = x => (x*100).toFixed(1) + "%";
+// Deterministic accent color from a team name, so logos stay stable per team.
+function hue(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h%360;}
+function initials(name){
+  return name.split(/[\s'-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join("").toUpperCase()||"?";
+}
+function logo(name){
+  return `<span class="logo" style="background:hsl(${hue(name)} 60% 62%)">${initials(name)}</span>`;
+}
+
+function matchCard(m, game){
+  const has = typeof m.p_a === "number";
+  const pa = has ? m.p_a : null, pb = has ? 1-m.p_a : null;
+  const aLead = has && pa >= pb;
+  const bar = has ? `
+    <div class="bar"><span class="fa" style="width:${pct(pa)}"></span><span class="fb" style="width:${pct(pb)}"></span></div>
+    <div class="pct">
+      <span class="${aLead?'pa':'pb'}">${pct(pa)} ${aLead?'<span class="pick">◄ pick</span>':''}</span>
+      <span class="${!aLead?'pa':'pb'}">${!aLead?'<span class="pick">pick ►</span>':''} ${pct(pb)}</span>
+    </div>` : `<div class="nopred">No model line published yet.</div>`;
+  const conf = m.confidence ? `<span class="band">${m.confidence}</span>` : `<span class="band">${m.fmt||'TBD'}</span>`;
+  return `<div class="row ${game}">
+    <div class="top"><span class="ev">${m.event||game.toUpperCase()} · ${m.fmt||''}</span>${conf}</div>
+    <div class="side">${logo(m.team_a)}<span class="name">${m.team_a}</span></div>
+    <div class="vs">vs</div>
+    <div class="side">${logo(m.team_b)}<span class="name">${m.team_b}</span></div>
+    ${bar}
+  </div>`;
+}
+
+function fmtDate(iso){
+  // Parse as local date (avoid TZ shift from new Date("YYYY-MM-DD")).
+  const [y,mo,d] = iso.split("-").map(Number);
+  const dt = new Date(y, mo-1, d);
+  return dt.toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric"});
+}
+
+// Adapt today-only predictions.json into the schedule shape (fallback path).
+function fromPredictions(pred){
+  const slate = pred.slate||{};
+  const day = pred.generated_for || "today";
+  const cs2 = (slate.cs2||[]).map(m=>({...m}));
+  const lol = (slate.lol||[]).map(m=>({...m}));
+  if(!cs2.length && !lol.length) return {next_dates:[]};
+  return {generated_for:day, next_dates:[{date:day, cs2_matches:cs2, lol_matches:lol}]};
+}
+
+(async () => {
+  let data;
+  try {
+    data = await (await fetch("data/schedule.json?_="+Date.now())).json();
+  } catch(e){
+    try {
+      const pred = await (await fetch("data/predictions.json?_="+Date.now())).json();
+      data = fromPredictions(pred);
+    } catch(e2){
+      document.getElementById("sched").innerHTML =
+        `<div class="empty">No published schedule yet. Run <code>python -m pipeline.daily</code> or wait for the daily cron.</div>`;
+      return;
+    }
+  }
+
+  const dates = (data.next_dates||[]).filter(d =>
+    (d.cs2_matches||[]).length || (d.lol_matches||[]).length);
+
+  if(!dates.length){
+    document.getElementById("sched").innerHTML =
+      `<div class="empty">No tier-1 matches scheduled for the next 3 days.</div>`;
+  } else {
+    document.getElementById("sched").innerHTML = dates.map(d => {
+      const cards = []
+        .concat((d.cs2_matches||[]).map(m=>matchCard(m,'cs')))
+        .concat((d.lol_matches||[]).map(m=>matchCard(m,'lol')));
+      const body = cards.length
+        ? `<div class="grid">${cards.join("")}</div>`
+        : `<div class="empty">No matches scheduled for this date.</div>`;
+      return `<div class="datehead">${fmtDate(d.date)}</div>${body}`;
+    }).join("");
+  }
+
+  document.getElementById("foot").innerHTML =
+    "Win % is the model's series probability for the first-listed team. Logos are placeholders. " +
+    "Data: Liquipedia (CC BY-SA) + bo3.gg · <a href='index.html'>← Back to today's board</a>";
+})();
+</script>
+</body>
+</html>
