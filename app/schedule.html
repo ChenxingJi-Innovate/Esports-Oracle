@@ -23,6 +23,7 @@
   .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px}
   .ev{color:var(--mut);font-size:12.5px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .band{font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+  .clock{font-size:11px;color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
   .side{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:16px;font-weight:600}
   .logo{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
     font-size:12px;font-weight:700;color:#0f1115;flex-shrink:0}
@@ -43,7 +44,7 @@
 <body>
 <div class="wrap">
   <h1>Upcoming Matches</h1>
-  <p class="sub">Tier-1 CS2 + LoL fixtures · next 3 days · model win % per match · <a href="index.html">← Today's board</a> · <a href="predict.html">Ask any matchup →</a></p>
+  <p class="sub">Tier-1 CS2 + LoL fixtures · this week · model win % per match · <a href="index.html">← Today's board</a> · <a href="predict.html">Ask any matchup →</a></p>
 
   <div id="sched"></div>
 
@@ -55,14 +56,31 @@ const pct = x => (x*100).toFixed(1) + "%";
 // Deterministic accent color from a team name, so logos stay stable per team.
 function hue(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h%360;}
 function initials(name){
-  return name.split(/[\s'-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join("").toUpperCase()||"?";
+  if(!name || typeof name !== "string") return "?";
+  const parts = name.split(/[\s'-]+/).filter(Boolean);
+  return parts.slice(0,2).map(w=>w[0]).join("").toUpperCase() || "?";
 }
 function logo(name){
-  return `<span class="logo" style="background:hsl(${hue(name)} 60% 62%)">${initials(name)}</span>`;
+  const safe = (name && typeof name === "string") ? name : "TBD";
+  return `<span class="logo" style="background:hsl(${hue(safe)} 60% 62%)">${initials(safe)}</span>`;
+}
+
+// Resolve a display clock from optional time fields. Prefers a precise ISO
+// datetime, then a plain HH:MM string; returns null when neither is present
+// so the card can omit the clock entirely (graceful degradation).
+function formatTime(m){
+  if(m.scheduled_at){
+    const dt = new Date(m.scheduled_at);
+    if(!isNaN(dt.getTime())){
+      return dt.toLocaleTimeString("en-US", {hour:"2-digit", minute:"2-digit"});
+    }
+  }
+  if(m.time && typeof m.time === "string") return m.time;
+  return null;
 }
 
 function matchCard(m, game){
-  const has = typeof m.p_a === "number";
+  const has = typeof m.p_a === "number" && !isNaN(m.p_a) && m.p_a >= 0 && m.p_a <= 1;
   const pa = has ? m.p_a : null, pb = has ? 1-m.p_a : null;
   const aLead = has && pa >= pb;
   const bar = has ? `
@@ -72,41 +90,53 @@ function matchCard(m, game){
       <span class="${!aLead?'pa':'pb'}">${!aLead?'<span class="pick">pick ►</span>':''} ${pct(pb)}</span>
     </div>` : `<div class="nopred">No model line published yet.</div>`;
   const conf = m.confidence ? `<span class="band">${m.confidence}</span>` : `<span class="band">${m.fmt||'TBD'}</span>`;
+  const nameA = (m.team_a && typeof m.team_a === "string") ? m.team_a : "TBD";
+  const nameB = (m.team_b && typeof m.team_b === "string") ? m.team_b : "TBD";
+  const t = formatTime(m);
+  const clock = t ? ` · <span class="clock">${t}</span>` : "";
   return `<div class="row ${game}">
-    <div class="top"><span class="ev">${m.event||game.toUpperCase()} · ${m.fmt||''}</span>${conf}</div>
-    <div class="side">${logo(m.team_a)}<span class="name">${m.team_a}</span></div>
+    <div class="top"><span class="ev">${m.event||game.toUpperCase()} · ${m.fmt||''}${clock}</span>${conf}</div>
+    <div class="side">${logo(nameA)}<span class="name">${nameA}</span></div>
     <div class="vs">vs</div>
-    <div class="side">${logo(m.team_b)}<span class="name">${m.team_b}</span></div>
+    <div class="side">${logo(nameB)}<span class="name">${nameB}</span></div>
     ${bar}
   </div>`;
 }
 
 function fmtDate(iso){
   // Parse as local date (avoid TZ shift from new Date("YYYY-MM-DD")).
-  const [y,mo,d] = iso.split("-").map(Number);
+  const parts = iso ? iso.split("-") : null;
+  if(!parts || parts.length !== 3) return "Invalid date";
+  const [y,mo,d] = parts.map(Number);
+  if(isNaN(y) || isNaN(mo) || isNaN(d)) return "Invalid date";
   const dt = new Date(y, mo-1, d);
   return dt.toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric"});
 }
 
 // Adapt today-only predictions.json into the schedule shape (fallback path).
+// Always label with the browser's current date: predictions.json may carry a
+// stale `generated_for` if it was not regenerated today, and showing that as
+// the header would mislead users into thinking old lines are current.
 function fromPredictions(pred){
   const slate = pred.slate||{};
-  const day = pred.generated_for || "today";
-  const cs2 = (slate.cs2||[]).map(m=>({...m}));
-  const lol = (slate.lol||[]).map(m=>({...m}));
+  const today = new Date().toISOString().split("T")[0];
+  const cs2 = slate.cs2||[];
+  const lol = slate.lol||[];
   if(!cs2.length && !lol.length) return {next_dates:[]};
-  return {generated_for:day, next_dates:[{date:day, cs2_matches:cs2, lol_matches:lol}]};
+  return {generated_for:today, next_dates:[{date:today, cs2_matches:cs2, lol_matches:lol}]};
 }
 
 (async () => {
   let data;
   try {
-    data = await (await fetch("data/schedule.json?_="+Date.now())).json();
+    data = await (await fetch("data/schedule.json?v=20260605")).json();
   } catch(e){
+    console.error("Failed to load schedule.json:", e.message);
     try {
-      const pred = await (await fetch("data/predictions.json?_="+Date.now())).json();
+      const pred = await (await fetch("data/predictions.json?v=20260605")).json();
       data = fromPredictions(pred);
     } catch(e2){
+      console.error("Fallback predictions.json also failed:", e2.message);
       document.getElementById("sched").innerHTML =
         `<div class="empty">No published schedule yet. Run <code>python -m pipeline.daily</code> or wait for the daily cron.</div>`;
       return;
@@ -116,11 +146,11 @@ function fromPredictions(pred){
   const dates = (data.next_dates||[]).filter(d =>
     (d.cs2_matches||[]).length || (d.lol_matches||[]).length);
 
+  let html;
   if(!dates.length){
-    document.getElementById("sched").innerHTML =
-      `<div class="empty">No tier-1 matches scheduled for the next 3 days.</div>`;
+    html = `<div class="empty">No tier-1 matches scheduled for the next few days.</div>`;
   } else {
-    document.getElementById("sched").innerHTML = dates.map(d => {
+    html = dates.map(d => {
       const cards = []
         .concat((d.cs2_matches||[]).map(m=>matchCard(m,'cs')))
         .concat((d.lol_matches||[]).map(m=>matchCard(m,'lol')));
@@ -130,9 +160,10 @@ function fromPredictions(pred){
       return `<div class="datehead">${fmtDate(d.date)}</div>${body}`;
     }).join("");
   }
+  document.getElementById("sched").innerHTML = html;
 
   document.getElementById("foot").innerHTML =
-    "Win % is the model's series probability for the first-listed team. Logos are placeholders. " +
+    "Win % is the model's series probability for the first-listed team. " +
     "Data: Liquipedia (CC BY-SA) + bo3.gg · <a href='index.html'>← Back to today's board</a>";
 })();
 </script>

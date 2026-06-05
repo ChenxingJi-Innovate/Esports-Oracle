@@ -1,5 +1,5 @@
 {
-  "_comment": "Daily-editable CS2 tier-1 slate. Filled from HLTV rank + H2H + event form. form/map_edge in [0,1]; player ~ rating-1.0; h2h = recent H2H win share vs THIS opponent.",
+  "_comment": "Daily-editable CS2 tier-1 slate. Filled from HLTV rank + H2H + event form. form/map_edge in [0,1]; player ~ rating-1.0; h2h = recent H2H win share vs THIS opponent. Optional per-match `time` (HH:MM, local to slate date) or `scheduled_at` (ISO 8601) renders a clock on the schedule page; omit if unknown.",
   "date": "2026-06-05",
   "matches": [
     {
@@ -7,6 +7,7 @@
       "event": "IEM Cologne Major 2026 (Stage 1 final day)",
       "tier": 1,
       "fmt": "BO3",
+      "time": "15:00",
       "team_a": {"name": "TyLoo",       "rank": 29, "form": 0.58, "map_edge": 0.55, "player": 0.04, "h2h": 0.70},
       "team_b": {"name": "Lynn Vision",  "rank": 31, "form": 0.45, "map_edge": 0.48, "player": 0.02, "h2h": 0.30}
     },
@@ -15,6 +16,7 @@
       "event": "IEM Cologne Major 2026 (Stage 1 final day)",
       "tier": 1,
       "fmt": "BO3",
+      "time": "17:30",
       "team_a": {"name": "Liquid",   "rank": 26, "form": 0.55, "map_edge": 0.55, "player": 0.05, "h2h": 0.60},
       "team_b": {"name": "FlyQuest", "rank": 56, "form": 0.45, "map_edge": 0.45, "player": 0.02, "h2h": 0.40}
     },
