@@ -51,26 +51,84 @@ def append_predictions(log: dict, day: str, game: str, preds: list[dict]) -> Non
             "team_a": p["team_a"],
             "team_b": p["team_b"],
             "p_a": round(p["p_a"], 4),
+            "p_map": round(p.get("p_map_a", p["p_a"]), 4),  # per-map prob, for calibration
             "fmt": p.get("fmt", "BO3"),
             "confidence": p.get("confidence", ""),
             "features": p.get("features"),   # feature vector -> becomes a training row once graded
             "pick": p["team_a"] if p["p_a"] >= 0.5 else p["team_b"],
             "result": None,        # filled by grade_pending: "a" | "b"
+            "map_score": None,      # filled by grade_pending when known: [maps_a, maps_b]
             "correct": None,        # filled by grade_pending: bool
         })
 
 
-def grade_pending(log: dict, results: dict[str, str]) -> int:
-    """results maps match_id -> winner 'a'|'b'. Returns count newly graded."""
+def grade_pending(log: dict, results: dict) -> int:
+    """results maps match_id -> winner 'a'|'b', OR -> {result, score_a, score_b}.
+    The dict form (from the Liquipedia auto-parser) also records the map score.
+    Returns count newly graded."""
     graded = 0
     for p in log["predictions"]:
         if p["result"] is None and p["match_id"] in results:
-            winner = results[p["match_id"]]
+            r = results[p["match_id"]]
+            if isinstance(r, dict):
+                winner = r["result"]
+                if r.get("score_a") is not None and r.get("score_b") is not None:
+                    p["map_score"] = [r["score_a"], r["score_b"]]
+            else:
+                winner = r
             p["result"] = winner
             picked_a = p["p_a"] >= 0.5
             p["correct"] = (winner == "a") == picked_a
             graded += 1
     return graded
+
+
+def map_training_examples(log: dict, game: str) -> list[dict]:
+    """Expand each graded match into PER-MAP rows for calibration: a 2-0 gives
+    two team_a-win rows, a 2-1 gives two win + one loss, etc. Round-score Bo1s
+    (e.g. 13-8) count as a single map to the winner. More rows + truer signal
+    than one series row, so the model learns map-result vs odds correlation."""
+    rows = []
+    for p in log["predictions"]:
+        if p["game"] != game or not p.get("features") or p.get("result") is None:
+            continue
+        ms = p.get("map_score")
+        if ms and isinstance(ms[0], int) and isinstance(ms[1], int) and max(ms) <= 3:
+            wins_a, wins_b = ms[0], ms[1]            # real map counts (Bo3/Bo5)
+        else:
+            wins_a, wins_b = (1, 0) if p["result"] == "a" else (0, 1)  # Bo1 / unknown
+        rows += [{"features": p["features"], "label": 1}] * wins_a
+        rows += [{"features": p["features"], "label": 0}] * wins_b
+    return rows
+
+
+def calibration(log: dict, game: str, bins: int = 4) -> list[dict]:
+    """Predicted per-map prob vs realized per-map win rate, bucketed. This is the
+    'map result vs odds' curve: if the 60-70% bucket realizes at 50%, we're hot."""
+    pts = []  # (p_map_for_favorite, won?) per map
+    for p in log["predictions"]:
+        if p["game"] != game or p.get("result") is None or p.get("p_map") is None:
+            continue
+        ms = p.get("map_score")
+        pm = p["p_map"]  # prob team_a wins a map
+        if ms and isinstance(ms[0], int) and isinstance(ms[1], int) and max(ms) <= 3:
+            seq = [1] * ms[0] + [0] * ms[1]
+        else:
+            seq = [1] if p["result"] == "a" else [0]
+        for won_a in seq:
+            # express from the favorite's view so buckets are >= 0.5
+            pts.append((pm, won_a) if pm >= 0.5 else (1 - pm, 1 - won_a))
+    if not pts:
+        return []
+    out = []
+    for i in range(bins):
+        lo, hi = 0.5 + i * 0.5 / bins, 0.5 + (i + 1) * 0.5 / bins
+        b = [w for pmf, w in pts if (lo <= pmf < hi or (i == bins - 1 and pmf == 1.0))]
+        if b:
+            out.append({"bucket": f"{lo:.2f}-{hi:.2f}", "n": len(b),
+                        "predicted": round((lo + hi) / 2, 3),
+                        "realized": round(sum(b) / len(b), 3)})
+    return out
 
 
 def purge_old(log: dict, today: date, window: int = WINDOW_DAYS) -> int:

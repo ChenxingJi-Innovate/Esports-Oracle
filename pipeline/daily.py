@@ -22,7 +22,7 @@ import json
 from datetime import date
 from pathlib import Path
 
-from . import scorelog, trainer
+from . import scorelog, trainer, refresh_results
 from .build_schedule import schedule_3days
 from .cs2_pipeline import predict as predict_cs2, _CS2_MODEL
 from .lol_pipeline import predict as predict_lol, _LOL_MODEL
@@ -45,8 +45,9 @@ def run(today: date) -> dict:
     day = today.isoformat()
     log = scorelog.load(SCORELOG)
 
-    # 1-2. grade yesterday + refresh scorecard
-    graded = scorelog.grade_pending(log, _load_results())
+    # 1-2. auto-grade from Liquipedia (manual results.json overrides), + scorecard
+    results = {**refresh_results.auto_results(log), **_load_results()}
+    graded = scorelog.grade_pending(log, results)
     # 3. rolling window
     purged = scorelog.purge_old(log, today)
 
@@ -55,7 +56,9 @@ def run(today: date) -> dict:
     priors = {"cs2": _CS2_MODEL, "lol": _LOL_MODEL}
     models, train_meta = {}, {}
     for game, prior in priors.items():
-        model, meta = trainer.train_game(scorelog.training_examples(log, game), prior)
+        # train on PER-MAP rows (a 2-0 is two rows), so the model learns the
+        # map-result vs odds correlation, not just series win/lose.
+        model, meta = trainer.train_game(scorelog.map_training_examples(log, game), prior)
         trainer.save(game, model, meta)
         models[game], train_meta[game] = model, meta
 
@@ -75,6 +78,7 @@ def run(today: date) -> dict:
         "generated_for": day,
         "accuracy": acc,
         "training": train_meta,
+        "calibration": {g: scorelog.calibration(log, g) for g in ("cs2", "lol")},
         "slate": {"cs2": cs2, "lol": lol},
         "notes": [
             "Tier-1 events only (CS2 big LAN; LoL LPL/LCK/LEC/MSI/Worlds).",
