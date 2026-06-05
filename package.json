@@ -1,0 +1,9 @@
+{
+  "name": "lol-pro-edge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"const fs=require('fs'); fs.rmSync('dist',{recursive:true,force:true}); fs.cpSync('app','dist',{recursive:true});\"",
+    "start": "python3 -m http.server 4173 --directory app"
+  }
+}

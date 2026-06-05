@@ -1,0 +1,29 @@
+{
+  "intercept": 0.0,
+  "weights": {
+    "rating_diff": 0.35,
+    "form_diff": 0.22,
+    "map_diff": 0.17,
+    "player_diff": 0.17,
+    "h2h_diff": 0.11
+  },
+  "mean": {
+    "rating_diff": 0.0,
+    "form_diff": 0.0,
+    "map_diff": 0.0,
+    "player_diff": 0.0,
+    "h2h_diff": 0.0
+  },
+  "std": {
+    "rating_diff": 1.0,
+    "form_diff": 0.15,
+    "map_diff": 0.12,
+    "player_diff": 0.12,
+    "h2h_diff": 0.8
+  },
+  "meta": {
+    "n_train": 0,
+    "trained": false,
+    "shrinkage": 0.0
+  }
+}

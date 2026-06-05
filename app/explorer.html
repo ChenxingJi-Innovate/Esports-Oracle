@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LoL Pro Edge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">League of Legends Pro Analytics</div>
+        <h1>LoL Pro Edge</h1>
+      </div>
+      <div class="topbar__meta" id="sourceStatus">Loading data...</div>
+    </header>
+
+    <nav class="tabs" aria-label="workspace">
+      <button class="tab is-active" data-panel="predictPanel">预测台</button>
+      <button class="tab" data-panel="teamPanel">队伍与英雄</button>
+      <button class="tab" data-panel="modelPanel">模型验证</button>
+      <button class="tab" data-panel="dataPanel">数据源</button>
+    </nav>
+
+    <main>
+      <section id="predictPanel" class="panel is-visible">
+        <div class="workspace">
+          <aside class="controls">
+            <label>
+              蓝方战队
+              <select id="blueTeam"></select>
+            </label>
+            <label>
+              红方战队
+              <select id="redTeam"></select>
+            </label>
+            <label>
+              赛制
+              <select id="seriesFormat">
+                <option value="bo1">BO1</option>
+                <option value="bo3">BO3</option>
+                <option value="bo5">BO5</option>
+              </select>
+            </label>
+            <button id="resetDraft" class="primary">使用最近阵容英雄</button>
+            <div class="mini-grid" id="teamSnapshot"></div>
+          </aside>
+
+          <section class="main-surface">
+            <div class="verdict">
+              <div>
+                <div class="eyebrow">Predicted Win Probability</div>
+                <div class="probability" id="probability">--</div>
+              </div>
+              <div class="verdict__side" id="winnerLabel">--</div>
+            </div>
+
+            <div class="draft-grid" id="draftGrid"></div>
+
+            <div class="split">
+              <section>
+                <h2>公式贡献</h2>
+                <div id="contributionList" class="contribution-list"></div>
+              </section>
+              <section>
+                <h2>证据差值</h2>
+                <table>
+                  <thead>
+                    <tr><th>特征</th><th>蓝方</th><th>红方</th><th>差值</th></tr>
+                  </thead>
+                  <tbody id="featureTable"></tbody>
+                </table>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="teamPanel" class="panel">
+        <div class="team-layout">
+          <section>
+            <h2>蓝方档案</h2>
+            <div id="blueProfile" class="profile"></div>
+          </section>
+          <section>
+            <h2>红方档案</h2>
+            <div id="redProfile" class="profile"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="modelPanel" class="panel">
+        <div class="metrics" id="metricCards"></div>
+        <div class="team-layout">
+          <section>
+            <h2>完备性检查</h2>
+            <table>
+              <thead>
+                <tr><th>模型层</th><th>Accuracy</th><th>Log loss</th><th>Brier</th><th>ECE</th></tr>
+              </thead>
+              <tbody id="ablationTable"></tbody>
+            </table>
+          </section>
+          <section>
+            <h2>校准曲线</h2>
+            <div id="calibrationChart" class="calibration"></div>
+          </section>
+        </div>
+        <section class="wide-section">
+          <h2>训练后的公式权重</h2>
+          <table>
+            <thead>
+              <tr><th>特征</th><th>权重</th><th>解释</th></tr>
+            </thead>
+            <tbody id="weightTable"></tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="dataPanel" class="panel">
+        <div class="team-layout">
+          <section>
+            <h2>已接入</h2>
+            <div id="sourceList" class="source-list"></div>
+          </section>
+          <section>
+            <h2>推荐接入顺序</h2>
+            <ol class="roadmap">
+              <li><strong>Leaguepedia Cargo API</strong><span>赛程、赛制、阵容变更、转会和赛事上下文。</span></li>
+              <li><strong>Riot/GRID 官方数据</strong><span>如能申请到，补实时事件和官方 telemetry。</span></li>
+              <li><strong>CS2: GRID 或 demo parser</strong><span>地图 veto、回合经济、选手首杀/KAST/ADR；不抓 HLTV HTML。</span></li>
+              <li><strong>非结构化情报</strong><span>版本改动、替补、旅行、采访，由 LLM 抽取成结构化特征。</span></li>
+            </ol>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

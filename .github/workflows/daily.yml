@@ -1,0 +1,47 @@
+name: daily-predictions
+
+# Runs every morning, grades yesterday, publishes today's tier-1 slate, and
+# commits the JSON back so Vercel redeploys the static site automatically.
+on:
+  schedule:
+    - cron: "0 9 * * *"   # 09:00 UTC daily
+  workflow_dispatch: {}    # manual "Run workflow" button
+
+permissions:
+  contents: write          # allow the bot to commit app/data/*.json
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install numpy pandas
+
+      # Refresh inputs from legal sources (rate-limited, cached, proper UA).
+      # Fetchers are best-effort: if a source is unreachable the run still
+      # publishes from the committed inputs rather than failing.
+      - name: Refresh tier-1 inputs (best-effort)
+        continue-on-error: true
+        run: |
+          python -m pipeline.refresh_inputs || echo "refresh skipped, using committed inputs"
+
+      - name: Predict + grade + publish
+        run: python -m pipeline.daily
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "oracle-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add app/data/*.json data/*.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "daily: $(date -u +%F) predictions + grades"
+            git push
+          fi

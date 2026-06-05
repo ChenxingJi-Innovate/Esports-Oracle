@@ -1,0 +1,31 @@
+{
+  "intercept": -0.11274436663101993,
+  "weights": {
+    "rating_diff": 0.4649912659596402,
+    "form_diff": 0.10362128915952516,
+    "map_diff": 0.2284888967652785,
+    "player_diff": 0.2378842606511968,
+    "h2h_diff": 0.35729479851876866
+  },
+  "mean": {
+    "rating_diff": 0.0,
+    "form_diff": 0.0,
+    "map_diff": 0.0,
+    "player_diff": 0.0,
+    "h2h_diff": 0.0
+  },
+  "std": {
+    "rating_diff": 1.0,
+    "form_diff": 0.15,
+    "map_diff": 0.12,
+    "player_diff": 0.12,
+    "h2h_diff": 0.8
+  },
+  "meta": {
+    "n_train": 2,
+    "trained": true,
+    "shrinkage": 0.048,
+    "l2_to_prior": 0.591,
+    "in_sample_acc": 1.0
+  }
+}

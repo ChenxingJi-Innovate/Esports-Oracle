@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Esports Oracle — daily tier-1 predictions (CS2 + LoL)</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--ink:#e8ebf0;--mut:#9aa3b2;
+    --good:#3ad29f;--warn:#f0b35b;--hot:#ff5d5d;--accent:#6ea8fe;--cs:#f0b35b;--lol:#6ea8fe;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:38px 22px 90px}
+  h1{font-size:28px;letter-spacing:-.02em;margin:0 0 2px}
+  .sub{color:var(--mut);margin:0 0 26px}
+  .sub a{color:var(--accent);text-decoration:none}
+  .score{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:150px}
+  .stat .k{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .stat .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums;margin-top:3px}
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin:30px 0 12px;display:flex;align-items:center;gap:8px}
+  .dot{width:9px;height:9px;border-radius:50%}
+  .cs .dot{background:var(--cs)} .lol .dot{background:var(--lol)}
+  .row{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .ev{color:var(--mut);font-size:12.5px}
+  .band{font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+  .teams{display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 6px;font-size:17px;font-weight:600}
+  .bar{height:12px;border-radius:7px;background:#222732;overflow:hidden;display:flex}
+  .bar>span{height:100%}
+  .fa{background:linear-gradient(90deg,#6ea8fe,#3ad29f)} .fb{background:#3a4150}
+  .pct{display:flex;justify-content:space-between;font-size:13px;font-variant-numeric:tabular-nums;margin-top:5px}
+  .pa{color:var(--good)} .pb{color:var(--mut)}
+  .empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+  th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);color:var(--mut)}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  td .ok{color:var(--good)} td .no{color:var(--hot)}
+  .foot{color:var(--mut);font-size:12px;margin-top:34px;line-height:1.7}
+  .modelsel{display:flex;align-items:center;gap:8px;color:var(--mut);font-size:13px;margin:-12px 0 24px}
+  .modelsel select{background:#0f131a;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:5px 8px;font-size:13px}
+  .explain{margin-top:10px;background:transparent;border:1px solid var(--line);color:var(--accent);
+    border-radius:8px;padding:6px 12px;font-size:12.5px;cursor:pointer}
+  .explain:hover{border-color:var(--accent)}
+  .reason{margin-top:10px;font-size:13px;color:var(--ink);background:#0f131a;border:1px solid var(--line);
+    border-radius:10px;padding:0;line-height:1.6;overflow:hidden;max-height:0;transition:max-height .2s}
+  .reason.open{padding:12px 14px;max-height:none}
+  .reason .v{font-weight:650}.reason .adj{color:var(--warn)}.reason .src{color:var(--mut);font-size:12px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Esports Oracle</h1>
+  <p class="sub">Daily predictions for <b>tier-1</b> CS2 + LoL events · self-grading · rolling 1-year model · <a href="predict.html">Ask any matchup →</a> · <a href="explorer.html">LoL team explorer →</a></p>
+
+  <div class="score" id="score"></div>
+
+  <div class="modelsel">🔍 Explain uses:
+    <select id="model">
+      <option value="deepseek-v4-flash">DeepSeek V4 Flash (fast)</option>
+      <option value="deepseek-v4-pro">DeepSeek V4 Pro (deep)</option>
+    </select>
+  </div>
+
+  <h2 class="cs"><span class="dot"></span> CS2 — today</h2>
+  <div id="cs2"></div>
+
+  <h2 class="lol"><span class="dot"></span> LoL — today</h2>
+  <div id="lol"></div>
+
+  <h2>Recently graded</h2>
+  <div id="history"></div>
+
+  <p class="foot" id="foot"></p>
+</div>
+
+<script>
+const pct = x => (x*100).toFixed(1) + "%";
+function matchRow(m, game){
+  const pa = m.p_a, pb = 1-m.p_a, aLead = pa >= pb;
+  return `<div class="row">
+    <div class="top"><span class="ev">${m.event} · ${m.fmt}</span><span class="band">${m.confidence}</span></div>
+    <div class="teams"><span>${m.team_a}</span><span>${m.team_b}</span></div>
+    <div class="bar"><span class="fa" style="width:${pct(pa)}"></span><span class="fb" style="width:${pct(pb)}"></span></div>
+    <div class="pct"><span class="${aLead?'pa':'pb'}">${pct(pa)} ${aLead?'◄ pick':''}</span>
+      <span class="${!aLead?'pa':'pb'}">${!aLead?'pick ►':''} ${pct(pb)}</span></div>
+    <button class="explain" onclick="explain('${game}','${m.match_id}',this)">🔍 Explain</button>
+    <div class="reason" id="r-${m.match_id}"></div>
+  </div>`;
+}
+
+async function explain(game, matchId, btn){
+  const box = document.getElementById('r-'+matchId);
+  const m = (window.SLATE?.[game]||[]).find(x=>x.match_id===matchId);
+  if(!m){return;}
+  const model = document.getElementById('model').value;
+  box.classList.add('open'); box.innerHTML = 'Thinking with '+model.replace('deepseek-','')+'…';
+  btn.disabled = true;
+  try{
+    const r = await fetch('/api/explain', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({model, match:{...m, game}})});
+    const d = await r.json();
+    if(d.error){ box.innerHTML = '⚠️ '+d.error+' (is DEEPSEEK_API_KEY set on Vercel?)'; btn.disabled=false; return; }
+    const adj = d.adjusted_p_a!=null ? `<div class="adj">↳ adjusted ${m.team_a} → ${pct(d.adjusted_p_a)}</div>`:'';
+    const src = (d.searched&&d.searched.length)?`<div class="src">searched: ${d.searched.map(s=>s.query).filter(Boolean).join('; ')||'—'}</div>`:'';
+    box.innerHTML = `<span class="v">${(d.verdict||'').toUpperCase()}</span> · conf ${d.confidence||'?'} · ${model.replace('deepseek-','')}
+      <div style="margin-top:6px">${d.reasoning||''}</div>${adj}${src}`;
+  }catch(e){ box.innerHTML = '⚠️ '+e.message; }
+  btn.disabled = false;
+}
+const statCard = (k,v) => `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div></div>`;
+
+(async () => {
+  let pred, log;
+  try {
+    pred = await (await fetch("data/predictions.json?_="+Date.now())).json();
+    log  = await (await fetch("data/scorelog.json?_="+Date.now())).json();
+  } catch(e){
+    document.getElementById("cs2").innerHTML = `<div class="empty">No published data yet. Run <code>python -m pipeline.daily</code> or wait for the daily cron.</div>`;
+    return;
+  }
+  const acc = pred.accuracy.overall, byg = pred.accuracy.by_game||{};
+  document.getElementById("score").innerHTML =
+    statCard("Slate date", pred.generated_for) +
+    statCard("Overall accuracy", acc.accuracy!=null ? pct(acc.accuracy) : "—") +
+    statCard("Graded picks", acc.graded||0) +
+    statCard("CS2 acc", byg.cs2&&byg.cs2.accuracy!=null ? pct(byg.cs2.accuracy) : "—") +
+    statCard("LoL acc", byg.lol&&byg.lol.accuracy!=null ? pct(byg.lol.accuracy) : "—");
+
+  const cs2 = pred.slate.cs2||[], lol = pred.slate.lol||[];
+  window.SLATE = {cs2, lol};
+  document.getElementById("cs2").innerHTML = cs2.length ? cs2.map(m=>matchRow(m,'cs2')).join("")
+    : `<div class="empty">No tier-1 CS2 LAN matches loaded for today.</div>`;
+  document.getElementById("lol").innerHTML = lol.length ? lol.map(m=>matchRow(m,'lol')).join("")
+    : `<div class="empty">No tier-1 LoL (LPL/LCK/LEC/MSI/Worlds) matches loaded for today.</div>`;
+
+  const graded = (log.predictions||[]).filter(p=>p.correct!=null)
+    .sort((a,b)=> b.date.localeCompare(a.date)).slice(0,12);
+  document.getElementById("history").innerHTML = graded.length ? `<table>
+    <tr><th>Date</th><th>Game</th><th>Match</th><th>Pick</th><th>Conf</th><th>Result</th></tr>
+    ${graded.map(p=>`<tr>
+      <td>${p.date}</td><td>${p.game.toUpperCase()}</td>
+      <td>${p.team_a} vs ${p.team_b}</td>
+      <td>${p.pick} (${pct(p.result==='a'?p.p_a:1-p.p_a)} for winner)</td>
+      <td>${p.confidence}</td>
+      <td>${p.correct?'<span class="ok">✓ hit</span>':'<span class="no">✗ miss</span>'}</td>
+    </tr>`).join("")}</table>` : `<div class="empty">No graded predictions yet — the model grades itself once results land.</div>`;
+
+  document.getElementById("foot").innerHTML =
+    (pred.notes||[]).join(" · ") +
+    `<br/>Backbone verified on LoL (Oracle's Elixir) at 65.3% hold-out accuracy. CS2 weights are damped calibrated priors pending a trained LPDB fit. Data: Liquipedia (CC BY-SA) + bo3.gg.`;
+})();
+</script>
+</body>
+</html>

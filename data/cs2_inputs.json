@@ -1,0 +1,30 @@
+{
+  "_comment": "Daily-editable CS2 tier-1 slate. Filled from HLTV rank + H2H + event form. form/map_edge in [0,1]; player ~ rating-1.0; h2h = recent H2H win share vs THIS opponent.",
+  "date": "2026-06-05",
+  "matches": [
+    {
+      "match_id": "iem-cologne-2026-s1-tyloo-lvg",
+      "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+      "tier": 1,
+      "fmt": "BO3",
+      "team_a": {"name": "TyLoo",       "rank": 29, "form": 0.58, "map_edge": 0.55, "player": 0.04, "h2h": 0.70},
+      "team_b": {"name": "Lynn Vision",  "rank": 31, "form": 0.45, "map_edge": 0.48, "player": 0.02, "h2h": 0.30}
+    },
+    {
+      "match_id": "iem-cologne-2026-s1-liquid-flyquest",
+      "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+      "tier": 1,
+      "fmt": "BO3",
+      "team_a": {"name": "Liquid",   "rank": 26, "form": 0.55, "map_edge": 0.55, "player": 0.05, "h2h": 0.60},
+      "team_b": {"name": "FlyQuest", "rank": 56, "form": 0.45, "map_edge": 0.45, "player": 0.02, "h2h": 0.40}
+    },
+    {
+      "match_id": "iem-cologne-2026-s1-nrg-big",
+      "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+      "tier": 1,
+      "fmt": "BO3",
+      "team_a": {"name": "NRG", "rank": 33, "form": 0.50, "map_edge": 0.50, "player": 0.03, "h2h": 0.55},
+      "team_b": {"name": "BIG", "rank": 38, "form": 0.48, "map_edge": 0.50, "player": 0.03, "h2h": 0.45}
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_comment": "Tier-1 event pages the daily fetcher watches. Add the current Liquipedia event page per game; the refresher pulls + caches their HTML so the match parser can extract today's fixtures. Minor-region events must NOT be listed here (tier-1 gate).",
+  "cs2": {
+    "wiki": "counterstrike",
+    "events": [
+      "Intel Extreme Masters/2026/Cologne/Stage 1"
+    ]
+  },
+  "lol": {
+    "wiki": "leagueoflegends",
+    "events": []
+  }
+}

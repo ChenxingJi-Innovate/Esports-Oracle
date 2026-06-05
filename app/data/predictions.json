@@ -1,0 +1,116 @@
+{
+  "generated_for": "2026-06-05",
+  "accuracy": {
+    "overall": {
+      "graded": 2,
+      "accuracy": 0.5,
+      "brier": 0.2173
+    },
+    "by_game": {
+      "cs2": {
+        "graded": 2,
+        "accuracy": 0.5,
+        "brier": 0.2173
+      },
+      "lol": {
+        "graded": 0,
+        "accuracy": null,
+        "brier": null
+      }
+    }
+  },
+  "training": {
+    "cs2": {
+      "n_train": 2,
+      "trained": true,
+      "shrinkage": 0.048,
+      "l2_to_prior": 0.591,
+      "in_sample_acc": 1.0
+    },
+    "lol": {
+      "n_train": 0,
+      "trained": false,
+      "shrinkage": 0.0
+    }
+  },
+  "slate": {
+    "cs2": [
+      {
+        "match_id": "iem-cologne-2026-s1-tyloo-lvg",
+        "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+        "team_a": "TyLoo",
+        "team_b": "Lynn Vision",
+        "p_map_a": 0.589,
+        "p_a": 0.632,
+        "fmt": "BO3",
+        "confidence": "lean",
+        "features": {
+          "rating_diff": 0.0667,
+          "form_diff": 0.13,
+          "map_diff": 0.07,
+          "player_diff": 0.02,
+          "h2h_diff": 0.4
+        }
+      },
+      {
+        "match_id": "iem-cologne-2026-s1-liquid-flyquest",
+        "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+        "team_a": "Liquid",
+        "team_b": "FlyQuest",
+        "p_map_a": 0.6575,
+        "p_a": 0.7285,
+        "fmt": "BO3",
+        "confidence": "moderate",
+        "features": {
+          "rating_diff": 0.7673,
+          "form_diff": 0.1,
+          "map_diff": 0.1,
+          "player_diff": 0.03,
+          "h2h_diff": 0.2
+        }
+      },
+      {
+        "match_id": "iem-cologne-2026-s1-nrg-big",
+        "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+        "team_a": "NRG",
+        "team_b": "BIG",
+        "p_map_a": 0.5028,
+        "p_a": 0.5043,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "features": {
+          "rating_diff": 0.1411,
+          "form_diff": 0.02,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.1
+        }
+      }
+    ],
+    "lol": [
+      {
+        "match_id": "lpl-2026-s2-lbqf-al-lgd",
+        "event": "LPL 2026 Split 2 Playoffs (LB QF)",
+        "team_a": "Anyone's Legend",
+        "team_b": "LGD Gaming",
+        "p_map_a": 0.7876,
+        "p_a": 0.9321,
+        "fmt": "BO5",
+        "confidence": "strong",
+        "features": {
+          "rating_diff": 1.9459,
+          "form_diff": 0.17,
+          "map_diff": 0.15,
+          "player_diff": 0.06,
+          "h2h_diff": 0.6
+        }
+      }
+    ]
+  },
+  "notes": [
+    "Tier-1 events only (CS2 big LAN; LoL LPL/LCK/LEC/MSI/Worlds).",
+    "Rolling 1-year window; older predictions auto-purged.",
+    "Model self-trains daily on graded results, anchored to the prior.",
+    "p_a = probability the first-listed team wins the series."
+  ]
+}

@@ -1,0 +1,11 @@
+data/raw/*.csv
+data/raw/*.tmp
+data/cache/
+node_modules/
+dist/
+.next/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.local

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ask the Oracle — predict any matchup</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--ink:#e8ebf0;--mut:#9aa3b2;
+    --good:#3ad29f;--hot:#ff5d5d;--accent:#6ea8fe;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:36px 22px 80px}
+  h1{font-size:26px;letter-spacing:-.02em;margin:0 0 2px}
+  .sub{color:var(--mut);margin:0 0 24px}.sub a{color:var(--accent);text-decoration:none}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .col h3{margin:0 0 12px;font-size:15px}
+  label{display:block;font-size:12px;color:var(--mut);margin:10px 0 3px;text-transform:uppercase;letter-spacing:.04em}
+  input,select{width:100%;background:#0f131a;border:1px solid var(--line);color:var(--ink);
+    border-radius:9px;padding:8px 10px;font-size:14px}
+  .opts{display:flex;gap:14px;align-items:center;margin:16px 0}
+  .opts label{margin:0}
+  button{margin-top:16px;width:100%;background:var(--accent);color:#08101f;border:0;border-radius:11px;
+    padding:12px;font-size:15px;font-weight:650;cursor:pointer}
+  .out{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:none}
+  .bar{height:14px;border-radius:8px;background:#222732;overflow:hidden;display:flex;margin:10px 0 6px}
+  .bar>span{height:100%}.fa{background:linear-gradient(90deg,#6ea8fe,#3ad29f)}.fb{background:#3a4150}
+  .teams{display:flex;justify-content:space-between;font-weight:650;font-size:17px}
+  .pct{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums;font-size:13px;margin-top:5px}
+  .pa{color:var(--good)}.pb{color:var(--mut)}
+  .band{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mut);margin-left:8px}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}
+  td{padding:5px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+  td:last-child{text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
+  .hint{color:var(--mut);font-size:12px;margin-top:18px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Ask the Oracle</h1>
+  <p class="sub">Type any CS2 / LoL matchup, get the series prediction. <a href="index.html">← back to daily slate</a></p>
+
+  <div class="grid">
+    <div class="col">
+      <h3>Team A</h3>
+      <label>Name</label><input id="aName" value="Team A">
+      <label>World rank</label><input id="aRank" type="number" value="10">
+      <label>Recent form (win rate 0-1)</label><input id="aForm" type="number" step="0.01" value="0.55">
+      <label>Map/draft edge (0-1)</label><input id="aMap" type="number" step="0.01" value="0.5">
+      <label>H2H win share vs B (0-1)</label><input id="aH2h" type="number" step="0.01" value="0.5">
+    </div>
+    <div class="col">
+      <h3>Team B</h3>
+      <label>Name</label><input id="bName" value="Team B">
+      <label>World rank</label><input id="bRank" type="number" value="20">
+      <label>Recent form (win rate 0-1)</label><input id="bForm" type="number" step="0.01" value="0.5">
+      <label>Map/draft edge (0-1)</label><input id="bMap" type="number" step="0.01" value="0.5">
+      <label>H2H win share vs A (0-1)</label><input id="bH2h" type="number" step="0.01" value="0.5">
+    </div>
+  </div>
+
+  <div class="opts">
+    <div style="flex:1"><label>Format</label>
+      <select id="fmt"><option>BO1</option><option selected>BO3</option><option>BO5</option></select></div>
+    <div style="flex:1"><label>Game</label>
+      <select id="game"><option value="cs2">CS2</option><option value="lol">LoL</option></select></div>
+  </div>
+  <button onclick="run()">Predict</button>
+
+  <div class="out" id="out"></div>
+
+  <p class="hint">Same engine as the daily tool (damped calibrated priors; rating gap + form dominate, map edge is the CS2 add). Probabilities are deliberately conservative, not a runaway. "World rank" drives the biggest term, so it matters most. Series math assumes map independence.</p>
+</div>
+
+<script>
+// ----- engine ported from pipeline/predictor.py + cs2/lol priors -----
+const W   = {rating:0.35, form:0.22, map:0.17, h2h:0.11};
+const STD = {rating:1.0,  form:0.15, map:0.12, h2h:0.80};
+const sig = x => 1/(1+Math.exp(-Math.max(-35,Math.min(35,x))));
+const rankRating = r => -Math.log(Math.max(r,1));
+function comb(n,k){let c=1;for(let i=0;i<k;i++)c=c*(n-i)/(i+1);return c;}
+function bestOf(p,n){if(n===1)return p;const need=(n>>1)+1;let t=0;
+  for(let k=need;k<=n;k++)t+=comb(n,k)*p**k*(1-p)**(n-k);return t;}
+function band(p,fmt){const e=Math.abs(p-.5);
+  if(fmt==='BO1')return e<.12?'lean':'moderate';
+  return e<.08?'coin-flip':e<.18?'lean':e<.30?'moderate':'strong';}
+const pct = x => (x*100).toFixed(1)+'%';
+const num = id => parseFloat(document.getElementById(id).value)||0;
+const val = id => document.getElementById(id).value;
+
+function run(){
+  const a={rank:num('aRank'),form:num('aForm'),map:num('aMap'),h2h:num('aH2h')};
+  const b={rank:num('bRank'),form:num('bForm'),map:num('bMap'),h2h:num('bH2h')};
+  const z = W.rating*(rankRating(a.rank)-rankRating(b.rank))/STD.rating
+          + W.form*(a.form-b.form)/STD.form
+          + W.map*(a.map-b.map)/STD.map
+          + W.h2h*(a.h2h-b.h2h)/STD.h2h;
+  const pm = sig(z);
+  const fmt = val('fmt'), n = {BO1:1,BO3:3,BO5:5}[fmt];
+  const ps = bestOf(pm,n);
+  const A = val('aName')||'Team A', B = val('bName')||'Team B';
+  const aLead = ps>=.5;
+
+  // scoreline distribution
+  const need=(n>>1)+1; let rows=[];
+  for(let lose=0;lose<need;lose++){
+    rows.push([`${need}-${lose}`, comb(need-1+lose,lose)*pm**need*(1-pm)**lose, A]);
+    rows.push([`${lose}-${need}`, comb(need-1+lose,lose)*(1-pm)**need*pm**lose, B]);
+  }
+  rows.sort((x,y)=>y[1]-x[1]);
+
+  document.getElementById('out').style.display='block';
+  document.getElementById('out').innerHTML = `
+    <div class="teams"><span>${A}</span><span>${B}</span></div>
+    <div class="bar"><span class="fa" style="width:${pct(ps)}"></span><span class="fb" style="width:${pct(1-ps)}"></span></div>
+    <div class="pct"><span class="${aLead?'pa':'pb'}">${pct(ps)} ${aLead?'◄ pick':''}</span>
+      <span class="${!aLead?'pa':'pb'}">${!aLead?'pick ►':''} ${pct(1-ps)}</span></div>
+    <div style="margin-top:8px;color:var(--mut);font-size:13px">
+      per-map ${pct(pm)} · series <b>${fmt}</b><span class="band">${band(ps,fmt)}</span></div>
+    ${n>1?`<table><tr><td>most likely scoreline</td><td></td></tr>
+      ${rows.map(r=>`<tr><td>${r[2]==A?A:B} ${r[0]}</td><td>${pct(r[1])}</td></tr>`).join('')}</table>`:''}
+  `;
+}
+</script>
+</body>
+</html>

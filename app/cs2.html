@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CS2 Oracle — IEM Cologne Major 2026</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --line:#262b36; --ink:#e8ebf0; --mut:#9aa3b2;
+    --good:#3ad29f; --warn:#f0b35b; --hot:#ff5d5d; --accent:#6ea8fe;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 22px 80px}
+  h1{font-size:30px;letter-spacing:-.02em;margin:0 0 4px}
+  .sub{color:var(--mut);margin:0 0 28px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .match{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .vs{color:var(--mut);font-size:13px}
+  .team{font-size:19px;font-weight:600}
+  .bar{height:14px;border-radius:8px;background:#222732;overflow:hidden;display:flex;margin:10px 0 6px}
+  .bar > span{display:block;height:100%}
+  .fa{background:linear-gradient(90deg,#6ea8fe,#3ad29f)}
+  .fb{background:#3a4150}
+  .pct{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+  .pct b{font-size:17px}
+  .pa{color:var(--good)} .pb{color:var(--mut)}
+  .meta{color:var(--mut);font-size:13px;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+  table{width:100%;border-collapse:collapse;margin-top:12px;font-size:12.5px}
+  td{padding:3px 0;color:var(--mut);font-variant-numeric:tabular-nums}
+  td:last-child{text-align:right;color:var(--ink)}
+  .pos{color:var(--good)} .neg{color:var(--hot)}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--mut);margin-left:8px}
+  .edge{background:rgba(58,210,159,.12);border:1px solid rgba(58,210,159,.4);border-radius:10px;padding:8px 12px;font-size:13px;margin-top:12px;color:#bdf0db}
+  h2{font-size:16px;margin:34px 0 10px}
+  .crit{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 22px}
+  .crit li{margin:14px 0;color:var(--mut)} .crit b{color:var(--ink)}
+  .foot{color:var(--mut);font-size:12px;margin-top:30px;line-height:1.7}
+  a{color:var(--accent);text-decoration:none}
+  .warnote{background:rgba(240,179,91,.1);border:1px solid rgba(240,179,91,.35);color:var(--warn);
+    border-radius:10px;padding:10px 14px;font-size:13px;margin:0 0 24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>CS2 Oracle <span class="tag">ported from the verified LoL formula</span></h1>
+  <p class="sub">IEM Cologne Major 2026 · Stage 1 Round 4 (advancement, BO3) · model: p = sigmoid(Σ wᵢ·z(featureᵢ))</p>
+
+  <div class="warnote">These were the <b>June 4</b> pre-match outputs. Use them to grade the model, not to bet retroactively — some matches may already be decided.</div>
+
+  <div class="grid">
+    <!-- M80 vs NRG -->
+    <div class="card">
+      <div class="match"><span class="team">M80</span><span class="vs">vs</span><span class="team">NRG</span></div>
+      <div class="bar"><span class="fa" style="width:66.1%"></span><span class="fb" style="width:33.9%"></span></div>
+      <div class="pct"><span class="pa"><b>66.1%</b> M80</span><span class="pb">NRG <b>33.9%</b></span></div>
+      <div class="edge">Market had M80 ≈ 58%. Model says <b>66%</b> — higher on purpose: a 9-2 all-time, 3-0 last-year H2H is a real edge that odds-anchored AIs compress away.</div>
+      <table>
+        <tr><td>per-map P(M80)</td><td>60.9%</td></tr>
+        <tr><td>rating gap (#24 vs #33)</td><td class="pos">+0.111</td></tr>
+        <tr><td>recent form</td><td class="pos">+0.117</td></tr>
+        <tr><td>map-pool edge</td><td class="pos">+0.071</td></tr>
+        <tr><td>player rating</td><td class="pos">+0.057</td></tr>
+        <tr><td>head-to-head (capped)</td><td class="pos">+0.088</td></tr>
+      </table>
+      <div class="meta">Both 2-1 → winner advances to Stage 2. H2H/odds: tips.gg, egamersworld.</div>
+    </div>
+
+    <!-- Liquid vs HEROIC -->
+    <div class="card">
+      <div class="match"><span class="team">Liquid</span><span class="vs">vs</span><span class="team">HEROIC</span></div>
+      <div class="bar"><span class="fa" style="width:56.5%"></span><span class="fb" style="width:43.5%"></span></div>
+      <div class="pct"><span class="pa"><b>56.5%</b> Liquid</span><span class="pb">HEROIC <b>43.5%</b></span></div>
+      <div class="edge">Near-even on rank (#26 vs #25), so rating ≈ 0. The lean is pure <b>event form</b>: Liquid beat BIG, HEROIC was in the elimination zone. Low confidence by design.</div>
+      <table>
+        <tr><td>per-map P(Liquid)</td><td>54.4%</td></tr>
+        <tr><td>rating gap (#26 vs #25)</td><td class="neg">−0.014</td></tr>
+        <tr><td>recent / event form</td><td class="pos">+0.147</td></tr>
+        <tr><td>map-pool edge</td><td class="pos">+0.028</td></tr>
+        <tr><td>player rating</td><td class="pos">+0.014</td></tr>
+        <tr><td>head-to-head</td><td>0.000</td></tr>
+      </table>
+      <div class="meta">A coin-flip we refuse to dress up as 75%. HLTV ranking Jun 2026.</div>
+    </div>
+  </div>
+
+  <h2>Why this beats an odds-anchored AI (e.g. bo3.gg)</h2>
+  <ul class="crit">
+    <li><b>No market input.</b> bo3.gg ingests live bookmaker odds, which compress toward 50% and carry vig — so it under-weights lopsided structural edges. We use none, so a true mismatch isn't dragged back to a coin-flip.</li>
+    <li><b>Damped, not stacked.</b> Naively summing form+H2H+rank produces runaway 85%+ calls (our first pass hit 89.5% for M80). We capped H2H and damped weights to land a disciplined 66%.</li>
+    <li><b>Event-aware form.</b> Generic 3-month form misses "HEROIC is collapsing <i>at this event</i>." We add an event-form term.</li>
+    <li><b>Honest on BO1.</b> The model widens on high-variance BO1 rather than faking precision.</li>
+  </ul>
+
+  <p class="foot">
+    Backbone verified on League of Legends (Oracle's Elixir): re-trained from scratch, reproduces 65.3% hold-out accuracy exactly; a leaner 5-feature variant matches it with better calibration.<br/>
+    CS2 weights are calibrated priors ordered after the LoL fit — <b>not yet a trained CS2 regression</b>. Next step: wire in an HLTV/bo3.gg map dataset and fit for real.<br/>
+    Sources: Liquipedia · HLTV · tips.gg · egamersworld · bo3.gg.
+  </p>
+</div>
+</body>
+</html>

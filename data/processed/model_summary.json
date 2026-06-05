@@ -1,0 +1,238 @@
+{
+  "features": [
+    "elo_diff",
+    "team_recent_diff",
+    "side_profile_diff",
+    "player_form_diff",
+    "player_champion_diff",
+    "team_champion_diff",
+    "champion_meta_diff",
+    "patch_experience_diff"
+  ],
+  "intercept": 0.140425665480582,
+  "weights": {
+    "elo_diff": 0.2451951703102045,
+    "team_recent_diff": 0.1853503749770703,
+    "side_profile_diff": -0.00015350758150979338,
+    "player_form_diff": 0.29668039770801535,
+    "player_champion_diff": 0.09563959536705112,
+    "team_champion_diff": -0.01575039646976694,
+    "champion_meta_diff": 0.12079648517456913,
+    "patch_experience_diff": -0.022709540517410587
+  },
+  "scaler": {
+    "mean": {
+      "elo_diff": -0.004097946846434381,
+      "team_recent_diff": -0.0076699909598196775,
+      "side_profile_diff": 0.04366075535866317,
+      "player_form_diff": -0.0009427798017283725,
+      "player_champion_diff": 0.002976152135485568,
+      "team_champion_diff": 0.002378699443100868,
+      "champion_meta_diff": 0.0015712662392343073,
+      "patch_experience_diff": -0.007592416646119311
+    },
+    "std": {
+      "elo_diff": 0.2934416692445578,
+      "team_recent_diff": 0.19712387745022134,
+      "side_profile_diff": 0.16522664934877845,
+      "player_form_diff": 0.08316911957722463,
+      "player_champion_diff": 0.08142590259193971,
+      "team_champion_diff": 0.0793171565276308,
+      "champion_meta_diff": 0.024409643905920493,
+      "patch_experience_diff": 0.4676419816296644
+    }
+  },
+  "train": {
+    "games": 17048,
+    "accuracy": 0.6439465039887377,
+    "log_loss": 0.6269671194105724,
+    "brier": 0.2190861665883029,
+    "ece": 0.01081897786180231,
+    "calibration_bins": [
+      {
+        "bin": "0.0-0.1",
+        "count": 46,
+        "avg_pred": 0.07402706386901302,
+        "actual": 0.06521739130434782
+      },
+      {
+        "bin": "0.1-0.2",
+        "count": 356,
+        "avg_pred": 0.16108246198952192,
+        "actual": 0.14606741573033707
+      },
+      {
+        "bin": "0.2-0.3",
+        "count": 1040,
+        "avg_pred": 0.25692310300767524,
+        "actual": 0.26153846153846155
+      },
+      {
+        "bin": "0.3-0.4",
+        "count": 2188,
+        "avg_pred": 0.3562738990548719,
+        "actual": 0.34323583180987205
+      },
+      {
+        "bin": "0.4-0.5",
+        "count": 3483,
+        "avg_pred": 0.4524671123536897,
+        "actual": 0.43583118001722654
+      },
+      {
+        "bin": "0.5-0.6",
+        "count": 4045,
+        "avg_pred": 0.5496612020670825,
+        "actual": 0.5505562422744129
+      },
+      {
+        "bin": "0.6-0.7",
+        "count": 3250,
+        "avg_pred": 0.6466718443239778,
+        "actual": 0.6532307692307693
+      },
+      {
+        "bin": "0.7-0.8",
+        "count": 1807,
+        "avg_pred": 0.7417922049565764,
+        "actual": 0.7598229109020476
+      },
+      {
+        "bin": "0.8-0.9",
+        "count": 729,
+        "avg_pred": 0.8391524571284428,
+        "actual": 0.8724279835390947
+      },
+      {
+        "bin": "0.9-1.0",
+        "count": 104,
+        "avg_pred": 0.9264920301228143,
+        "actual": 0.9807692307692307
+      }
+    ]
+  },
+  "validation": {
+    "games": 4944,
+    "accuracy": 0.6525080906148867,
+    "log_loss": 0.6220172398081666,
+    "brier": 0.21641142723264878,
+    "ece": 0.03578683240262844,
+    "calibration_bins": [
+      {
+        "bin": "0.0-0.1",
+        "count": 0,
+        "avg_pred": null,
+        "actual": null
+      },
+      {
+        "bin": "0.1-0.2",
+        "count": 54,
+        "avg_pred": 0.16197191390253546,
+        "actual": 0.2037037037037037
+      },
+      {
+        "bin": "0.2-0.3",
+        "count": 234,
+        "avg_pred": 0.257392139024837,
+        "actual": 0.17094017094017094
+      },
+      {
+        "bin": "0.3-0.4",
+        "count": 608,
+        "avg_pred": 0.3587969832119714,
+        "actual": 0.3092105263157895
+      },
+      {
+        "bin": "0.4-0.5",
+        "count": 1005,
+        "avg_pred": 0.45469784508581734,
+        "actual": 0.40497512437810945
+      },
+      {
+        "bin": "0.5-0.6",
+        "count": 1238,
+        "avg_pred": 0.548771286957343,
+        "actual": 0.5323101777059773
+      },
+      {
+        "bin": "0.6-0.7",
+        "count": 1043,
+        "avg_pred": 0.6474226713142974,
+        "actual": 0.6711409395973155
+      },
+      {
+        "bin": "0.7-0.8",
+        "count": 579,
+        "avg_pred": 0.7412539732971049,
+        "actual": 0.772020725388601
+      },
+      {
+        "bin": "0.8-0.9",
+        "count": 177,
+        "avg_pred": 0.8367232026105792,
+        "actual": 0.8983050847457628
+      },
+      {
+        "bin": "0.9-1.0",
+        "count": 6,
+        "avg_pred": 0.917337926314537,
+        "actual": 1.0
+      }
+    ]
+  },
+  "formula": "p(blue win)=sigmoid(intercept + sum(weight_i * zscore(feature_i)))",
+  "ablations": [
+    {
+      "name": "elo only",
+      "features": [
+        "elo_diff"
+      ],
+      "accuracy": 0.6324838187702265,
+      "log_loss": 0.640459150038315,
+      "brier": 0.2247176376665406,
+      "ece": 0.01570576910889685
+    },
+    {
+      "name": "elo + recent form",
+      "features": [
+        "elo_diff",
+        "team_recent_diff",
+        "side_profile_diff"
+      ],
+      "accuracy": 0.6389563106796117,
+      "log_loss": 0.631104678484153,
+      "brier": 0.22054171751218452,
+      "ece": 0.024577632494179203
+    },
+    {
+      "name": "roster layer",
+      "features": [
+        "elo_diff",
+        "team_recent_diff",
+        "side_profile_diff",
+        "player_form_diff"
+      ],
+      "accuracy": 0.6478559870550162,
+      "log_loss": 0.6245951709589155,
+      "brier": 0.21750961001615698,
+      "ece": 0.03726707668613416
+    },
+    {
+      "name": "draft layer",
+      "features": [
+        "elo_diff",
+        "team_recent_diff",
+        "side_profile_diff",
+        "player_form_diff",
+        "player_champion_diff",
+        "team_champion_diff",
+        "champion_meta_diff",
+        "patch_experience_diff"
+      ],
+      "accuracy": 0.6525080906148867,
+      "log_loss": 0.6220170835093571,
+      "brier": 0.2164113166926221,
+      "ece": 0.035790996427650025
+    }
+  ]
+}

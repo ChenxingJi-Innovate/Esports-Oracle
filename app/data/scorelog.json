@@ -1,0 +1,149 @@
+{
+  "predictions": [
+    {
+      "match_id": "iem-cologne-2026-r4-m80-nrg",
+      "date": "2026-06-04",
+      "game": "cs2",
+      "event": "IEM Cologne Major 2026",
+      "team_a": "M80",
+      "team_b": "NRG",
+      "p_a": 0.6613,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.3185,
+        "form_diff": 0.08,
+        "map_diff": 0.05,
+        "player_diff": 0.04,
+        "h2h_diff": 0.64
+      },
+      "pick": "M80",
+      "result": "a",
+      "correct": true
+    },
+    {
+      "match_id": "iem-cologne-2026-r4-liquid-heroic",
+      "date": "2026-06-04",
+      "game": "cs2",
+      "event": "IEM Cologne Major 2026",
+      "team_a": "Liquid",
+      "team_b": "HEROIC",
+      "p_a": 0.5655,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": -0.0392,
+        "form_diff": 0.1,
+        "map_diff": 0.02,
+        "player_diff": 0.01,
+        "h2h_diff": 0.0
+      },
+      "pick": "Liquid",
+      "result": "b",
+      "correct": false
+    },
+    {
+      "match_id": "lpl-2026-s2-lbqf-al-lgd",
+      "date": "2026-06-05",
+      "game": "lol",
+      "event": "LPL 2026 Split 2 Playoffs (LB QF)",
+      "team_a": "Anyone's Legend",
+      "team_b": "LGD Gaming",
+      "p_a": 0.9321,
+      "fmt": "BO5",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 1.9459,
+        "form_diff": 0.17,
+        "map_diff": 0.15,
+        "player_diff": 0.06,
+        "h2h_diff": 0.6
+      },
+      "pick": "Anyone's Legend",
+      "result": null,
+      "correct": null
+    },
+    {
+      "match_id": "iem-cologne-2026-s1-tyloo-lvg",
+      "date": "2026-06-05",
+      "game": "cs2",
+      "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+      "team_a": "TyLoo",
+      "team_b": "Lynn Vision",
+      "p_a": 0.632,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.0667,
+        "form_diff": 0.13,
+        "map_diff": 0.07,
+        "player_diff": 0.02,
+        "h2h_diff": 0.4
+      },
+      "pick": "TyLoo",
+      "result": null,
+      "correct": null
+    },
+    {
+      "match_id": "iem-cologne-2026-s1-liquid-flyquest",
+      "date": "2026-06-05",
+      "game": "cs2",
+      "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+      "team_a": "Liquid",
+      "team_b": "FlyQuest",
+      "p_a": 0.7285,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 0.7673,
+        "form_diff": 0.1,
+        "map_diff": 0.1,
+        "player_diff": 0.03,
+        "h2h_diff": 0.2
+      },
+      "pick": "Liquid",
+      "result": null,
+      "correct": null
+    },
+    {
+      "match_id": "iem-cologne-2026-s1-nrg-big",
+      "date": "2026-06-05",
+      "game": "cs2",
+      "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+      "team_a": "NRG",
+      "team_b": "BIG",
+      "p_a": 0.5043,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.1411,
+        "form_diff": 0.02,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.1
+      },
+      "pick": "NRG",
+      "result": null,
+      "correct": null
+    }
+  ],
+  "accuracy": {
+    "overall": {
+      "graded": 2,
+      "accuracy": 0.5,
+      "brier": 0.2173
+    },
+    "by_game": {
+      "cs2": {
+        "graded": 2,
+        "accuracy": 0.5,
+        "brier": 0.2173
+      },
+      "lol": {
+        "graded": 0,
+        "accuracy": null,
+        "brier": null
+      }
+    }
+  }
+}

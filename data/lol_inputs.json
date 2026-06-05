@@ -1,0 +1,15 @@
+{
+  "_comment": "Daily-editable LoL tier-1 slate (LPL / LCK / LEC / MSI / Worlds only). Same schema as cs2_inputs. rank=world rank; form=recent win rate; map_edge=expected draft/side edge; player~rating-1.0; h2h=recent H2H win share vs THIS opponent.",
+  "date": "2026-06-05",
+  "allowed_leagues": ["LPL", "LCK", "LEC", "MSI", "WLDs", "Worlds"],
+  "matches": [
+    {
+      "match_id": "lpl-2026-s2-lbqf-al-lgd",
+      "league": "LPL",
+      "event": "LPL 2026 Split 2 Playoffs (LB QF)",
+      "fmt": "BO5",
+      "team_a": {"name": "Anyone's Legend", "rank": 5,  "form": 0.65, "map_edge": 0.60, "player": 0.08, "h2h": 0.80},
+      "team_b": {"name": "LGD Gaming",      "rank": 35, "form": 0.48, "map_edge": 0.45, "player": 0.02, "h2h": 0.20}
+    }
+  ]
+}
