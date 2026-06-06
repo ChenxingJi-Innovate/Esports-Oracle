@@ -25,40 +25,40 @@
         {
           "match_id": "g2esports-m80-2026-06-06",
           "event": "Intel Extreme Masters",
-          "fmt": "BO3",
+          "fmt": "BO1",
           "team_a": "G2 Esports",
           "team_b": "M80",
-          "p_a": 0.6301,
+          "p_a": 0.5876,
           "confidence": "lean",
           "scheduled_at": "2026-06-06T12:40:00+00:00"
         },
         {
           "match_id": "monte-big-2026-06-06",
           "event": "Intel Extreme Masters",
-          "fmt": "BO3",
+          "fmt": "BO1",
           "team_a": "Monte",
           "team_b": "BIG",
-          "p_a": 0.4075,
+          "p_a": 0.438,
           "confidence": "lean",
           "scheduled_at": "2026-06-06T12:45:00+00:00"
         },
         {
           "match_id": "teamspirit-betboomteam-2026-06-06",
           "event": "Intel Extreme Masters",
-          "fmt": "BO3",
+          "fmt": "BO1",
           "team_a": "Team Spirit",
           "team_b": "BetBoom Team",
-          "p_a": 0.7084,
+          "p_a": 0.6428,
           "confidence": "moderate",
           "scheduled_at": "2026-06-06T13:30:00+00:00"
         },
         {
           "match_id": "legacy-mibr-2026-06-06",
           "event": "Intel Extreme Masters",
-          "fmt": "BO3",
+          "fmt": "BO1",
           "team_a": "Legacy",
           "team_b": "MIBR",
-          "p_a": 0.6038,
+          "p_a": 0.5696,
           "confidence": "lean",
           "scheduled_at": "2026-06-06T13:30:00+00:00"
         }

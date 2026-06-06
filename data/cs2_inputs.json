@@ -6,7 +6,7 @@
       "match_id": "g2esports-m80-2026-06-06",
       "event": "Intel Extreme Masters",
       "tier": 1,
-      "fmt": "BO3",
+      "fmt": "BO1",
       "scheduled_at": "2026-06-06T12:40:00+00:00",
       "team_a": {
         "name": "G2 Esports",
@@ -29,7 +29,7 @@
       "match_id": "monte-big-2026-06-06",
       "event": "Intel Extreme Masters",
       "tier": 1,
-      "fmt": "BO3",
+      "fmt": "BO1",
       "scheduled_at": "2026-06-06T12:45:00+00:00",
       "team_a": {
         "name": "Monte",
@@ -52,7 +52,7 @@
       "match_id": "teamspirit-betboomteam-2026-06-06",
       "event": "Intel Extreme Masters",
       "tier": 1,
-      "fmt": "BO3",
+      "fmt": "BO1",
       "scheduled_at": "2026-06-06T13:30:00+00:00",
       "team_a": {
         "name": "Team Spirit",
@@ -75,7 +75,7 @@
       "match_id": "legacy-mibr-2026-06-06",
       "event": "Intel Extreme Masters",
       "tier": 1,
-      "fmt": "BO3",
+      "fmt": "BO1",
       "scheduled_at": "2026-06-06T13:30:00+00:00",
       "team_a": {
         "name": "Legacy",

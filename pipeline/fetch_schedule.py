@@ -54,6 +54,15 @@ _MATCH_BLOCK = re.compile(
     r'(?=brkts-popup-header-left|brkts-matchlist-match\b|$)', re.S)
 _TS = re.compile(r'data-timestamp="(\d+)"')
 _ARIA = re.compile(r'aria-label="([^"]+)"')
+_BO = re.compile(r'\bBo([135])\b')
+
+
+def _detect_fmt(block: str, default: str) -> str:
+    """Read the real series length from the match card (Liquipedia stamps a
+    'Bo1'/'Bo3'/'Bo5' token). CS2 Swiss opening rounds are Bo1, advancement and
+    elimination are Bo3, finals Bo5, so we must NOT assume a per-event default."""
+    m = _BO.search(block)
+    return f"BO{m.group(1)}" if m else default
 
 
 def _distinct_teams(block: str) -> list[str]:
@@ -98,7 +107,7 @@ def _fetch_matches(wiki: str, page: str, fmt: str,
             "date": t.date().isoformat(),
             "team_a": teams[0], "team_b": teams[1],
             "event": page.split("/")[0] if "/" in page else page,
-            "page": page, "fmt": fmt,
+            "page": page, "fmt": _detect_fmt(block, fmt),
         })
     return out
 
