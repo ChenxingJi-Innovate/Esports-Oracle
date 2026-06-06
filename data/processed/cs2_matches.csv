@@ -131,6 +131,72 @@ date,ts,team_a,team_b,score_a,score_b,winner,event
 2025-06-10,1749567600,Nemiga Gaming,HEROIC,2,0,Nemiga Gaming,BLAST/Major/2025/Austin
 2025-06-10,1749576600,B8,Lynn Vision Gaming,1,2,Lynn Vision Gaming,BLAST/Major/2025/Austin
 2025-06-10,1749587400,FaZe Clan,MIBR,2,0,FaZe Clan,BLAST/Major/2025/Austin
+2025-06-12,1749740400,Team Vitality,Legacy,3,13,Legacy,BLAST/Major/2025/Austin
+2025-06-12,1749740400,MOUZ,Virtus.pro,11,13,Virtus.pro,BLAST/Major/2025/Austin
+2025-06-12,1749743700,Team Spirit,PaiN Gaming,13,3,Team Spirit,BLAST/Major/2025/Austin
+2025-06-12,1749744600,G2 Esports,3DMAX,5,13,3DMAX,BLAST/Major/2025/Austin
+2025-06-12,1749746700,Aurora Gaming,FaZe Clan,13,5,Aurora Gaming,BLAST/Major/2025/Austin
+2025-06-12,1749747600,The MongolZ,FURIA,11,13,FURIA,BLAST/Major/2025/Austin
+2025-06-12,1749750300,Natus Vincere,Nemiga Gaming,13,7,Natus Vincere,BLAST/Major/2025/Austin
+2025-06-12,1749751500,Team Liquid,Lynn Vision Gaming,5,13,Lynn Vision Gaming,BLAST/Major/2025/Austin
+2025-06-12,1749756900,Aurora Gaming,FURIA,7,13,FURIA,BLAST/Major/2025/Austin
+2025-06-12,1749756900,Legacy,Virtus.pro,11,13,Virtus.pro,BLAST/Major/2025/Austin
+2025-06-12,1749760500,Natus Vincere,3DMAX,16,14,Natus Vincere,BLAST/Major/2025/Austin
+2025-06-12,1749760800,Team Spirit,Lynn Vision Gaming,13,7,Team Spirit,BLAST/Major/2025/Austin
+2025-06-12,1749764100,MOUZ,FaZe Clan,10,13,FaZe Clan,BLAST/Major/2025/Austin
+2025-06-12,1749765600,Team Vitality,Nemiga Gaming,13,6,Team Vitality,BLAST/Major/2025/Austin
+2025-06-12,1749768000,The MongolZ,Team Liquid,13,7,The MongolZ,BLAST/Major/2025/Austin
+2025-06-12,1749768600,G2 Esports,PaiN Gaming,13,6,G2 Esports,BLAST/Major/2025/Austin
+2025-06-13,1749826800,Legacy,FaZe Clan,8,13,FaZe Clan,BLAST/Major/2025/Austin
+2025-06-13,1749826800,3DMAX,Team Vitality,2,13,Team Vitality,BLAST/Major/2025/Austin
+2025-06-13,1749829500,Aurora Gaming,G2 Esports,4,13,G2 Esports,BLAST/Major/2025/Austin
+2025-06-13,1749830400,The MongolZ,Lynn Vision Gaming,13,7,The MongolZ,BLAST/Major/2025/Austin
+2025-06-13,1749832500,Team Spirit,Natus Vincere,2,0,Team Spirit,BLAST/Major/2025/Austin
+2025-06-13,1749833700,FURIA,Virtus.pro,2,0,FURIA,BLAST/Major/2025/Austin
+2025-06-13,1749840000,MOUZ,Team Liquid,2,1,MOUZ,BLAST/Major/2025/Austin
+2025-06-13,1749840000,PaiN Gaming,Nemiga Gaming,2,1,PaiN Gaming,BLAST/Major/2025/Austin
+2025-06-14,1749913200,Legacy,Lynn Vision Gaming,2,1,Legacy,BLAST/Major/2025/Austin
+2025-06-14,1749913200,3DMAX,PaiN Gaming,0,2,PaiN Gaming,BLAST/Major/2025/Austin
+2025-06-14,1749921900,Aurora Gaming,MOUZ,1,2,MOUZ,BLAST/Major/2025/Austin
+2025-06-14,1749922200,The MongolZ,FaZe Clan,0,2,FaZe Clan,BLAST/Major/2025/Austin
+2025-06-14,1749929100,Natus Vincere,G2 Esports,2,1,Natus Vincere,BLAST/Major/2025/Austin
+2025-06-14,1749933900,Virtus.pro,Team Vitality,0,2,Team Vitality,BLAST/Major/2025/Austin
+2025-06-15,1749999600,Legacy,MOUZ,1,2,MOUZ,BLAST/Major/2025/Austin
+2025-06-15,1750011300,The MongolZ,G2 Esports,2,0,The MongolZ,BLAST/Major/2025/Austin
+2025-06-15,1750023900,Virtus.pro,PaiN Gaming,1,2,PaiN Gaming,BLAST/Major/2025/Austin
+2025-09-12,1757664000,GamerLegion,TYLOO,0,2,TYLOO,FISSURE/Playground/2
+2025-09-12,1757673900,The MongolZ,3DMAX,1,2,3DMAX,FISSURE/Playground/2
+2025-09-12,1757686200,Team Falcons,Virtus.pro,2,0,Team Falcons,FISSURE/Playground/2
+2025-09-12,1757694000,Aurora Gaming,Astralis,2,1,Aurora Gaming,FISSURE/Playground/2
+2025-09-13,1757750400,HEROIC,Legacy,1,2,Legacy,FISSURE/Playground/2
+2025-09-13,1757764200,G2 Esports,Lynn Vision Gaming,2,0,G2 Esports,FISSURE/Playground/2
+2025-09-13,1757773800,FaZe Clan,PaiN Gaming,2,0,FaZe Clan,FISSURE/Playground/2
+2025-09-13,1757783700,FURIA,Team Liquid,2,1,FURIA,FISSURE/Playground/2
+2025-09-14,1757836800,FaZe Clan,3DMAX,2,1,FaZe Clan,FISSURE/Playground/2
+2025-09-14,1757836800,The MongolZ,Lynn Vision Gaming,2,0,The MongolZ,FISSURE/Playground/2
+2025-09-14,1757846700,Virtus.pro,Astralis,0,2,Astralis,FISSURE/Playground/2
+2025-09-14,1757848500,Team Falcons,Legacy,2,0,Team Falcons,FISSURE/Playground/2
+2025-09-14,1757856300,GamerLegion,Team Liquid,2,0,GamerLegion,FISSURE/Playground/2
+2025-09-14,1757859300,Aurora Gaming,TYLOO,2,0,Aurora Gaming,FISSURE/Playground/2
+2025-09-14,1757865000,HEROIC,PaiN Gaming,1,2,PaiN Gaming,FISSURE/Playground/2
+2025-09-14,1757870100,FURIA,G2 Esports,2,0,FURIA,FISSURE/Playground/2
+2025-09-15,1757923200,TYLOO,The MongolZ,1,2,The MongolZ,FISSURE/Playground/2
+2025-09-15,1757923200,Virtus.pro,Lynn Vision Gaming,2,0,Virtus.pro,FISSURE/Playground/2
+2025-09-15,1757936400,Team Liquid,HEROIC,2,1,Team Liquid,FISSURE/Playground/2
+2025-09-15,1757937300,3DMAX,GamerLegion,1,2,GamerLegion,FISSURE/Playground/2
+2025-09-15,1757952000,G2 Esports,Legacy,2,0,G2 Esports,FISSURE/Playground/2
+2025-09-15,1757952300,FaZe Clan,Team Falcons,0,2,Team Falcons,FISSURE/Playground/2
+2025-09-15,1757960400,Astralis,PaiN Gaming,0,2,PaiN Gaming,FISSURE/Playground/2
+2025-09-15,1757962200,Aurora Gaming,FURIA,2,0,Aurora Gaming,FISSURE/Playground/2
+2025-09-16,1758013200,G2 Esports,GamerLegion,2,1,G2 Esports,FISSURE/Playground/2
+2025-09-16,1758013200,3DMAX,Virtus.pro,1,2,Virtus.pro,FISSURE/Playground/2
+2025-09-16,1758027900,FaZe Clan,The MongolZ,1,2,The MongolZ,FISSURE/Playground/2
+2025-09-16,1758031200,TYLOO,Team Liquid,1,2,Team Liquid,FISSURE/Playground/2
+2025-09-16,1758043800,FURIA,PaiN Gaming,2,0,FURIA,FISSURE/Playground/2
+2025-09-16,1758045900,Astralis,Legacy,2,0,Astralis,FISSURE/Playground/2
+2025-09-17,1758100800,FaZe Clan,Team Liquid,0,2,Team Liquid,FISSURE/Playground/2
+2025-09-17,1758110400,Astralis,GamerLegion,2,0,Astralis,FISSURE/Playground/2
+2025-09-17,1758121500,PaiN Gaming,Virtus.pro,2,1,PaiN Gaming,FISSURE/Playground/2
 2026-05-09,1778302800,Aurora Gaming,HEROIC,0,2,HEROIC,PGL/2026/Astana
 2026-05-09,1778302800,G2 Esports,Fisher College,2,0,G2 Esports,PGL/2026/Astana
 2026-05-09,1778309400,The MongolZ,Magic,2,0,The MongolZ,PGL/2026/Astana
@@ -196,3 +262,14 @@ date,ts,team_a,team_b,score_a,score_b,winner,event
 2026-06-04,1780592400,Team Liquid,HEROIC,2,0,Team Liquid,Intel Extreme Masters/2026/Cologne
 2026-06-05,1780660800,TYLOO,Lynn Vision Gaming,2,0,TYLOO,Intel Extreme Masters/2026/Cologne
 2026-06-05,1780669800,Team Liquid,FlyQuest,0,2,FlyQuest,Intel Extreme Masters/2026/Cologne
+2026-06-05,1780678800,NRG,BIG,1,2,BIG,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780741800,Astralis,GamerLegion,13,4,Astralis,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780741800,9z Team,FlyQuest,13,9,9z Team,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780745400,FUT Esports,B8,13,11,FUT Esports,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780746000,PaiN Gaming,TYLOO,9,13,TYLOO,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780749600,G2 Esports,M80,13,8,G2 Esports,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780749900,Monte,BIG,13,8,Monte,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780753800,Team Spirit,BetBoom Team,13,5,Team Spirit,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780754400,Legacy,MIBR,8,13,MIBR,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780759800,FUT Esports,TYLOO,13,9,FUT Esports,Intel Extreme Masters/2026/Cologne
+2026-06-06,1780761000,Astralis,9z Team,5,13,9z Team,Intel Extreme Masters/2026/Cologne

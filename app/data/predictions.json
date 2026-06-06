@@ -63,11 +63,11 @@
       "note": "OE kNN, 702-game holdout (static)"
     },
     "cs2": {
-      "n_cases": 197,
-      "holdout_maps": 40,
+      "n_cases": 274,
+      "holdout_maps": 55,
       "k": 25,
-      "accuracy": 0.45,
-      "brier": 0.2722
+      "accuracy": 0.4182,
+      "brier": 0.266
     },
     "val": {
       "error": "corpus pending (no case base yet)"
@@ -76,84 +76,84 @@
   "slate": {
     "cs2": [
       {
-        "match_id": "monte-big-2026-06-06",
+        "match_id": "g2esports-monte-2026-06-06",
         "event": "Intel Extreme Masters",
-        "team_a": "Monte",
-        "team_b": "BIG",
-        "p_map_a": 0.438,
-        "p_a": 0.438,
+        "team_a": "G2 Esports",
+        "team_b": "Monte",
+        "p_map_a": 0.6229,
+        "p_a": 0.6229,
         "fmt": "BO1",
-        "confidence": "lean",
+        "confidence": "moderate",
         "scoreline": {
-          "pick": "0-1",
-          "a": 0,
-          "b": 1,
-          "p": 0.562,
+          "pick": "1-0",
+          "a": 1,
+          "b": 0,
+          "p": 0.6229,
           "dist": [
             {
-              "score": "0-1",
-              "p": 0.562
+              "score": "1-0",
+              "p": 0.6229
             },
             {
-              "score": "1-0",
-              "p": 0.438
+              "score": "0-1",
+              "p": 0.3771
             }
           ]
         },
-        "scheduled_at": "2026-06-06T12:45:00+00:00",
+        "scheduled_at": "2026-06-06T16:40:00+00:00",
         "date": "2026-06-06",
         "features": {
-          "rating_diff": 0.0715,
-          "form_diff": -0.044,
+          "rating_diff": 1.7492,
+          "form_diff": 0.2,
           "map_diff": 0.0,
-          "player_diff": 0.001,
-          "h2h_diff": 0.0
+          "player_diff": 0.178,
+          "h2h_diff": 1.0
         },
         "similar_matches": [
           {
-            "date": "2025-06-08",
-            "blue_team": "B8",
-            "red_team": "HEROIC",
-            "winner": "B8",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.2126
-          },
-          {
-            "date": "2025-06-03",
-            "blue_team": "HEROIC",
-            "red_team": "NRG",
-            "winner": "HEROIC",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.2675
-          },
-          {
-            "date": "2025-06-08",
-            "blue_team": "TYLOO",
+            "date": "2025-09-14",
+            "blue_team": "The MongolZ",
             "red_team": "Lynn Vision Gaming",
-            "winner": "Lynn Vision Gaming",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.2989
+            "winner": "The MongolZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.9821
           },
           {
-            "date": "2026-06-05",
-            "blue_team": "Team Liquid",
-            "red_team": "FlyQuest",
-            "winner": "FlyQuest",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.3146
+            "date": "2025-09-13",
+            "blue_team": "FaZe Clan",
+            "red_team": "PaiN Gaming",
+            "winner": "FaZe Clan",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.1747
           },
           {
-            "date": "2025-02-15",
-            "blue_team": "Complexity",
-            "red_team": "Virtus.pro",
-            "winner": "Virtus.pro",
+            "date": "2025-09-14",
+            "blue_team": "Virtus.pro",
+            "red_team": "Astralis",
+            "winner": "Astralis",
             "winner_side": "red",
             "target": 0,
-            "distance": 0.3461
+            "distance": 1.375
+          },
+          {
+            "date": "2025-09-16",
+            "blue_team": "FaZe Clan",
+            "red_team": "The MongolZ",
+            "winner": "The MongolZ",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.3948
+          },
+          {
+            "date": "2025-06-12",
+            "blue_team": "The MongolZ",
+            "red_team": "FURIA",
+            "winner": "FURIA",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.7176
           }
         ],
         "case_based": {
@@ -164,178 +164,442 @@
         }
       },
       {
-        "match_id": "teamspirit-betboomteam-2026-06-06",
+        "match_id": "teamspirit-mibr-2026-06-06",
         "event": "Intel Extreme Masters",
         "team_a": "Team Spirit",
-        "team_b": "BetBoom Team",
-        "p_map_a": 0.6428,
-        "p_a": 0.6428,
+        "team_b": "MIBR",
+        "p_map_a": 0.6667,
+        "p_a": 0.6667,
         "fmt": "BO1",
         "confidence": "moderate",
         "scoreline": {
           "pick": "1-0",
           "a": 1,
           "b": 0,
-          "p": 0.6428,
+          "p": 0.6667,
           "dist": [
             {
               "score": "1-0",
-              "p": 0.6428
+              "p": 0.6667
             },
             {
               "score": "0-1",
-              "p": 0.3572
+              "p": 0.3333
             }
           ]
         },
-        "scheduled_at": "2026-06-06T13:45:00+00:00",
+        "scheduled_at": "2026-06-06T18:30:00+00:00",
         "date": "2026-06-06",
         "features": {
-          "rating_diff": 0.8267,
+          "rating_diff": 3.0445,
           "form_diff": 0.4,
           "map_diff": 0.0,
-          "player_diff": 0.052,
+          "player_diff": 0.244,
           "h2h_diff": 0.0
         },
         "similar_matches": [
           {
-            "date": "2026-06-02",
-            "blue_team": "BIG",
+            "date": "2026-05-10",
+            "blue_team": "FURIA",
+            "red_team": "HEROIC",
+            "winner": "FURIA",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.7847
+          },
+          {
+            "date": "2025-09-14",
+            "blue_team": "GamerLegion",
             "red_team": "Team Liquid",
-            "winner": "Team Liquid",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.4739
+            "winner": "GamerLegion",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.0584
           },
           {
-            "date": "2025-04-06",
+            "date": "2026-06-06",
+            "blue_team": "Team Spirit",
+            "red_team": "BetBoom Team",
+            "winner": "Team Spirit",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.1365
+          },
+          {
+            "date": "2025-06-13",
+            "blue_team": "MOUZ",
+            "red_team": "Team Liquid",
+            "winner": "MOUZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.1589
+          },
+          {
+            "date": "2025-06-08",
             "blue_team": "FaZe Clan",
-            "red_team": "Astralis",
-            "winner": "Astralis",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.4742
-          },
-          {
-            "date": "2025-04-08",
-            "blue_team": "Aurora Gaming",
-            "red_team": "3DMAX",
-            "winner": "3DMAX",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.5548
-          },
-          {
-            "date": "2025-06-04",
-            "blue_team": "B8",
-            "red_team": "Wildcard",
-            "winner": "B8",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.5866
-          },
-          {
-            "date": "2025-06-03",
-            "blue_team": "Lynn Vision Gaming",
             "red_team": "Legacy",
-            "winner": "Lynn Vision Gaming",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.7171
+            "winner": "Legacy",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.293
           }
         ],
         "case_based": {
-          "p_blue_knn": 0.64,
+          "p_blue_knn": 0.52,
           "k": 25,
-          "outcome_rate": "2/5",
+          "outcome_rate": "4/5",
           "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       },
       {
-        "match_id": "legacy-mibr-2026-06-06",
+        "match_id": "paingaming-big-2026-06-06",
         "event": "Intel Extreme Masters",
-        "team_a": "Legacy",
-        "team_b": "MIBR",
-        "p_map_a": 0.5696,
-        "p_a": 0.5696,
+        "team_a": "PaiN Gaming",
+        "team_b": "BIG",
+        "p_map_a": 0.5291,
+        "p_a": 0.5291,
         "fmt": "BO1",
         "confidence": "lean",
         "scoreline": {
           "pick": "1-0",
           "a": 1,
           "b": 0,
-          "p": 0.5696,
+          "p": 0.5291,
           "dist": [
             {
               "score": "1-0",
-              "p": 0.5696
+              "p": 0.5291
             },
             {
               "score": "0-1",
-              "p": 0.4304
+              "p": 0.4709
             }
           ]
         },
-        "scheduled_at": "2026-06-06T13:50:00+00:00",
+        "scheduled_at": "2026-06-06T16:55:00+00:00",
         "date": "2026-06-06",
         "features": {
-          "rating_diff": 0.7802,
+          "rating_diff": 0.8023,
           "form_diff": 0.1,
           "map_diff": 0.0,
-          "player_diff": 0.102,
-          "h2h_diff": 1.0
+          "player_diff": 0.127,
+          "h2h_diff": 0.0
         },
         "similar_matches": [
           {
-            "date": "2025-06-08",
-            "blue_team": "PaiN Gaming",
-            "red_team": "Virtus.pro",
-            "winner": "Virtus.pro",
+            "date": "2026-06-04",
+            "blue_team": "THUNDERdOWNUNDER",
+            "red_team": "FlyQuest",
+            "winner": "FlyQuest",
             "winner_side": "red",
             "target": 0,
-            "distance": 2.6041
+            "distance": 0.4387
           },
           {
-            "date": "2025-06-07",
-            "blue_team": "Team Falcons",
+            "date": "2026-06-03",
+            "blue_team": "Sharks Esports",
             "red_team": "Lynn Vision Gaming",
             "winner": "Lynn Vision Gaming",
             "winner_side": "red",
             "target": 0,
-            "distance": 7.0432
-          },
-          {
-            "date": "2026-06-03",
-            "blue_team": "NRG",
-            "red_team": "FlyQuest",
-            "winner": "NRG",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 7.0449
-          },
-          {
-            "date": "2025-04-10",
-            "blue_team": "Astralis",
-            "red_team": "Virtus.pro",
-            "winner": "Virtus.pro",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 7.054
+            "distance": 0.5521
           },
           {
             "date": "2026-05-11",
-            "blue_team": "HEROIC",
-            "red_team": "Gentle Mates",
-            "winner": "Gentle Mates",
+            "blue_team": "Team Falcons",
+            "red_team": "Monte",
+            "winner": "Team Falcons",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.6019
+          },
+          {
+            "date": "2026-06-06",
+            "blue_team": "G2 Esports",
+            "red_team": "M80",
+            "winner": "G2 Esports",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.6319
+          },
+          {
+            "date": "2026-06-02",
+            "blue_team": "SINNERS Esports",
+            "red_team": "FlyQuest",
+            "winner": "FlyQuest",
             "winner_side": "red",
             "target": 0,
-            "distance": 7.0572
+            "distance": 0.7326
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.56,
+          "k": 25,
+          "outcome_rate": "2/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "legacy-flyquest-2026-06-06",
+        "event": "Intel Extreme Masters",
+        "team_a": "Legacy",
+        "team_b": "FlyQuest",
+        "p_map_a": 0.4208,
+        "p_a": 0.4208,
+        "fmt": "BO1",
+        "confidence": "lean",
+        "scoreline": {
+          "pick": "0-1",
+          "a": 0,
+          "b": 1,
+          "p": 0.5792,
+          "dist": [
+            {
+              "score": "0-1",
+              "p": 0.5792
+            },
+            {
+              "score": "1-0",
+              "p": 0.4208
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-06T17:30:00+00:00",
+        "date": "2026-06-06",
+        "features": {
+          "rating_diff": 0.2412,
+          "form_diff": -0.1,
+          "map_diff": 0.0,
+          "player_diff": 0.039,
+          "h2h_diff": 0.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-09-13",
+            "blue_team": "HEROIC",
+            "red_team": "Legacy",
+            "winner": "Legacy",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.3973
+          },
+          {
+            "date": "2025-09-15",
+            "blue_team": "3DMAX",
+            "red_team": "GamerLegion",
+            "winner": "GamerLegion",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.4441
+          },
+          {
+            "date": "2026-06-02",
+            "blue_team": "M80",
+            "red_team": "Lynn Vision Gaming",
+            "winner": "M80",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.4798
+          },
+          {
+            "date": "2025-06-08",
+            "blue_team": "3DMAX",
+            "red_team": "Nemiga Gaming",
+            "winner": "3DMAX",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.4905
+          },
+          {
+            "date": "2025-09-12",
+            "blue_team": "Aurora Gaming",
+            "red_team": "Astralis",
+            "winner": "Aurora Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.5534
           }
         ],
         "case_based": {
           "p_blue_knn": 0.52,
           "k": 25,
-          "outcome_rate": "1/5",
+          "outcome_rate": "3/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "betboomteam-gamerlegion-2026-06-06",
+        "event": "Intel Extreme Masters",
+        "team_a": "BetBoom Team",
+        "team_b": "GamerLegion",
+        "p_map_a": 0.5048,
+        "p_a": 0.5048,
+        "fmt": "BO1",
+        "confidence": "lean",
+        "scoreline": {
+          "pick": "1-0",
+          "a": 1,
+          "b": 0,
+          "p": 0.5048,
+          "dist": [
+            {
+              "score": "1-0",
+              "p": 0.5048
+            },
+            {
+              "score": "0-1",
+              "p": 0.4952
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-06T17:30:00+00:00",
+        "date": "2026-06-06",
+        "features": {
+          "rating_diff": -0.1054,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": -0.008,
+          "h2h_diff": 1.0
+        },
+        "similar_matches": [
+          {
+            "date": "2026-05-12",
+            "blue_team": "MOUZ",
+            "red_team": "Aurora Gaming",
+            "winner": "MOUZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.2356
+          },
+          {
+            "date": "2026-06-06",
+            "blue_team": "Legacy",
+            "red_team": "MIBR",
+            "winner": "MIBR",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.47
+          },
+          {
+            "date": "2025-09-16",
+            "blue_team": "G2 Esports",
+            "red_team": "GamerLegion",
+            "winner": "G2 Esports",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.4979
+          },
+          {
+            "date": "2026-05-11",
+            "blue_team": "The MongolZ",
+            "red_team": "G2 Esports",
+            "winner": "The MongolZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.5923
+          },
+          {
+            "date": "2026-06-06",
+            "blue_team": "Astralis",
+            "red_team": "GamerLegion",
+            "winner": "Astralis",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.6578
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.48,
+          "k": 25,
+          "outcome_rate": "4/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "b8-m80-2026-06-06",
+        "event": "Intel Extreme Masters",
+        "team_a": "B8",
+        "team_b": "M80",
+        "p_map_a": 0.601,
+        "p_a": 0.601,
+        "fmt": "BO1",
+        "confidence": "lean",
+        "scoreline": {
+          "pick": "1-0",
+          "a": 1,
+          "b": 0,
+          "p": 0.601,
+          "dist": [
+            {
+              "score": "1-0",
+              "p": 0.601
+            },
+            {
+              "score": "0-1",
+              "p": 0.399
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-06T18:30:00+00:00",
+        "date": "2026-06-06",
+        "features": {
+          "rating_diff": 1.0217,
+          "form_diff": 0.156,
+          "map_diff": 0.0,
+          "player_diff": 0.137,
+          "h2h_diff": 1.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-09-14",
+            "blue_team": "The MongolZ",
+            "red_team": "Lynn Vision Gaming",
+            "winner": "The MongolZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.5502
+          },
+          {
+            "date": "2025-09-13",
+            "blue_team": "FaZe Clan",
+            "red_team": "PaiN Gaming",
+            "winner": "FaZe Clan",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.9218
+          },
+          {
+            "date": "2025-09-14",
+            "blue_team": "Virtus.pro",
+            "red_team": "Astralis",
+            "winner": "Astralis",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.9687
+          },
+          {
+            "date": "2025-09-16",
+            "blue_team": "FaZe Clan",
+            "red_team": "The MongolZ",
+            "winner": "The MongolZ",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.1266
+          },
+          {
+            "date": "2025-06-12",
+            "blue_team": "The MongolZ",
+            "red_team": "FURIA",
+            "winner": "FURIA",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.2842
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.64,
+          "k": 25,
+          "outcome_rate": "2/5",
           "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       }

@@ -23,34 +23,64 @@
       "date": "2026-06-06",
       "cs2_matches": [
         {
-          "match_id": "monte-big-2026-06-06",
+          "match_id": "g2esports-monte-2026-06-06",
           "event": "Intel Extreme Masters",
           "fmt": "BO1",
-          "team_a": "Monte",
-          "team_b": "BIG",
-          "p_a": 0.438,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-06T12:45:00+00:00"
+          "team_a": "G2 Esports",
+          "team_b": "Monte",
+          "p_a": 0.6229,
+          "confidence": "moderate",
+          "scheduled_at": "2026-06-06T16:40:00+00:00"
         },
         {
-          "match_id": "teamspirit-betboomteam-2026-06-06",
+          "match_id": "teamspirit-mibr-2026-06-06",
           "event": "Intel Extreme Masters",
           "fmt": "BO1",
           "team_a": "Team Spirit",
-          "team_b": "BetBoom Team",
-          "p_a": 0.6428,
+          "team_b": "MIBR",
+          "p_a": 0.6667,
           "confidence": "moderate",
-          "scheduled_at": "2026-06-06T13:45:00+00:00"
+          "scheduled_at": "2026-06-06T18:30:00+00:00"
         },
         {
-          "match_id": "legacy-mibr-2026-06-06",
+          "match_id": "paingaming-big-2026-06-06",
+          "event": "Intel Extreme Masters",
+          "fmt": "BO1",
+          "team_a": "PaiN Gaming",
+          "team_b": "BIG",
+          "p_a": 0.5291,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-06T16:55:00+00:00"
+        },
+        {
+          "match_id": "legacy-flyquest-2026-06-06",
           "event": "Intel Extreme Masters",
           "fmt": "BO1",
           "team_a": "Legacy",
-          "team_b": "MIBR",
-          "p_a": 0.5696,
+          "team_b": "FlyQuest",
+          "p_a": 0.4208,
           "confidence": "lean",
-          "scheduled_at": "2026-06-06T13:50:00+00:00"
+          "scheduled_at": "2026-06-06T17:30:00+00:00"
+        },
+        {
+          "match_id": "betboomteam-gamerlegion-2026-06-06",
+          "event": "Intel Extreme Masters",
+          "fmt": "BO1",
+          "team_a": "BetBoom Team",
+          "team_b": "GamerLegion",
+          "p_a": 0.5048,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-06T17:30:00+00:00"
+        },
+        {
+          "match_id": "b8-m80-2026-06-06",
+          "event": "Intel Extreme Masters",
+          "fmt": "BO1",
+          "team_a": "B8",
+          "team_b": "M80",
+          "p_a": 0.601,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-06T18:30:00+00:00"
         }
       ],
       "lol_matches": []

@@ -3,71 +3,140 @@
   "date": "2026-06-06",
   "matches": [
     {
-      "match_id": "monte-big-2026-06-06",
+      "match_id": "g2esports-monte-2026-06-06",
       "event": "Intel Extreme Masters",
       "tier": 1,
       "fmt": "BO1",
-      "scheduled_at": "2026-06-06T12:45:00+00:00",
+      "scheduled_at": "2026-06-06T16:40:00+00:00",
       "team_a": {
-        "name": "Monte",
-        "rank": 27,
-        "form": 0.4,
+        "name": "G2 Esports",
+        "rank": 4,
+        "form": 0.7,
         "map_edge": 0.5,
-        "player": -0.034,
+        "player": 0.199,
+        "h2h": 1.0
+      },
+      "team_b": {
+        "name": "Monte",
+        "rank": 23,
+        "form": 0.5,
+        "map_edge": 0.5,
+        "player": 0.021,
+        "h2h": 0.0
+      }
+    },
+    {
+      "match_id": "teamspirit-mibr-2026-06-06",
+      "event": "Intel Extreme Masters",
+      "tier": 1,
+      "fmt": "BO1",
+      "scheduled_at": "2026-06-06T18:30:00+00:00",
+      "team_a": {
+        "name": "Team Spirit",
+        "rank": 1,
+        "form": 1.0,
+        "map_edge": 0.5,
+        "player": 0.276,
+        "h2h": 0.5
+      },
+      "team_b": {
+        "name": "MIBR",
+        "rank": 21,
+        "form": 0.6,
+        "map_edge": 0.5,
+        "player": 0.032,
+        "h2h": 0.5
+      }
+    },
+    {
+      "match_id": "paingaming-big-2026-06-06",
+      "event": "Intel Extreme Masters",
+      "tier": 1,
+      "fmt": "BO1",
+      "scheduled_at": "2026-06-06T16:55:00+00:00",
+      "team_a": {
+        "name": "PaiN Gaming",
+        "rank": 13,
+        "form": 0.6,
+        "map_edge": 0.5,
+        "player": 0.088,
         "h2h": 0.5
       },
       "team_b": {
         "name": "BIG",
         "rank": 29,
-        "form": 0.444,
+        "form": 0.5,
         "map_edge": 0.5,
-        "player": -0.035,
+        "player": -0.039,
         "h2h": 0.5
       }
     },
     {
-      "match_id": "teamspirit-betboomteam-2026-06-06",
+      "match_id": "legacy-flyquest-2026-06-06",
       "event": "Intel Extreme Masters",
       "tier": 1,
       "fmt": "BO1",
-      "scheduled_at": "2026-06-06T13:45:00+00:00",
+      "scheduled_at": "2026-06-06T17:30:00+00:00",
       "team_a": {
-        "name": "Team Spirit",
-        "rank": 7,
-        "form": 1.0,
+        "name": "Legacy",
+        "rank": 33,
+        "form": 0.3,
         "map_edge": 0.5,
-        "player": 0.123,
+        "player": -0.064,
         "h2h": 0.5
       },
       "team_b": {
-        "name": "BetBoom Team",
-        "rank": 16,
-        "form": 0.6,
+        "name": "FlyQuest",
+        "rank": 42,
+        "form": 0.4,
         "map_edge": 0.5,
-        "player": 0.071,
+        "player": -0.103,
         "h2h": 0.5
       }
     },
     {
-      "match_id": "legacy-mibr-2026-06-06",
+      "match_id": "betboomteam-gamerlegion-2026-06-06",
       "event": "Intel Extreme Masters",
       "tier": 1,
       "fmt": "BO1",
-      "scheduled_at": "2026-06-06T13:50:00+00:00",
+      "scheduled_at": "2026-06-06T17:30:00+00:00",
       "team_a": {
-        "name": "Legacy",
-        "rank": 11,
-        "form": 0.6,
+        "name": "BetBoom Team",
+        "rank": 20,
+        "form": 0.5,
         "map_edge": 0.5,
-        "player": 0.105,
+        "player": 0.037,
         "h2h": 1.0
       },
       "team_b": {
-        "name": "MIBR",
-        "rank": 24,
+        "name": "GamerLegion",
+        "rank": 18,
         "form": 0.5,
         "map_edge": 0.5,
-        "player": 0.003,
+        "player": 0.045,
+        "h2h": 0.0
+      }
+    },
+    {
+      "match_id": "b8-m80-2026-06-06",
+      "event": "Intel Extreme Masters",
+      "tier": 1,
+      "fmt": "BO1",
+      "scheduled_at": "2026-06-06T18:30:00+00:00",
+      "team_a": {
+        "name": "B8",
+        "rank": 9,
+        "form": 0.6,
+        "map_edge": 0.5,
+        "player": 0.117,
+        "h2h": 1.0
+      },
+      "team_b": {
+        "name": "M80",
+        "rank": 25,
+        "form": 0.444,
+        "map_edge": 0.5,
+        "player": -0.02,
         "h2h": 0.0
       }
     }
