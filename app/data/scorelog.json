@@ -100,6 +100,98 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "g2esports-m80-2026-06-06",
+      "date": "2026-06-06",
+      "game": "cs2",
+      "event": "Intel Extreme Masters",
+      "team_a": "G2 Esports",
+      "team_b": "M80",
+      "p_a": 0.6301,
+      "p_map": 0.5876,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 1.3863,
+        "form_diff": 0.25,
+        "map_diff": 0.0,
+        "player_diff": 0.115,
+        "h2h_diff": 0.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "monte-big-2026-06-06",
+      "date": "2026-06-06",
+      "game": "cs2",
+      "event": "Intel Extreme Masters",
+      "team_a": "Monte",
+      "team_b": "BIG",
+      "p_a": 0.4075,
+      "p_map": 0.438,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.0715,
+        "form_diff": -0.044,
+        "map_diff": 0.0,
+        "player_diff": 0.001,
+        "h2h_diff": 0.0
+      },
+      "pick": "BIG",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "teamspirit-betboomteam-2026-06-06",
+      "date": "2026-06-06",
+      "game": "cs2",
+      "event": "Intel Extreme Masters",
+      "team_a": "Team Spirit",
+      "team_b": "BetBoom Team",
+      "p_a": 0.7084,
+      "p_map": 0.6428,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 0.8267,
+        "form_diff": 0.4,
+        "map_diff": 0.0,
+        "player_diff": 0.052,
+        "h2h_diff": 0.0
+      },
+      "pick": "Team Spirit",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "legacy-mibr-2026-06-06",
+      "date": "2026-06-06",
+      "game": "cs2",
+      "event": "Intel Extreme Masters",
+      "team_a": "Legacy",
+      "team_b": "MIBR",
+      "p_a": 0.6038,
+      "p_map": 0.5696,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.7802,
+        "form_diff": 0.1,
+        "map_diff": 0.0,
+        "player_diff": 0.102,
+        "h2h_diff": 1.0
+      },
+      "pick": "Legacy",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

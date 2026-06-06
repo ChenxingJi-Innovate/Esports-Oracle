@@ -22,7 +22,7 @@ import math
 from datetime import date
 from pathlib import Path
 
-from .predictor import LinearModel, best_of, confidence_band
+from .predictor import LinearModel, best_of, confidence_band, scoreline
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -72,7 +72,20 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None,
             continue  # tier-1 gate
         a, b = m["team_a"], m["team_b"]
         feats = _features(a, b)
-        p_map = mdl.map_prob(feats)
+
+        # Compute the OE kNN first: it doubles as reasoning AND, for
+        # auto-fetched fixtures (predict: case_based) that carry no hand-entered
+        # rank/form, as the actual pick (the grounded ~69% model beats a 50/50
+        # linear read on empty inputs).
+        sim = None
+        if case_base is not None:
+            try:
+                sim = case_based.similar_matches_for_live(m, as_of, case_base=case_base)
+            except Exception:
+                sim = None
+
+        use_knn = m.get("predict") == "case_based" and sim is not None
+        p_map = sim["p_blue_knn"] if use_knn else mdl.map_prob(feats)
         fmt = m.get("fmt", "BO3")
         n = {"BO1": 1, "BO3": 3, "BO5": 5}.get(fmt, 3)
         p_series = best_of(p_map, n)
@@ -85,23 +98,19 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None,
             "p_a": round(p_series, 4),
             "fmt": fmt,
             "confidence": confidence_band(p_series, fmt),
+            "scoreline": scoreline(p_map, fmt),
+            "pick_source": "case_based" if use_knn else "linear",
             "features": {k: round(v, 4) for k, v in feats.items()},
         }
-        # OE case-based reasoning: only attach when BOTH teams exist in the OE
-        # case base. Otherwise leave the logistic pick untouched (no fabricated
-        # neighbors for minor-region / newly-promoted teams).
-        if case_base is not None:
-            try:
-                sim = case_based.similar_matches_for_live(m, as_of, case_base=case_base)
-                if sim:
-                    pred["similar_matches"] = sim["matches"]
-                    pred["case_based"] = {
-                        "p_blue_knn": sim["p_blue_knn"],
-                        "k": sim["k"],
-                        "outcome_rate": sim["outcome_rate"],
-                    }
-            except Exception:
-                pass  # reasoning is append-only; never break the core pick
+        # Attach the top-5 similar matches as the auditable "why" whenever both
+        # teams are OE-grounded (independent of which model drove the pick).
+        if sim:
+            pred["similar_matches"] = sim["matches"]
+            pred["case_based"] = {
+                "p_blue_knn": sim["p_blue_knn"],
+                "k": sim["k"],
+                "outcome_rate": sim["outcome_rate"],
+            }
         out.append(pred)
     return out
 

@@ -19,7 +19,7 @@ import json
 import math
 from pathlib import Path
 
-from .predictor import LinearModel, best_of, confidence_band
+from .predictor import LinearModel, best_of, confidence_band, scoreline
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -87,6 +87,7 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None) -
             "p_a": round(p_series, 4),
             "fmt": fmt,
             "confidence": confidence_band(p_series, fmt),
+            "scoreline": scoreline(p_map, fmt),
             "features": {k: round(v, 4) for k, v in feats.items()},
         }
         # Case-based reasoning: top-5 similar past maps when at least one team is

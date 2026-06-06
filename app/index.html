@@ -31,6 +31,11 @@
   .fa{background:linear-gradient(90deg,#6ea8fe,#3ad29f)} .fb{background:#3a4150}
   .pct{display:flex;justify-content:space-between;font-size:13px;font-variant-numeric:tabular-nums;margin-top:5px}
   .pa{color:var(--good)} .pb{color:var(--mut)}
+  .score-line{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+  .score-pick{font-size:12.5px;font-weight:600;color:var(--accent);white-space:nowrap}
+  .score-dist{display:flex;gap:6px;flex-wrap:wrap}
+  .scell{font-size:11.5px;color:var(--mut);background:#0f131a;border:1px solid var(--line);border-radius:7px;padding:2px 7px;font-variant-numeric:tabular-nums}
+  .scell b{color:var(--ink);font-weight:600}
   .empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px}
   table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
   th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);color:var(--mut)}
@@ -105,6 +110,16 @@ function simBlock(m){
     <div class="simnote">${cb.note || `Oracle's Elixir kNN (k=${cb.k||'?'}). Nearer = more similar on the 8 engineered features.`}</div>
   </details>`;
 }
+function scoreBlock(m){
+  // Predicted scoreline (几比几): most-likely final map score + full distribution.
+  const sl = m.scoreline;
+  if(!sl || !sl.dist) return '';
+  const bars = sl.dist.map(d=>`<span class="scell"><b>${d.score}</b> ${(d.p*100).toFixed(0)}%</span>`).join('');
+  return `<div class="score-line">
+    <span class="score-pick">预测比分 ${sl.pick}</span>
+    <span class="score-dist">${bars}</span>
+  </div>`;
+}
 function matchRow(m, game){
   const pa = m.p_a, pb = 1-m.p_a, aLead = pa >= pb;
   return `<div class="row">
@@ -113,6 +128,7 @@ function matchRow(m, game){
     <div class="bar"><span class="fa" style="width:${pct(pa)}"></span><span class="fb" style="width:${pct(pb)}"></span></div>
     <div class="pct"><span class="${aLead?'pa':'pb'}">${pct(pa)} ${aLead?'◄ pick':''}</span>
       <span class="${!aLead?'pa':'pb'}">${!aLead?'pick ►':''} ${pct(pb)}</span></div>
+    ${scoreBlock(m)}
     <button class="explain" onclick="explain('${game}','${m.match_id}',this)">🔍 Explain</button>
     ${simBlock(m)}
     <div class="reason" id="r-${m.match_id}"></div>

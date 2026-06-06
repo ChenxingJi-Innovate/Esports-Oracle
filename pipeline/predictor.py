@@ -53,6 +53,39 @@ def best_of(p_map: float, n: int) -> float:
     return total
 
 
+def scoreline_probs(p_map: float, fmt: str) -> list[dict]:
+    """Distribution over final map scorelines, assuming map independence (same
+    assumption as best_of). Returns every reachable scoreline as
+    {a, b, p} (a = team_a's maps, b = team_b's maps), sorted most likely first.
+
+    For a first-to-`need` series, team_a winning `need`-`k` means: across the
+    first need-1+k maps team_a took need-1 and the opponent took k, then team_a
+    closes it out. Summing the team_a branch reproduces best_of() exactly."""
+    need = {"BO1": 1, "BO3": 2, "BO5": 3}.get(fmt, 2)
+    p, q = p_map, 1.0 - p_map
+    out: list[dict] = []
+    for k in range(need):  # opponent's map count when team_a wins
+        prob = math.comb(need - 1 + k, k) * p ** need * q ** k
+        out.append({"a": need, "b": k, "p": prob})
+    for k in range(need):  # team_a's map count when opponent wins
+        prob = math.comb(need - 1 + k, k) * q ** need * p ** k
+        out.append({"a": k, "b": need, "p": prob})
+    out.sort(key=lambda d: -d["p"])
+    return out
+
+
+def scoreline(p_map: float, fmt: str) -> dict:
+    """Most-likely scoreline + the full distribution, ready to drop on a pick.
+    {"pick": "2-1", "a": 2, "b": 1, "p": 0.29, "dist": [{score,p}, ...]}."""
+    dist = scoreline_probs(p_map, fmt)
+    top = dist[0]
+    return {
+        "pick": f"{top['a']}-{top['b']}",
+        "a": top["a"], "b": top["b"], "p": round(top["p"], 4),
+        "dist": [{"score": f"{d['a']}-{d['b']}", "p": round(d["p"], 4)} for d in dist],
+    }
+
+
 def confidence_band(p_series: float, fmt: str) -> str:
     """Honest confidence tag. BO1 is high variance, so we never call it 'strong'."""
     edge = abs(p_series - 0.5)

@@ -4,37 +4,7 @@
   "next_dates": [
     {
       "date": "2026-06-05",
-      "cs2_matches": [
-        {
-          "match_id": "iem-cologne-2026-s1-tyloo-lvg",
-          "event": "IEM Cologne Major 2026 (Stage 1 final day)",
-          "fmt": "BO3",
-          "team_a": "TyLoo",
-          "team_b": "Lynn Vision",
-          "p_a": 0.5911,
-          "confidence": "lean",
-          "time": "15:00"
-        },
-        {
-          "match_id": "iem-cologne-2026-s1-liquid-flyquest",
-          "event": "IEM Cologne Major 2026 (Stage 1 final day)",
-          "fmt": "BO3",
-          "team_a": "Liquid",
-          "team_b": "FlyQuest",
-          "p_a": 0.562,
-          "confidence": "coin-flip",
-          "time": "17:30"
-        },
-        {
-          "match_id": "iem-cologne-2026-s1-nrg-big",
-          "event": "IEM Cologne Major 2026 (Stage 1 final day)",
-          "fmt": "BO3",
-          "team_a": "NRG",
-          "team_b": "BIG",
-          "p_a": 0.4563,
-          "confidence": "coin-flip"
-        }
-      ],
+      "cs2_matches": [],
       "lol_matches": [
         {
           "match_id": "lpl-2026-s2-lbqf-al-lgd",
@@ -48,6 +18,52 @@
           "scheduled_at": "2026-06-05T11:00:00Z"
         }
       ]
+    },
+    {
+      "date": "2026-06-06",
+      "cs2_matches": [
+        {
+          "match_id": "g2esports-m80-2026-06-06",
+          "event": "Intel Extreme Masters",
+          "fmt": "BO3",
+          "team_a": "G2 Esports",
+          "team_b": "M80",
+          "p_a": 0.6301,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-06T12:40:00+00:00"
+        },
+        {
+          "match_id": "monte-big-2026-06-06",
+          "event": "Intel Extreme Masters",
+          "fmt": "BO3",
+          "team_a": "Monte",
+          "team_b": "BIG",
+          "p_a": 0.4075,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-06T12:45:00+00:00"
+        },
+        {
+          "match_id": "teamspirit-betboomteam-2026-06-06",
+          "event": "Intel Extreme Masters",
+          "fmt": "BO3",
+          "team_a": "Team Spirit",
+          "team_b": "BetBoom Team",
+          "p_a": 0.7084,
+          "confidence": "moderate",
+          "scheduled_at": "2026-06-06T13:30:00+00:00"
+        },
+        {
+          "match_id": "legacy-mibr-2026-06-06",
+          "event": "Intel Extreme Masters",
+          "fmt": "BO3",
+          "team_a": "Legacy",
+          "team_b": "MIBR",
+          "p_a": 0.6038,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-06T13:30:00+00:00"
+        }
+      ],
+      "lol_matches": []
     }
   ]
 }

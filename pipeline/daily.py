@@ -45,6 +45,16 @@ def run(today: date) -> dict:
     day = today.isoformat()
     log = scorelog.load(SCORELOG)
 
+    # 0. AUTO-SCHEDULE: pull today's real upcoming fixtures from Liquipedia into
+    #    the inputs, so we predict the actual slate instead of a stale hand-typed
+    #    one. Best-effort: a failed/empty fetch leaves existing inputs untouched.
+    try:
+        from . import fetch_schedule
+        sched = fetch_schedule.refresh(today)
+        print(json.dumps({"schedule_refresh": sched}))
+    except Exception as e:
+        print(json.dumps({"schedule_refresh_error": str(e)}))
+
     # 1-2. auto-grade from Liquipedia (manual results.json overrides), + scorecard
     results = {**refresh_results.auto_results(log), **_load_results()}
     graded = scorelog.grade_pending(log, results)
