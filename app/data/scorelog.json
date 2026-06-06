@@ -71,9 +71,12 @@
         "h2h_diff": 0.1
       },
       "pick": "NRG",
-      "result": null,
-      "map_score": null,
-      "correct": null
+      "result": "b",
+      "map_score": [
+        1,
+        2
+      ],
+      "correct": false
     },
     {
       "match_id": "lpl-2026-s2-lbqf-al-lgd",
@@ -101,15 +104,15 @@
   ],
   "accuracy": {
     "overall": {
-      "graded": 2,
-      "accuracy": 0.5,
-      "brier": 0.3058
+      "graded": 3,
+      "accuracy": 0.3333,
+      "brier": 0.2971
     },
     "by_game": {
       "cs2": {
-        "graded": 2,
-        "accuracy": 0.5,
-        "brier": 0.3058
+        "graded": 3,
+        "accuracy": 0.3333,
+        "brier": 0.2971
       },
       "lol": {
         "graded": 0,

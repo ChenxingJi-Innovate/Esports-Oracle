@@ -11,7 +11,7 @@
           "fmt": "BO3",
           "team_a": "TyLoo",
           "team_b": "Lynn Vision",
-          "p_a": 0.6125,
+          "p_a": 0.5911,
           "confidence": "lean",
           "time": "15:00"
         },
@@ -21,7 +21,7 @@
           "fmt": "BO3",
           "team_a": "Liquid",
           "team_b": "FlyQuest",
-          "p_a": 0.5436,
+          "p_a": 0.562,
           "confidence": "coin-flip",
           "time": "17:30"
         },
@@ -31,7 +31,7 @@
           "fmt": "BO3",
           "team_a": "NRG",
           "team_b": "BIG",
-          "p_a": 0.4808,
+          "p_a": 0.4563,
           "confidence": "coin-flip"
         }
       ],
