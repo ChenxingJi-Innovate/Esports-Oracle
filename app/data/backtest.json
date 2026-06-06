@@ -1,0 +1,57 @@
+{
+  "holdout": {
+    "start": "2026-05-15",
+    "end": "2026-06-01",
+    "n": 691
+  },
+  "windows": [
+    {
+      "window": "1w",
+      "days": 7,
+      "n_train": 287,
+      "window_start": "2026-05-08",
+      "accuracy": 0.6758,
+      "brier": 0.2087,
+      "logloss": 0.6052
+    },
+    {
+      "window": "1m",
+      "days": 30,
+      "n_train": 1420,
+      "window_start": "2026-04-15",
+      "accuracy": 0.6932,
+      "brier": 0.2027,
+      "logloss": 0.5923
+    },
+    {
+      "window": "3m",
+      "days": 90,
+      "n_train": 3019,
+      "window_start": "2026-02-14",
+      "accuracy": 0.7062,
+      "brier": 0.2019,
+      "logloss": 0.5904
+    },
+    {
+      "window": "6m",
+      "days": 182,
+      "n_train": 4183,
+      "window_start": "2025-11-14",
+      "accuracy": 0.6946,
+      "brier": 0.2023,
+      "logloss": 0.5912
+    }
+  ],
+  "best_window": "3m",
+  "model": "z-scored L2-logistic (same backbone as build_dataset / predictor)",
+  "features": [
+    "elo_diff",
+    "team_recent_diff",
+    "side_profile_diff",
+    "player_form_diff",
+    "player_champion_diff",
+    "team_champion_diff",
+    "champion_meta_diff",
+    "patch_experience_diff"
+  ]
+}

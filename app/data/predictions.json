@@ -50,6 +50,19 @@
     ],
     "lol": []
   },
+  "case_based": {
+    "lol": {
+      "accuracy": 0.689,
+      "note": "OE kNN, 702-game holdout (static)"
+    },
+    "cs2": {
+      "n_cases": 197,
+      "holdout_maps": 40,
+      "k": 25,
+      "accuracy": 0.45,
+      "brier": 0.2722
+    }
+  },
   "slate": {
     "cs2": [
       {
@@ -67,6 +80,59 @@
           "map_diff": 0.07,
           "player_diff": 0.02,
           "h2h_diff": 0.4
+        },
+        "similar_matches": [
+          {
+            "date": "2025-06-08",
+            "blue_team": "B8",
+            "red_team": "HEROIC",
+            "winner": "B8",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.2211
+          },
+          {
+            "date": "2025-06-08",
+            "blue_team": "TYLOO",
+            "red_team": "Lynn Vision Gaming",
+            "winner": "Lynn Vision Gaming",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.2333
+          },
+          {
+            "date": "2025-06-03",
+            "blue_team": "HEROIC",
+            "red_team": "NRG",
+            "winner": "HEROIC",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.256
+          },
+          {
+            "date": "2025-04-07",
+            "blue_team": "Aurora Gaming",
+            "red_team": "Legacy",
+            "winner": "Aurora Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.3144
+          },
+          {
+            "date": "2025-02-15",
+            "blue_team": "SAW",
+            "red_team": "Astralis",
+            "winner": "Astralis",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.3372
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.56,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       },
       {
@@ -84,6 +150,59 @@
           "map_diff": 0.1,
           "player_diff": 0.03,
           "h2h_diff": 0.2
+        },
+        "similar_matches": [
+          {
+            "date": "2026-06-04",
+            "blue_team": "THUNDERdOWNUNDER",
+            "red_team": "FlyQuest",
+            "winner": "FlyQuest",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.6498
+          },
+          {
+            "date": "2025-06-07",
+            "blue_team": "PaiN Gaming",
+            "red_team": "FURIA",
+            "winner": "PaiN Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.6593
+          },
+          {
+            "date": "2025-04-10",
+            "blue_team": "Astralis",
+            "red_team": "Virtus.pro",
+            "winner": "Virtus.pro",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.751
+          },
+          {
+            "date": "2026-06-03",
+            "blue_team": "NRG",
+            "red_team": "FlyQuest",
+            "winner": "NRG",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.7816
+          },
+          {
+            "date": "2026-05-09",
+            "blue_team": "Team Falcons",
+            "red_team": "K27",
+            "winner": "Team Falcons",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.805
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.44,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       },
       {
@@ -101,6 +220,59 @@
           "map_diff": 0.0,
           "player_diff": 0.0,
           "h2h_diff": 0.1
+        },
+        "similar_matches": [
+          {
+            "date": "2025-02-16",
+            "blue_team": "SAW",
+            "red_team": "FlyQuest",
+            "winner": "SAW",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.0465
+          },
+          {
+            "date": "2025-02-16",
+            "blue_team": "Wildcard",
+            "red_team": "Virtus.pro",
+            "winner": "Virtus.pro",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.0465
+          },
+          {
+            "date": "2025-02-16",
+            "blue_team": "3DMAX",
+            "red_team": "MIBR",
+            "winner": "3DMAX",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.0465
+          },
+          {
+            "date": "2025-02-17",
+            "blue_team": "PaiN Gaming",
+            "red_team": "Virtus.pro",
+            "winner": "PaiN Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.1157
+          },
+          {
+            "date": "2025-02-17",
+            "blue_team": "3DMAX",
+            "red_team": "Eternal Fire",
+            "winner": "Eternal Fire",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.1157
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.76,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       }
     ],
@@ -120,6 +292,63 @@
           "map_diff": 0.15,
           "player_diff": 0.06,
           "h2h_diff": 0.6
+        },
+        "similar_matches": [
+          {
+            "gameid": "LOLTMNT03_332179",
+            "date": "2025-12-29T10:52:27",
+            "blue_team": "Anyone's Legend",
+            "red_team": "LGD Gaming",
+            "target": 0,
+            "winner": "LGD Gaming",
+            "winner_side": "red",
+            "distance": 0.0
+          },
+          {
+            "gameid": "LOLTMNT03_331511",
+            "date": "2025-12-29T09:57:49",
+            "blue_team": "Anyone's Legend",
+            "red_team": "LGD Gaming",
+            "target": 0,
+            "winner": "LGD Gaming",
+            "winner_side": "red",
+            "distance": 1.3846
+          },
+          {
+            "gameid": "LOLTMNT05_146931",
+            "date": "2025-08-13T16:11:20",
+            "blue_team": "Venomcrest Esports",
+            "red_team": "DMG Esports",
+            "target": 0,
+            "winner": "DMG Esports",
+            "winner_side": "red",
+            "distance": 1.5737
+          },
+          {
+            "gameid": "LOLTMNT02_269512",
+            "date": "2025-05-19T19:14:53",
+            "blue_team": "WAP Esports",
+            "red_team": "Sicar Esports",
+            "target": 1,
+            "winner": "WAP Esports",
+            "winner_side": "blue",
+            "distance": 1.6164
+          },
+          {
+            "gameid": "LOLTMNT01_233311",
+            "date": "2025-04-25T23:04:39",
+            "blue_team": "Supernova",
+            "red_team": "Blue Otter",
+            "target": 0,
+            "winner": "Blue Otter",
+            "winner_side": "red",
+            "distance": 1.6507
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.5333,
+          "k": 75,
+          "outcome_rate": "1/5"
         }
       }
     ]
@@ -128,6 +357,7 @@
     "Tier-1 events only (CS2 big LAN; LoL LPL/LCK/LEC/MSI/Worlds).",
     "Rolling 1-year window; older predictions auto-purged.",
     "Model self-trains daily on graded results, anchored to the prior.",
-    "p_a = probability the first-listed team wins the series."
+    "p_a = probability the first-listed team wins the series.",
+    "Case-based 'similar matches' are transparency, not the pick: the displayed win% is the calibrated model. LoL kNN ~69% out-of-sample; CS2 kNN is provisional (small Liquipedia corpus) - see case_based."
   ]
 }

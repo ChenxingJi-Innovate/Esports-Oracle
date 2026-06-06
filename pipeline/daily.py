@@ -64,7 +64,9 @@ def run(today: date) -> dict:
 
     # 5. today's tier-1 slate, using the freshly self-trained models
     cs2 = predict_cs2(model=models["cs2"])
-    lol = predict_lol(model=models["lol"])
+    # LoL picks carry OE case-based reasoning (top-5 similar matches) when both
+    # teams exist in the OE case base; as_of=today keeps the kNN leakage-free.
+    lol = predict_lol(model=models["lol"], as_of_date=today)
 
     # 6. log today's picks (dedup-safe) + refresh scorecard
     scorelog.append_predictions(log, day, "cs2", cs2)
@@ -74,17 +76,34 @@ def run(today: date) -> dict:
     # 6. publish
     APP_DATA.mkdir(parents=True, exist_ok=True)
     scorelog.save(SCORELOG, log)
+
+    # Case-based reasoning health: the HONEST out-of-sample number for the kNN
+    # similar-match layer, published so the UI never mistakes it for an edge.
+    # CS2 is cheap to backtest live (small corpus); LoL's fixed-window figure is
+    # static (~0.689 on a 702-game holdout, see pipeline.case_based) so we cite
+    # it rather than re-running the heavy backtest every cron.
+    case_based_health = {"lol": {"accuracy": 0.689, "note": "OE kNN, 702-game holdout (static)"}}
+    try:
+        from . import cs2_case_based
+        case_based_health["cs2"] = cs2_case_based.backtest()
+    except Exception as e:  # corpus missing / too small -> reasoning just absent
+        case_based_health["cs2"] = {"error": str(e)}
+
     PREDICTIONS.write_text(json.dumps({
         "generated_for": day,
         "accuracy": acc,
         "training": train_meta,
         "calibration": {g: scorelog.calibration(log, g) for g in ("cs2", "lol")},
+        "case_based": case_based_health,
         "slate": {"cs2": cs2, "lol": lol},
         "notes": [
             "Tier-1 events only (CS2 big LAN; LoL LPL/LCK/LEC/MSI/Worlds).",
             "Rolling 1-year window; older predictions auto-purged.",
             "Model self-trains daily on graded results, anchored to the prior.",
             "p_a = probability the first-listed team wins the series.",
+            "Case-based 'similar matches' are transparency, not the pick: the "
+            "displayed win% is the calibrated model. LoL kNN ~69% out-of-sample; "
+            "CS2 kNN is provisional (small Liquipedia corpus) - see case_based.",
         ],
     }, indent=2, ensure_ascii=False), encoding="utf-8")
 

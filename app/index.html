@@ -46,12 +46,19 @@
     border-radius:10px;padding:0;line-height:1.6;overflow:hidden;max-height:0;transition:max-height .2s}
   .reason.open{padding:12px 14px;max-height:none}
   .reason .v{font-weight:650}.reason .adj{color:var(--warn)}.reason .src{color:var(--mut);font-size:12px;margin-top:8px}
+  .sim{margin-top:10px;background:#0f131a;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+  .sim summary{cursor:pointer;color:var(--accent);font-size:12.5px;list-style:none}
+  .sim summary::-webkit-details-marker{display:none}
+  .sim summary::before{content:"▸ ";color:var(--mut)}
+  .sim[open] summary::before{content:"▾ "}
+  .simtbl{margin-top:6px}.simtbl td,.simtbl th{padding:5px 6px}
+  .simnote{color:var(--mut);font-size:11.5px;margin-top:4px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Esports Oracle</h1>
-  <p class="sub">Daily predictions for <b>tier-1</b> CS2 + LoL events · self-grading · rolling 1-year model · <a href="schedule.html">Upcoming matches →</a> · <a href="predict.html">Ask any matchup →</a> · <a href="explorer.html">LoL team explorer →</a></p>
+  <p class="sub">Daily predictions for <b>tier-1</b> CS2 + LoL events · self-grading · rolling 1-year model · <a href="schedule.html">Upcoming matches →</a> · <a href="predict.html">Ask any matchup →</a> · <a href="explorer.html">LoL team explorer →</a> · <a href="backtest.html">Backtest →</a></p>
 
   <div class="score" id="score"></div>
 
@@ -76,6 +83,28 @@
 
 <script>
 const pct = x => (x*100).toFixed(1) + "%";
+function simBlock(m){
+  // OE case-based reasoning: top-5 similar historical matchups as the "why".
+  const sims = m.similar_matches;
+  if(!sims || !sims.length){ return ''; }
+  const cb = m.case_based || {};
+  const rate = cb.outcome_rate ? ` · blue won ${cb.outcome_rate} of nearest`
+    : '';
+  const rows = sims.map(s=>`<tr>
+      <td>${(s.date||'').slice(0,10)}</td>
+      <td>${s.blue_team} vs ${s.red_team}</td>
+      <td class="${s.winner_side==='blue'?'pa':'pb'}">${s.winner}</td>
+      <td>${(s.distance).toFixed(3)}</td>
+    </tr>`).join('');
+  return `<details class="sim">
+    <summary>Similar historical matchups${rate}</summary>
+    <table class="simtbl">
+      <tr><th>Date</th><th>Blue vs Red</th><th>Winner</th><th>Distance</th></tr>
+      ${rows}
+    </table>
+    <div class="simnote">${cb.note || `Oracle's Elixir kNN (k=${cb.k||'?'}). Nearer = more similar on the 8 engineered features.`}</div>
+  </details>`;
+}
 function matchRow(m, game){
   const pa = m.p_a, pb = 1-m.p_a, aLead = pa >= pb;
   return `<div class="row">
@@ -85,6 +114,7 @@ function matchRow(m, game){
     <div class="pct"><span class="${aLead?'pa':'pb'}">${pct(pa)} ${aLead?'◄ pick':''}</span>
       <span class="${!aLead?'pa':'pb'}">${!aLead?'pick ►':''} ${pct(pb)}</span></div>
     <button class="explain" onclick="explain('${game}','${m.match_id}',this)">🔍 Explain</button>
+    ${simBlock(m)}
     <div class="reason" id="r-${m.match_id}"></div>
   </div>`;
 }

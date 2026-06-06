@@ -55,6 +55,19 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None) -
     path = inputs_path or (ROOT / "data" / "cs2_inputs.json")
     data = json.loads(path.read_text(encoding="utf-8"))
     mdl = model or _CS2_MODEL          # use the self-trained model when supplied
+
+    # Lazy-load the CS2 case base (derived from Liquipedia tier-1 history) once
+    # per slate. Optional: if the corpus/feature table is missing, the linear
+    # pick stands alone, exactly like the LoL pipeline's OE case base.
+    case_base = None
+    cs2_case_based = None
+    try:
+        from . import cs2_case_based as _cb
+        cs2_case_based = _cb
+        case_base = _cb.load_case_base()
+    except Exception:
+        case_base = None
+
     out = []
     for m in data.get("matches", []):
         if m.get("tier") != 1:
@@ -65,7 +78,7 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None) -
         fmt = m.get("fmt", "BO3")
         n = {"BO1": 1, "BO3": 3, "BO5": 5}.get(fmt, 3)
         p_series = best_of(p_map, n)
-        out.append({
+        pred = {
             "match_id": m["match_id"],
             "event": m["event"],
             "team_a": a["name"],
@@ -75,7 +88,24 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None) -
             "fmt": fmt,
             "confidence": confidence_band(p_series, fmt),
             "features": {k: round(v, 4) for k, v in feats.items()},
-        })
+        }
+        # Case-based reasoning: top-5 similar past maps when at least one team is
+        # in the CS2 history base. Append-only; never breaks the core pick.
+        if case_base is not None and cs2_case_based is not None:
+            try:
+                sim = cs2_case_based.similar_matches_for_live(
+                    a["name"], b["name"], case_base)
+                if sim:
+                    pred["similar_matches"] = sim["matches"]
+                    pred["case_based"] = {
+                        "p_blue_knn": sim["p_blue_knn"],
+                        "k": sim["k"],
+                        "outcome_rate": sim["outcome_rate"],
+                        "note": sim["note"],
+                    }
+            except Exception:
+                pass  # reasoning is append-only; never break the core pick
+        out.append(pred)
     return out
 
 

@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import math
+from datetime import date
 from pathlib import Path
 
 from .predictor import LinearModel, best_of, confidence_band
@@ -48,11 +49,23 @@ def _features(a: dict, b: dict) -> dict:
     }
 
 
-def predict(inputs_path: Path | None = None, model: LinearModel | None = None) -> list[dict]:
+def predict(inputs_path: Path | None = None, model: LinearModel | None = None,
+            as_of_date: date | None = None) -> list[dict]:
     path = inputs_path or (ROOT / "data" / "lol_inputs.json")
     data = json.loads(path.read_text(encoding="utf-8"))
     allowed = set(data.get("allowed_leagues", []))
     mdl = model or _LOL_MODEL          # use the self-trained model when supplied
+    as_of = as_of_date or date.today()
+
+    # Lazy-load the OE case base once for this slate. It is optional: if the
+    # module/CSV is unavailable the logistic pick stands alone.
+    case_base = None
+    try:
+        from . import case_based
+        case_base = case_based.load_case_base()
+    except Exception:
+        case_based = None  # type: ignore
+
     out = []
     for m in data.get("matches", []):
         if allowed and m.get("league") not in allowed:
@@ -63,7 +76,7 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None) -
         fmt = m.get("fmt", "BO3")
         n = {"BO1": 1, "BO3": 3, "BO5": 5}.get(fmt, 3)
         p_series = best_of(p_map, n)
-        out.append({
+        pred = {
             "match_id": m["match_id"],
             "event": m.get("event", m.get("league", "")),
             "team_a": a["name"],
@@ -73,7 +86,23 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None) -
             "fmt": fmt,
             "confidence": confidence_band(p_series, fmt),
             "features": {k: round(v, 4) for k, v in feats.items()},
-        })
+        }
+        # OE case-based reasoning: only attach when BOTH teams exist in the OE
+        # case base. Otherwise leave the logistic pick untouched (no fabricated
+        # neighbors for minor-region / newly-promoted teams).
+        if case_base is not None:
+            try:
+                sim = case_based.similar_matches_for_live(m, as_of, case_base=case_base)
+                if sim:
+                    pred["similar_matches"] = sim["matches"]
+                    pred["case_based"] = {
+                        "p_blue_knn": sim["p_blue_knn"],
+                        "k": sim["k"],
+                        "outcome_rate": sim["outcome_rate"],
+                    }
+            except Exception:
+                pass  # reasoning is append-only; never break the core pick
+        out.append(pred)
     return out
 
 

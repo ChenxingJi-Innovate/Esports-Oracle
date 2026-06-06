@@ -1,11 +1,11 @@
 {
-  "intercept": -0.09255320013305099,
+  "intercept": -0.1662303274067991,
   "weights": {
-    "rating_diff": -0.15394717522954382,
-    "form_diff": 0.2933567032229703,
-    "map_diff": 0.06904878741620109,
-    "player_diff": 0.10558718469798532,
-    "h2h_diff": 0.19068524577299364
+    "rating_diff": -0.043589457206937264,
+    "form_diff": 0.2756911861421248,
+    "map_diff": 0.13494534844163014,
+    "player_diff": 0.12651392381967197,
+    "h2h_diff": 0.15141699593260338
   },
   "mean": {
     "rating_diff": 0.0,
@@ -22,10 +22,10 @@
     "h2h_diff": 0.8
   },
   "meta": {
-    "n_train": 4,
+    "n_train": 7,
     "trained": true,
-    "shrinkage": 0.091,
-    "l2_to_prior": 0.565,
-    "in_sample_acc": 0.5
+    "shrinkage": 0.149,
+    "l2_to_prior": 0.531,
+    "in_sample_acc": 0.571
   }
 }

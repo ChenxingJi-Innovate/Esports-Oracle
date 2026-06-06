@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Windowed Backtest — Esports Oracle</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--ink:#e8ebf0;--mut:#9aa3b2;
+    --good:#3ad29f;--warn:#f0b35b;--hot:#ff5d5d;--accent:#6ea8fe;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:38px 22px 90px}
+  h1{font-size:28px;letter-spacing:-.02em;margin:0 0 2px}
+  .sub{color:var(--mut);margin:0 0 26px}
+  .sub a{color:var(--accent);text-decoration:none}
+  .modelsel{display:flex;align-items:center;gap:8px;color:var(--mut);font-size:13px;margin:0 0 22px}
+  .modelsel select{background:#0f131a;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:5px 8px;font-size:13px}
+  .score{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:150px}
+  .stat .k{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .stat .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums;margin-top:3px}
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin:30px 0 12px}
+  .row{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;transition:border-color .15s,opacity .15s}
+  .row.best{border-color:var(--good)}
+  .row.dim{opacity:.4}
+  .row.focus{border-color:var(--accent)}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .wname{font-size:17px;font-weight:650}
+  .wname .tag{font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--good);color:var(--good);margin-left:8px;font-weight:500}
+  .meta{color:var(--mut);font-size:12.5px}
+  .metrics{display:flex;gap:26px;margin-top:12px;flex-wrap:wrap}
+  .metric{flex:1;min-width:160px}
+  .metric .lab{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.04em;display:flex;justify-content:space-between}
+  .metric .num{font-variant-numeric:tabular-nums;font-weight:600}
+  .bar{height:10px;border-radius:6px;background:#222732;overflow:hidden;margin-top:5px}
+  .bar>span{display:block;height:100%}
+  .bar .acc{background:linear-gradient(90deg,#6ea8fe,#3ad29f)}
+  .bar .br{background:linear-gradient(90deg,#f0b35b,#ff5d5d)}
+  .empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px}
+  .foot{color:var(--mut);font-size:12px;margin-top:34px;line-height:1.7}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+  th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);color:var(--mut);font-variant-numeric:tabular-nums}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  td.win{color:var(--good);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Windowed Backtest</h1>
+  <p class="sub">How much training history does the LoL model need? Same z-scored logistic backbone, one fixed hold-out, four look-back windows. · <a href="index.html">← Back to Oracle</a></p>
+
+  <div class="modelsel">Focus window:
+    <select id="focus">
+      <option value="all">All windows</option>
+    </select>
+  </div>
+
+  <div class="score" id="score"></div>
+
+  <h2>Per-window results on the fixed hold-out</h2>
+  <div id="rows"></div>
+
+  <h2>Comparison table</h2>
+  <div id="tablewrap"></div>
+
+  <p class="foot" id="foot"></p>
+</div>
+
+<script>
+const pct = x => (x*100).toFixed(1) + "%";
+const WNAMES = {"1w":"1 week","1m":"1 month","3m":"3 months","6m":"6 months"};
+
+(async () => {
+  let d;
+  try {
+    d = await (await fetch("data/backtest.json?_="+Date.now())).json();
+  } catch(e){
+    document.getElementById("rows").innerHTML =
+      `<div class="empty">No backtest data yet. Run <code>python -m pipeline.backtest_windows</code> to generate <code>app/data/backtest.json</code>.</div>`;
+    return;
+  }
+
+  const wins = (d.windows||[]).filter(w => w.accuracy != null);
+  if(!wins.length){
+    document.getElementById("rows").innerHTML = `<div class="empty">Backtest ran but no window had usable training data.</div>`;
+    return;
+  }
+
+  // header stats
+  const best = wins.find(w => w.window === d.best_window);
+  document.getElementById("score").innerHTML =
+    `<div class="stat"><div class="k">Hold-out period</div><div class="v" style="font-size:16px">${d.holdout.start} → ${d.holdout.end}</div></div>` +
+    `<div class="stat"><div class="k">Hold-out games</div><div class="v">${d.holdout.n}</div></div>` +
+    `<div class="stat"><div class="k">Best window</div><div class="v">${WNAMES[d.best_window]||d.best_window}</div></div>` +
+    (best ? `<div class="stat"><div class="k">Best accuracy</div><div class="v">${pct(best.accuracy)}</div></div>` : "");
+
+  // scales for the bars (accuracy 0.5–0.75 typical; brier 0.15–0.25)
+  const accLo=0.5, accHi=0.75, brLo=0.15, brHi=0.27;
+  const accW = a => Math.max(2, Math.min(100, (a-accLo)/(accHi-accLo)*100));
+  const brW  = b => Math.max(2, Math.min(100, (b-brLo)/(brHi-brLo)*100));
+
+  function renderRows(focus){
+    document.getElementById("rows").innerHTML = wins.map(w => {
+      const isBest = w.window === d.best_window;
+      const isFocus = focus !== "all" && w.window === focus;
+      const isDim = focus !== "all" && w.window !== focus;
+      const cls = ["row", isBest?"best":"", isFocus?"focus":"", isDim?"dim":""].filter(Boolean).join(" ");
+      return `<div class="${cls}">
+        <div class="top">
+          <span class="wname">${WNAMES[w.window]||w.window}${isBest?'<span class="tag">best</span>':''}</span>
+          <span class="meta">trains ${w.window_start} → ${d.holdout.start} · ${w.n_train.toLocaleString()} games</span>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <div class="lab"><span>Accuracy</span><span class="num">${pct(w.accuracy)}</span></div>
+            <div class="bar"><span class="acc" style="width:${accW(w.accuracy)}%"></span></div>
+          </div>
+          <div class="metric">
+            <div class="lab"><span>Brier (lower is better)</span><span class="num">${w.brier.toFixed(4)}</span></div>
+            <div class="bar"><span class="br" style="width:${brW(w.brier)}%"></span></div>
+          </div>
+          <div class="metric">
+            <div class="lab"><span>Log loss</span><span class="num">${w.logloss.toFixed(4)}</span></div>
+          </div>
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  // table
+  document.getElementById("tablewrap").innerHTML = `<table>
+    <tr><th>Window</th><th>Train games</th><th>Accuracy</th><th>Brier</th><th>Log loss</th></tr>
+    ${wins.map(w=>{
+      const isBest = w.window===d.best_window;
+      return `<tr>
+        <td>${WNAMES[w.window]||w.window}${isBest?' ★':''}</td>
+        <td>${w.n_train.toLocaleString()}</td>
+        <td class="${isBest?'win':''}">${pct(w.accuracy)}</td>
+        <td>${w.brier.toFixed(4)}</td>
+        <td>${w.logloss.toFixed(4)}</td>
+      </tr>`;
+    }).join("")}</table>`;
+
+  // focus selector
+  const sel = document.getElementById("focus");
+  wins.forEach(w => {
+    const o = document.createElement("option");
+    o.value = w.window; o.textContent = WNAMES[w.window]||w.window;
+    sel.appendChild(o);
+  });
+  sel.addEventListener("change", () => renderRows(sel.value));
+
+  renderRows("all");
+
+  document.getElementById("foot").innerHTML =
+    `Model: ${d.model||'z-scored L2-logistic'}. Each window trains strictly on games before ${d.holdout.start} (no leakage), z-scored on its own training stats, then scored on the identical ${d.holdout.n}-game hold-out.<br/>` +
+    `Features: ${(d.features||[]).join(", ")}.`;
+})();
+</script>
+</body>
+</html>
