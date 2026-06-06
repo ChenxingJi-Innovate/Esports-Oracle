@@ -100,6 +100,8 @@ def predict(inputs_path: Path | None = None, model: LinearModel | None = None,
             "confidence": confidence_band(p_series, fmt),
             "scoreline": scoreline(p_map, fmt),
             "pick_source": "case_based" if use_knn else "linear",
+            "scheduled_at": m.get("scheduled_at"),
+            "date": (m.get("scheduled_at") or "")[:10] or m.get("date"),
             "features": {k: round(v, 4) for k, v in feats.items()},
         }
         # Attach the top-5 similar matches as the auditable "why" whenever both

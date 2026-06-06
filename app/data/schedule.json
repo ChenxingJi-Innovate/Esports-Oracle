@@ -23,16 +23,6 @@
       "date": "2026-06-06",
       "cs2_matches": [
         {
-          "match_id": "g2esports-m80-2026-06-06",
-          "event": "Intel Extreme Masters",
-          "fmt": "BO1",
-          "team_a": "G2 Esports",
-          "team_b": "M80",
-          "p_a": 0.5876,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-06T12:40:00+00:00"
-        },
-        {
           "match_id": "monte-big-2026-06-06",
           "event": "Intel Extreme Masters",
           "fmt": "BO1",
@@ -50,7 +40,7 @@
           "team_b": "BetBoom Team",
           "p_a": 0.6428,
           "confidence": "moderate",
-          "scheduled_at": "2026-06-06T13:30:00+00:00"
+          "scheduled_at": "2026-06-06T13:45:00+00:00"
         },
         {
           "match_id": "legacy-mibr-2026-06-06",
@@ -60,7 +50,7 @@
           "team_b": "MIBR",
           "p_a": 0.5696,
           "confidence": "lean",
-          "scheduled_at": "2026-06-06T13:30:00+00:00"
+          "scheduled_at": "2026-06-06T13:50:00+00:00"
         }
       ],
       "lol_matches": []

@@ -69,8 +69,10 @@ class CaseBase:
         return (v - self.mean) / self.std
 
 
-def load_case_base() -> CaseBase | None:
-    rows, state = cs2_features.build(return_state=True)
+def load_case_base(matches_csv=None) -> CaseBase | None:
+    # matches_csv lets the same engine serve another FPS (e.g. Valorant) by
+    # pointing at a different corpus; default is the CS2 corpus.
+    rows, state = cs2_features.build(matches_csv=matches_csv, return_state=True)
     if len(rows) < 30:                      # too thin to reason from
         return None
     raw = np.array([[float(r[c]) for c in FEATURE_COLS] for r in rows], dtype=float)
@@ -147,10 +149,12 @@ def similar_matches_for_live(team_a: str, team_b: str, cb: CaseBase,
     }
 
 
-def backtest(holdout_frac: float = 0.2, k: int = DEFAULT_K) -> dict:
+def backtest(holdout_frac: float = 0.2, k: int = DEFAULT_K, matches_csv=None,
+             case_base: "CaseBase | None" = None) -> dict:
     """Time-ordered holdout: evaluate the last `holdout_frac` of maps, each
-    using only strictly-earlier cases. Reports the honest out-of-sample number."""
-    cb = load_case_base()
+    using only strictly-earlier cases. Reports the honest out-of-sample number.
+    Pass a prebuilt `case_base` to avoid rebuilding the corpus."""
+    cb = case_base or load_case_base(matches_csv=matches_csv)
     if cb is None:
         return {"error": "case base too small; scrape more events first"}
     n = len(cb)

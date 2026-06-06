@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CS2_INPUTS = DATA / "cs2_inputs.json"
 LOL_INPUTS = DATA / "lol_inputs.json"
+VAL_INPUTS = DATA / "val_inputs.json"
 
 # Currently-running tier-1 events to watch. Each entry: (wiki, page, default_fmt).
 # Keep this list current (it is the only manual upkeep); matches and dates are
@@ -45,6 +46,15 @@ WATCH_CS2 = [
 WATCH_LOL = [
     ("leagueoflegends", "LPL/2026/Split 2/Playoffs", "BO5"),
     ("leagueoflegends", "LCK/2026/Split 2/Playoffs", "BO5"),
+    ("leagueoflegends", "LPL/2026", "BO3"),   # league page Matches widget (fallback)
+    ("leagueoflegends", "LCK/2026", "BO5"),
+]
+WATCH_VAL = [
+    ("valorant", "VCT/2026/Americas League/Stage 1", "BO3"),
+    ("valorant", "VCT/2026/EMEA League/Stage 1", "BO3"),
+    ("valorant", "VCT/2026/Pacific League/Stage 1", "BO3"),
+    ("valorant", "VCT/2026/China League/Stage 1", "BO3"),
+    ("valorant", "VCT/2026/Masters/Bangkok", "BO3"),
 ]
 
 DEFAULT_WINDOW_DAYS = 2  # today + next 2
@@ -53,7 +63,6 @@ _MATCH_BLOCK = re.compile(
     r'(brkts-popup-header-left.*?|brkts-matchlist-match\b.*?)'
     r'(?=brkts-popup-header-left|brkts-matchlist-match\b|$)', re.S)
 _TS = re.compile(r'data-timestamp="(\d+)"')
-_ARIA = re.compile(r'aria-label="([^"]+)"')
 _BO = re.compile(r'\bBo([135])\b')
 
 
@@ -65,57 +74,95 @@ def _detect_fmt(block: str, default: str) -> str:
     return f"BO{m.group(1)}" if m else default
 
 
+# Team-name patterns, tried in priority order. aria-label is the cleanest on
+# CS2/Valorant bracket cards; team-template-text and data-highlightingclass
+# cover the LoL league "Matches" widget where aria-label is absent.
+_TEAM_PATTERNS = [
+    re.compile(r'aria-label="([^"]+)"'),
+    re.compile(r'team-template-text["\']?>\s*<a[^>]*>([^<]+)</a>'),
+    re.compile(r'data-highlightingclass="([^"]+)"'),
+]
+
+
 def _distinct_teams(block: str) -> list[str]:
-    names, seen = [], []
-    for o in _ARIA.findall(block):
-        if not seen or seen[-1] != o:
-            seen.append(o)
-    # collapse to the first two distinct names
-    for n in seen:
-        if n not in names:
-            names.append(n)
-        if len(names) == 2:
-            break
-    return names
+    """First two distinct team names in a match block, robust across wikis."""
+    for pat in _TEAM_PATTERNS:
+        seen = []
+        for o in pat.findall(block):
+            o = o.strip()
+            if o and o not in seen:
+                seen.append(o)
+        names = [n for n in seen if n.upper() != "TBD"][:2]
+        if len(names) >= 2:
+            return names
+    return []
+
+
+def _emit(block: str, fmt: str, page: str, today: date,
+          window: int) -> dict | None:
+    ts_m = _TS.search(block)
+    if not ts_m:
+        return None
+    if 'data-finished="finished"' in block or 'bracket-team-won' in block:
+        return None  # already played
+    teams = _distinct_teams(block)
+    if len(teams) < 2:
+        return None
+    t = datetime.fromtimestamp(int(ts_m.group(1)), tz=timezone.utc)
+    if not (today <= t.date() <= today + timedelta(days=window)):
+        return None
+    return {
+        "scheduled_at": t.isoformat(), "date": t.date().isoformat(),
+        "team_a": teams[0], "team_b": teams[1],
+        "event": page.split("/")[0] if "/" in page else page,
+        "page": page, "fmt": _detect_fmt(block, fmt),
+    }
+
+
+def _windows_around_timestamps(html: str) -> list[str]:
+    """Template-agnostic fallback: one slice per match, centred on each
+    data-timestamp (used when the bracket/matchlist split finds nothing, e.g.
+    the LoL league-page Matches widget)."""
+    idx = [m.start() for m in _TS.finditer(html)]
+    blocks = []
+    for i, pos in enumerate(idx):
+        lo = idx[i - 1] + 12 if i else max(0, pos - 1500)
+        hi = idx[i + 1] if i + 1 < len(idx) else min(len(html), pos + 1500)
+        blocks.append(html[lo:hi])
+    return blocks
 
 
 def _fetch_matches(wiki: str, page: str, fmt: str,
                    today: date, window: int) -> list[dict]:
-    """Upcoming (not finished) matches on `page` within the date window."""
+    """Upcoming (not finished) matches on `page` within the date window.
+    Tries the bracket/matchlist split first, then a generic timestamp-window
+    scan, so one parser serves CS2 brackets, LoL league widgets, and Valorant."""
     try:
         html = liquipedia.page_html(wiki, page, cache_hours=1.0)
     except Exception as e:
         print(f"  [warn] fetch {page}: {e}")
         return []
-    lo = today
-    hi = today + timedelta(days=window)
-    out = []
-    for block in _MATCH_BLOCK.findall(html):
-        ts_m = _TS.search(block)
-        if not ts_m:
-            continue
-        teams = _distinct_teams(block)
-        if len(teams) < 2 or "TBD" in teams:
-            continue
-        if 'data-finished="finished"' in block:
-            continue  # already played
-        t = datetime.fromtimestamp(int(ts_m.group(1)), tz=timezone.utc)
-        if not (lo <= t.date() <= hi):
-            continue
-        out.append({
-            "scheduled_at": t.isoformat(),
-            "date": t.date().isoformat(),
-            "team_a": teams[0], "team_b": teams[1],
-            "event": page.split("/")[0] if "/" in page else page,
-            "page": page, "fmt": _detect_fmt(block, fmt),
-        })
-    return out
+    def _collect(blocks):
+        out, seen = [], set()
+        for block in blocks:
+            m = _emit(block, fmt, page, today, window)
+            if not m:
+                continue
+            key = (m["scheduled_at"], m["team_a"].lower(), m["team_b"].lower())
+            if key not in seen:
+                seen.add(key)
+                out.append(m)
+        return out
+
+    # Structured bracket/matchlist split first; only fall back to the fuzzy
+    # timestamp-window scan (LoL league widgets) if that found nothing.
+    return _collect(_MATCH_BLOCK.findall(html)) or _collect(_windows_around_timestamps(html))
 
 
 # --------------------------------------------------------------------------- #
-# CS2: derive linear-model features from the case-base state
+# FPS (CS2 / Valorant): derive linear-model features from the case-base state
 # --------------------------------------------------------------------------- #
-def _cs2_team_features(state: dict) -> dict:
+def _fps_team_features(state: dict) -> dict:
     """Map corpus state -> per-team {rank, form, player} via Elo ordering."""
     elo = state.get("elo", {})
     order = sorted(elo, key=lambda t: -elo[t])           # strongest first
@@ -137,17 +184,19 @@ def _norm(s: str) -> str:
     return "".join(c for c in s.lower() if c.isalnum())
 
 
-def build_cs2_inputs(today: date, window: int = DEFAULT_WINDOW_DAYS) -> dict | None:
+def _build_fps_inputs(today: date, window: int, watch: list, matches_csv,
+                      game: str) -> dict | None:
+    """Shared CS2/Valorant slate builder: pull fixtures from `watch`, derive
+    each team's rank/form/h2h from that game's case-base corpus."""
     from . import cs2_features
-    _, state = cs2_features.build(return_state=True)
+    _, state = cs2_features.build(matches_csv=matches_csv, return_state=True)
     if not state:
         return None
-    tf = _cs2_team_features(state)
-    by_norm = {_norm(k): v for k, v in tf.items()}
+    by_norm = {_norm(k): v for k, v in _fps_team_features(state).items()}
     h2h = state.get("h2h", {})
 
     matches = []
-    for wiki, page, fmt in WATCH_CS2:
+    for wiki, page, fmt in watch:
         for m in _fetch_matches(wiki, page, fmt, today, window):
             na, nb = _norm(m["team_a"]), _norm(m["team_b"])
             fa = by_norm.get(na, {"rank": 60, "form": 0.5, "player": 0.0})
@@ -165,12 +214,22 @@ def build_cs2_inputs(today: date, window: int = DEFAULT_WINDOW_DAYS) -> dict | N
                            "map_edge": 0.5, "player": fb["player"], "h2h": round(h2b, 3)},
             })
     return {
-        "_comment": ("AUTO-GENERATED by fetch_schedule.py from Liquipedia. "
-                     "rank/form/h2h derived from the CS2 case-base (Elo ordering, "
-                     "recent win rate, prior meetings). Edit WATCH_CS2 to change "
-                     "which events are tracked; matches/dates are pulled live."),
+        "_comment": (f"AUTO-GENERATED by fetch_schedule.py from Liquipedia. "
+                     f"rank/form/h2h derived from the {game} case-base (Elo "
+                     f"ordering, recent win rate, prior meetings). Edit WATCH_"
+                     f"{game} to change tracked events; matches/dates are live."),
         "date": today.isoformat(), "matches": matches,
     }
+
+
+def build_cs2_inputs(today: date, window: int = DEFAULT_WINDOW_DAYS) -> dict | None:
+    return _build_fps_inputs(today, window, WATCH_CS2, matches_csv=None, game="CS2")
+
+
+def build_val_inputs(today: date, window: int = DEFAULT_WINDOW_DAYS) -> dict | None:
+    from . import val_corpus
+    return _build_fps_inputs(today, window, WATCH_VAL,
+                             matches_csv=val_corpus.OUT_CSV, game="VAL")
 
 
 def build_lol_inputs(today: date, window: int = DEFAULT_WINDOW_DAYS) -> dict | None:
@@ -205,6 +264,7 @@ def refresh(today: date | None = None, window: int = DEFAULT_WINDOW_DAYS) -> dic
     for label, builder, path in (
         ("cs2", build_cs2_inputs, CS2_INPUTS),
         ("lol", build_lol_inputs, LOL_INPUTS),
+        ("val", build_val_inputs, VAL_INPUTS),
     ):
         try:
             payload = builder(today, window)

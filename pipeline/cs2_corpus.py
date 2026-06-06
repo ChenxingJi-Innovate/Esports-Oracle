@@ -97,13 +97,15 @@ def _match_key(m: dict) -> tuple:
             m["scores"][0], m["scores"][1])
 
 
-def build(seeds: list[str] | None = None) -> list[dict]:
+def build(seeds: list[str] | None = None, wiki: str = WIKI) -> list[dict]:
+    # wiki lets the same scraper serve another tactical FPS on Liquipedia
+    # (e.g. "valorant"); the match-card markup is identical (round-score maps).
     seeds = seeds or EVENT_SEEDS
     seen: set[tuple] = set()
     rows: list[dict] = []
     for base in seeds:
         try:
-            exists = liquipedia.page_exists(WIKI, base)
+            exists = liquipedia.page_exists(wiki, base)
         except Exception as e:
             # A transient network error on the cheap existence check must not
             # abort the whole corpus; everything fetched so far is cached, so we
@@ -115,7 +117,7 @@ def build(seeds: list[str] | None = None) -> list[dict]:
             continue
         pages = [base]
         try:
-            base_html = liquipedia.page_html(WIKI, base, cache_hours=24.0)
+            base_html = liquipedia.page_html(wiki, base, cache_hours=24.0)
             pages += _subpages(base, base_html)
         except Exception as e:
             print(f"  [warn] base fetch {base}: {e}", file=sys.stderr)
@@ -123,7 +125,7 @@ def build(seeds: list[str] | None = None) -> list[dict]:
         for page in pages:
             try:
                 html = base_html if page == base else liquipedia.page_html(
-                    WIKI, page, cache_hours=24.0)
+                    wiki, page, cache_hours=24.0)
                 matches = parse_event_dated(html)
             except Exception as e:
                 print(f"  [warn] {page}: {e}", file=sys.stderr)
@@ -146,14 +148,14 @@ def build(seeds: list[str] | None = None) -> list[dict]:
     return rows
 
 
-def write_csv(rows: list[dict]) -> Path:
-    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
-    with OUT_CSV.open("w", newline="", encoding="utf-8") as f:
+def write_csv(rows: list[dict], out_csv: Path = OUT_CSV) -> Path:
+    out_csv.parent.mkdir(parents=True, exist_ok=True)
+    with out_csv.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=[
             "date", "ts", "team_a", "team_b", "score_a", "score_b", "winner", "event"])
         w.writeheader()
         w.writerows(rows)
-    return OUT_CSV
+    return out_csv
 
 
 if __name__ == "__main__":

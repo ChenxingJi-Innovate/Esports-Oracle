@@ -36,6 +36,19 @@
   .score-dist{display:flex;gap:6px;flex-wrap:wrap}
   .scell{font-size:11.5px;color:var(--mut);background:#0f131a;border:1px solid var(--line);border-radius:7px;padding:2px 7px;font-variant-numeric:tabular-nums}
   .scell b{color:var(--ink);font-weight:600}
+  .gametabs{display:flex;gap:8px;margin:22px 0 4px}
+  .gtab{display:inline-flex;align-items:center;gap:7px;cursor:pointer;font:inherit;font-size:13px;
+    font-weight:600;color:var(--mut);background:var(--card);border:1px solid var(--line);
+    border-radius:999px;padding:8px 16px;transition:all .15s}
+  .gtab:hover{color:var(--ink)}
+  .gtab .dot{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.5}
+  .gtab.cs2.active{color:#0f1115;background:var(--cs);border-color:var(--cs)}
+  .gtab.lol.active{color:#0f1115;background:var(--lol);border-color:var(--lol)}
+  .gtab.val.active{color:#0f1115;background:var(--hot);border-color:var(--hot)}
+  .gtab.active .dot{opacity:1}
+  .daygroup{margin-bottom:18px}
+  .dayhdr{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);
+    margin:0 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
   .empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px}
   table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
   th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);color:var(--mut)}
@@ -63,9 +76,15 @@
 <body>
 <div class="wrap">
   <h1>Esports Oracle</h1>
-  <p class="sub">Daily predictions for <b>tier-1</b> CS2 + LoL events · self-grading · rolling 1-year model · <a href="schedule.html">Upcoming matches →</a> · <a href="predict.html">Ask any matchup →</a> · <a href="explorer.html">LoL team explorer →</a> · <a href="backtest.html">Backtest →</a></p>
+  <p class="sub">Daily predictions for <b>tier-1</b> CS2 · LoL · Valorant · self-grading · rolling 1-year model · auto-updates 00:00 Beijing · <a href="predict.html">Ask any matchup →</a> · <a href="explorer.html">LoL team explorer →</a> · <a href="backtest.html">Backtest →</a></p>
 
   <div class="score" id="score"></div>
+
+  <div class="gametabs" id="gametabs">
+    <button class="gtab cs2 active" data-game="cs2"><span class="dot"></span> CS2</button>
+    <button class="gtab lol" data-game="lol"><span class="dot"></span> LoL</button>
+    <button class="gtab val" data-game="val"><span class="dot"></span> Valorant</button>
+  </div>
 
   <div class="modelsel">🔍 Explain uses:
     <select id="model">
@@ -74,14 +93,11 @@
     </select>
   </div>
 
-  <h2 class="cs"><span class="dot"></span> CS2 — today</h2>
-  <div id="cs2"></div>
+  <h2 id="up-title"><span class="dot"></span> Upcoming · next 2 days</h2>
+  <div id="upcoming"></div>
 
-  <h2 class="lol"><span class="dot"></span> LoL — today</h2>
-  <div id="lol"></div>
-
-  <h2>Recently graded</h2>
-  <div id="history"></div>
+  <h2>Past 3 days · results</h2>
+  <div id="results"></div>
 
   <p class="foot" id="foot"></p>
 </div>
@@ -137,7 +153,7 @@ function matchRow(m, game){
 
 async function explain(game, matchId, btn){
   const box = document.getElementById('r-'+matchId);
-  const m = (window.SLATE?.[game]||[]).find(x=>x.match_id===matchId);
+  const m = (window.PRED?.slate?.[game]||[]).find(x=>x.match_id===matchId);
   if(!m){return;}
   const model = document.getElementById('model').value;
   box.classList.add('open'); box.innerHTML = 'Thinking with '+model.replace('deepseek-','')+'…';
@@ -156,45 +172,81 @@ async function explain(game, matchId, btn){
 }
 const statCard = (k,v) => `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div></div>`;
 
-(async () => {
-  let pred, log;
-  try {
-    pred = await (await fetch("data/predictions.json?_="+Date.now())).json();
-    log  = await (await fetch("data/scorelog.json?_="+Date.now())).json();
-  } catch(e){
-    document.getElementById("cs2").innerHTML = `<div class="empty">No published data yet. Run <code>python -m pipeline.daily</code> or wait for the daily cron.</div>`;
-    return;
-  }
-  const acc = pred.accuracy.overall, byg = pred.accuracy.by_game||{};
-  document.getElementById("score").innerHTML =
-    statCard("Slate date", pred.generated_for) +
-    statCard("Overall accuracy", acc.accuracy!=null ? pct(acc.accuracy) : "—") +
-    statCard("Graded picks", acc.graded||0) +
-    statCard("CS2 acc", byg.cs2&&byg.cs2.accuracy!=null ? pct(byg.cs2.accuracy) : "—") +
-    statCard("LoL acc", byg.lol&&byg.lol.accuracy!=null ? pct(byg.lol.accuracy) : "—");
+const GAME_LABEL = {cs2:'CS2', lol:'LoL', val:'Valorant'};
+const EMPTY = {
+  cs2:'No tier-1 CS2 matches in the next 2 days.',
+  lol:'No tier-1 LoL (LPL/LCK/LEC/MSI/Worlds) matches in the next 2 days.',
+  val:'No tier-1 Valorant (VCT) matches in the next 2 days — corpus + schedule populate on the daily cron.'
+};
+const fmtDay = iso => {
+  if(!iso) return 'Date TBD';
+  const t = new Date(iso+'T00:00:00Z'), today = new Date();
+  const d0 = Date.UTC(today.getUTCFullYear(),today.getUTCMonth(),today.getUTCDate());
+  const diff = Math.round((Date.UTC(t.getUTCFullYear(),t.getUTCMonth(),t.getUTCDate())-d0)/864e5);
+  const lbl = diff===0?'Today':diff===1?'Tomorrow':diff===-1?'Yesterday':null;
+  const ds = t.toLocaleDateString(undefined,{month:'short',day:'numeric',weekday:'short',timeZone:'UTC'});
+  return lbl ? `${lbl} · ${ds}` : ds;
+};
 
-  const cs2 = pred.slate.cs2||[], lol = pred.slate.lol||[];
-  window.SLATE = {cs2, lol};
-  document.getElementById("cs2").innerHTML = cs2.length ? cs2.map(m=>matchRow(m,'cs2')).join("")
-    : `<div class="empty">No tier-1 CS2 LAN matches loaded for today.</div>`;
-  document.getElementById("lol").innerHTML = lol.length ? lol.map(m=>matchRow(m,'lol')).join("")
-    : `<div class="empty">No tier-1 LoL (LPL/LCK/LEC/MSI/Worlds) matches loaded for today.</div>`;
+function renderUpcoming(game){
+  const slate = (window.PRED.slate?.[game])||[];
+  const box = document.getElementById('upcoming');
+  if(!slate.length){ box.innerHTML = `<div class="empty">${EMPTY[game]}</div>`; return; }
+  // group by date, ascending
+  const byDate = {};
+  slate.forEach(m=>{ (byDate[m.date||'']=byDate[m.date||'']||[]).push(m); });
+  box.innerHTML = Object.keys(byDate).sort().map(d=>`
+    <div class="daygroup"><div class="dayhdr">${fmtDay(d)}</div>
+      ${byDate[d].map(m=>matchRow(m,game)).join("")}</div>`).join("");
+}
 
-  const graded = (log.predictions||[]).filter(p=>p.correct!=null)
-    .sort((a,b)=> b.date.localeCompare(a.date)).slice(0,12);
-  document.getElementById("history").innerHTML = graded.length ? `<table>
-    <tr><th>Date</th><th>Game</th><th>Match</th><th>Pick</th><th>Conf</th><th>Result</th></tr>
-    ${graded.map(p=>`<tr>
-      <td>${p.date}</td><td>${p.game.toUpperCase()}</td>
+function renderResults(game){
+  const rows = (window.PRED.results?.[game])||[];
+  const box = document.getElementById('results');
+  if(!rows.length){ box.innerHTML = `<div class="empty">No graded ${GAME_LABEL[game]} results in the past 3 days yet.</div>`; return; }
+  box.innerHTML = `<table>
+    <tr><th>Date</th><th>Match</th><th>Pick</th><th>Conf</th><th>Result</th></tr>
+    ${rows.map(p=>`<tr>
+      <td>${p.date}</td>
       <td>${p.team_a} vs ${p.team_b}</td>
       <td>${p.pick} (${pct(p.result==='a'?p.p_a:1-p.p_a)} for winner)</td>
       <td>${p.confidence}</td>
       <td>${p.correct?'<span class="ok">✓ hit</span>':'<span class="no">✗ miss</span>'}</td>
-    </tr>`).join("")}</table>` : `<div class="empty">No graded predictions yet — the model grades itself once results land.</div>`;
+    </tr>`).join("")}</table>`;
+}
+
+function selectGame(game){
+  window.GAME = game;
+  document.querySelectorAll('.gtab').forEach(b=>b.classList.toggle('active', b.dataset.game===game));
+  document.getElementById('up-title').innerHTML = `<span class="dot"></span> ${GAME_LABEL[game]} · upcoming · next 2 days`;
+  renderUpcoming(game);
+  renderResults(game);
+}
+
+(async () => {
+  let pred;
+  try {
+    pred = await (await fetch("data/predictions.json?_="+Date.now())).json();
+  } catch(e){
+    document.getElementById("upcoming").innerHTML = `<div class="empty">No published data yet (or opened via file://, which blocks fetch). Serve it: <code>python3 -m http.server --directory app</code>, or wait for the daily cron.</div>`;
+    return;
+  }
+  window.PRED = pred;
+  const acc = pred.accuracy.overall, byg = pred.accuracy.by_game||{};
+  document.getElementById("score").innerHTML =
+    statCard("Slate date", pred.generated_for) +
+    statCard("Overall acc", acc.accuracy!=null ? pct(acc.accuracy) : "—") +
+    statCard("Graded picks", acc.graded||0) +
+    statCard("CS2 acc", byg.cs2&&byg.cs2.accuracy!=null ? pct(byg.cs2.accuracy) : "—") +
+    statCard("LoL acc", byg.lol&&byg.lol.accuracy!=null ? pct(byg.lol.accuracy) : "—") +
+    statCard("Val acc", byg.val&&byg.val.accuracy!=null ? pct(byg.val.accuracy) : "—");
+
+  document.querySelectorAll('.gtab').forEach(b=>b.onclick=()=>selectGame(b.dataset.game));
+  selectGame('cs2');
 
   document.getElementById("foot").innerHTML =
     (pred.notes||[]).join(" · ") +
-    `<br/>Backbone verified on LoL (Oracle's Elixir) at 65.3% hold-out accuracy. CS2 weights are damped calibrated priors pending a trained LPDB fit. Data: Liquipedia (CC BY-SA) + bo3.gg.`;
+    `<br/>Backbone verified on LoL (Oracle's Elixir) at ~69% kNN out-of-sample. CS2/Valorant case bases are smaller and provisional. Data: Liquipedia (CC BY-SA).`;
 })();
 </script>
 </body>

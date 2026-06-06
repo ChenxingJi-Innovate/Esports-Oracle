@@ -57,6 +57,12 @@ HOLDOUT_END = date(2026, 6, 1)
 # real number for these 8 features, not tuned toward an overfit 0.80.
 DEFAULT_K = 75
 
+# Out-of-sample accuracy of the OE kNN on the fixed 702-game holdout (see
+# backtest() / `python -m pipeline.case_based`). Published by daily.py instead of
+# re-running the heavy backtest every cron; keep it next to the code that
+# produces it so the figure can't silently drift from the method.
+OE_HOLDOUT_ACCURACY = 0.6895
+
 
 def _parse_day(value) -> date:
     """Normalize an ISO timestamp / date / datetime to a date."""

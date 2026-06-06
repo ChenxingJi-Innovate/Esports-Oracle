@@ -1,18 +1,21 @@
 name: daily-predictions
 
-# Runs every morning, grades yesterday, publishes today's tier-1 slate, and
-# commits the JSON back so Vercel redeploys the static site automatically.
+# Runs every day at 00:00 Beijing (UTC+8) = 16:00 UTC. Fetches the new day's
+# tier-1 schedule from Liquipedia, grades the matches that finished, retrains the
+# models on those fresh results, and publishes today's CS2 / LoL / Valorant slate
+# (plus past-3-days results), committing the JSON so Vercel redeploys the site.
 on:
   schedule:
-    - cron: "0 9 * * *"   # 09:00 UTC daily
+    - cron: "0 16 * * *"   # 16:00 UTC == 00:00 Asia/Shanghai (no DST)
   workflow_dispatch: {}    # manual "Run workflow" button
 
 permissions:
-  contents: write          # allow the bot to commit app/data/*.json
+  contents: write          # allow the bot to commit data + grown corpora
 
 jobs:
   predict:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -23,25 +26,28 @@ jobs:
       - name: Install deps
         run: pip install numpy pandas
 
-      # Refresh inputs from legal sources (rate-limited, cached, proper UA).
-      # Fetchers are best-effort: if a source is unreachable the run still
-      # publishes from the committed inputs rather than failing.
-      - name: Refresh tier-1 inputs (best-effort)
+      # Grow the CS2 + Valorant case-base corpora from Liquipedia. Cached on
+      # disk, rate-limited, best-effort: a slow/unreachable source never fails
+      # the run, and finished runs only fetch newly-completed events.
+      - name: Refresh case-base corpora (best-effort)
         continue-on-error: true
         run: |
-          python -m pipeline.refresh_inputs || echo "refresh skipped, using committed inputs"
+          python -m pipeline.cs2_corpus || echo "cs2 corpus refresh skipped"
+          python -m pipeline.val_corpus || echo "val corpus refresh skipped"
 
-      - name: Predict + grade + publish
+      # Fetch today's schedule (also done inside daily.py as a safety net),
+      # grade finished matches, retrain on results, predict + publish.
+      - name: Predict + grade + retrain + publish
         run: python -m pipeline.daily
 
       - name: Commit updated data
         run: |
           git config user.name  "oracle-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add app/data/*.json data/*.json
+          git add app/data/*.json data/*.json data/processed/*.csv
           if git diff --cached --quiet; then
             echo "no changes"
           else
-            git commit -m "daily: $(date -u +%F) predictions + grades"
+            git commit -m "daily: $(date -u +%F) schedule + grades + retrain"
             git push
           fi

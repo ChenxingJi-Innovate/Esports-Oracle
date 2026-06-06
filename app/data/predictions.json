@@ -1,5 +1,6 @@
 {
   "generated_for": "2026-06-06",
+  "window_days": 2,
   "accuracy": {
     "overall": {
       "graded": 3,
@@ -31,6 +32,11 @@
       "n_train": 0,
       "trained": false,
       "shrinkage": 0.0
+    },
+    "val": {
+      "n_train": 0,
+      "trained": false,
+      "shrinkage": 0.0
     }
   },
   "calibration": {
@@ -48,11 +54,12 @@
         "realized": 0.0
       }
     ],
-    "lol": []
+    "lol": [],
+    "val": []
   },
   "case_based": {
     "lol": {
-      "accuracy": 0.689,
+      "accuracy": 0.6895,
       "note": "OE kNN, 702-game holdout (static)"
     },
     "cs2": {
@@ -61,96 +68,13 @@
       "k": 25,
       "accuracy": 0.45,
       "brier": 0.2722
+    },
+    "val": {
+      "error": "corpus pending (no case base yet)"
     }
   },
   "slate": {
     "cs2": [
-      {
-        "match_id": "g2esports-m80-2026-06-06",
-        "event": "Intel Extreme Masters",
-        "team_a": "G2 Esports",
-        "team_b": "M80",
-        "p_map_a": 0.5876,
-        "p_a": 0.5876,
-        "fmt": "BO1",
-        "confidence": "lean",
-        "scoreline": {
-          "pick": "1-0",
-          "a": 1,
-          "b": 0,
-          "p": 0.5876,
-          "dist": [
-            {
-              "score": "1-0",
-              "p": 0.5876
-            },
-            {
-              "score": "0-1",
-              "p": 0.4124
-            }
-          ]
-        },
-        "features": {
-          "rating_diff": 1.3863,
-          "form_diff": 0.25,
-          "map_diff": 0.0,
-          "player_diff": 0.115,
-          "h2h_diff": 0.0
-        },
-        "similar_matches": [
-          {
-            "date": "2026-06-03",
-            "blue_team": "GamerLegion",
-            "red_team": "BetBoom Team",
-            "winner": "BetBoom Team",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.145
-          },
-          {
-            "date": "2026-06-02",
-            "blue_team": "GamerLegion",
-            "red_team": "NRG",
-            "winner": "GamerLegion",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.4538
-          },
-          {
-            "date": "2026-06-04",
-            "blue_team": "GamerLegion",
-            "red_team": "BIG",
-            "winner": "GamerLegion",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.5087
-          },
-          {
-            "date": "2025-06-03",
-            "blue_team": "Lynn Vision Gaming",
-            "red_team": "Legacy",
-            "winner": "Lynn Vision Gaming",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.555
-          },
-          {
-            "date": "2026-06-02",
-            "blue_team": "SINNERS Esports",
-            "red_team": "FlyQuest",
-            "winner": "FlyQuest",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.5688
-          }
-        ],
-        "case_based": {
-          "p_blue_knn": 0.44,
-          "k": 25,
-          "outcome_rate": "3/5",
-          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
-        }
-      },
       {
         "match_id": "monte-big-2026-06-06",
         "event": "Intel Extreme Masters",
@@ -176,6 +100,8 @@
             }
           ]
         },
+        "scheduled_at": "2026-06-06T12:45:00+00:00",
+        "date": "2026-06-06",
         "features": {
           "rating_diff": 0.0715,
           "form_diff": -0.044,
@@ -262,6 +188,8 @@
             }
           ]
         },
+        "scheduled_at": "2026-06-06T13:45:00+00:00",
+        "date": "2026-06-06",
         "features": {
           "rating_diff": 0.8267,
           "form_diff": 0.4,
@@ -348,6 +276,8 @@
             }
           ]
         },
+        "scheduled_at": "2026-06-06T13:50:00+00:00",
+        "date": "2026-06-06",
         "features": {
           "rating_diff": 0.7802,
           "form_diff": 0.1,
@@ -453,6 +383,8 @@
           ]
         },
         "pick_source": "linear",
+        "scheduled_at": "2026-06-05T11:00:00Z",
+        "date": "2026-06-05",
         "features": {
           "rating_diff": 1.9459,
           "form_diff": 0.17,
@@ -518,13 +450,99 @@
           "outcome_rate": "1/5"
         }
       }
-    ]
+    ],
+    "val": []
+  },
+  "results": {
+    "cs2": [
+      {
+        "match_id": "iem-cologne-2026-s1-tyloo-lvg",
+        "date": "2026-06-05",
+        "game": "cs2",
+        "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+        "team_a": "TyLoo",
+        "team_b": "Lynn Vision",
+        "p_a": 0.6738,
+        "p_map": 0.6181,
+        "fmt": "BO3",
+        "confidence": "lean",
+        "features": {
+          "rating_diff": 0.0667,
+          "form_diff": 0.13,
+          "map_diff": 0.07,
+          "player_diff": 0.02,
+          "h2h_diff": 0.4
+        },
+        "pick": "TyLoo",
+        "result": "a",
+        "map_score": [
+          2,
+          0
+        ],
+        "correct": true
+      },
+      {
+        "match_id": "iem-cologne-2026-s1-liquid-flyquest",
+        "date": "2026-06-05",
+        "game": "cs2",
+        "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+        "team_a": "Liquid",
+        "team_b": "FlyQuest",
+        "p_a": 0.7107,
+        "p_map": 0.6445,
+        "fmt": "BO3",
+        "confidence": "moderate",
+        "features": {
+          "rating_diff": 0.7673,
+          "form_diff": 0.1,
+          "map_diff": 0.1,
+          "player_diff": 0.03,
+          "h2h_diff": 0.2
+        },
+        "pick": "Liquid",
+        "result": "b",
+        "map_score": [
+          0,
+          2
+        ],
+        "correct": false
+      },
+      {
+        "match_id": "iem-cologne-2026-s1-nrg-big",
+        "date": "2026-06-05",
+        "game": "cs2",
+        "event": "IEM Cologne Major 2026 (Stage 1 final day)",
+        "team_a": "NRG",
+        "team_b": "BIG",
+        "p_a": 0.5291,
+        "p_map": 0.5194,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "features": {
+          "rating_diff": 0.1411,
+          "form_diff": 0.02,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.1
+        },
+        "pick": "NRG",
+        "result": "b",
+        "map_score": [
+          1,
+          2
+        ],
+        "correct": false
+      }
+    ],
+    "lol": [],
+    "val": []
   },
   "notes": [
-    "Tier-1 events only (CS2 big LAN; LoL LPL/LCK/LEC/MSI/Worlds).",
+    "Tier-1 events only (CS2 LAN; LoL LPL/LCK/etc.; Valorant VCT).",
+    "Auto-fetched from Liquipedia daily at 00:00 Beijing (16:00 UTC).",
     "Rolling 1-year window; older predictions auto-purged.",
     "Model self-trains daily on graded results, anchored to the prior.",
     "p_a = probability the first-listed team wins the series.",
-    "Case-based 'similar matches' are transparency, not the pick: the displayed win% is the calibrated model. LoL kNN ~69% out-of-sample; CS2 kNN is provisional (small Liquipedia corpus) - see case_based."
+    "Case-based 'similar matches' are transparency, not the pick: the displayed win% is the calibrated model. LoL kNN ~69% out-of-sample; CS2/Valorant kNN provisional (small Liquipedia corpus) - see case_based."
   ]
 }
