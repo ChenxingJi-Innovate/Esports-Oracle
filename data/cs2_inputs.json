@@ -10,18 +10,18 @@
       "scheduled_at": "2026-06-07T17:00:00+00:00",
       "team_a": {
         "name": "Team Spirit",
-        "rank": 7,
+        "rank": 1,
         "form": 1.0,
         "map_edge": 0.5,
-        "player": 0.123,
+        "player": 0.305,
         "h2h": 0.5
       },
       "team_b": {
         "name": "9z Team",
-        "rank": 8,
+        "rank": 5,
         "form": 1.0,
         "map_edge": 0.5,
-        "player": 0.123,
+        "player": 0.198,
         "h2h": 0.5
       }
     },
@@ -30,113 +30,21 @@
       "event": "IEM Cologne 2026 Major",
       "tier": 1,
       "fmt": "BO3",
-      "scheduled_at": "2026-06-07T17:00:00+00:00",
+      "scheduled_at": "2026-06-07T17:30:00+00:00",
       "team_a": {
         "name": "G2 Esports",
-        "rank": 5,
-        "form": 0.75,
+        "rank": 3,
+        "form": 0.7,
         "map_edge": 0.5,
-        "player": 0.136,
+        "player": 0.231,
         "h2h": 0.5
       },
       "team_b": {
         "name": "FUT Esports",
-        "rank": 60,
-        "form": 0.5,
+        "rank": 13,
+        "form": 1.0,
         "map_edge": 0.5,
-        "player": 0.0,
-        "h2h": 0.5
-      }
-    },
-    {
-      "match_id": "monte-legacy-2026-06-07",
-      "event": "IEM Cologne 2026 Major",
-      "tier": 1,
-      "fmt": "BO1",
-      "scheduled_at": "2026-06-07T12:30:00+00:00",
-      "team_a": {
-        "name": "Monte",
-        "rank": 27,
-        "form": 0.4,
-        "map_edge": 0.5,
-        "player": -0.034,
-        "h2h": 0.5
-      },
-      "team_b": {
-        "name": "Legacy",
-        "rank": 11,
-        "form": 0.6,
-        "map_edge": 0.5,
-        "player": 0.105,
-        "h2h": 0.5
-      }
-    },
-    {
-      "match_id": "astralis-tyloo-2026-06-07",
-      "event": "IEM Cologne 2026 Major",
-      "tier": 1,
-      "fmt": "BO1",
-      "scheduled_at": "2026-06-07T12:30:00+00:00",
-      "team_a": {
-        "name": "Astralis",
-        "rank": 25,
-        "form": 0.5,
-        "map_edge": 0.5,
-        "player": -0.006,
-        "h2h": 0.5
-      },
-      "team_b": {
-        "name": "TYLOO",
-        "rank": 22,
-        "form": 0.5,
-        "map_edge": 0.5,
-        "player": 0.011,
-        "h2h": 0.5
-      }
-    },
-    {
-      "match_id": "mibr-big-2026-06-07",
-      "event": "IEM Cologne 2026 Major",
-      "tier": 1,
-      "fmt": "BO1",
-      "scheduled_at": "2026-06-07T13:30:00+00:00",
-      "team_a": {
-        "name": "MIBR",
-        "rank": 24,
-        "form": 0.5,
-        "map_edge": 0.5,
-        "player": 0.003,
-        "h2h": 0.5
-      },
-      "team_b": {
-        "name": "BIG",
-        "rank": 29,
-        "form": 0.444,
-        "map_edge": 0.5,
-        "player": -0.035,
-        "h2h": 0.5
-      }
-    },
-    {
-      "match_id": "betboomteam-m80-2026-06-07",
-      "event": "IEM Cologne 2026 Major",
-      "tier": 1,
-      "fmt": "BO1",
-      "scheduled_at": "2026-06-07T13:30:00+00:00",
-      "team_a": {
-        "name": "BetBoom Team",
-        "rank": 16,
-        "form": 0.6,
-        "map_edge": 0.5,
-        "player": 0.071,
-        "h2h": 0.5
-      },
-      "team_b": {
-        "name": "M80",
-        "rank": 20,
-        "form": 0.5,
-        "map_edge": 0.5,
-        "player": 0.021,
+        "player": 0.085,
         "h2h": 0.5
       }
     },
@@ -145,44 +53,21 @@
       "event": "IEM Cologne 2026 Major",
       "tier": 1,
       "fmt": "BO3",
-      "scheduled_at": "2026-06-07T14:30:00+00:00",
+      "scheduled_at": "2026-06-07T15:20:00+00:00",
       "team_a": {
         "name": "B8",
-        "rank": 1,
-        "form": 0.7,
+        "rank": 16,
+        "form": 0.5,
         "map_edge": 0.5,
-        "player": 0.167,
+        "player": 0.07,
         "h2h": 0.5
       },
       "team_b": {
         "name": "GamerLegion",
-        "rank": 4,
-        "form": 0.75,
-        "map_edge": 0.5,
-        "player": 0.136,
-        "h2h": 0.5
-      }
-    },
-    {
-      "match_id": "flyquest-paingaming-2026-06-07",
-      "event": "IEM Cologne 2026 Major",
-      "tier": 1,
-      "fmt": "BO3",
-      "scheduled_at": "2026-06-07T14:30:00+00:00",
-      "team_a": {
-        "name": "FlyQuest",
-        "rank": 33,
+        "rank": 23,
         "form": 0.5,
         "map_edge": 0.5,
-        "player": -0.07,
-        "h2h": 0.5
-      },
-      "team_b": {
-        "name": "PaiN Gaming",
-        "rank": 17,
-        "form": 0.5,
-        "map_edge": 0.5,
-        "player": 0.047,
+        "player": 0.005,
         "h2h": 0.5
       }
     }

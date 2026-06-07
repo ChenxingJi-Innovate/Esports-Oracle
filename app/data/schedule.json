@@ -11,7 +11,7 @@
           "fmt": "BO3",
           "team_a": "Team Spirit",
           "team_b": "9z Team",
-          "p_a": 0.4358,
+          "p_a": 0.4538,
           "confidence": "coin-flip",
           "scheduled_at": "2026-06-07T17:00:00+00:00"
         },
@@ -21,49 +21,9 @@
           "fmt": "BO3",
           "team_a": "G2 Esports",
           "team_b": "FUT Esports",
-          "p_a": 0.6209,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-07T17:00:00+00:00"
-        },
-        {
-          "match_id": "monte-legacy-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO1",
-          "team_a": "Monte",
-          "team_b": "Legacy",
-          "p_a": 0.345,
+          "p_a": 0.2791,
           "confidence": "moderate",
-          "scheduled_at": "2026-06-07T12:30:00+00:00"
-        },
-        {
-          "match_id": "astralis-tyloo-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO1",
-          "team_a": "Astralis",
-          "team_b": "TYLOO",
-          "p_a": 0.4555,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-07T12:30:00+00:00"
-        },
-        {
-          "match_id": "mibr-big-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO1",
-          "team_a": "MIBR",
-          "team_b": "BIG",
-          "p_a": 0.4921,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-07T13:30:00+00:00"
-        },
-        {
-          "match_id": "betboomteam-m80-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO1",
-          "team_a": "BetBoom Team",
-          "team_b": "M80",
-          "p_a": 0.5151,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-07T13:30:00+00:00"
+          "scheduled_at": "2026-06-07T17:30:00+00:00"
         },
         {
           "match_id": "b8-gamerlegion-2026-06-07",
@@ -71,19 +31,9 @@
           "fmt": "BO3",
           "team_a": "B8",
           "team_b": "GamerLegion",
-          "p_a": 0.3942,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-07T14:30:00+00:00"
-        },
-        {
-          "match_id": "flyquest-paingaming-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO3",
-          "team_a": "FlyQuest",
-          "team_b": "PaiN Gaming",
-          "p_a": 0.4033,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-07T14:30:00+00:00"
+          "p_a": 0.4575,
+          "confidence": "coin-flip",
+          "scheduled_at": "2026-06-07T15:20:00+00:00"
         }
       ],
       "lol_matches": [
