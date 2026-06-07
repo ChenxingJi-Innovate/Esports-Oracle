@@ -38,23 +38,24 @@ VAL_INPUTS = DATA / "val_inputs.json"
 # Currently-running tier-1 events to watch. Each entry: (wiki, page, default_fmt).
 # Keep this list current (it is the only manual upkeep); matches and dates are
 # pulled live. Swiss/opening stages are BO1, later stages BO3, finals BO5.
+# Each entry: (wiki, page, default_fmt, display_label). The label is what the UI
+# shows as the event name; the page is the live Liquipedia source.
 WATCH_CS2 = [
-    ("counterstrike", "Intel Extreme Masters/2026/Cologne/Stage 2", "BO3"),
-    ("counterstrike", "Intel Extreme Masters/2026/Cologne/Stage 3", "BO3"),
-    ("counterstrike", "Intel Extreme Masters/2026/Cologne/Playoffs", "BO3"),
+    ("counterstrike", "Intel Extreme Masters/2026/Cologne/Stage 2", "BO3", "IEM Cologne 2026 Major"),
+    ("counterstrike", "Intel Extreme Masters/2026/Cologne/Stage 3", "BO3", "IEM Cologne 2026 Major"),
+    ("counterstrike", "Intel Extreme Masters/2026/Cologne/Playoffs", "BO3", "IEM Cologne 2026 Major · Playoffs"),
 ]
 WATCH_LOL = [
-    ("leagueoflegends", "LPL/2026/Split 2/Playoffs", "BO5"),
-    ("leagueoflegends", "LCK/2026/Split 2/Playoffs", "BO5"),
-    ("leagueoflegends", "LPL/2026", "BO3"),   # league page Matches widget (fallback)
-    ("leagueoflegends", "LCK/2026", "BO5"),
+    ("leagueoflegends", "LPL/2026/Split 2", "BO3", "LPL 2026 Split 2"),
+    ("leagueoflegends", "LCK/2026/Split 2", "BO5", "LCK 2026 Split 2"),
+    ("leagueoflegends", "LEC/2026/Summer", "BO3", "LEC 2026 Summer"),
 ]
 WATCH_VAL = [
-    ("valorant", "VCT/2026/Americas League/Stage 1", "BO3"),
-    ("valorant", "VCT/2026/EMEA League/Stage 1", "BO3"),
-    ("valorant", "VCT/2026/Pacific League/Stage 1", "BO3"),
-    ("valorant", "VCT/2026/China League/Stage 1", "BO3"),
-    ("valorant", "VCT/2026/Masters/Bangkok", "BO3"),
+    ("valorant", "VCT/2026/Stage 2/Masters", "BO3", "VCT 2026 · Stage 2 Masters"),
+    ("valorant", "VCT/2026/Americas League/Stage 2", "BO3", "VCT 2026 Americas · Stage 2"),
+    ("valorant", "VCT/2026/EMEA League/Stage 2", "BO3", "VCT 2026 EMEA · Stage 2"),
+    ("valorant", "VCT/2026/Pacific League/Stage 2", "BO3", "VCT 2026 Pacific · Stage 2"),
+    ("valorant", "VCT/2026/China League/Stage 2", "BO3", "VCT 2026 China · Stage 2"),
 ]
 
 DEFAULT_WINDOW_DAYS = 2  # today + next 2
@@ -99,7 +100,7 @@ def _distinct_teams(block: str) -> list[str]:
 
 
 def _emit(block: str, fmt: str, page: str, today: date,
-          window: int) -> dict | None:
+          window: int, label: str | None = None) -> dict | None:
     ts_m = _TS.search(block)
     if not ts_m:
         return None
@@ -114,9 +115,52 @@ def _emit(block: str, fmt: str, page: str, today: date,
     return {
         "scheduled_at": t.isoformat(), "date": t.date().isoformat(),
         "team_a": teams[0], "team_b": teams[1],
-        "event": page.split("/")[0] if "/" in page else page,
+        "event": label or (page.split("/")[0] if "/" in page else page),
         "page": page, "fmt": _detect_fmt(block, fmt),
     }
+
+
+# LoL league pages surface upcoming games in a `match-info` carousel ticker
+# (not brackets / not match-card rows): each card has a countdown timestamp and
+# two `block-team` opponents whose name sits in the <a title="..."> attribute.
+_MI_BLOCK = re.compile(
+    r'match-info match-info--vertical.*?(?=match-info match-info--vertical|carousel-fade|$)', re.S)
+_MI_TEAM = re.compile(r'block-team".*?<a [^>]*title="([^"]+)"', re.S)
+_MI_STAGE = re.compile(r'match-info-stage">([^<]+)<')
+
+
+def _collect_match_info(html: str, fmt: str, page: str, today: date,
+                        window: int, label: str | None) -> list[dict]:
+    import html as _h
+    out, seen = [], set()
+    for block in _MI_BLOCK.findall(html):
+        ts_m = _TS.search(block)
+        if not ts_m:
+            continue
+        teams = []
+        for raw in _MI_TEAM.findall(block):
+            name = _h.unescape(raw).strip()
+            if name and name.upper() != "TBD" and name not in teams:
+                teams.append(name)
+        if len(teams) < 2:
+            continue
+        t = datetime.fromtimestamp(int(ts_m.group(1)), tz=timezone.utc)
+        if not (today <= t.date() <= today + timedelta(days=window)):
+            continue
+        stage = _MI_STAGE.search(block)
+        f = _detect_fmt(block, fmt)
+        key = (t.isoformat(), teams[0].lower(), teams[1].lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append({
+            "scheduled_at": t.isoformat(), "date": t.date().isoformat(),
+            "team_a": teams[0], "team_b": teams[1],
+            "event": (f"{label} · {stage.group(1).strip()}" if (label and stage) else
+                      (label or page.split("/")[0])),
+            "page": page, "fmt": f,
+        })
+    return out
 
 
 def _windows_around_timestamps(html: str) -> list[str]:
@@ -133,7 +177,7 @@ def _windows_around_timestamps(html: str) -> list[str]:
 
 
 def _fetch_matches(wiki: str, page: str, fmt: str,
-                   today: date, window: int) -> list[dict]:
+                   today: date, window: int, label: str | None = None) -> list[dict]:
     """Upcoming (not finished) matches on `page` within the date window.
     Tries the bracket/matchlist split first, then a generic timestamp-window
     scan, so one parser serves CS2 brackets, LoL league widgets, and Valorant."""
@@ -145,7 +189,7 @@ def _fetch_matches(wiki: str, page: str, fmt: str,
     def _collect(blocks):
         out, seen = [], set()
         for block in blocks:
-            m = _emit(block, fmt, page, today, window)
+            m = _emit(block, fmt, page, today, window, label)
             if not m:
                 continue
             key = (m["scheduled_at"], m["team_a"].lower(), m["team_b"].lower())
@@ -154,9 +198,11 @@ def _fetch_matches(wiki: str, page: str, fmt: str,
                 out.append(m)
         return out
 
-    # Structured bracket/matchlist split first; only fall back to the fuzzy
-    # timestamp-window scan (LoL league widgets) if that found nothing.
-    return _collect(_MATCH_BLOCK.findall(html)) or _collect(_windows_around_timestamps(html))
+    # Strategy order: structured bracket/matchlist split, then the LoL
+    # match-info carousel, then a generic timestamp-window scan as last resort.
+    return (_collect(_MATCH_BLOCK.findall(html))
+            or _collect_match_info(html, fmt, page, today, window, label)
+            or _collect(_windows_around_timestamps(html)))
 
 
 # --------------------------------------------------------------------------- #
@@ -196,8 +242,9 @@ def _build_fps_inputs(today: date, window: int, watch: list, matches_csv,
     h2h = state.get("h2h", {})
 
     matches = []
-    for wiki, page, fmt in watch:
-        for m in _fetch_matches(wiki, page, fmt, today, window):
+    for wiki, page, fmt, *rest in watch:
+        label = rest[0] if rest else None
+        for m in _fetch_matches(wiki, page, fmt, today, window, label):
             na, nb = _norm(m["team_a"]), _norm(m["team_b"])
             fa = by_norm.get(na, {"rank": 60, "form": 0.5, "player": 0.0})
             fb = by_norm.get(nb, {"rank": 60, "form": 0.5, "player": 0.0})
@@ -234,8 +281,9 @@ def build_val_inputs(today: date, window: int = DEFAULT_WINDOW_DAYS) -> dict | N
 
 def build_lol_inputs(today: date, window: int = DEFAULT_WINDOW_DAYS) -> dict | None:
     matches = []
-    for wiki, page, fmt in WATCH_LOL:
-        for m in _fetch_matches(wiki, page, fmt, today, window):
+    for wiki, page, fmt, *rest in WATCH_LOL:
+        label = rest[0] if rest else None
+        for m in _fetch_matches(wiki, page, fmt, today, window, label):
             na, nb = _norm(m["team_a"]), _norm(m["team_b"])
             matches.append({
                 "match_id": f"{na}-{nb}-{m['date']}",

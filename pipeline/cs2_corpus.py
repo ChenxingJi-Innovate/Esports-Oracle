@@ -28,7 +28,7 @@ import sys
 from pathlib import Path
 
 from .sources import liquipedia
-from .sources.cs2_corpus_parser import parse_event_dated
+from .sources.cs2_corpus_parser import parse_event_dated, parse_league_matches
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_CSV = ROOT / "data" / "processed" / "cs2_matches.csv"
@@ -126,7 +126,8 @@ def build(seeds: list[str] | None = None, wiki: str = WIKI) -> list[dict]:
             try:
                 html = base_html if page == base else liquipedia.page_html(
                     wiki, page, cache_hours=24.0)
-                matches = parse_event_dated(html)
+                # brackets (playoffs) + match-card wikitables (group stage)
+                matches = parse_event_dated(html) + parse_league_matches(html)
             except Exception as e:
                 print(f"  [warn] {page}: {e}", file=sys.stderr)
                 continue

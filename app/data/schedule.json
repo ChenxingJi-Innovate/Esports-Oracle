@@ -1,89 +1,104 @@
 {
-  "generated_for": "2026-06-06",
+  "generated_for": "2026-06-07",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-05",
-      "cs2_matches": [],
-      "lol_matches": [
-        {
-          "match_id": "lpl-2026-s2-lbqf-al-lgd",
-          "event": "LPL 2026 Split 2 Playoffs (LB QF)",
-          "fmt": "BO5",
-          "team_a": "Anyone's Legend",
-          "team_b": "LGD Gaming",
-          "p_a": 0.9321,
-          "confidence": "strong",
-          "league": "LPL",
-          "scheduled_at": "2026-06-05T11:00:00Z"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-06",
+      "date": "2026-06-07",
       "cs2_matches": [
         {
-          "match_id": "g2esports-monte-2026-06-06",
-          "event": "Intel Extreme Masters",
-          "fmt": "BO1",
-          "team_a": "G2 Esports",
-          "team_b": "Monte",
-          "p_a": 0.6229,
-          "confidence": "moderate",
-          "scheduled_at": "2026-06-06T16:40:00+00:00"
-        },
-        {
-          "match_id": "teamspirit-mibr-2026-06-06",
-          "event": "Intel Extreme Masters",
-          "fmt": "BO1",
+          "match_id": "teamspirit-9zteam-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
           "team_a": "Team Spirit",
-          "team_b": "MIBR",
-          "p_a": 0.6667,
+          "team_b": "9z Team",
+          "p_a": 0.4358,
+          "confidence": "coin-flip",
+          "scheduled_at": "2026-06-07T17:00:00+00:00"
+        },
+        {
+          "match_id": "g2esports-futesports-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "G2 Esports",
+          "team_b": "FUT Esports",
+          "p_a": 0.6209,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-07T17:00:00+00:00"
+        },
+        {
+          "match_id": "monte-legacy-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO1",
+          "team_a": "Monte",
+          "team_b": "Legacy",
+          "p_a": 0.345,
           "confidence": "moderate",
-          "scheduled_at": "2026-06-06T18:30:00+00:00"
+          "scheduled_at": "2026-06-07T12:30:00+00:00"
         },
         {
-          "match_id": "paingaming-big-2026-06-06",
-          "event": "Intel Extreme Masters",
+          "match_id": "astralis-tyloo-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
           "fmt": "BO1",
-          "team_a": "PaiN Gaming",
+          "team_a": "Astralis",
+          "team_b": "TYLOO",
+          "p_a": 0.4555,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-07T12:30:00+00:00"
+        },
+        {
+          "match_id": "mibr-big-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO1",
+          "team_a": "MIBR",
           "team_b": "BIG",
-          "p_a": 0.5291,
+          "p_a": 0.4921,
           "confidence": "lean",
-          "scheduled_at": "2026-06-06T16:55:00+00:00"
+          "scheduled_at": "2026-06-07T13:30:00+00:00"
         },
         {
-          "match_id": "legacy-flyquest-2026-06-06",
-          "event": "Intel Extreme Masters",
-          "fmt": "BO1",
-          "team_a": "Legacy",
-          "team_b": "FlyQuest",
-          "p_a": 0.4208,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-06T17:30:00+00:00"
-        },
-        {
-          "match_id": "betboomteam-gamerlegion-2026-06-06",
-          "event": "Intel Extreme Masters",
+          "match_id": "betboomteam-m80-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
           "fmt": "BO1",
           "team_a": "BetBoom Team",
-          "team_b": "GamerLegion",
-          "p_a": 0.5048,
+          "team_b": "M80",
+          "p_a": 0.5151,
           "confidence": "lean",
-          "scheduled_at": "2026-06-06T17:30:00+00:00"
+          "scheduled_at": "2026-06-07T13:30:00+00:00"
         },
         {
-          "match_id": "b8-m80-2026-06-06",
-          "event": "Intel Extreme Masters",
-          "fmt": "BO1",
+          "match_id": "b8-gamerlegion-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
           "team_a": "B8",
-          "team_b": "M80",
-          "p_a": 0.601,
+          "team_b": "GamerLegion",
+          "p_a": 0.3942,
           "confidence": "lean",
-          "scheduled_at": "2026-06-06T18:30:00+00:00"
+          "scheduled_at": "2026-06-07T14:30:00+00:00"
+        },
+        {
+          "match_id": "flyquest-paingaming-2026-06-07",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "FlyQuest",
+          "team_b": "PaiN Gaming",
+          "p_a": 0.4033,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-07T14:30:00+00:00"
         }
       ],
-      "lol_matches": []
+      "lol_matches": [
+        {
+          "match_id": "anyoneslegend-bilibiligaming-2026-06-08",
+          "event": "LPL 2026 Split 2 · Lower Bracket Semifinal",
+          "fmt": "BO3",
+          "team_a": "Anyone's Legend",
+          "team_b": "Bilibili Gaming",
+          "p_a": 0.5896,
+          "confidence": "lean",
+          "league": "LPL",
+          "scheduled_at": "2026-06-08T09:00:00+00:00"
+        }
+      ]
     }
   ]
 }

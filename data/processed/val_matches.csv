@@ -1,21 +1,771 @@
 date,ts,team_a,team_b,score_a,score_b,winner,event
-2025-09-12,1757682000,Paper Rex,XLG Esports,2,0,Paper Rex,VCT/2025/Champions
-2025-09-12,1757690400,GIANTX,Sentinels,2,1,GIANTX,VCT/2025/Champions
-2025-09-13,1757768400,NRG,EDward Gaming,2,0,NRG,VCT/2025/Champions
-2025-09-13,1757779200,Team Liquid,DRX,0,2,DRX,VCT/2025/Champions
-2025-09-14,1757854800,Dragon Ranger Gaming,T1,0,2,T1,VCT/2025/Champions
-2025-09-14,1757866800,G2 Esports,Team Heretics,0,2,Team Heretics,VCT/2025/Champions
-2025-09-15,1757941200,Bilibili Gaming,MIBR,0,2,MIBR,VCT/2025/Champions
-2025-09-15,1757949000,Rex Regum Qeon,Fnatic,0,2,Fnatic,VCT/2025/Champions
-2025-09-17,1758114000,Paper Rex,GIANTX,2,1,Paper Rex,VCT/2025/Champions
-2025-09-17,1758125400,DRX,NRG,1,2,NRG,VCT/2025/Champions
-2025-09-18,1758200400,Team Heretics,T1,2,0,Team Heretics,VCT/2025/Champions
-2025-09-18,1758209400,MIBR,Fnatic,1,2,Fnatic,VCT/2025/Champions
-2025-09-19,1758286800,Team Liquid,EDward Gaming,2,1,Team Liquid,VCT/2025/Champions
-2025-09-19,1758299400,XLG Esports,Sentinels,2,1,XLG Esports,VCT/2025/Champions
-2025-09-20,1758373200,Bilibili Gaming,Rex Regum Qeon,1,2,Rex Regum Qeon,VCT/2025/Champions
-2025-09-20,1758384000,G2 Esports,Dragon Ranger Gaming,2,0,G2 Esports,VCT/2025/Champions
-2025-09-21,1758459600,DRX,Team Liquid,2,0,DRX,VCT/2025/Champions
-2025-09-21,1758468000,GIANTX,XLG Esports,2,0,GIANTX,VCT/2025/Champions
-2025-09-22,1758546000,T1,G2 Esports,0,2,G2 Esports,VCT/2025/Champions
-2025-09-22,1758554400,MIBR,Rex Regum Qeon,2,0,MIBR,VCT/2025/Champions
+2025-01-11,1736586000,TYLOO,Titan Esports Club,0,2,Titan Esports Club,VCT/2025/China League/Kickoff
+2025-01-11,1736595600,XLG Esports,Wolves Esports,2,0,XLG Esports,VCT/2025/China League/Kickoff
+2025-01-12,1736672400,JD Gaming,Dragon Ranger Gaming,1,2,Dragon Ranger Gaming,VCT/2025/China League/Kickoff
+2025-01-12,1736685000,All Gamers,Nova Esports,0,2,Nova Esports,VCT/2025/China League/Kickoff
+2025-01-15,1736960400,BBL Esports,GIANTX,2,1,BBL Esports,VCT/2025/EMEA League/Kickoff
+2025-01-15,1736973000,Karmine Corp,Natus Vincere,2,1,Karmine Corp,VCT/2025/EMEA League/Kickoff
+2025-01-16,1737018000,FunPlus Phoenix,Titan Esports Club,2,1,FunPlus Phoenix,VCT/2025/China League/Kickoff
+2025-01-16,1737030000,Bilibili Gaming,XLG Esports,2,1,Bilibili Gaming,VCT/2025/China League/Kickoff
+2025-01-16,1737046800,Team Liquid,KOI,2,1,Team Liquid,VCT/2025/EMEA League/Kickoff
+2025-01-16,1737058200,Apeks,Gentle Mates,0,2,Gentle Mates,VCT/2025/EMEA League/Kickoff
+2025-01-16,1737064800,Evil Geniuses,LOUD,0,2,LOUD,VCT/2025/Americas League/Kickoff
+2025-01-17,1737074700,MIBR,100 Thieves,0,2,100 Thieves,VCT/2025/Americas League/Kickoff
+2025-01-17,1737104400,Trace Esports,Dragon Ranger Gaming,2,0,Trace Esports,VCT/2025/China League/Kickoff
+2025-01-17,1737112200,EDward Gaming,Nova Esports,2,0,EDward Gaming,VCT/2025/China League/Kickoff
+2025-01-17,1737133200,Fnatic,BBL Esports,1,2,BBL Esports,VCT/2025/EMEA League/Kickoff
+2025-01-17,1737147600,Team Vitality,Karmine Corp,2,1,Team Vitality,VCT/2025/EMEA League/Kickoff
+2025-01-17,1737151200,2GAME Esports,FURIA,0,2,FURIA,VCT/2025/Americas League/Kickoff
+2025-01-18,1737159000,NRG,Cloud9,0,2,Cloud9,VCT/2025/Americas League/Kickoff
+2025-01-18,1737187200,BOOM Esports,T1,1,2,T1,VCT/2025/Pacific League/Kickoff
+2025-01-18,1737190800,Titan Esports Club,JD Gaming,0,2,JD Gaming,VCT/2025/China League/Kickoff
+2025-01-18,1737199200,ZETA DIVISION,Nongshim RedForce,0,2,Nongshim RedForce,VCT/2025/Pacific League/Kickoff
+2025-01-18,1737199200,XLG Esports,All Gamers,2,1,XLG Esports,VCT/2025/China League/Kickoff
+2025-01-18,1737237600,KRÜ Esports,LOUD,0,2,LOUD,VCT/2025/Americas League/Kickoff
+2025-01-19,1737246000,Sentinels,100 Thieves,2,1,Sentinels,VCT/2025/Americas League/Kickoff
+2025-01-19,1737273600,Global Esports,Team Secret,2,1,Global Esports,VCT/2025/Pacific League/Kickoff
+2025-01-19,1737277200,Dragon Ranger Gaming,TYLOO,2,0,Dragon Ranger Gaming,VCT/2025/China League/Kickoff
+2025-01-19,1737284400,DetonatioN FocusMe,Rex Regum Qeon,1,2,Rex Regum Qeon,VCT/2025/Pacific League/Kickoff
+2025-01-19,1737285000,Nova Esports,Wolves Esports,2,1,Nova Esports,VCT/2025/China League/Kickoff
+2025-01-19,1737324000,Leviatán,FURIA,2,0,Leviatán,VCT/2025/Americas League/Kickoff
+2025-01-20,1737333000,G2 Esports,Cloud9,2,0,G2 Esports,VCT/2025/Americas League/Kickoff
+2025-01-20,1737360000,DRX,Nongshim RedForce,2,1,DRX,VCT/2025/Pacific League/Kickoff
+2025-01-20,1737363600,Bilibili Gaming,FunPlus Phoenix,2,0,Bilibili Gaming,VCT/2025/China League/Kickoff
+2025-01-20,1737370800,Paper Rex,T1,1,2,T1,VCT/2025/Pacific League/Kickoff
+2025-01-20,1737372600,Trace Esports,EDward Gaming,2,0,Trace Esports,VCT/2025/China League/Kickoff
+2025-01-21,1737450000,Nova Esports,Dragon Ranger Gaming,0,2,Dragon Ranger Gaming,VCT/2025/China League/Kickoff
+2025-01-21,1737458400,JD Gaming,XLG Esports,1,2,XLG Esports,VCT/2025/China League/Kickoff
+2025-01-22,1737536400,FunPlus Phoenix,Dragon Ranger Gaming,1,2,Dragon Ranger Gaming,VCT/2025/China League/Kickoff
+2025-01-22,1737547800,EDward Gaming,XLG Esports,2,1,EDward Gaming,VCT/2025/China League/Kickoff
+2025-01-22,1737565200,FUT Esports,Team Liquid,2,0,FUT Esports,VCT/2025/EMEA League/Kickoff
+2025-01-22,1737573000,Team Heretics,Gentle Mates,2,1,Team Heretics,VCT/2025/EMEA League/Kickoff
+2025-01-23,1737622800,Bilibili Gaming,Trace Esports,1,2,Trace Esports,VCT/2025/China League/Kickoff
+2025-01-23,1737635400,Dragon Ranger Gaming,EDward Gaming,0,2,EDward Gaming,VCT/2025/China League/Kickoff
+2025-01-23,1737651600,Karmine Corp,GIANTX,1,2,GIANTX,VCT/2025/EMEA League/Kickoff
+2025-01-23,1737664200,Fnatic,Natus Vincere,2,1,Fnatic,VCT/2025/EMEA League/Kickoff
+2025-01-23,1737669600,FURIA,Evil Geniuses,0,2,Evil Geniuses,VCT/2025/Americas League/Kickoff
+2025-01-24,1737678000,Cloud9,MIBR,1,2,MIBR,VCT/2025/Americas League/Kickoff
+2025-01-24,1737709200,Bilibili Gaming,EDward Gaming,0,3,EDward Gaming,VCT/2025/China League/Kickoff
+2025-01-24,1737738000,Team Liquid,Apeks,2,1,Team Liquid,VCT/2025/EMEA League/Kickoff
+2025-01-24,1737749400,Gentle Mates,KOI,2,1,Gentle Mates,VCT/2025/EMEA League/Kickoff
+2025-01-24,1737756000,KRÜ Esports,2GAME Esports,2,0,KRÜ Esports,VCT/2025/Americas League/Kickoff
+2025-01-25,1737763800,100 Thieves,NRG,1,2,NRG,VCT/2025/Americas League/Kickoff
+2025-01-25,1737792000,TALON,Global Esports,2,1,TALON,VCT/2025/Pacific League/Kickoff
+2025-01-25,1737795600,Trace Esports,EDward Gaming,1,3,EDward Gaming,VCT/2025/China League/Kickoff
+2025-01-25,1737802800,Gen.G Esports,Rex Regum Qeon,2,1,Gen.G Esports,VCT/2025/Pacific League/Kickoff
+2025-01-26,1737878400,Nongshim RedForce,BOOM Esports,2,1,Nongshim RedForce,VCT/2025/Pacific League/Kickoff
+2025-01-26,1737889200,Paper Rex,ZETA DIVISION,2,0,Paper Rex,VCT/2025/Pacific League/Kickoff
+2025-01-27,1737964800,Rex Regum Qeon,Team Secret,2,1,Rex Regum Qeon,VCT/2025/Pacific League/Kickoff
+2025-01-27,1737975600,Global Esports,DetonatioN FocusMe,0,2,DetonatioN FocusMe,VCT/2025/Pacific League/Kickoff
+2025-01-29,1738170000,BBL Esports,Team Heretics,0,2,Team Heretics,VCT/2025/EMEA League/Kickoff
+2025-01-29,1738178400,FUT Esports,Team Vitality,0,2,Team Vitality,VCT/2025/EMEA League/Kickoff
+2025-01-30,1738256400,Gentle Mates,Fnatic,0,2,Fnatic,VCT/2025/EMEA League/Kickoff
+2025-01-30,1738264200,GIANTX,Team Liquid,0,2,Team Liquid,VCT/2025/EMEA League/Kickoff
+2025-01-31,1738310400,T1,TALON,2,1,T1,VCT/2025/Pacific League/Kickoff
+2025-01-31,1738320000,Gen.G Esports,DRX,0,2,DRX,VCT/2025/Pacific League/Kickoff
+2025-01-31,1738342800,FUT Esports,Fnatic,2,0,FUT Esports,VCT/2025/EMEA League/Kickoff
+2025-01-31,1738350600,BBL Esports,Team Liquid,1,2,Team Liquid,VCT/2025/EMEA League/Kickoff
+2025-01-31,1738360800,LOUD,Sentinels,1,2,Sentinels,VCT/2025/Americas League/Kickoff
+2025-02-01,1738375200,G2 Esports,Leviatán,2,0,G2 Esports,VCT/2025/Americas League/Kickoff
+2025-02-01,1738396800,Nongshim RedForce,Rex Regum Qeon,2,1,Nongshim RedForce,VCT/2025/Pacific League/Kickoff
+2025-02-01,1738407600,DetonatioN FocusMe,Paper Rex,2,0,DetonatioN FocusMe,VCT/2025/Pacific League/Kickoff
+2025-02-01,1738447200,Evil Geniuses,MIBR,0,2,MIBR,VCT/2025/Americas League/Kickoff
+2025-02-02,1738456200,NRG,KRÜ Esports,1,2,KRÜ Esports,VCT/2025/Americas League/Kickoff
+2025-02-02,1738483200,TALON,Nongshim RedForce,2,1,TALON,VCT/2025/Pacific League/Kickoff
+2025-02-02,1738494000,Gen.G Esports,DetonatioN FocusMe,2,0,Gen.G Esports,VCT/2025/Pacific League/Kickoff
+2025-02-02,1738533600,Leviatán,MIBR,1,2,MIBR,VCT/2025/Americas League/Kickoff
+2025-02-03,1738546200,LOUD,KRÜ Esports,0,2,KRÜ Esports,VCT/2025/Americas League/Kickoff
+2025-02-06,1738879200,Sentinels,G2 Esports,0,2,G2 Esports,VCT/2025/Americas League/Kickoff
+2025-02-07,1738887600,MIBR,KRÜ Esports,2,1,MIBR,VCT/2025/Americas League/Kickoff
+2025-02-07,1738915200,T1,DRX,1,2,DRX,VCT/2025/Pacific League/Kickoff
+2025-02-07,1738927800,TALON,Gen.G Esports,0,2,Gen.G Esports,VCT/2025/Pacific League/Kickoff
+2025-02-07,1738947600,Team Vitality,Team Heretics,2,0,Team Vitality,VCT/2025/EMEA League/Kickoff
+2025-02-07,1738955400,FUT Esports,Team Liquid,1,2,Team Liquid,VCT/2025/EMEA League/Kickoff
+2025-02-07,1738965600,Sentinels,MIBR,3,1,Sentinels,VCT/2025/Americas League/Kickoff
+2025-02-08,1739001600,T1,Gen.G Esports,3,2,T1,VCT/2025/Pacific League/Kickoff
+2025-02-08,1739034000,Team Heretics,Team Liquid,0,3,Team Liquid,VCT/2025/EMEA League/Kickoff
+2025-02-08,1739052000,G2 Esports,Sentinels,3,2,G2 Esports,VCT/2025/Americas League/Kickoff
+2025-02-09,1739088000,DRX,T1,3,2,DRX,VCT/2025/Pacific League/Kickoff
+2025-02-09,1739120400,Team Vitality,Team Liquid,3,2,Team Vitality,VCT/2025/EMEA League/Kickoff
+2025-02-20,1740045600,EDward Gaming,Team Liquid,2,0,EDward Gaming,VCT/2025/Stage 1/Masters
+2025-02-20,1740056400,DRX,Sentinels,2,0,DRX,VCT/2025/Stage 1/Masters
+2025-02-21,1740132000,Team Vitality,T1,2,0,Team Vitality,VCT/2025/Stage 1/Masters
+2025-02-21,1740141000,G2 Esports,Trace Esports,2,0,G2 Esports,VCT/2025/Stage 1/Masters
+2025-02-22,1740218400,DRX,Team Vitality,1,2,Team Vitality,VCT/2025/Stage 1/Masters
+2025-02-22,1740230400,EDward Gaming,G2 Esports,2,1,EDward Gaming,VCT/2025/Stage 1/Masters
+2025-02-23,1740304800,T1,Trace Esports,2,0,T1,VCT/2025/Stage 1/Masters
+2025-02-23,1740311700,Team Liquid,Sentinels,2,1,Team Liquid,VCT/2025/Stage 1/Masters
+2025-02-24,1740391200,T1,DRX,2,0,T1,VCT/2025/Stage 1/Masters
+2025-02-24,1740399000,G2 Esports,Team Liquid,2,0,G2 Esports,VCT/2025/Stage 1/Masters
+2025-02-27,1740650400,EDward Gaming,T1,2,1,EDward Gaming,VCT/2025/Stage 1/Masters
+2025-02-27,1740661800,Team Vitality,G2 Esports,0,2,G2 Esports,VCT/2025/Stage 1/Masters
+2025-02-28,1740736800,EDward Gaming,G2 Esports,0,2,G2 Esports,VCT/2025/Stage 1/Masters
+2025-02-28,1740744000,T1,Team Vitality,2,1,T1,VCT/2025/Stage 1/Masters
+2025-03-01,1740823200,EDward Gaming,T1,1,3,T1,VCT/2025/Stage 1/Masters
+2025-03-02,1740913200,G2 Esports,T1,2,3,T1,VCT/2025/Stage 1/Masters
+2025-03-13,1741863600,XLG Esports,Bilibili Gaming,1,2,Bilibili Gaming,VCT/2025/China League/Stage 1
+2025-03-14,1741950000,Trace Esports,All Gamers,2,1,Trace Esports,VCT/2025/China League/Stage 1
+2025-03-15,1742029200,Dragon Ranger Gaming,Nova Esports,2,0,Dragon Ranger Gaming,VCT/2025/China League/Stage 1
+2025-03-15,1742036400,TYLOO,EDward Gaming,0,2,EDward Gaming,VCT/2025/China League/Stage 1
+2025-03-16,1742115600,JD Gaming,Wolves Esports,0,2,Wolves Esports,VCT/2025/China League/Stage 1
+2025-03-16,1742125200,FunPlus Phoenix,Titan Esports Club,2,0,FunPlus Phoenix,VCT/2025/China League/Stage 1
+2025-03-20,1742468400,Nova Esports,EDward Gaming,2,0,Nova Esports,VCT/2025/China League/Stage 1
+2025-03-21,1742554800,TYLOO,FunPlus Phoenix,1,2,FunPlus Phoenix,VCT/2025/China League/Stage 1
+2025-03-21,1742590800,Cloud9,NRG,2,1,Cloud9,VCT/2025/Americas League/Stage 1
+2025-03-22,1742603400,KRÜ Esports,LOUD,2,1,KRÜ Esports,VCT/2025/Americas League/Stage 1
+2025-03-22,1742630400,DetonatioN FocusMe,Global Esports,0,2,Global Esports,VCT/2025/Pacific League/Stage 1
+2025-03-22,1742634000,XLG Esports,All Gamers,2,0,XLG Esports,VCT/2025/China League/Stage 1
+2025-03-22,1742639400,T1,ZETA DIVISION,2,1,T1,VCT/2025/Pacific League/Stage 1
+2025-03-22,1742642400,Wolves Esports,Trace Esports,2,0,Wolves Esports,VCT/2025/China League/Stage 1
+2025-03-22,1742677200,G2 Esports,FURIA,2,0,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-03-22,1742686200,MIBR,Leviatán,2,0,MIBR,VCT/2025/Americas League/Stage 1
+2025-03-23,1742716800,DRX,Paper Rex,2,1,DRX,VCT/2025/Pacific League/Stage 1
+2025-03-23,1742720400,Titan Esports Club,Dragon Ranger Gaming,2,1,Titan Esports Club,VCT/2025/China League/Stage 1
+2025-03-23,1742727600,TALON,Team Secret,2,1,TALON,VCT/2025/Pacific League/Stage 1
+2025-03-23,1742731200,Bilibili Gaming,JD Gaming,2,1,Bilibili Gaming,VCT/2025/China League/Stage 1
+2025-03-23,1742763600,2GAME Esports,Evil Geniuses,0,2,Evil Geniuses,VCT/2025/Americas League/Stage 1
+2025-03-23,1742772600,Sentinels,100 Thieves,2,1,Sentinels,VCT/2025/Americas League/Stage 1
+2025-03-24,1742803200,Gen.G Esports,BOOM Esports,0,2,BOOM Esports,VCT/2025/Pacific League/Stage 1
+2025-03-24,1742812800,Nongshim RedForce,Rex Regum Qeon,2,1,Nongshim RedForce,VCT/2025/Pacific League/Stage 1
+2025-03-26,1743004800,Team Vitality,GIANTX,2,0,Team Vitality,VCT/2025/EMEA League/Stage 1
+2025-03-26,1743013200,BBL Esports,Karmine Corp,2,1,BBL Esports,VCT/2025/EMEA League/Stage 1
+2025-03-27,1743073200,JD Gaming,Trace Esports,0,2,Trace Esports,VCT/2025/China League/Stage 1
+2025-03-27,1743091200,Team Heretics,Apeks,2,1,Team Heretics,VCT/2025/EMEA League/Stage 1
+2025-03-27,1743102600,FUT Esports,KOI,2,0,FUT Esports,VCT/2025/EMEA League/Stage 1
+2025-03-28,1743159600,Wolves Esports,XLG Esports,0,2,XLG Esports,VCT/2025/China League/Stage 1
+2025-03-28,1743177600,Fnatic,Natus Vincere,2,0,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-03-28,1743186000,Team Liquid,Gentle Mates,1,2,Gentle Mates,VCT/2025/EMEA League/Stage 1
+2025-03-28,1743195600,NRG,FURIA,2,1,NRG,VCT/2025/Americas League/Stage 1
+2025-03-29,1743206400,Sentinels,KRÜ Esports,0,2,KRÜ Esports,VCT/2025/Americas League/Stage 1
+2025-03-29,1743235200,Team Secret,ZETA DIVISION,0,2,ZETA DIVISION,VCT/2025/Pacific League/Stage 1
+2025-03-29,1743238800,TYLOO,Titan Esports Club,1,2,Titan Esports Club,VCT/2025/China League/Stage 1
+2025-03-29,1743244200,T1,Nongshim RedForce,2,0,T1,VCT/2025/Pacific League/Stage 1
+2025-03-29,1743250800,Dragon Ranger Gaming,EDward Gaming,1,2,EDward Gaming,VCT/2025/China League/Stage 1
+2025-03-29,1743282000,100 Thieves,Evil Geniuses,2,0,100 Thieves,VCT/2025/Americas League/Stage 1
+2025-03-29,1743289800,G2 Esports,MIBR,2,1,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-03-30,1743321600,Gen.G Esports,Paper Rex,2,1,Gen.G Esports,VCT/2025/Pacific League/Stage 1
+2025-03-30,1743325200,Nova Esports,FunPlus Phoenix,2,0,Nova Esports,VCT/2025/China League/Stage 1
+2025-03-30,1743331200,DRX,DetonatioN FocusMe,2,0,DRX,VCT/2025/Pacific League/Stage 1
+2025-03-30,1743334200,All Gamers,Bilibili Gaming,0,2,Bilibili Gaming,VCT/2025/China League/Stage 1
+2025-03-30,1743368400,LOUD,2GAME Esports,0,2,2GAME Esports,VCT/2025/Americas League/Stage 1
+2025-03-30,1743378600,Leviatán,Cloud9,0,2,Cloud9,VCT/2025/Americas League/Stage 1
+2025-03-31,1743408000,TALON,Rex Regum Qeon,0,2,Rex Regum Qeon,VCT/2025/Pacific League/Stage 1
+2025-03-31,1743415200,BOOM Esports,Global Esports,2,0,BOOM Esports,VCT/2025/Pacific League/Stage 1
+2025-04-02,1743606000,Team Liquid,BBL Esports,2,1,Team Liquid,VCT/2025/EMEA League/Stage 1
+2025-04-02,1743615600,Apeks,Natus Vincere,1,2,Natus Vincere,VCT/2025/EMEA League/Stage 1
+2025-04-03,1743678000,FunPlus Phoenix,Dragon Ranger Gaming,0,2,Dragon Ranger Gaming,VCT/2025/China League/Stage 1
+2025-04-03,1743692400,FUT Esports,Gentle Mates,2,1,FUT Esports,VCT/2025/EMEA League/Stage 1
+2025-04-03,1743705000,Team Heretics,GIANTX,2,1,Team Heretics,VCT/2025/EMEA League/Stage 1
+2025-04-04,1743764400,Bilibili Gaming,Wolves Esports,2,1,Bilibili Gaming,VCT/2025/China League/Stage 1
+2025-04-04,1743778800,Team Vitality,Fnatic,1,2,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-04-04,1743793800,KOI,Karmine Corp,0,2,Karmine Corp,VCT/2025/EMEA League/Stage 1
+2025-04-04,1743800400,Evil Geniuses,Sentinels,0,2,Sentinels,VCT/2025/Americas League/Stage 1
+2025-04-04,1743808200,100 Thieves,LOUD,2,1,100 Thieves,VCT/2025/Americas League/Stage 1
+2025-04-05,1743840000,Gen.G Esports,DetonatioN FocusMe,2,0,Gen.G Esports,VCT/2025/Pacific League/Stage 1
+2025-04-05,1743843600,All Gamers,JD Gaming,0,2,JD Gaming,VCT/2025/China League/Stage 1
+2025-04-05,1743847200,Rex Regum Qeon,ZETA DIVISION,2,0,Rex Regum Qeon,VCT/2025/Pacific League/Stage 1
+2025-04-05,1743852600,EDward Gaming,Titan Esports Club,2,1,EDward Gaming,VCT/2025/China League/Stage 1
+2025-04-05,1743886800,2GAME Esports,KRÜ Esports,1,2,KRÜ Esports,VCT/2025/Americas League/Stage 1
+2025-04-06,1743898200,G2 Esports,NRG,2,0,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-04-06,1743926400,Paper Rex,BOOM Esports,1,2,BOOM Esports,VCT/2025/Pacific League/Stage 1
+2025-04-06,1743930000,Nova Esports,TYLOO,2,1,Nova Esports,VCT/2025/China League/Stage 1
+2025-04-06,1743939600,TALON,Nongshim RedForce,2,1,TALON,VCT/2025/Pacific League/Stage 1
+2025-04-06,1743940800,Trace Esports,XLG Esports,1,2,XLG Esports,VCT/2025/China League/Stage 1
+2025-04-06,1743973200,FURIA,Leviatán,0,2,Leviatán,VCT/2025/Americas League/Stage 1
+2025-04-06,1743981000,Cloud9,MIBR,1,2,MIBR,VCT/2025/Americas League/Stage 1
+2025-04-07,1744012800,DRX,Global Esports,2,0,DRX,VCT/2025/Pacific League/Stage 1
+2025-04-07,1744021200,T1,Team Secret,2,1,T1,VCT/2025/Pacific League/Stage 1
+2025-04-09,1744210800,KOI,BBL Esports,0,2,BBL Esports,VCT/2025/EMEA League/Stage 1
+2025-04-09,1744218600,Natus Vincere,GIANTX,2,1,Natus Vincere,VCT/2025/EMEA League/Stage 1
+2025-04-10,1744282800,JD Gaming,XLG Esports,1,2,XLG Esports,VCT/2025/China League/Stage 1
+2025-04-10,1744297200,Team Liquid,FUT Esports,2,0,Team Liquid,VCT/2025/EMEA League/Stage 1
+2025-04-10,1744303800,Team Vitality,Team Heretics,0,2,Team Heretics,VCT/2025/EMEA League/Stage 1
+2025-04-11,1744369200,Dragon Ranger Gaming,TYLOO,1,2,TYLOO,VCT/2025/China League/Stage 1
+2025-04-11,1744383600,Apeks,Fnatic,0,2,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-04-11,1744394400,Karmine Corp,Gentle Mates,2,0,Karmine Corp,VCT/2025/EMEA League/Stage 1
+2025-04-11,1744405200,100 Thieves,2GAME Esports,2,0,100 Thieves,VCT/2025/Americas League/Stage 1
+2025-04-11,1744413600,G2 Esports,Leviatán,2,1,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-04-12,1744444800,Nongshim RedForce,Team Secret,2,0,Nongshim RedForce,VCT/2025/Pacific League/Stage 1
+2025-04-12,1744448400,Wolves Esports,All Gamers,2,1,Wolves Esports,VCT/2025/China League/Stage 1
+2025-04-12,1744453200,DRX,BOOM Esports,1,2,BOOM Esports,VCT/2025/Pacific League/Stage 1
+2025-04-12,1744459200,Bilibili Gaming,Trace Esports,1,2,Trace Esports,VCT/2025/China League/Stage 1
+2025-04-12,1744491600,FURIA,Cloud9,0,2,Cloud9,VCT/2025/Americas League/Stage 1
+2025-04-12,1744500000,Sentinels,LOUD,2,1,Sentinels,VCT/2025/Americas League/Stage 1
+2025-04-13,1744531200,T1,Rex Regum Qeon,1,2,Rex Regum Qeon,VCT/2025/Pacific League/Stage 1
+2025-04-13,1744534800,Titan Esports Club,Nova Esports,2,0,Titan Esports Club,VCT/2025/China League/Stage 1
+2025-04-13,1744542000,Gen.G Esports,Global Esports,2,0,Gen.G Esports,VCT/2025/Pacific League/Stage 1
+2025-04-13,1744542000,EDward Gaming,FunPlus Phoenix,2,0,EDward Gaming,VCT/2025/China League/Stage 1
+2025-04-13,1744578000,KRÜ Esports,Evil Geniuses,0,2,Evil Geniuses,VCT/2025/Americas League/Stage 1
+2025-04-13,1744585800,NRG,MIBR,0,2,MIBR,VCT/2025/Americas League/Stage 1
+2025-04-14,1744617600,TALON,ZETA DIVISION,0,2,ZETA DIVISION,VCT/2025/Pacific League/Stage 1
+2025-04-14,1744624800,DetonatioN FocusMe,Paper Rex,1,2,Paper Rex,VCT/2025/Pacific League/Stage 1
+2025-04-16,1744815600,Team Vitality,Apeks,2,0,Team Vitality,VCT/2025/EMEA League/Stage 1
+2025-04-16,1744824000,Team Liquid,KOI,2,0,Team Liquid,VCT/2025/EMEA League/Stage 1
+2025-04-17,1744880400,Titan Esports Club,Wolves Esports,0,2,Wolves Esports,VCT/2025/China League/Stage 1
+2025-04-17,1744889400,XLG Esports,Nova Esports,2,0,XLG Esports,VCT/2025/China League/Stage 1
+2025-04-17,1744902000,Gentle Mates,BBL Esports,0,2,BBL Esports,VCT/2025/EMEA League/Stage 1
+2025-04-17,1744909800,GIANTX,Fnatic,1,2,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-04-18,1744966800,Titan Esports Club,Dragon Ranger Gaming,1,2,Dragon Ranger Gaming,VCT/2025/China League/Stage 1
+2025-04-18,1744980600,Nova Esports,Trace Esports,0,2,Trace Esports,VCT/2025/China League/Stage 1
+2025-04-18,1744988400,Karmine Corp,FUT Esports,1,2,FUT Esports,VCT/2025/EMEA League/Stage 1
+2025-04-18,1745004000,Natus Vincere,Team Heretics,0,2,Team Heretics,VCT/2025/EMEA League/Stage 1
+2025-04-18,1745010000,G2 Esports,Cloud9,2,1,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-04-19,1745020800,MIBR,FURIA,2,1,MIBR,VCT/2025/Americas League/Stage 1
+2025-04-19,1745049600,Paper Rex,Global Esports,2,0,Paper Rex,VCT/2025/Pacific League/Stage 1
+2025-04-19,1745053200,Bilibili Gaming,Wolves Esports,0,2,Wolves Esports,VCT/2025/China League/Stage 1
+2025-04-19,1745057700,T1,TALON,0,2,TALON,VCT/2025/Pacific League/Stage 1
+2025-04-19,1745061600,EDward Gaming,XLG Esports,0,2,XLG Esports,VCT/2025/China League/Stage 1
+2025-04-19,1745096400,Sentinels,2GAME Esports,2,0,Sentinels,VCT/2025/Americas League/Stage 1
+2025-04-19,1745104800,KRÜ Esports,100 Thieves,2,0,KRÜ Esports,VCT/2025/Americas League/Stage 1
+2025-04-20,1745136000,DRX,Gen.G Esports,2,1,DRX,VCT/2025/Pacific League/Stage 1
+2025-04-20,1745139600,Bilibili Gaming,Trace Esports,2,0,Bilibili Gaming,VCT/2025/China League/Stage 1
+2025-04-20,1745146800,EDward Gaming,Dragon Ranger Gaming,2,1,EDward Gaming,VCT/2025/China League/Stage 1
+2025-04-20,1745148000,Nongshim RedForce,ZETA DIVISION,2,1,Nongshim RedForce,VCT/2025/Pacific League/Stage 1
+2025-04-20,1745182800,Evil Geniuses,LOUD,2,1,Evil Geniuses,VCT/2025/Americas League/Stage 1
+2025-04-21,1745198400,Leviatán,NRG,0,2,NRG,VCT/2025/Americas League/Stage 1
+2025-04-21,1745222400,DetonatioN FocusMe,BOOM Esports,0,2,BOOM Esports,VCT/2025/Pacific League/Stage 1
+2025-04-21,1745229600,Rex Regum Qeon,Team Secret,1,2,Team Secret,VCT/2025/Pacific League/Stage 1
+2025-04-23,1745420400,BBL Esports,FUT Esports,2,0,BBL Esports,VCT/2025/EMEA League/Stage 1
+2025-04-23,1745436000,GIANTX,Apeks,2,0,GIANTX,VCT/2025/EMEA League/Stage 1
+2025-04-24,1745506800,Gentle Mates,KOI,1,2,KOI,VCT/2025/EMEA League/Stage 1
+2025-04-24,1745517600,Team Vitality,Natus Vincere,0,2,Natus Vincere,VCT/2025/EMEA League/Stage 1
+2025-04-24,1745528400,MIBR,100 Thieves,2,0,MIBR,VCT/2025/Americas League/Stage 1
+2025-04-24,1745536200,Sentinels,Cloud9,2,0,Sentinels,VCT/2025/Americas League/Stage 1
+2025-04-25,1745614800,100 Thieves,NRG,2,0,100 Thieves,VCT/2025/Americas League/Stage 1
+2025-04-25,1745622600,Cloud9,Evil Geniuses,0,2,Evil Geniuses,VCT/2025/Americas League/Stage 1
+2025-04-26,1745654400,TALON,Gen.G Esports,1,2,Gen.G Esports,VCT/2025/Pacific League/Stage 1
+2025-04-26,1745665200,DRX,T1,2,0,DRX,VCT/2025/Pacific League/Stage 1
+2025-04-26,1745701200,KRÜ Esports,MIBR,0,2,MIBR,VCT/2025/Americas League/Stage 1
+2025-04-26,1745708400,G2 Esports,Sentinels,1,2,Sentinels,VCT/2025/Americas League/Stage 1
+2025-04-27,1745740800,BOOM Esports,Gen.G Esports,0,2,Gen.G Esports,VCT/2025/Pacific League/Stage 1
+2025-04-27,1745748000,Rex Regum Qeon,DRX,2,1,Rex Regum Qeon,VCT/2025/Pacific League/Stage 1
+2025-04-27,1745787600,KRÜ Esports,Evil Geniuses,0,2,Evil Geniuses,VCT/2025/Americas League/Stage 1
+2025-04-27,1745797200,G2 Esports,100 Thieves,2,1,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-05-02,1746176400,Wolves Esports,XLG Esports,0,2,XLG Esports,VCT/2025/China League/Stage 1
+2025-05-02,1746186000,EDward Gaming,Bilibili Gaming,1,2,Bilibili Gaming,VCT/2025/China League/Stage 1
+2025-05-02,1746198000,Team Liquid,Karmine Corp,2,1,Team Liquid,VCT/2025/EMEA League/Stage 1
+2025-05-02,1746207000,Fnatic,Team Heretics,0,2,Team Heretics,VCT/2025/EMEA League/Stage 1
+2025-05-02,1746219600,MIBR,Sentinels,0,2,Sentinels,VCT/2025/Americas League/Stage 1
+2025-05-02,1746229800,G2 Esports,Evil Geniuses,2,1,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-05-03,1746259200,TALON,Nongshim RedForce,2,1,TALON,VCT/2025/Pacific League/Stage 1
+2025-05-03,1746262800,Wolves Esports,Bilibili Gaming,0,3,Bilibili Gaming,VCT/2025/China League/Stage 1
+2025-05-03,1746271200,T1,Paper Rex,1,2,Paper Rex,VCT/2025/Pacific League/Stage 1
+2025-05-03,1746306000,MIBR,G2 Esports,1,3,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-05-04,1746345600,DRX,TALON,2,0,DRX,VCT/2025/Pacific League/Stage 1
+2025-05-04,1746349200,XLG Esports,Bilibili Gaming,3,1,XLG Esports,VCT/2025/China League/Stage 1
+2025-05-04,1746354000,BOOM Esports,Paper Rex,0,2,Paper Rex,VCT/2025/Pacific League/Stage 1
+2025-05-04,1746392400,Sentinels,G2 Esports,1,3,G2 Esports,VCT/2025/Americas League/Stage 1
+2025-05-08,1746716400,BBL Esports,Natus Vincere,2,0,BBL Esports,VCT/2025/EMEA League/Stage 1
+2025-05-08,1746727200,Fnatic,FUT Esports,2,0,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-05-09,1746777600,Gen.G Esports,Rex Regum Qeon,2,0,Gen.G Esports,VCT/2025/Pacific League/Stage 1
+2025-05-09,1746784800,DRX,Paper Rex,0,2,Paper Rex,VCT/2025/Pacific League/Stage 1
+2025-05-09,1746802800,Natus Vincere,Karmine Corp,2,1,Natus Vincere,VCT/2025/EMEA League/Stage 1
+2025-05-09,1746817200,FUT Esports,Team Vitality,2,0,FUT Esports,VCT/2025/EMEA League/Stage 1
+2025-05-10,1746864000,Rex Regum Qeon,Paper Rex,3,2,Rex Regum Qeon,VCT/2025/Pacific League/Stage 1
+2025-05-10,1746889200,Team Heretics,BBL Esports,2,0,Team Heretics,VCT/2025/EMEA League/Stage 1
+2025-05-10,1746898800,Team Liquid,Fnatic,1,2,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-05-11,1746950400,Gen.G Esports,Rex Regum Qeon,1,3,Rex Regum Qeon,VCT/2025/Pacific League/Stage 1
+2025-05-11,1746975600,BBL Esports,FUT Esports,2,1,BBL Esports,VCT/2025/EMEA League/Stage 1
+2025-05-11,1746989400,Team Liquid,Natus Vincere,2,1,Team Liquid,VCT/2025/EMEA League/Stage 1
+2025-05-16,1747407600,Team Heretics,Fnatic,0,2,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-05-16,1747416600,Team Liquid,BBL Esports,2,1,Team Liquid,VCT/2025/EMEA League/Stage 1
+2025-05-17,1747497600,Team Heretics,Team Liquid,3,0,Team Heretics,VCT/2025/EMEA League/Stage 1
+2025-05-18,1747584000,Fnatic,Team Heretics,3,0,Fnatic,VCT/2025/EMEA League/Stage 1
+2025-06-07,1749312000,Team Heretics,Paper Rex,0,2,Paper Rex,VCT/2025/Stage 2/Masters
+2025-06-07,1749319200,Bilibili Gaming,Team Liquid,2,1,Bilibili Gaming,VCT/2025/Stage 2/Masters
+2025-06-08,1749398400,Sentinels,Wolves Esports,2,0,Sentinels,VCT/2025/Stage 2/Masters
+2025-06-08,1749408000,Gen.G Esports,MIBR,2,0,Gen.G Esports,VCT/2025/Stage 2/Masters
+2025-06-09,1749484800,Bilibili Gaming,Sentinels,1,2,Sentinels,VCT/2025/Stage 2/Masters
+2025-06-09,1749497400,Paper Rex,Gen.G Esports,0,2,Gen.G Esports,VCT/2025/Stage 2/Masters
+2025-06-10,1749571200,Team Heretics,Wolves Esports,0,2,Wolves Esports,VCT/2025/Stage 2/Masters
+2025-06-10,1749580200,Team Liquid,MIBR,2,0,Team Liquid,VCT/2025/Stage 2/Masters
+2025-06-11,1749657600,Bilibili Gaming,Wolves Esports,0,2,Wolves Esports,VCT/2025/Stage 2/Masters
+2025-06-11,1749666600,Paper Rex,Team Liquid,2,1,Paper Rex,VCT/2025/Stage 2/Masters
+2025-06-13,1749830400,G2 Esports,Paper Rex,0,2,Paper Rex,VCT/2025/Stage 2/Masters
+2025-06-13,1749839400,XLG Esports,Sentinels,0,2,Sentinels,VCT/2025/Stage 2/Masters
+2025-06-14,1749916800,Rex Regum Qeon,Wolves Esports,0,2,Wolves Esports,VCT/2025/Stage 2/Masters
+2025-06-14,1749925800,Fnatic,Gen.G Esports,1,2,Gen.G Esports,VCT/2025/Stage 2/Masters
+2025-06-15,1750003200,G2 Esports,XLG Esports,2,0,G2 Esports,VCT/2025/Stage 2/Masters
+2025-06-15,1750010400,Rex Regum Qeon,Fnatic,1,2,Fnatic,VCT/2025/Stage 2/Masters
+2025-06-16,1750089600,Wolves Esports,Gen.G Esports,2,0,Wolves Esports,VCT/2025/Stage 2/Masters
+2025-06-16,1750098600,Paper Rex,Sentinels,2,0,Paper Rex,VCT/2025/Stage 2/Masters
+2025-06-17,1750176000,Gen.G Esports,G2 Esports,1,2,G2 Esports,VCT/2025/Stage 2/Masters
+2025-06-17,1750188600,Sentinels,Fnatic,1,2,Fnatic,VCT/2025/Stage 2/Masters
+2025-06-20,1750435200,Paper Rex,Wolves Esports,2,0,Paper Rex,VCT/2025/Stage 2/Masters
+2025-06-20,1750444800,G2 Esports,Fnatic,0,2,Fnatic,VCT/2025/Stage 2/Masters
+2025-06-21,1750521600,Wolves Esports,Fnatic,1,3,Fnatic,VCT/2025/Stage 2/Masters
+2025-06-22,1750612800,Paper Rex,Fnatic,3,1,Paper Rex,VCT/2025/Stage 2/Masters
+2025-07-03,1751540400,EDward Gaming,Titan Esports Club,2,0,EDward Gaming,VCT/2025/China League/Stage 2
+2025-07-04,1751626800,Bilibili Gaming,TYLOO,2,0,Bilibili Gaming,VCT/2025/China League/Stage 2
+2025-07-05,1751706000,All Gamers,XLG Esports,1,2,XLG Esports,VCT/2025/China League/Stage 2
+2025-07-05,1751716800,Wolves Esports,FunPlus Phoenix,0,2,FunPlus Phoenix,VCT/2025/China League/Stage 2
+2025-07-06,1751792400,Dragon Ranger Gaming,Nova Esports,2,1,Dragon Ranger Gaming,VCT/2025/China League/Stage 2
+2025-07-06,1751804400,JD Gaming,Trace Esports,1,2,Trace Esports,VCT/2025/China League/Stage 2
+2025-07-15,1752566400,BOOM Esports,TALON,0,2,TALON,VCT/2025/Pacific League/Stage 2
+2025-07-15,1752574800,Nongshim RedForce,Team Secret,2,1,Nongshim RedForce,VCT/2025/Pacific League/Stage 2
+2025-07-16,1752652800,T1,Paper Rex,0,2,Paper Rex,VCT/2025/Pacific League/Stage 2
+2025-07-16,1752661800,DRX,Gen.G Esports,0,2,Gen.G Esports,VCT/2025/Pacific League/Stage 2
+2025-07-16,1752663600,Trace Esports,TYLOO,0,2,TYLOO,VCT/2025/China League/Stage 2
+2025-07-16,1752678000,Natus Vincere,Apeks,2,1,Natus Vincere,VCT/2025/EMEA League/Stage 2
+2025-07-16,1752688200,Team Vitality,GIANTX,0,2,GIANTX,VCT/2025/EMEA League/Stage 2
+2025-07-17,1752739200,Rex Regum Qeon,Global Esports,0,2,Global Esports,VCT/2025/Pacific League/Stage 2
+2025-07-17,1752747600,ZETA DIVISION,DetonatioN FocusMe,1,2,DetonatioN FocusMe,VCT/2025/Pacific League/Stage 2
+2025-07-17,1752750000,FunPlus Phoenix,Nova Esports,2,1,FunPlus Phoenix,VCT/2025/China League/Stage 2
+2025-07-17,1752764400,FUT Esports,Gentle Mates,2,1,FUT Esports,VCT/2025/EMEA League/Stage 2
+2025-07-17,1752777000,Team Liquid,KOI,2,1,Team Liquid,VCT/2025/EMEA League/Stage 2
+2025-07-18,1752825600,DRX,Nongshim RedForce,2,1,DRX,VCT/2025/Pacific League/Stage 2
+2025-07-18,1752829200,All Gamers,Wolves Esports,2,0,All Gamers,VCT/2025/China League/Stage 2
+2025-07-18,1752836400,BOOM Esports,T1,0,2,T1,VCT/2025/Pacific League/Stage 2
+2025-07-18,1752836400,JD Gaming,Bilibili Gaming,1,2,Bilibili Gaming,VCT/2025/China League/Stage 2
+2025-07-18,1752850800,Team Heretics,BBL Esports,2,1,Team Heretics,VCT/2025/EMEA League/Stage 2
+2025-07-18,1752862200,Fnatic,Karmine Corp,2,1,Fnatic,VCT/2025/EMEA League/Stage 2
+2025-07-18,1752872400,Cloud9,FURIA,2,0,Cloud9,VCT/2025/Americas League/Stage 2
+2025-07-18,1752880800,Leviatán,LOUD,1,2,LOUD,VCT/2025/Americas League/Stage 2
+2025-07-19,1752912000,Global Esports,Team Secret,1,2,Team Secret,VCT/2025/Pacific League/Stage 2
+2025-07-19,1752915600,TYLOO,Titan Esports Club,2,0,TYLOO,VCT/2025/China League/Stage 2
+2025-07-19,1752924000,Paper Rex,DetonatioN FocusMe,2,0,Paper Rex,VCT/2025/Pacific League/Stage 2
+2025-07-19,1752924000,Trace Esports,EDward Gaming,2,1,Trace Esports,VCT/2025/China League/Stage 2
+2025-07-19,1752958800,Evil Geniuses,2GAME Esports,2,1,Evil Geniuses,VCT/2025/Americas League/Stage 2
+2025-07-20,1752971400,MIBR,KRÜ Esports,1,2,KRÜ Esports,VCT/2025/Americas League/Stage 2
+2025-07-20,1752998400,TALON,ZETA DIVISION,2,0,TALON,VCT/2025/Pacific League/Stage 2
+2025-07-20,1753002000,Dragon Ranger Gaming,All Gamers,2,1,Dragon Ranger Gaming,VCT/2025/China League/Stage 2
+2025-07-20,1753005600,Rex Regum Qeon,Gen.G Esports,2,1,Rex Regum Qeon,VCT/2025/Pacific League/Stage 2
+2025-07-20,1753012800,XLG Esports,Wolves Esports,2,0,XLG Esports,VCT/2025/China League/Stage 2
+2025-07-20,1753045200,100 Thieves,NRG,2,0,100 Thieves,VCT/2025/Americas League/Stage 2
+2025-07-20,1753052400,Sentinels,G2 Esports,2,1,Sentinels,VCT/2025/Americas League/Stage 2
+2025-07-23,1753268400,Titan Esports Club,Bilibili Gaming,0,2,Bilibili Gaming,VCT/2025/China League/Stage 2
+2025-07-23,1753282800,Apeks,Karmine Corp,1,2,Karmine Corp,VCT/2025/EMEA League/Stage 2
+2025-07-23,1753295400,GIANTX,BBL Esports,2,1,GIANTX,VCT/2025/EMEA League/Stage 2
+2025-07-24,1753354800,FunPlus Phoenix,Dragon Ranger Gaming,2,1,FunPlus Phoenix,VCT/2025/China League/Stage 2
+2025-07-24,1753369200,Team Liquid,Natus Vincere,2,0,Team Liquid,VCT/2025/EMEA League/Stage 2
+2025-07-24,1753377000,Gentle Mates,Team Heretics,1,2,Team Heretics,VCT/2025/EMEA League/Stage 2
+2025-07-25,1753430400,Gen.G Esports,Global Esports,2,1,Gen.G Esports,VCT/2025/Pacific League/Stage 2
+2025-07-25,1753434000,Nova Esports,All Gamers,1,2,All Gamers,VCT/2025/China League/Stage 2
+2025-07-25,1753440600,TALON,DetonatioN FocusMe,1,2,DetonatioN FocusMe,VCT/2025/Pacific League/Stage 2
+2025-07-25,1753446600,TYLOO,EDward Gaming,0,2,EDward Gaming,VCT/2025/China League/Stage 2
+2025-07-25,1753455600,FUT Esports,Team Vitality,0,2,Team Vitality,VCT/2025/EMEA League/Stage 2
+2025-07-25,1753462800,KOI,Fnatic,0,2,Fnatic,VCT/2025/EMEA League/Stage 2
+2025-07-25,1753477200,2GAME Esports,G2 Esports,0,2,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-07-25,1753485000,FURIA,Sentinels,0,2,Sentinels,VCT/2025/Americas League/Stage 2
+2025-07-26,1753516800,T1,ZETA DIVISION,2,0,T1,VCT/2025/Pacific League/Stage 2
+2025-07-26,1753520400,Titan Esports Club,JD Gaming,1,2,JD Gaming,VCT/2025/China League/Stage 2
+2025-07-26,1753524000,Rex Regum Qeon,Nongshim RedForce,2,1,Rex Regum Qeon,VCT/2025/Pacific League/Stage 2
+2025-07-26,1753533000,Bilibili Gaming,Trace Esports,1,2,Trace Esports,VCT/2025/China League/Stage 2
+2025-07-26,1753563600,100 Thieves,KRÜ Esports,2,0,100 Thieves,VCT/2025/Americas League/Stage 2
+2025-07-26,1753572000,NRG,LOUD,2,0,NRG,VCT/2025/Americas League/Stage 2
+2025-07-27,1753603200,DRX,Team Secret,2,0,DRX,VCT/2025/Pacific League/Stage 2
+2025-07-27,1753606800,Wolves Esports,Dragon Ranger Gaming,2,1,Wolves Esports,VCT/2025/China League/Stage 2
+2025-07-27,1753610400,BOOM Esports,Paper Rex,0,2,Paper Rex,VCT/2025/Pacific League/Stage 2
+2025-07-27,1753620000,XLG Esports,FunPlus Phoenix,2,0,XLG Esports,VCT/2025/China League/Stage 2
+2025-07-27,1753650000,Cloud9,Evil Geniuses,2,0,Cloud9,VCT/2025/Americas League/Stage 2
+2025-07-27,1753658400,MIBR,Leviatán,0,2,Leviatán,VCT/2025/Americas League/Stage 2
+2025-07-30,1753887600,FUT Esports,GIANTX,2,1,FUT Esports,VCT/2025/EMEA League/Stage 2
+2025-07-30,1753899000,Gentle Mates,BBL Esports,0,2,BBL Esports,VCT/2025/EMEA League/Stage 2
+2025-07-31,1753952400,Nova Esports,XLG Esports,0,2,XLG Esports,VCT/2025/China League/Stage 2
+2025-07-31,1753959600,EDward Gaming,JD Gaming,2,1,EDward Gaming,VCT/2025/China League/Stage 2
+2025-07-31,1753974000,Team Liquid,Apeks,2,1,Team Liquid,VCT/2025/EMEA League/Stage 2
+2025-07-31,1753987200,KOI,Karmine Corp,1,2,Karmine Corp,VCT/2025/EMEA League/Stage 2
+2025-08-01,1754035200,Gen.G Esports,Team Secret,2,0,Gen.G Esports,VCT/2025/Pacific League/Stage 2
+2025-08-01,1754038800,All Gamers,FunPlus Phoenix,2,0,All Gamers,VCT/2025/China League/Stage 2
+2025-08-01,1754042400,TALON,T1,2,0,TALON,VCT/2025/Pacific League/Stage 2
+2025-08-01,1754048400,Trace Esports,Titan Esports Club,0,2,Titan Esports Club,VCT/2025/China League/Stage 2
+2025-08-01,1754060400,Natus Vincere,Fnatic,1,2,Fnatic,VCT/2025/EMEA League/Stage 2
+2025-08-01,1754073600,Team Vitality,Team Heretics,0,2,Team Heretics,VCT/2025/EMEA League/Stage 2
+2025-08-01,1754082000,2GAME Esports,FURIA,2,1,2GAME Esports,VCT/2025/Americas League/Stage 2
+2025-08-02,1754094000,Leviatán,NRG,1,2,NRG,VCT/2025/Americas League/Stage 2
+2025-08-02,1754121600,BOOM Esports,DetonatioN FocusMe,0,2,DetonatioN FocusMe,VCT/2025/Pacific League/Stage 2
+2025-08-02,1754125200,Nova Esports,Wolves Esports,2,1,Nova Esports,VCT/2025/China League/Stage 2
+2025-08-02,1754128800,Rex Regum Qeon,DRX,0,2,DRX,VCT/2025/Pacific League/Stage 2
+2025-08-02,1754137800,Dragon Ranger Gaming,XLG Esports,2,1,Dragon Ranger Gaming,VCT/2025/China League/Stage 2
+2025-08-02,1754168400,Sentinels,Cloud9,2,0,Sentinels,VCT/2025/Americas League/Stage 2
+2025-08-02,1754176200,MIBR,100 Thieves,2,0,MIBR,VCT/2025/Americas League/Stage 2
+2025-08-03,1754208000,Nongshim RedForce,Global Esports,2,0,Nongshim RedForce,VCT/2025/Pacific League/Stage 2
+2025-08-03,1754211600,TYLOO,JD Gaming,2,1,TYLOO,VCT/2025/China League/Stage 2
+2025-08-03,1754215200,Paper Rex,ZETA DIVISION,0,2,ZETA DIVISION,VCT/2025/Pacific League/Stage 2
+2025-08-03,1754222400,Bilibili Gaming,EDward Gaming,2,0,Bilibili Gaming,VCT/2025/China League/Stage 2
+2025-08-03,1754254800,G2 Esports,Evil Geniuses,2,1,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-08-04,1754266200,LOUD,KRÜ Esports,1,2,KRÜ Esports,VCT/2025/Americas League/Stage 2
+2025-08-06,1754492400,FUT Esports,Team Heretics,0,2,Team Heretics,VCT/2025/EMEA League/Stage 2
+2025-08-06,1754501400,KOI,Apeks,2,1,KOI,VCT/2025/EMEA League/Stage 2
+2025-08-07,1754578800,Gentle Mates,GIANTX,1,2,GIANTX,VCT/2025/EMEA League/Stage 2
+2025-08-07,1754589600,Natus Vincere,Karmine Corp,2,0,Natus Vincere,VCT/2025/EMEA League/Stage 2
+2025-08-08,1754640000,Gen.G Esports,Nongshim RedForce,0,2,Nongshim RedForce,VCT/2025/Pacific League/Stage 2
+2025-08-08,1754648400,TALON,Paper Rex,0,2,Paper Rex,VCT/2025/Pacific League/Stage 2
+2025-08-08,1754665200,Team Vitality,BBL Esports,1,2,BBL Esports,VCT/2025/EMEA League/Stage 2
+2025-08-08,1754678400,Team Liquid,Fnatic,2,0,Team Liquid,VCT/2025/EMEA League/Stage 2
+2025-08-08,1754686800,Cloud9,2GAME Esports,2,0,Cloud9,VCT/2025/Americas League/Stage 2
+2025-08-08,1754694000,MIBR,NRG,0,2,NRG,VCT/2025/Americas League/Stage 2
+2025-08-09,1754726400,DRX,Global Esports,2,0,DRX,VCT/2025/Pacific League/Stage 2
+2025-08-09,1754730000,All Gamers,TYLOO,0,2,TYLOO,VCT/2025/China League/Stage 2
+2025-08-09,1754734800,BOOM Esports,ZETA DIVISION,1,2,ZETA DIVISION,VCT/2025/Pacific League/Stage 2
+2025-08-09,1754738400,EDward Gaming,Dragon Ranger Gaming,0,2,Dragon Ranger Gaming,VCT/2025/China League/Stage 2
+2025-08-09,1754773200,Sentinels,Evil Geniuses,2,0,Sentinels,VCT/2025/Americas League/Stage 2
+2025-08-09,1754781000,Leviatán,KRÜ Esports,2,1,Leviatán,VCT/2025/Americas League/Stage 2
+2025-08-10,1754812800,Rex Regum Qeon,Team Secret,2,1,Rex Regum Qeon,VCT/2025/Pacific League/Stage 2
+2025-08-10,1754816400,All Gamers,FunPlus Phoenix,2,1,All Gamers,VCT/2025/China League/Stage 2
+2025-08-10,1754823600,T1,DetonatioN FocusMe,2,0,T1,VCT/2025/Pacific League/Stage 2
+2025-08-10,1754828400,EDward Gaming,Trace Esports,2,1,EDward Gaming,VCT/2025/China League/Stage 2
+2025-08-10,1754859600,FURIA,G2 Esports,0,2,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-08-10,1754866800,LOUD,100 Thieves,1,2,100 Thieves,VCT/2025/Americas League/Stage 2
+2025-08-13,1755072000,TALON,Nongshim RedForce,2,0,TALON,VCT/2025/Pacific League/Stage 2
+2025-08-13,1755081000,Rex Regum Qeon,T1,1,2,T1,VCT/2025/Pacific League/Stage 2
+2025-08-13,1755097200,KOI,Natus Vincere,1,2,Natus Vincere,VCT/2025/EMEA League/Stage 2
+2025-08-13,1755109200,Apeks,Fnatic,0,2,Fnatic,VCT/2025/EMEA League/Stage 2
+2025-08-14,1755158400,DRX,TALON,1,2,TALON,VCT/2025/Pacific League/Stage 2
+2025-08-14,1755169800,Paper Rex,T1,2,0,Paper Rex,VCT/2025/Pacific League/Stage 2
+2025-08-14,1755183600,GIANTX,Team Heretics,0,2,Team Heretics,VCT/2025/EMEA League/Stage 2
+2025-08-14,1755191400,Gentle Mates,Team Vitality,1,2,Team Vitality,VCT/2025/EMEA League/Stage 2
+2025-08-15,1755244800,Nongshim RedForce,DetonatioN FocusMe,2,0,Nongshim RedForce,VCT/2025/Pacific League/Stage 2
+2025-08-15,1755252000,Rex Regum Qeon,Gen.G Esports,2,1,Rex Regum Qeon,VCT/2025/Pacific League/Stage 2
+2025-08-15,1755270000,FUT Esports,BBL Esports,0,2,BBL Esports,VCT/2025/EMEA League/Stage 2
+2025-08-15,1755279000,Team Liquid,Karmine Corp,1,2,Karmine Corp,VCT/2025/EMEA League/Stage 2
+2025-08-15,1755291600,KRÜ Esports,NRG,1,2,NRG,VCT/2025/Americas League/Stage 2
+2025-08-16,1755303000,100 Thieves,Leviatán,1,2,Leviatán,VCT/2025/Americas League/Stage 2
+2025-08-16,1755331200,T1,Nongshim RedForce,2,0,T1,VCT/2025/Pacific League/Stage 2
+2025-08-16,1755338400,DRX,Rex Regum Qeon,0,2,Rex Regum Qeon,VCT/2025/Pacific League/Stage 2
+2025-08-16,1755378000,FURIA,Evil Geniuses,0,2,Evil Geniuses,VCT/2025/Americas League/Stage 2
+2025-08-16,1755386400,2GAME Esports,Sentinels,1,2,Sentinels,VCT/2025/Americas League/Stage 2
+2025-08-17,1755417600,TALON,Paper Rex,0,2,Paper Rex,VCT/2025/Pacific League/Stage 2
+2025-08-17,1755424800,T1,Rex Regum Qeon,1,2,Rex Regum Qeon,VCT/2025/Pacific League/Stage 2
+2025-08-17,1755464400,G2 Esports,Cloud9,2,0,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-08-17,1755473400,MIBR,LOUD,2,0,MIBR,VCT/2025/Americas League/Stage 2
+2025-08-20,1755680400,Bilibili Gaming,TYLOO,2,1,Bilibili Gaming,VCT/2025/China League/Stage 2
+2025-08-20,1755692400,XLG Esports,Dragon Ranger Gaming,1,2,Dragon Ranger Gaming,VCT/2025/China League/Stage 2
+2025-08-21,1755766800,TYLOO,EDward Gaming,0,2,EDward Gaming,VCT/2025/China League/Stage 2
+2025-08-21,1755775800,XLG Esports,All Gamers,2,1,XLG Esports,VCT/2025/China League/Stage 2
+2025-08-21,1755788400,Fnatic,BBL Esports,1,2,BBL Esports,VCT/2025/EMEA League/Stage 2
+2025-08-21,1755800400,GIANTX,Natus Vincere,2,1,GIANTX,VCT/2025/EMEA League/Stage 2
+2025-08-21,1755810000,Leviatán,Cloud9,1,2,Cloud9,VCT/2025/Americas League/Stage 2
+2025-08-22,1755823200,G2 Esports,100 Thieves,2,0,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-08-22,1755853200,Bilibili Gaming,Dragon Ranger Gaming,1,2,Dragon Ranger Gaming,VCT/2025/China League/Stage 2
+2025-08-22,1755866400,XLG Esports,EDward Gaming,0,2,EDward Gaming,VCT/2025/China League/Stage 2
+2025-08-22,1755874800,Team Heretics,BBL Esports,0,2,BBL Esports,VCT/2025/EMEA League/Stage 2
+2025-08-22,1755883200,Team Liquid,GIANTX,2,1,Team Liquid,VCT/2025/EMEA League/Stage 2
+2025-08-22,1755896400,Sentinels,Cloud9,2,1,Sentinels,VCT/2025/Americas League/Stage 2
+2025-08-23,1755909000,NRG,G2 Esports,1,2,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-08-23,1755939600,Bilibili Gaming,EDward Gaming,3,1,Bilibili Gaming,VCT/2025/China League/Stage 2
+2025-08-23,1755961200,Fnatic,Karmine Corp,2,1,Fnatic,VCT/2025/EMEA League/Stage 2
+2025-08-23,1755975000,Natus Vincere,Team Vitality,2,0,Natus Vincere,VCT/2025/EMEA League/Stage 2
+2025-08-23,1755982800,Leviatán,KRÜ Esports,2,1,Leviatán,VCT/2025/Americas League/Stage 2
+2025-08-24,1755994800,100 Thieves,Evil Geniuses,2,0,100 Thieves,VCT/2025/Americas League/Stage 2
+2025-08-24,1756027800,Dragon Ranger Gaming,Bilibili Gaming,1,3,Bilibili Gaming,VCT/2025/China League/Stage 2
+2025-08-24,1756047600,GIANTX,Fnatic,2,0,GIANTX,VCT/2025/EMEA League/Stage 2
+2025-08-24,1756056600,Team Heretics,Natus Vincere,0,2,Natus Vincere,VCT/2025/EMEA League/Stage 2
+2025-08-24,1756069200,NRG,Leviatán,2,0,NRG,VCT/2025/Americas League/Stage 2
+2025-08-24,1756075800,Cloud9,100 Thieves,2,0,Cloud9,VCT/2025/Americas League/Stage 2
+2025-08-29,1756479600,BBL Esports,Team Liquid,1,2,Team Liquid,VCT/2025/EMEA League/Stage 2
+2025-08-29,1756492800,GIANTX,Natus Vincere,2,1,GIANTX,VCT/2025/EMEA League/Stage 2
+2025-08-29,1756501200,Sentinels,G2 Esports,0,2,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-08-29,1756510200,NRG,Cloud9,2,1,NRG,VCT/2025/Americas League/Stage 2
+2025-08-30,1756534800,TALON,Rex Regum Qeon,2,3,Rex Regum Qeon,VCT/2025/Pacific League/Stage 2
+2025-08-30,1756569600,BBL Esports,GIANTX,0,3,GIANTX,VCT/2025/EMEA League/Stage 2
+2025-08-30,1756591800,Sentinels,NRG,1,3,NRG,VCT/2025/Americas League/Stage 2
+2025-08-31,1756620000,Paper Rex,Rex Regum Qeon,3,1,Paper Rex,VCT/2025/Pacific League/Stage 2
+2025-08-31,1756657800,Team Liquid,GIANTX,3,0,Team Liquid,VCT/2025/EMEA League/Stage 2
+2025-08-31,1756674000,G2 Esports,NRG,3,0,G2 Esports,VCT/2025/Americas League/Stage 2
+2025-11-20,1763625600,Ninetails,Nova Esports GC,0,2,Nova Esports GC,VCT/2025/Game Changers Championship
+2025-11-20,1763634000,MIBR GC,GIANTX GC,2,1,MIBR GC,VCT/2025/Game Changers Championship
+2025-11-21,1763712000,Xipto GC,Karmine Corp GC,0,2,Karmine Corp GC,VCT/2025/Game Changers Championship
+2025-11-21,1763719800,Team Liquid Brazil,KRÜ Blaze,2,0,Team Liquid Brazil,VCT/2025/Game Changers Championship
+2025-11-22,1763798400,G2 Gozen,Nova Esports GC,2,0,G2 Gozen,VCT/2025/Game Changers Championship
+2025-11-22,1763805600,Shopify Rebellion Gold,MIBR GC,2,0,Shopify Rebellion Gold,VCT/2025/Game Changers Championship
+2025-11-23,1763884800,Xipto GC,Ninetails,1,2,Ninetails,VCT/2025/Game Changers Championship
+2025-11-23,1763894400,KRÜ Blaze,GIANTX GC,2,1,KRÜ Blaze,VCT/2025/Game Changers Championship
+2025-11-24,1763971200,MIBR GC,Ninetails,2,0,MIBR GC,VCT/2025/Game Changers Championship
+2025-11-24,1763978100,Nova Esports GC,KRÜ Blaze,0,2,KRÜ Blaze,VCT/2025/Game Changers Championship
+2025-11-26,1764144000,G2 Gozen,Team Liquid Brazil,1,2,Team Liquid Brazil,VCT/2025/Game Changers Championship
+2025-11-26,1764154800,Shopify Rebellion Gold,Karmine Corp GC,2,1,Shopify Rebellion Gold,VCT/2025/Game Changers Championship
+2025-11-27,1764230400,G2 Gozen,MIBR GC,1,2,MIBR GC,VCT/2025/Game Changers Championship
+2025-11-27,1764242400,Karmine Corp GC,KRÜ Blaze,0,2,KRÜ Blaze,VCT/2025/Game Changers Championship
+2025-11-28,1764316800,Team Liquid Brazil,Shopify Rebellion Gold,2,1,Team Liquid Brazil,VCT/2025/Game Changers Championship
+2025-11-28,1764330000,KRÜ Blaze,MIBR GC,0,2,MIBR GC,VCT/2025/Game Changers Championship
+2025-11-29,1764406800,Shopify Rebellion Gold,MIBR GC,3,1,Shopify Rebellion Gold,VCT/2025/Game Changers Championship
+2025-11-30,1764489600,Team Liquid Brazil,Shopify Rebellion Gold,3,2,Team Liquid Brazil,VCT/2025/Game Changers Championship
+2026-01-15,1768514400,ENVY,Evil Geniuses,2,1,ENVY,VCT/2026/Americas League/Kickoff
+2026-01-16,1768525800,LOUD,Cloud9,0,2,Cloud9,VCT/2026/Americas League/Kickoff
+2026-01-16,1768600800,KRÜ Esports,FURIA,1,2,FURIA,VCT/2026/Americas League/Kickoff
+2026-01-17,1768612200,100 Thieves,Leviatán,2,1,100 Thieves,VCT/2026/Americas League/Kickoff
+2026-01-17,1768687200,NRG,Cloud9,2,0,NRG,VCT/2026/Americas League/Kickoff
+2026-01-18,1768694400,MIBR,ENVY,2,0,MIBR,VCT/2026/Americas League/Kickoff
+2026-01-18,1768773600,Sentinels,FURIA,0,2,FURIA,VCT/2026/Americas League/Kickoff
+2026-01-19,1768782000,G2 Esports,100 Thieves,2,1,G2 Esports,VCT/2026/Americas League/Kickoff
+2026-01-20,1768924800,Natus Vincere,Karmine Corp,2,0,Natus Vincere,VCT/2026/EMEA League/Kickoff
+2026-01-20,1768933800,FUT Esports,Gentle Mates,0,2,Gentle Mates,VCT/2026/EMEA League/Kickoff
+2026-01-21,1769011200,PCIFIC Esports,BBL Esports,1,2,BBL Esports,VCT/2026/EMEA League/Kickoff
+2026-01-21,1769022600,ULF Esports,Team Vitality,0,2,Team Vitality,VCT/2026/EMEA League/Kickoff
+2026-01-22,1769068800,Nongshim RedForce,Team Secret,2,0,Nongshim RedForce,VCT/2026/Pacific League/Kickoff
+2026-01-22,1769072400,Trace Esports,Wolves Esports,1,2,Wolves Esports,VCT/2026/China League/Kickoff
+2026-01-22,1769076600,ZETA DIVISION,FULL SENSE,0,2,FULL SENSE,VCT/2026/Pacific League/Kickoff
+2026-01-22,1769085000,FunPlus Phoenix,TYLOO,0,2,TYLOO,VCT/2026/China League/Kickoff
+2026-01-22,1769097600,Team Heretics,Natus Vincere,1,2,Natus Vincere,VCT/2026/EMEA League/Kickoff
+2026-01-22,1769110200,GIANTX,Gentle Mates,0,2,Gentle Mates,VCT/2026/EMEA League/Kickoff
+2026-01-23,1769155200,VARREL,Global Esports,0,2,Global Esports,VCT/2026/Pacific League/Kickoff
+2026-01-23,1769158800,All Gamers,Nova Esports,2,0,All Gamers,VCT/2026/China League/Kickoff
+2026-01-23,1769163600,DetonatioN FocusMe,Gen.G Esports,2,0,DetonatioN FocusMe,VCT/2026/Pacific League/Kickoff
+2026-01-23,1769169600,JD Gaming,Titan Esports Club,2,1,JD Gaming,VCT/2026/China League/Kickoff
+2026-01-23,1769184000,Fnatic,BBL Esports,0,2,BBL Esports,VCT/2026/EMEA League/Kickoff
+2026-01-23,1769193000,Team Liquid,Team Vitality,1,2,Team Vitality,VCT/2026/EMEA League/Kickoff
+2026-01-23,1769205600,100 Thieves,LOUD,2,1,100 Thieves,VCT/2026/Americas League/Kickoff
+2026-01-24,1769217600,Sentinels,Evil Geniuses,2,0,Sentinels,VCT/2026/Americas League/Kickoff
+2026-01-24,1769241600,T1,Nongshim RedForce,1,2,Nongshim RedForce,VCT/2026/Pacific League/Kickoff
+2026-01-24,1769245200,XLG Esports,Wolves Esports,2,0,XLG Esports,VCT/2026/China League/Kickoff
+2026-01-24,1769252400,DRX,FULL SENSE,1,2,FULL SENSE,VCT/2026/Pacific League/Kickoff
+2026-01-24,1769254200,EDward Gaming,TYLOO,2,0,EDward Gaming,VCT/2026/China League/Kickoff
+2026-01-24,1769292000,ENVY,KRÜ Esports,2,1,ENVY,VCT/2026/Americas League/Kickoff
+2026-01-25,1769302800,Cloud9,Leviatán,2,0,Cloud9,VCT/2026/Americas League/Kickoff
+2026-01-25,1769328000,Paper Rex,Global Esports,2,1,Paper Rex,VCT/2026/Pacific League/Kickoff
+2026-01-25,1769331600,Bilibili Gaming,All Gamers,0,2,All Gamers,VCT/2026/China League/Kickoff
+2026-01-25,1769339400,Rex Regum Qeon,DetonatioN FocusMe,2,0,Rex Regum Qeon,VCT/2026/Pacific League/Kickoff
+2026-01-25,1769341200,Dragon Ranger Gaming,JD Gaming,2,1,Dragon Ranger Gaming,VCT/2026/China League/Kickoff
+2026-01-25,1769378400,100 Thieves,Sentinels,2,0,100 Thieves,VCT/2026/Americas League/Kickoff
+2026-01-26,1769389200,ENVY,Cloud9,1,2,Cloud9,VCT/2026/Americas League/Kickoff
+2026-01-27,1769529600,Team Liquid,Karmine Corp,2,1,Team Liquid,VCT/2026/EMEA League/Kickoff
+2026-01-27,1769541300,Fnatic,FUT Esports,2,1,Fnatic,VCT/2026/EMEA League/Kickoff
+2026-01-28,1769590800,TYLOO,Nova Esports,2,0,TYLOO,VCT/2026/China League/Kickoff
+2026-01-28,1769598900,Wolves Esports,Titan Esports Club,1,2,Titan Esports Club,VCT/2026/China League/Kickoff
+2026-01-28,1769616000,GIANTX,PCIFIC Esports,2,1,GIANTX,VCT/2026/EMEA League/Kickoff
+2026-01-28,1769628600,Team Heretics,ULF Esports,2,0,Team Heretics,VCT/2026/EMEA League/Kickoff
+2026-01-29,1769673600,DetonatioN FocusMe,Team Secret,2,0,DetonatioN FocusMe,VCT/2026/Pacific League/Kickoff
+2026-01-29,1769677200,JD Gaming,Trace Esports,1,2,Trace Esports,VCT/2026/China League/Kickoff
+2026-01-29,1769681100,Global Esports,ZETA DIVISION,2,0,Global Esports,VCT/2026/Pacific League/Kickoff
+2026-01-29,1769688900,Bilibili Gaming,FunPlus Phoenix,2,0,Bilibili Gaming,VCT/2026/China League/Kickoff
+2026-01-29,1769702400,Natus Vincere,Gentle Mates,0,2,Gentle Mates,VCT/2026/EMEA League/Kickoff
+2026-01-29,1769710500,BBL Esports,Team Vitality,2,0,BBL Esports,VCT/2026/EMEA League/Kickoff
+2026-01-30,1769760000,DRX,VARREL,2,1,DRX,VCT/2026/Pacific League/Kickoff
+2026-01-30,1769763600,TYLOO,Titan Esports Club,2,1,TYLOO,VCT/2026/China League/Kickoff
+2026-01-30,1769772000,T1,Gen.G Esports,2,1,T1,VCT/2026/Pacific League/Kickoff
+2026-01-30,1769776800,Trace Esports,Bilibili Gaming,0,2,Bilibili Gaming,VCT/2026/China League/Kickoff
+2026-01-30,1769788800,Team Liquid,Fnatic,0,2,Fnatic,VCT/2026/EMEA League/Kickoff
+2026-01-30,1769796900,GIANTX,Team Heretics,2,0,GIANTX,VCT/2026/EMEA League/Kickoff
+2026-01-30,1769810400,NRG,MIBR,1,2,MIBR,VCT/2026/Americas League/Kickoff
+2026-01-31,1769824800,FURIA,G2 Esports,2,1,FURIA,VCT/2026/Americas League/Kickoff
+2026-01-31,1769846400,Nongshim RedForce,FULL SENSE,2,0,Nongshim RedForce,VCT/2026/Pacific League/Kickoff
+2026-01-31,1769850000,Nova Esports,Wolves Esports,1,2,Wolves Esports,VCT/2026/China League/Kickoff
+2026-01-31,1769854200,Paper Rex,Rex Regum Qeon,0,2,Rex Regum Qeon,VCT/2026/Pacific League/Kickoff
+2026-01-31,1769861700,All Gamers,Dragon Ranger Gaming,2,1,All Gamers,VCT/2026/China League/Kickoff
+2026-01-31,1769896800,LOUD,Evil Geniuses,0,2,Evil Geniuses,VCT/2026/Americas League/Kickoff
+2026-02-01,1769906400,KRÜ Esports,Leviatán,0,2,Leviatán,VCT/2026/Americas League/Kickoff
+2026-02-01,1769932800,DetonatioN FocusMe,Global Esports,2,1,DetonatioN FocusMe,VCT/2026/Pacific League/Kickoff
+2026-02-01,1769936400,JD Gaming,FunPlus Phoenix,2,1,JD Gaming,VCT/2026/China League/Kickoff
+2026-02-01,1769943600,DRX,T1,0,2,T1,VCT/2026/Pacific League/Kickoff
+2026-02-01,1769947200,XLG Esports,EDward Gaming,2,0,XLG Esports,VCT/2026/China League/Kickoff
+2026-02-01,1769983200,NRG,100 Thieves,2,0,NRG,VCT/2026/Americas League/Kickoff
+2026-02-02,1769991600,G2 Esports,Cloud9,2,0,G2 Esports,VCT/2026/Americas League/Kickoff
+2026-02-03,1770109200,Trace Esports,Wolves Esports,2,1,Trace Esports,VCT/2026/China League/Kickoff
+2026-02-03,1770121800,Dragon Ranger Gaming,TYLOO,2,1,Dragon Ranger Gaming,VCT/2026/China League/Kickoff
+2026-02-03,1770134400,Karmine Corp,FUT Esports,2,1,Karmine Corp,VCT/2026/EMEA League/Kickoff
+2026-02-03,1770147000,PCIFIC Esports,ULF Esports,0,2,ULF Esports,VCT/2026/EMEA League/Kickoff
+2026-02-04,1770195600,Titan Esports Club,JD Gaming,1,2,JD Gaming,VCT/2026/China League/Kickoff
+2026-02-04,1770208200,EDward Gaming,Bilibili Gaming,1,2,Bilibili Gaming,VCT/2026/China League/Kickoff
+2026-02-04,1770220800,Natus Vincere,Fnatic,1,2,Fnatic,VCT/2026/EMEA League/Kickoff
+2026-02-04,1770234600,Team Vitality,GIANTX,2,0,Team Vitality,VCT/2026/EMEA League/Kickoff
+2026-02-05,1770278400,Team Secret,ZETA DIVISION,1,2,ZETA DIVISION,VCT/2026/Pacific League/Kickoff
+2026-02-05,1770282000,TYLOO,Trace Esports,2,0,TYLOO,VCT/2026/China League/Kickoff
+2026-02-05,1770288600,VARREL,Gen.G Esports,1,2,Gen.G Esports,VCT/2026/Pacific League/Kickoff
+2026-02-05,1770291000,EDward Gaming,JD Gaming,2,1,EDward Gaming,VCT/2026/China League/Kickoff
+2026-02-05,1770307200,Team Heretics,Karmine Corp,2,1,Team Heretics,VCT/2026/EMEA League/Kickoff
+2026-02-05,1770318000,Team Liquid,ULF Esports,2,1,Team Liquid,VCT/2026/EMEA League/Kickoff
+2026-02-06,1770364800,FULL SENSE,DetonatioN FocusMe,1,2,DetonatioN FocusMe,VCT/2026/Pacific League/Kickoff
+2026-02-06,1770368400,Dragon Ranger Gaming,Bilibili Gaming,0,2,Bilibili Gaming,VCT/2026/China League/Kickoff
+2026-02-06,1770375600,Paper Rex,T1,1,2,T1,VCT/2026/Pacific League/Kickoff
+2026-02-06,1770375600,TYLOO,EDward Gaming,1,2,EDward Gaming,VCT/2026/China League/Kickoff
+2026-02-06,1770393600,Natus Vincere,Team Heretics,0,2,Team Heretics,VCT/2026/EMEA League/Kickoff
+2026-02-06,1770400800,GIANTX,Team Liquid,1,2,Team Liquid,VCT/2026/EMEA League/Kickoff
+2026-02-06,1770415200,ENVY,Evil Geniuses,0,2,Evil Geniuses,VCT/2026/Americas League/Kickoff
+2026-02-07,1770424200,Sentinels,Leviatán,0,2,Leviatán,VCT/2026/Americas League/Kickoff
+2026-02-07,1770447600,Dragon Ranger Gaming,EDward Gaming,1,2,EDward Gaming,VCT/2026/China League/Kickoff
+2026-02-07,1770451200,DRX,ZETA DIVISION,2,1,DRX,VCT/2026/Pacific League/Kickoff
+2026-02-07,1770460200,All Gamers,XLG Esports,3,2,All Gamers,VCT/2026/China League/Kickoff
+2026-02-07,1770462000,Global Esports,Gen.G Esports,2,1,Global Esports,VCT/2026/Pacific League/Kickoff
+2026-02-07,1770496800,100 Thieves,Evil Geniuses,2,0,100 Thieves,VCT/2026/Americas League/Kickoff
+2026-02-07,1770506400,Cloud9,Leviatán,2,0,Cloud9,VCT/2026/Americas League/Kickoff
+2026-02-08,1770513600,NRG,G2 Esports,0,2,G2 Esports,VCT/2026/Americas League/Kickoff
+2026-02-08,1770537600,FULL SENSE,DRX,0,2,DRX,VCT/2026/Pacific League/Kickoff
+2026-02-08,1770541200,XLG Esports,Bilibili Gaming,3,2,XLG Esports,VCT/2026/China League/Kickoff
+2026-02-08,1770545400,Paper Rex,Global Esports,2,1,Paper Rex,VCT/2026/Pacific League/Kickoff
+2026-02-09,1770627600,Bilibili Gaming,EDward Gaming,1,3,EDward Gaming,VCT/2026/China League/Kickoff
+2026-02-12,1770883200,DRX,Paper Rex,1,2,Paper Rex,VCT/2026/Pacific League/Kickoff
+2026-02-12,1770915600,Team Heretics,Team Liquid,0,2,Team Liquid,VCT/2026/EMEA League/Kickoff
+2026-02-13,1770966000,DetonatioN FocusMe,T1,0,2,T1,VCT/2026/Pacific League/Kickoff
+2026-02-13,1770974400,Nongshim RedForce,Rex Regum Qeon,3,2,Nongshim RedForce,VCT/2026/Pacific League/Kickoff
+2026-02-13,1770987600,Fnatic,Team Vitality,2,0,Fnatic,VCT/2026/EMEA League/Kickoff
+2026-02-13,1770996000,Gentle Mates,BBL Esports,2,3,BBL Esports,VCT/2026/EMEA League/Kickoff
+2026-02-13,1771012800,100 Thieves,Cloud9,2,1,100 Thieves,VCT/2026/Americas League/Kickoff
+2026-02-13,1771025400,MIBR,FURIA,2,3,FURIA,VCT/2026/Americas League/Kickoff
+2026-02-14,1771052400,DetonatioN FocusMe,Paper Rex,0,2,Paper Rex,VCT/2026/Pacific League/Kickoff
+2026-02-14,1771059600,Rex Regum Qeon,T1,0,3,T1,VCT/2026/Pacific League/Kickoff
+2026-02-14,1771074000,Team Vitality,Team Liquid,1,2,Team Liquid,VCT/2026/EMEA League/Kickoff
+2026-02-14,1771084800,Gentle Mates,Fnatic,3,2,Gentle Mates,VCT/2026/EMEA League/Kickoff
+2026-02-14,1771099200,NRG,100 Thieves,2,0,NRG,VCT/2026/Americas League/Kickoff
+2026-02-14,1771107600,MIBR,G2 Esports,0,3,G2 Esports,VCT/2026/Americas League/Kickoff
+2026-02-15,1771138800,Rex Regum Qeon,Paper Rex,1,3,Paper Rex,VCT/2026/Pacific League/Kickoff
+2026-02-15,1771174800,Fnatic,Team Liquid,0,3,Team Liquid,VCT/2026/EMEA League/Kickoff
+2026-02-15,1771192800,MIBR,NRG,2,3,NRG,VCT/2026/Americas League/Kickoff
+2026-02-28,1772298000,Gentle Mates,EDward Gaming,2,0,Gentle Mates,VCT/2026/Stage 1/Masters
+2026-02-28,1772307000,XLG Esports,NRG,0,2,NRG,VCT/2026/Stage 1/Masters
+2026-03-01,1772384400,G2 Esports,Paper Rex,0,2,Paper Rex,VCT/2026/Stage 1/Masters
+2026-03-01,1772391600,T1,Team Liquid,0,2,Team Liquid,VCT/2026/Stage 1/Masters
+2026-03-02,1772474400,Paper Rex,NRG,2,1,Paper Rex,VCT/2026/Stage 1/Masters
+2026-03-02,1772487000,Gentle Mates,Team Liquid,2,0,Gentle Mates,VCT/2026/Stage 1/Masters
+2026-03-03,1772560800,EDward Gaming,T1,0,2,T1,VCT/2026/Stage 1/Masters
+2026-03-03,1772568000,XLG Esports,G2 Esports,0,2,G2 Esports,VCT/2026/Stage 1/Masters
+2026-03-04,1772647200,NRG,Team Liquid,2,0,NRG,VCT/2026/Stage 1/Masters
+2026-03-04,1772655000,G2 Esports,T1,2,0,G2 Esports,VCT/2026/Stage 1/Masters
+2026-03-06,1772820000,FURIA,Paper Rex,1,2,Paper Rex,VCT/2026/Stage 1/Masters
+2026-03-06,1772830800,Nongshim RedForce,Gentle Mates,2,0,Nongshim RedForce,VCT/2026/Stage 1/Masters
+2026-03-07,1772902800,BBL Esports,NRG,1,2,NRG,VCT/2026/Stage 1/Masters
+2026-03-07,1772915400,All Gamers,G2 Esports,0,2,G2 Esports,VCT/2026/Stage 1/Masters
+2026-03-08,1772989200,FURIA,BBL Esports,1,2,BBL Esports,VCT/2026/Stage 1/Masters
+2026-03-08,1773001800,Gentle Mates,All Gamers,1,2,All Gamers,VCT/2026/Stage 1/Masters
+2026-03-09,1773079200,Nongshim RedForce,G2 Esports,2,1,Nongshim RedForce,VCT/2026/Stage 1/Masters
+2026-03-09,1773091200,Paper Rex,NRG,0,2,NRG,VCT/2026/Stage 1/Masters
+2026-03-10,1773165600,G2 Esports,BBL Esports,2,0,G2 Esports,VCT/2026/Stage 1/Masters
+2026-03-10,1773173400,Paper Rex,All Gamers,2,1,Paper Rex,VCT/2026/Stage 1/Masters
+2026-03-13,1773421200,Nongshim RedForce,NRG,2,0,Nongshim RedForce,VCT/2026/Stage 1/Masters
+2026-03-13,1773429600,Paper Rex,G2 Esports,2,1,Paper Rex,VCT/2026/Stage 1/Masters
+2026-03-14,1773507600,NRG,Paper Rex,1,3,Paper Rex,VCT/2026/Stage 1/Masters
+2026-03-15,1773598800,Nongshim RedForce,Paper Rex,3,0,Nongshim RedForce,VCT/2026/Stage 1/Masters
+2026-04-01,1775055600,Fnatic,Eternal Fire,2,1,Fnatic,VCT/2026/EMEA League/Stage 1
+2026-04-01,1775068200,Team Liquid,Karmine Corp,2,0,Team Liquid,VCT/2026/EMEA League/Stage 1
+2026-04-02,1775142000,Team Vitality,GIANTX,2,0,Team Vitality,VCT/2026/EMEA League/Stage 1
+2026-04-02,1775149800,Gentle Mates,FUT Esports,1,2,FUT Esports,VCT/2026/EMEA League/Stage 1
+2026-04-03,1775203200,Gen.G Esports,Global Esports,0,2,Global Esports,VCT/2026/Pacific League/Stage 1
+2026-04-03,1775211000,T1,VARREL,2,0,T1,VCT/2026/Pacific League/Stage 1
+2026-04-03,1775228400,Team Heretics,Natus Vincere,1,2,Natus Vincere,VCT/2026/EMEA League/Stage 1
+2026-04-03,1775242800,BBL Esports,PCIFIC Esports,2,0,BBL Esports,VCT/2026/EMEA League/Stage 1
+2026-04-04,1775289600,Nongshim RedForce,Paper Rex,1,2,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-04-04,1775301000,FULL SENSE,DetonatioN FocusMe,2,0,FULL SENSE,VCT/2026/Pacific League/Stage 1
+2026-04-05,1775376000,Team Secret,DRX,0,2,DRX,VCT/2026/Pacific League/Stage 1
+2026-04-05,1775384400,Rex Regum Qeon,ZETA DIVISION,2,1,Rex Regum Qeon,VCT/2026/Pacific League/Stage 1
+2026-04-08,1775660400,PCIFIC Esports,GIANTX,1,2,GIANTX,VCT/2026/EMEA League/Stage 1
+2026-04-08,1775673000,BBL Esports,Eternal Fire,0,2,Eternal Fire,VCT/2026/EMEA League/Stage 1
+2026-04-09,1775746800,Fnatic,Team Vitality,2,0,Fnatic,VCT/2026/EMEA League/Stage 1
+2026-04-09,1775755800,Team Liquid,Team Heretics,2,0,Team Liquid,VCT/2026/EMEA League/Stage 1
+2026-04-10,1775808000,DetonatioN FocusMe,T1,0,2,T1,VCT/2026/Pacific League/Stage 1
+2026-04-10,1775817000,Nongshim RedForce,DRX,1,2,DRX,VCT/2026/Pacific League/Stage 1
+2026-04-10,1775833200,FUT Esports,Natus Vincere,2,1,FUT Esports,VCT/2026/EMEA League/Stage 1
+2026-04-10,1775845200,Gentle Mates,Karmine Corp,2,1,Gentle Mates,VCT/2026/EMEA League/Stage 1
+2026-04-10,1775854800,Sentinels,KRÜ Esports,0,2,KRÜ Esports,VCT/2026/Americas League/Stage 1
+2026-04-10,1775864400,G2 Esports,MIBR,0,2,MIBR,VCT/2026/Americas League/Stage 1
+2026-04-11,1775894400,Team Secret,Global Esports,0,2,Global Esports,VCT/2026/Pacific League/Stage 1
+2026-04-11,1775903400,Rex Regum Qeon,VARREL,2,0,Rex Regum Qeon,VCT/2026/Pacific League/Stage 1
+2026-04-11,1775941200,100 Thieves,Evil Geniuses,2,0,100 Thieves,VCT/2026/Americas League/Stage 1
+2026-04-12,1775953800,ENVY,LOUD,1,2,LOUD,VCT/2026/Americas League/Stage 1
+2026-04-12,1775980800,FULL SENSE,ZETA DIVISION,2,0,FULL SENSE,VCT/2026/Pacific League/Stage 1
+2026-04-12,1775987400,Gen.G Esports,Paper Rex,2,1,Gen.G Esports,VCT/2026/Pacific League/Stage 1
+2026-04-12,1776027600,Cloud9,Leviatán,0,2,Leviatán,VCT/2026/Americas League/Stage 1
+2026-04-12,1776034800,FURIA,NRG,2,0,FURIA,VCT/2026/Americas League/Stage 1
+2026-04-15,1776265200,BBL Esports,GIANTX,1,2,GIANTX,VCT/2026/EMEA League/Stage 1
+2026-04-15,1776277200,Gentle Mates,Natus Vincere,2,0,Gentle Mates,VCT/2026/EMEA League/Stage 1
+2026-04-16,1776351600,Eternal Fire,Team Vitality,2,0,Eternal Fire,VCT/2026/EMEA League/Stage 1
+2026-04-16,1776360600,Karmine Corp,Team Heretics,1,2,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-04-17,1776412800,FULL SENSE,VARREL,2,0,FULL SENSE,VCT/2026/Pacific League/Stage 1
+2026-04-17,1776421200,Team Secret,Paper Rex,0,2,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-04-17,1776438000,FUT Esports,Team Liquid,2,0,FUT Esports,VCT/2026/EMEA League/Stage 1
+2026-04-17,1776447000,PCIFIC Esports,Fnatic,0,2,Fnatic,VCT/2026/EMEA League/Stage 1
+2026-04-17,1776459600,Cloud9,ENVY,1,2,ENVY,VCT/2026/Americas League/Stage 1
+2026-04-18,1776470400,FURIA,Evil Geniuses,2,1,FURIA,VCT/2026/Americas League/Stage 1
+2026-04-18,1776499200,DRX,Global Esports,2,0,DRX,VCT/2026/Pacific League/Stage 1
+2026-04-18,1776502800,TYLOO,Dragon Ranger Gaming,2,0,TYLOO,VCT/2026/China League/Stage 1
+2026-04-18,1776507600,ZETA DIVISION,DetonatioN FocusMe,1,2,DetonatioN FocusMe,VCT/2026/Pacific League/Stage 1
+2026-04-18,1776511800,JD Gaming,EDward Gaming,1,2,EDward Gaming,VCT/2026/China League/Stage 1
+2026-04-18,1776546000,G2 Esports,Leviatán,1,2,Leviatán,VCT/2026/Americas League/Stage 1
+2026-04-19,1776558600,MIBR,LOUD,2,0,MIBR,VCT/2026/Americas League/Stage 1
+2026-04-19,1776585600,Rex Regum Qeon,T1,0,2,T1,VCT/2026/Pacific League/Stage 1
+2026-04-19,1776589200,Titan Esports Club,Trace Esports,1,2,Trace Esports,VCT/2026/China League/Stage 1
+2026-04-19,1776592800,Nongshim RedForce,Gen.G Esports,2,0,Nongshim RedForce,VCT/2026/Pacific League/Stage 1
+2026-04-19,1776601200,All Gamers,XLG Esports,1,2,XLG Esports,VCT/2026/China League/Stage 1
+2026-04-19,1776632400,NRG,KRÜ Esports,0,2,KRÜ Esports,VCT/2026/Americas League/Stage 1
+2026-04-19,1776640800,100 Thieves,Sentinels,0,2,Sentinels,VCT/2026/Americas League/Stage 1
+2026-04-22,1776870000,Eternal Fire,PCIFIC Esports,2,1,Eternal Fire,VCT/2026/EMEA League/Stage 1
+2026-04-22,1776881400,Natus Vincere,Team Liquid,1,2,Team Liquid,VCT/2026/EMEA League/Stage 1
+2026-04-23,1776956400,GIANTX,Fnatic,1,2,Fnatic,VCT/2026/EMEA League/Stage 1
+2026-04-23,1776967200,Karmine Corp,FUT Esports,1,2,FUT Esports,VCT/2026/EMEA League/Stage 1
+2026-04-24,1777017600,Rex Regum Qeon,FULL SENSE,2,1,Rex Regum Qeon,VCT/2026/Pacific League/Stage 1
+2026-04-24,1777028400,Paper Rex,Global Esports,2,0,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-04-24,1777042800,Gentle Mates,Team Heretics,0,2,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-04-24,1777050600,BBL Esports,Team Vitality,2,1,BBL Esports,VCT/2026/EMEA League/Stage 1
+2026-04-24,1777064400,Leviatán,ENVY,2,0,Leviatán,VCT/2026/Americas League/Stage 1
+2026-04-24,1777070400,G2 Esports,LOUD,2,0,G2 Esports,VCT/2026/Americas League/Stage 1
+2026-04-25,1777104000,Gen.G Esports,DRX,1,2,DRX,VCT/2026/Pacific League/Stage 1
+2026-04-25,1777116600,DetonatioN FocusMe,VARREL,2,1,DetonatioN FocusMe,VCT/2026/Pacific League/Stage 1
+2026-04-25,1777150800,FURIA,KRÜ Esports,0,2,KRÜ Esports,VCT/2026/Americas League/Stage 1
+2026-04-25,1777158000,NRG,100 Thieves,2,1,NRG,VCT/2026/Americas League/Stage 1
+2026-04-26,1777190400,T1,ZETA DIVISION,2,0,T1,VCT/2026/Pacific League/Stage 1
+2026-04-26,1777197600,Nongshim RedForce,Team Secret,2,1,Nongshim RedForce,VCT/2026/Pacific League/Stage 1
+2026-04-26,1777237200,Evil Geniuses,Sentinels,0,2,Sentinels,VCT/2026/Americas League/Stage 1
+2026-04-26,1777245600,MIBR,Cloud9,0,2,Cloud9,VCT/2026/Americas League/Stage 1
+2026-04-29,1777474800,Team Heretics,FUT Esports,2,0,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-04-29,1777482600,Team Vitality,PCIFIC Esports,2,0,Team Vitality,VCT/2026/EMEA League/Stage 1
+2026-04-30,1777561200,Natus Vincere,Karmine Corp,2,0,Natus Vincere,VCT/2026/EMEA League/Stage 1
+2026-04-30,1777569000,BBL Esports,Fnatic,0,2,Fnatic,VCT/2026/EMEA League/Stage 1
+2026-05-01,1777622400,Gen.G Esports,Team Secret,1,2,Team Secret,VCT/2026/Pacific League/Stage 1
+2026-05-01,1777626000,XLG Esports,Titan Esports Club,2,0,XLG Esports,VCT/2026/China League/Stage 1
+2026-05-01,1777634400,VARREL,ZETA DIVISION,1,2,ZETA DIVISION,VCT/2026/Pacific League/Stage 1
+2026-05-01,1777635000,JD Gaming,TYLOO,2,1,JD Gaming,VCT/2026/China League/Stage 1
+2026-05-01,1777647600,GIANTX,Eternal Fire,0,2,Eternal Fire,VCT/2026/EMEA League/Stage 1
+2026-05-01,1777655400,Gentle Mates,Team Liquid,0,2,Team Liquid,VCT/2026/EMEA League/Stage 1
+2026-05-01,1777669200,Evil Geniuses,NRG,0,2,NRG,VCT/2026/Americas League/Stage 1
+2026-05-01,1777677600,Leviatán,MIBR,0,2,MIBR,VCT/2026/Americas League/Stage 1
+2026-05-02,1777708800,T1,FULL SENSE,2,1,T1,VCT/2026/Pacific League/Stage 1
+2026-05-02,1777712400,All Gamers,Trace Esports,2,0,All Gamers,VCT/2026/China League/Stage 1
+2026-05-02,1777720200,Nongshim RedForce,Global Esports,1,2,Global Esports,VCT/2026/Pacific League/Stage 1
+2026-05-02,1777720800,EDward Gaming,Dragon Ranger Gaming,2,1,EDward Gaming,VCT/2026/China League/Stage 1
+2026-05-02,1777755600,KRÜ Esports,100 Thieves,1,2,100 Thieves,VCT/2026/Americas League/Stage 1
+2026-05-03,1777766400,FURIA,Sentinels,2,1,FURIA,VCT/2026/Americas League/Stage 1
+2026-05-03,1777795200,Paper Rex,DRX,2,0,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-05-03,1777798800,Titan Esports Club,TYLOO,1,2,TYLOO,VCT/2026/China League/Stage 1
+2026-05-03,1777801800,Rex Regum Qeon,DetonatioN FocusMe,2,1,Rex Regum Qeon,VCT/2026/Pacific League/Stage 1
+2026-05-03,1777811400,Trace Esports,Dragon Ranger Gaming,0,2,Dragon Ranger Gaming,VCT/2026/China League/Stage 1
+2026-05-03,1777842000,LOUD,Cloud9,2,1,LOUD,VCT/2026/Americas League/Stage 1
+2026-05-04,1777852800,G2 Esports,ENVY,2,0,G2 Esports,VCT/2026/Americas League/Stage 1
+2026-05-04,1777885200,XLG Esports,JD Gaming,2,0,XLG Esports,VCT/2026/China League/Stage 1
+2026-05-04,1777893000,All Gamers,EDward Gaming,0,2,EDward Gaming,VCT/2026/China League/Stage 1
+2026-05-05,1777971600,JD Gaming,Dragon Ranger Gaming,0,2,Dragon Ranger Gaming,VCT/2026/China League/Stage 1
+2026-05-05,1777980000,All Gamers,TYLOO,2,1,All Gamers,VCT/2026/China League/Stage 1
+2026-05-07,1778140800,Rex Regum Qeon,Global Esports,0,2,Global Esports,VCT/2026/Pacific League/Stage 1
+2026-05-07,1778149800,DRX,FULL SENSE,0,2,FULL SENSE,VCT/2026/Pacific League/Stage 1
+2026-05-07,1778166000,Eternal Fire,Team Heretics,2,1,Eternal Fire,VCT/2026/EMEA League/Stage 1
+2026-05-07,1778176200,Team Liquid,Team Vitality,1,2,Team Vitality,VCT/2026/EMEA League/Stage 1
+2026-05-08,1778227200,Paper Rex,Global Esports,1,2,Global Esports,VCT/2026/Pacific League/Stage 1
+2026-05-08,1778230800,XLG Esports,EDward Gaming,0,2,EDward Gaming,VCT/2026/China League/Stage 1
+2026-05-08,1778238600,T1,FULL SENSE,0,2,FULL SENSE,VCT/2026/Pacific League/Stage 1
+2026-05-08,1778239200,All Gamers,Dragon Ranger Gaming,1,2,Dragon Ranger Gaming,VCT/2026/China League/Stage 1
+2026-05-08,1778252400,FUT Esports,Eternal Fire,2,1,FUT Esports,VCT/2026/EMEA League/Stage 1
+2026-05-08,1778263200,Fnatic,Team Vitality,0,2,Team Vitality,VCT/2026/EMEA League/Stage 1
+2026-05-08,1778274000,KRÜ Esports,Evil Geniuses,2,1,KRÜ Esports,VCT/2026/Americas League/Stage 1
+2026-05-09,1778286000,FURIA,100 Thieves,1,2,100 Thieves,VCT/2026/Americas League/Stage 1
+2026-05-09,1778313600,Rex Regum Qeon,DetonatioN FocusMe,2,1,Rex Regum Qeon,VCT/2026/Pacific League/Stage 1
+2026-05-09,1778317200,XLG Esports,Dragon Ranger Gaming,3,1,XLG Esports,VCT/2026/China League/Stage 1
+2026-05-09,1778325600,DRX,Nongshim RedForce,2,1,DRX,VCT/2026/Pacific League/Stage 1
+2026-05-09,1778338800,Team Heretics,BBL Esports,2,0,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-05-09,1778347800,Team Liquid,Gentle Mates,1,2,Gentle Mates,VCT/2026/EMEA League/Stage 1
+2026-05-09,1778360400,G2 Esports,Cloud9,2,0,G2 Esports,VCT/2026/Americas League/Stage 1
+2026-05-09,1778368200,ENVY,MIBR,2,0,ENVY,VCT/2026/Americas League/Stage 1
+2026-05-10,1778400000,T1,Rex Regum Qeon,2,1,T1,VCT/2026/Pacific League/Stage 1
+2026-05-10,1778403600,EDward Gaming,XLG Esports,3,2,EDward Gaming,VCT/2026/China League/Stage 1
+2026-05-10,1778412000,Paper Rex,DRX,2,1,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-05-10,1778425200,Fnatic,Team Heretics,1,2,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-05-10,1778437800,Eternal Fire,Gentle Mates,2,0,Eternal Fire,VCT/2026/EMEA League/Stage 1
+2026-05-10,1778446800,LOUD,Leviatán,2,1,LOUD,VCT/2026/Americas League/Stage 1
+2026-05-11,1778458200,Sentinels,NRG,1,2,NRG,VCT/2026/Americas League/Stage 1
+2026-05-14,1778792400,FURIA,Leviatán,1,2,Leviatán,VCT/2026/Americas League/Stage 1
+2026-05-14,1778802600,G2 Esports,100 Thieves,2,0,G2 Esports,VCT/2026/Americas League/Stage 1
+2026-05-15,1778839200,Global Esports,FULL SENSE,0,2,FULL SENSE,VCT/2026/Pacific League/Stage 1
+2026-05-15,1778848200,T1,Paper Rex,1,2,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-05-15,1778857200,FUT Esports,Team Vitality,1,2,Team Vitality,VCT/2026/EMEA League/Stage 1
+2026-05-15,1778871000,Team Heretics,Eternal Fire,2,1,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-05-15,1778878800,MIBR,Leviatán,1,2,Leviatán,VCT/2026/Americas League/Stage 1
+2026-05-16,1778889600,KRÜ Esports,G2 Esports,0,2,G2 Esports,VCT/2026/Americas League/Stage 1
+2026-05-16,1778925600,Global Esports,Paper Rex,0,3,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-05-16,1778947200,FUT Esports,Team Heretics,1,3,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-05-16,1778965200,FURIA,NRG,0,2,NRG,VCT/2026/Americas League/Stage 1
+2026-05-16,1778973600,100 Thieves,LOUD,2,0,100 Thieves,VCT/2026/Americas League/Stage 1
+2026-05-17,1779012000,FULL SENSE,Paper Rex,0,3,Paper Rex,VCT/2026/Pacific League/Stage 1
+2026-05-17,1779033600,Team Vitality,Team Heretics,2,3,Team Heretics,VCT/2026/EMEA League/Stage 1
+2026-05-17,1779051600,KRÜ Esports,NRG,0,2,NRG,VCT/2026/Americas League/Stage 1
+2026-05-17,1779058800,MIBR,100 Thieves,0,2,100 Thieves,VCT/2026/Americas League/Stage 1
+2026-05-22,1779483600,Leviatán,G2 Esports,2,1,Leviatán,VCT/2026/Americas League/Stage 1
+2026-05-23,1779494400,NRG,100 Thieves,2,0,NRG,VCT/2026/Americas League/Stage 1
+2026-05-23,1779570000,G2 Esports,NRG,3,2,G2 Esports,VCT/2026/Americas League/Stage 1
+2026-05-24,1779656400,Leviatán,G2 Esports,2,3,G2 Esports,VCT/2026/Americas League/Stage 1

@@ -36,6 +36,42 @@ def _to_int(s: str):
     return int(s) if s.isdigit() else None
 
 
+# League / group-stage matches render not as brackets but as `wikitable
+# match-card` rows: <tr class="Match"> with TeamLeft / Score / TeamRight cells.
+# This is the bulk of regular-season tier-1 data (VCT leagues, LoL splits), so
+# we parse it too and merge with the bracket results.
+_MCARD_ROW = re.compile(r'<tr class="Match">.*?</tr>', re.S)
+_HL = re.compile(r'data-highlighting-class="([^"]+)"')
+_MCARD_SCORE = re.compile(
+    r'line-height:1\.1">\s*(?:<b>)?(\d+)(?:</b>)?\s*:\s*(?:<b>)?(\d+)(?:</b>)?')
+
+
+def parse_league_matches(html: str) -> list[dict]:
+    """Completed, dated matches from a Liquipedia `match-card` wikitable."""
+    out = []
+    for row in _MCARD_ROW.findall(html):
+        ts_m = _TS.search(row)
+        teams = _HL.findall(row)
+        sc = _MCARD_SCORE.search(row)
+        if not ts_m or len(teams) < 2 or not sc:
+            continue
+        sa, sb = int(sc.group(1)), int(sc.group(2))
+        if sa == sb:
+            continue  # tie/unplayed placeholder -> not a finished BoX
+        ts = int(ts_m.group(1))
+        if ts <= 0:
+            continue
+        a, b = teams[0].strip(), teams[1].strip()
+        out.append({
+            "ts": ts,
+            "date": datetime.fromtimestamp(ts, tz=timezone.utc).date().isoformat(),
+            "teams": [a, b],
+            "scores": [sa, sb],
+            "winner_name": a if sa > sb else b,
+        })
+    return out
+
+
 def parse_event_dated(html: str) -> list[dict]:
     """Completed, dated matchlist matches from one event page's HTML."""
     out = []

@@ -40,8 +40,10 @@ def _rank_rating(rank: int) -> float:
 
 
 def _features(a: dict, b: dict) -> dict:
+    # Auto-fetched fixtures are name-only (the OE kNN drives their pick), so
+    # every linear feature must tolerate missing keys with a neutral default.
     return {
-        "rating_diff": _rank_rating(a["rank"]) - _rank_rating(b["rank"]),
+        "rating_diff": _rank_rating(a.get("rank", 20)) - _rank_rating(b.get("rank", 20)),
         "form_diff": a.get("form", 0.5) - b.get("form", 0.5),
         "map_diff": a.get("map_edge", 0.5) - b.get("map_edge", 0.5),
         "player_diff": a.get("player", 0.0) - b.get("player", 0.0),

@@ -57,19 +57,30 @@ def _get(wiki: str, params: dict, cache_hours: float) -> dict:
 
     query = urllib.parse.urlencode({**params, "format": "json"})
     url = f"https://liquipedia.net/{wiki}/api.php?{query}"
-    _throttle(is_parse=params.get("action") == "parse")
     req = urllib.request.Request(url, headers={
         "User-Agent": USER_AGENT,
         "Accept-Encoding": "gzip",
     })
-    with urllib.request.urlopen(req, timeout=40) as resp:
-        raw = resp.read()
-        if resp.headers.get("Content-Encoding") == "gzip":
-            raw = gzip.GzipFile(fileobj=io.BytesIO(raw)).read()
-    data = json.loads(raw.decode("utf-8"))
-    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    cache_file.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
-    return data
+    # Retry transient failures (proxy 503s, connection resets) with backoff so a
+    # flaky network does not silently empty the corpus. The throttle is applied
+    # before each attempt so we never burst past the rate limit.
+    last_err = None
+    for attempt in range(3):
+        _throttle(is_parse=params.get("action") == "parse")
+        try:
+            with urllib.request.urlopen(req, timeout=40) as resp:
+                raw = resp.read()
+                if resp.headers.get("Content-Encoding") == "gzip":
+                    raw = gzip.GzipFile(fileobj=io.BytesIO(raw)).read()
+            data = json.loads(raw.decode("utf-8"))
+            CACHE_DIR.mkdir(parents=True, exist_ok=True)
+            cache_file.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+            return data
+        except Exception as e:
+            last_err = e
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))   # 2s, 4s; fail fast on a dead host
+    raise last_err
 
 
 def page_html(wiki: str, page: str, cache_hours: float = 1.0) -> str:

@@ -25,22 +25,36 @@ WIKI = "valorant"
 # "VCT/<year>/..." scheme). Future/unplayed events yield no completed matches and
 # cost only an existence check; extend as Masters/Champions/league splits finish.
 EVENT_SEEDS = [
-    "VCT/2026/Masters/Bangkok",
+    # 2026 completed/ongoing (real Liquipedia titles, verified via category API)
+    "VCT/2026/Stage 1/Masters",
+    "VCT/2026/Americas League/Kickoff",
+    "VCT/2026/EMEA League/Kickoff",
+    "VCT/2026/Pacific League/Kickoff",
+    "VCT/2026/China League/Kickoff",
     "VCT/2026/Americas League/Stage 1",
     "VCT/2026/EMEA League/Stage 1",
     "VCT/2026/Pacific League/Stage 1",
     "VCT/2026/China League/Stage 1",
-    "VCT/2025/Champions",
-    "VCT/2025/Masters/Toronto",
-    "VCT/2025/Masters/Bangkok",
-    "VCT/2025/Americas League/Stage 2",
-    "VCT/2025/EMEA League/Stage 2",
-    "VCT/2025/Pacific League/Stage 2",
-    "VCT/2025/China League/Stage 2",
+    "VCT/2026/Americas League/Stage 2",
+    "VCT/2026/EMEA League/Stage 2",
+    "VCT/2026/Pacific League/Stage 2",
+    "VCT/2026/China League/Stage 2",
+    # 2025 full season (completed -> the bulk of the corpus)
+    "VCT/2025/Stage 1/Masters",
+    "VCT/2025/Stage 2/Masters",
+    "VCT/2025/Game Changers Championship",
+    "VCT/2025/Americas League/Kickoff",
+    "VCT/2025/EMEA League/Kickoff",
+    "VCT/2025/Pacific League/Kickoff",
+    "VCT/2025/China League/Kickoff",
     "VCT/2025/Americas League/Stage 1",
     "VCT/2025/EMEA League/Stage 1",
     "VCT/2025/Pacific League/Stage 1",
     "VCT/2025/China League/Stage 1",
+    "VCT/2025/Americas League/Stage 2",
+    "VCT/2025/EMEA League/Stage 2",
+    "VCT/2025/Pacific League/Stage 2",
+    "VCT/2025/China League/Stage 2",
 ]
 
 
