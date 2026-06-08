@@ -1,41 +1,10 @@
 {
-  "generated_for": "2026-06-07",
+  "generated_for": "2026-06-08",
   "window_days": 5,
   "next_dates": [
     {
       "date": "2026-06-07",
-      "cs2_matches": [
-        {
-          "match_id": "teamspirit-9zteam-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO3",
-          "team_a": "Team Spirit",
-          "team_b": "9z Team",
-          "p_a": 0.4538,
-          "confidence": "coin-flip",
-          "scheduled_at": "2026-06-07T17:00:00+00:00"
-        },
-        {
-          "match_id": "g2esports-futesports-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO3",
-          "team_a": "G2 Esports",
-          "team_b": "FUT Esports",
-          "p_a": 0.2791,
-          "confidence": "moderate",
-          "scheduled_at": "2026-06-07T17:30:00+00:00"
-        },
-        {
-          "match_id": "b8-gamerlegion-2026-06-07",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO3",
-          "team_a": "B8",
-          "team_b": "GamerLegion",
-          "p_a": 0.4575,
-          "confidence": "coin-flip",
-          "scheduled_at": "2026-06-07T15:20:00+00:00"
-        }
-      ],
+      "cs2_matches": [],
       "lol_matches": [
         {
           "match_id": "anyoneslegend-bilibiligaming-2026-06-08",
@@ -49,6 +18,32 @@
           "scheduled_at": "2026-06-08T09:00:00+00:00"
         }
       ]
+    },
+    {
+      "date": "2026-06-08",
+      "cs2_matches": [
+        {
+          "match_id": "g2esports-big-2026-06-08",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "G2 Esports",
+          "team_b": "BIG",
+          "p_a": 0.5407,
+          "confidence": "coin-flip",
+          "scheduled_at": "2026-06-08T17:25:00+00:00"
+        },
+        {
+          "match_id": "m80-legacy-2026-06-08",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "M80",
+          "team_b": "Legacy",
+          "p_a": 0.5902,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-08T17:15:00+00:00"
+        }
+      ],
+      "lol_matches": []
     }
   ]
 }
