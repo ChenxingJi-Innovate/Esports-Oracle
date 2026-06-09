@@ -583,6 +583,29 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "big-b8-2026-06-09",
+      "date": "2026-06-09",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major",
+      "team_a": "BIG",
+      "team_b": "B8",
+      "p_a": 0.3381,
+      "p_map": 0.3903,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": -0.8938,
+        "form_diff": -0.1,
+        "map_diff": 0.0,
+        "player_diff": -0.128,
+        "h2h_diff": 0.0
+      },
+      "pick": "B8",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

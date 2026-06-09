@@ -1,46 +1,19 @@
 {
-  "generated_for": "2026-06-08",
+  "generated_for": "2026-06-09",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-07",
-      "cs2_matches": [],
-      "lol_matches": [
-        {
-          "match_id": "anyoneslegend-bilibiligaming-2026-06-08",
-          "event": "LPL 2026 Split 2 · Lower Bracket Semifinal",
-          "fmt": "BO3",
-          "team_a": "Anyone's Legend",
-          "team_b": "Bilibili Gaming",
-          "p_a": 0.5896,
-          "confidence": "lean",
-          "league": "LPL",
-          "scheduled_at": "2026-06-08T09:00:00+00:00"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-08",
+      "date": "2026-06-09",
       "cs2_matches": [
         {
-          "match_id": "g2esports-big-2026-06-08",
+          "match_id": "big-b8-2026-06-09",
           "event": "IEM Cologne 2026 Major",
           "fmt": "BO3",
-          "team_a": "G2 Esports",
-          "team_b": "BIG",
-          "p_a": 0.5407,
-          "confidence": "coin-flip",
-          "scheduled_at": "2026-06-08T17:25:00+00:00"
-        },
-        {
-          "match_id": "m80-legacy-2026-06-08",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO3",
-          "team_a": "M80",
-          "team_b": "Legacy",
-          "p_a": 0.5902,
+          "team_a": "BIG",
+          "team_b": "B8",
+          "p_a": 0.3381,
           "confidence": "lean",
-          "scheduled_at": "2026-06-08T17:15:00+00:00"
+          "scheduled_at": "2026-06-09T17:00:00+00:00"
         }
       ],
       "lol_matches": []
