@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-06-09",
+  "generated_for": "2026-06-10",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -68,113 +68,785 @@
       "note": "OE kNN, 702-game holdout (static)"
     },
     "cs2": {
-      "n_cases": 296,
+      "n_cases": 297,
       "holdout_maps": 60,
       "k": 25,
-      "accuracy": 0.4167,
-      "brier": 0.2735
+      "accuracy": 0.4,
+      "brier": 0.2736
     },
     "val": {
-      "n_cases": 770,
+      "n_cases": 769,
       "holdout_maps": 154,
       "k": 25,
-      "accuracy": 0.5909,
-      "brier": 0.236
+      "accuracy": 0.6169,
+      "brier": 0.2358
     }
   },
   "slate": {
     "cs2": [
       {
-        "match_id": "big-b8-2026-06-09",
+        "match_id": "themongolz-betboomteam-2026-06-11",
         "event": "IEM Cologne 2026 Major",
-        "team_a": "BIG",
-        "team_b": "B8",
-        "p_map_a": 0.3903,
-        "p_a": 0.3381,
+        "team_a": "The MongolZ",
+        "team_b": "BetBoom Team",
+        "p_map_a": 0.4532,
+        "p_a": 0.4301,
         "fmt": "BO3",
-        "confidence": "lean",
+        "confidence": "coin-flip",
         "scoreline": {
           "pick": "0-2",
           "a": 0,
           "b": 2,
-          "p": 0.3717,
+          "p": 0.2989,
           "dist": [
             {
               "score": "0-2",
-              "p": 0.3717
+              "p": 0.2989
             },
             {
               "score": "1-2",
-              "p": 0.2902
+              "p": 0.271
             },
             {
               "score": "2-1",
-              "p": 0.1858
+              "p": 0.2246
             },
             {
               "score": "2-0",
-              "p": 0.1523
+              "p": 0.2054
             }
           ]
         },
-        "scheduled_at": "2026-06-09T17:00:00+00:00",
-        "date": "2026-06-09",
+        "scheduled_at": "2026-06-11T09:00:00+00:00",
+        "date": "2026-06-11",
         "features": {
-          "rating_diff": -0.8938,
-          "form_diff": -0.1,
+          "rating_diff": -0.4055,
+          "form_diff": 0.0,
           "map_diff": 0.0,
-          "player_diff": -0.128,
+          "player_diff": -0.037,
+          "h2h_diff": 0.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-06-12",
+            "blue_team": "Team Spirit",
+            "red_team": "PaiN Gaming",
+            "winner": "Team Spirit",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.1508
+          },
+          {
+            "date": "2026-06-03",
+            "blue_team": "Team Liquid",
+            "red_team": "MIBR",
+            "winner": "MIBR",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.1779
+          },
+          {
+            "date": "2026-06-04",
+            "blue_team": "M80",
+            "red_team": "NRG",
+            "winner": "M80",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.3275
+          },
+          {
+            "date": "2026-05-12",
+            "blue_team": "HEROIC",
+            "red_team": "Magic",
+            "winner": "Magic",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.3296
+          },
+          {
+            "date": "2026-06-05",
+            "blue_team": "NRG",
+            "red_team": "BIG",
+            "winner": "BIG",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.3631
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.72,
+          "k": 25,
+          "outcome_rate": "2/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "parivision-9zteam-2026-06-11",
+        "event": "IEM Cologne 2026 Major",
+        "team_a": "PARIVISION",
+        "team_b": "9z Team",
+        "p_map_a": 0.1586,
+        "p_a": 0.0675,
+        "fmt": "BO3",
+        "confidence": "strong",
+        "scoreline": {
+          "pick": "0-2",
+          "a": 0,
+          "b": 2,
+          "p": 0.7079,
+          "dist": [
+            {
+              "score": "0-2",
+              "p": 0.7079
+            },
+            {
+              "score": "1-2",
+              "p": 0.2246
+            },
+            {
+              "score": "2-1",
+              "p": 0.0423
+            },
+            {
+              "score": "2-0",
+              "p": 0.0252
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-11T09:00:00+00:00",
+        "date": "2026-06-11",
+        "features": {
+          "rating_diff": -1.8563,
+          "form_diff": -0.607,
+          "map_diff": 0.0,
+          "player_diff": -0.264,
+          "h2h_diff": -1.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-09-15",
+            "blue_team": "Aurora Gaming",
+            "red_team": "FURIA",
+            "winner": "Aurora Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 2.2964
+          },
+          {
+            "date": "2025-06-13",
+            "blue_team": "FURIA",
+            "red_team": "Virtus.pro",
+            "winner": "FURIA",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 2.618
+          },
+          {
+            "date": "2025-06-12",
+            "blue_team": "MOUZ",
+            "red_team": "FaZe Clan",
+            "winner": "FaZe Clan",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 2.9043
+          },
+          {
+            "date": "2025-09-15",
+            "blue_team": "Team Liquid",
+            "red_team": "HEROIC",
+            "winner": "Team Liquid",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 3.0472
+          },
+          {
+            "date": "2025-06-12",
+            "blue_team": "Team Liquid",
+            "red_team": "Lynn Vision Gaming",
+            "winner": "Lynn Vision Gaming",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 3.1223
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.52,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "teamvitality-futesports-2026-06-11",
+        "event": "IEM Cologne 2026 Major",
+        "team_a": "Team Vitality",
+        "team_b": "FUT Esports",
+        "p_map_a": 0.3427,
+        "p_a": 0.2719,
+        "fmt": "BO3",
+        "confidence": "moderate",
+        "scoreline": {
+          "pick": "0-2",
+          "a": 0,
+          "b": 2,
+          "p": 0.432,
+          "dist": [
+            {
+              "score": "0-2",
+              "p": 0.432
+            },
+            {
+              "score": "1-2",
+              "p": 0.2961
+            },
+            {
+              "score": "2-1",
+              "p": 0.1544
+            },
+            {
+              "score": "2-0",
+              "p": 0.1175
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-11T11:30:00+00:00",
+        "date": "2026-06-11",
+        "features": {
+          "rating_diff": -0.1671,
+          "form_diff": -0.25,
+          "map_diff": 0.0,
+          "player_diff": -0.031,
+          "h2h_diff": 0.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-06-07",
+            "blue_team": "MIBR",
+            "red_team": "Legacy",
+            "winner": "Legacy",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.4079
+          },
+          {
+            "date": "2025-06-13",
+            "blue_team": "Aurora Gaming",
+            "red_team": "G2 Esports",
+            "winner": "G2 Esports",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.5015
+          },
+          {
+            "date": "2025-04-09",
+            "blue_team": "Rare Atom",
+            "red_team": "Team Falcons",
+            "winner": "Team Falcons",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.5555
+          },
+          {
+            "date": "2025-06-15",
+            "blue_team": "The MongolZ",
+            "red_team": "G2 Esports",
+            "winner": "The MongolZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.5682
+          },
+          {
+            "date": "2025-09-15",
+            "blue_team": "3DMAX",
+            "red_team": "GamerLegion",
+            "winner": "GamerLegion",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.652
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.52,
+          "k": 25,
+          "outcome_rate": "1/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "mouz-legacy-2026-06-11",
+        "event": "IEM Cologne 2026 Major",
+        "team_a": "MOUZ",
+        "team_b": "Legacy",
+        "p_map_a": 0.6638,
+        "p_a": 0.737,
+        "fmt": "BO3",
+        "confidence": "moderate",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.4407,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.4407
+            },
+            {
+              "score": "2-1",
+              "p": 0.2963
+            },
+            {
+              "score": "1-2",
+              "p": 0.15
+            },
+            {
+              "score": "0-2",
+              "p": 0.113
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-11T11:30:00+00:00",
+        "date": "2026-06-11",
+        "features": {
+          "rating_diff": 1.0986,
+          "form_diff": 0.3,
+          "map_diff": 0.0,
+          "player_diff": 0.146,
+          "h2h_diff": 1.0
+        },
+        "similar_matches": [
+          {
+            "date": "2026-06-06",
+            "blue_team": "G2 Esports",
+            "red_team": "Monte",
+            "winner": "G2 Esports",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.5587
+          },
+          {
+            "date": "2026-06-06",
+            "blue_team": "B8",
+            "red_team": "M80",
+            "winner": "M80",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.6352
+          },
+          {
+            "date": "2025-09-14",
+            "blue_team": "The MongolZ",
+            "red_team": "Lynn Vision Gaming",
+            "winner": "The MongolZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.0694
+          },
+          {
+            "date": "2025-09-13",
+            "blue_team": "FaZe Clan",
+            "red_team": "PaiN Gaming",
+            "winner": "FaZe Clan",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.3399
+          },
+          {
+            "date": "2025-09-14",
+            "blue_team": "Virtus.pro",
+            "red_team": "Astralis",
+            "winner": "Astralis",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.3797
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.6,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "teamfalcons-g2esports-2026-06-11",
+        "event": "IEM Cologne 2026 Major",
+        "team_a": "Team Falcons",
+        "team_b": "G2 Esports",
+        "p_map_a": 0.4598,
+        "p_a": 0.4399,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "0-2",
+          "a": 0,
+          "b": 2,
+          "p": 0.2918,
+          "dist": [
+            {
+              "score": "0-2",
+              "p": 0.2918
+            },
+            {
+              "score": "1-2",
+              "p": 0.2683
+            },
+            {
+              "score": "2-1",
+              "p": 0.2284
+            },
+            {
+              "score": "2-0",
+              "p": 0.2114
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-11T14:00:00+00:00",
+        "date": "2026-06-11",
+        "features": {
+          "rating_diff": -0.2877,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": -0.007,
+          "h2h_diff": 0.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-02-17",
+            "blue_team": "PaiN Gaming",
+            "red_team": "Virtus.pro",
+            "winner": "PaiN Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.0815
+          },
+          {
+            "date": "2025-02-17",
+            "blue_team": "3DMAX",
+            "red_team": "Eternal Fire",
+            "winner": "Eternal Fire",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.0815
+          },
+          {
+            "date": "2026-06-05",
+            "blue_team": "NRG",
+            "red_team": "BIG",
+            "winner": "BIG",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.0839
+          },
+          {
+            "date": "2025-02-16",
+            "blue_team": "SAW",
+            "red_team": "FlyQuest",
+            "winner": "SAW",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.0888
+          },
+          {
+            "date": "2025-02-16",
+            "blue_team": "3DMAX",
+            "red_team": "MIBR",
+            "winner": "3DMAX",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.0888
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.64,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "furia-b8-2026-06-11",
+        "event": "IEM Cologne 2026 Major",
+        "team_a": "FURIA",
+        "team_b": "B8",
+        "p_map_a": 0.6042,
+        "p_a": 0.654,
+        "fmt": "BO3",
+        "confidence": "lean",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.365,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.365
+            },
+            {
+              "score": "2-1",
+              "p": 0.289
+            },
+            {
+              "score": "1-2",
+              "p": 0.1893
+            },
+            {
+              "score": "0-2",
+              "p": 0.1567
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-11T14:00:00+00:00",
+        "date": "2026-06-11",
+        "features": {
+          "rating_diff": 1.0986,
+          "form_diff": 0.2,
+          "map_diff": 0.0,
+          "player_diff": 0.076,
+          "h2h_diff": 1.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-09-14",
+            "blue_team": "The MongolZ",
+            "red_team": "Lynn Vision Gaming",
+            "winner": "The MongolZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.6358
+          },
+          {
+            "date": "2026-06-06",
+            "blue_team": "B8",
+            "red_team": "M80",
+            "winner": "M80",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.6897
+          },
+          {
+            "date": "2025-09-14",
+            "blue_team": "Virtus.pro",
+            "red_team": "Astralis",
+            "winner": "Astralis",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.7903
+          },
+          {
+            "date": "2025-06-12",
+            "blue_team": "The MongolZ",
+            "red_team": "FURIA",
+            "winner": "FURIA",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.8604
+          },
+          {
+            "date": "2026-05-11",
+            "blue_team": "The MongolZ",
+            "red_team": "G2 Esports",
+            "winner": "The MongolZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.8697
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.56,
+          "k": 25,
+          "outcome_rate": "2/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "natusvincere-teamspirit-2026-06-11",
+        "event": "IEM Cologne 2026 Major",
+        "team_a": "Natus Vincere",
+        "team_b": "Team Spirit",
+        "p_map_a": 0.2774,
+        "p_a": 0.1882,
+        "fmt": "BO3",
+        "confidence": "strong",
+        "scoreline": {
+          "pick": "0-2",
+          "a": 0,
+          "b": 2,
+          "p": 0.5221,
+          "dist": [
+            {
+              "score": "0-2",
+              "p": 0.5221
+            },
+            {
+              "score": "1-2",
+              "p": 0.2897
+            },
+            {
+              "score": "2-1",
+              "p": 0.1112
+            },
+            {
+              "score": "2-0",
+              "p": 0.077
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-11T16:30:00+00:00",
+        "date": "2026-06-11",
+        "features": {
+          "rating_diff": -2.6391,
+          "form_diff": -0.25,
+          "map_diff": 0.0,
+          "player_diff": -0.244,
+          "h2h_diff": -1.0
+        },
+        "similar_matches": [
+          {
+            "date": "2025-09-15",
+            "blue_team": "Aurora Gaming",
+            "red_team": "FURIA",
+            "winner": "Aurora Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.3211
+          },
+          {
+            "date": "2025-06-13",
+            "blue_team": "FURIA",
+            "red_team": "Virtus.pro",
+            "winner": "FURIA",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 1.8307
+          },
+          {
+            "date": "2025-06-12",
+            "blue_team": "MOUZ",
+            "red_team": "FaZe Clan",
+            "winner": "FaZe Clan",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.9002
+          },
+          {
+            "date": "2026-06-08",
+            "blue_team": "Astralis",
+            "red_team": "PaiN Gaming",
+            "winner": "PaiN Gaming",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 2.5358
+          },
+          {
+            "date": "2025-09-15",
+            "blue_team": "Astralis",
+            "red_team": "PaiN Gaming",
+            "winner": "PaiN Gaming",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 2.6794
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.44,
+          "k": 25,
+          "outcome_rate": "2/5",
+          "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "auroragaming-monte-2026-06-11",
+        "event": "IEM Cologne 2026 Major",
+        "team_a": "Aurora Gaming",
+        "team_b": "Monte",
+        "p_map_a": 0.5252,
+        "p_a": 0.5378,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.2759,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.2759
+            },
+            {
+              "score": "2-1",
+              "p": 0.2619
+            },
+            {
+              "score": "1-2",
+              "p": 0.2368
+            },
+            {
+              "score": "0-2",
+              "p": 0.2254
+            }
+          ]
+        },
+        "scheduled_at": "2026-06-11T16:30:00+00:00",
+        "date": "2026-06-11",
+        "features": {
+          "rating_diff": 0.7472,
+          "form_diff": 0.1,
+          "map_diff": 0.0,
+          "player_diff": 0.11,
           "h2h_diff": 0.0
         },
         "similar_matches": [
           {
             "date": "2026-05-11",
-            "blue_team": "PARIVISION",
-            "red_team": "Aurora Gaming",
-            "winner": "Aurora Gaming",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.2519
-          },
-          {
-            "date": "2026-06-09",
-            "blue_team": "Monte",
-            "red_team": "PaiN Gaming",
-            "winner": "Monte",
+            "blue_team": "Team Falcons",
+            "red_team": "Monte",
+            "winner": "Team Falcons",
             "winner_side": "blue",
             "target": 1,
-            "distance": 0.2734
+            "distance": 0.2579
           },
           {
-            "date": "2025-06-12",
-            "blue_team": "Team Vitality",
-            "red_team": "Legacy",
-            "winner": "Legacy",
+            "date": "2026-06-08",
+            "blue_team": "G2 Esports",
+            "red_team": "BIG",
+            "winner": "G2 Esports",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.2917
+          },
+          {
+            "date": "2026-06-04",
+            "blue_team": "THUNDERdOWNUNDER",
+            "red_team": "FlyQuest",
+            "winner": "FlyQuest",
             "winner_side": "red",
             "target": 0,
-            "distance": 0.309
+            "distance": 0.3099
+          },
+          {
+            "date": "2026-05-09",
+            "blue_team": "MOUZ",
+            "red_team": "Gentle Mates",
+            "winner": "MOUZ",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.3502
           },
           {
             "date": "2025-06-14",
-            "blue_team": "Natus Vincere",
-            "red_team": "G2 Esports",
-            "winner": "Natus Vincere",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.5053
-          },
-          {
-            "date": "2025-06-12",
-            "blue_team": "Natus Vincere",
-            "red_team": "Nemiga Gaming",
-            "winner": "Natus Vincere",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.553
+            "blue_team": "Virtus.pro",
+            "red_team": "Team Vitality",
+            "winner": "Team Vitality",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.3756
           }
         ],
         "case_based": {
-          "p_blue_knn": 0.48,
+          "p_blue_knn": 0.52,
           "k": 25,
           "outcome_rate": "3/5",
           "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
@@ -286,142 +958,99 @@
     ],
     "val": [
       {
-        "match_id": "globalesports-fullsense-2026-06-09",
+        "match_id": "globalesports-xlgesports-2026-06-10",
         "event": "VCT 2026 · Stage 2 Masters",
         "team_a": "Global Esports",
-        "team_b": "FULL SENSE",
-        "p_map_a": 0.3508,
-        "p_a": 0.2828,
+        "team_b": "XLG Esports",
+        "p_map_a": 0.3866,
+        "p_a": 0.3329,
         "fmt": "BO3",
-        "confidence": "moderate",
+        "confidence": "lean",
         "scoreline": {
           "pick": "0-2",
           "a": 0,
           "b": 2,
-          "p": 0.4215,
+          "p": 0.3762,
           "dist": [
             {
               "score": "0-2",
-              "p": 0.4215
+              "p": 0.3762
             },
             {
               "score": "1-2",
-              "p": 0.2957
+              "p": 0.2909
             },
             {
               "score": "2-1",
-              "p": 0.1598
+              "p": 0.1834
             },
             {
               "score": "2-0",
-              "p": 0.123
+              "p": 0.1495
             }
           ]
         },
-        "scheduled_at": "2026-06-09T17:20:00+00:00",
-        "date": "2026-06-09",
+        "scheduled_at": "2026-06-10T17:40:00+00:00",
+        "date": "2026-06-10",
         "features": {
-          "rating_diff": -0.6242,
-          "form_diff": -0.1,
+          "rating_diff": -0.9343,
+          "form_diff": 0.0,
           "map_diff": 0.0,
-          "player_diff": -0.125,
-          "h2h_diff": -1.0
+          "player_diff": -0.22,
+          "h2h_diff": 0.0
         },
         "similar_matches": [
           {
-            "date": "2026-02-05",
-            "blue_team": "Team Secret",
-            "red_team": "ZETA DIVISION",
-            "winner": "ZETA DIVISION",
+            "date": "2025-06-17",
+            "blue_team": "Gen.G Esports",
+            "red_team": "G2 Esports",
+            "winner": "G2 Esports",
             "winner_side": "red",
             "target": 0,
-            "distance": 0.3497
+            "distance": 0.388
           },
           {
-            "date": "2026-05-11",
-            "blue_team": "Sentinels",
-            "red_team": "NRG",
+            "date": "2026-02-12",
+            "blue_team": "DRX",
+            "red_team": "Paper Rex",
+            "winner": "Paper Rex",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.4265
+          },
+          {
+            "date": "2026-03-04",
+            "blue_team": "NRG",
+            "red_team": "Team Liquid",
             "winner": "NRG",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.4042
-          },
-          {
-            "date": "2025-07-27",
-            "blue_team": "Cloud9",
-            "red_team": "Evil Geniuses",
-            "winner": "Cloud9",
             "winner_side": "blue",
             "target": 1,
-            "distance": 0.446
+            "distance": 0.4275
           },
           {
-            "date": "2025-03-29",
-            "blue_team": "Dragon Ranger Gaming",
-            "red_team": "EDward Gaming",
-            "winner": "EDward Gaming",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.4472
-          },
-          {
-            "date": "2025-02-24",
-            "blue_team": "T1",
-            "red_team": "DRX",
-            "winner": "T1",
+            "date": "2026-03-15",
+            "blue_team": "Nongshim RedForce",
+            "red_team": "Paper Rex",
+            "winner": "Nongshim RedForce",
             "winner_side": "blue",
             "target": 1,
-            "distance": 0.4735
+            "distance": 0.4279
+          },
+          {
+            "date": "2026-01-21",
+            "blue_team": "PCIFIC Esports",
+            "red_team": "BBL Esports",
+            "winner": "BBL Esports",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.4415
           }
         ],
         "case_based": {
-          "p_blue_knn": 0.4,
+          "p_blue_knn": 0.44,
           "k": 25,
           "outcome_rate": "2/5",
           "note": "Valorant Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
-        }
-      },
-      {
-        "match_id": "viewmatchdetails-previous-2026-06-10",
-        "event": "VCT 2026 · Stage 2 Masters",
-        "team_a": "View match details",
-        "team_b": "Previous",
-        "p_map_a": 0.5,
-        "p_a": 0.5,
-        "fmt": "BO3",
-        "confidence": "coin-flip",
-        "scoreline": {
-          "pick": "2-0",
-          "a": 2,
-          "b": 0,
-          "p": 0.25,
-          "dist": [
-            {
-              "score": "2-0",
-              "p": 0.25
-            },
-            {
-              "score": "2-1",
-              "p": 0.25
-            },
-            {
-              "score": "0-2",
-              "p": 0.25
-            },
-            {
-              "score": "1-2",
-              "p": 0.25
-            }
-          ]
-        },
-        "scheduled_at": "2026-06-10T17:00:00+00:00",
-        "date": "2026-06-10",
-        "features": {
-          "rating_diff": 0.0,
-          "form_diff": 0.0,
-          "map_diff": 0.0,
-          "player_diff": 0.0,
-          "h2h_diff": 0.0
         }
       }
     ]

@@ -1,19 +1,89 @@
 {
-  "generated_for": "2026-06-09",
+  "generated_for": "2026-06-10",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-09",
+      "date": "2026-06-10",
       "cs2_matches": [
         {
-          "match_id": "big-b8-2026-06-09",
+          "match_id": "themongolz-betboomteam-2026-06-11",
           "event": "IEM Cologne 2026 Major",
           "fmt": "BO3",
-          "team_a": "BIG",
+          "team_a": "The MongolZ",
+          "team_b": "BetBoom Team",
+          "p_a": 0.4301,
+          "confidence": "coin-flip",
+          "scheduled_at": "2026-06-11T09:00:00+00:00"
+        },
+        {
+          "match_id": "parivision-9zteam-2026-06-11",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "PARIVISION",
+          "team_b": "9z Team",
+          "p_a": 0.0675,
+          "confidence": "strong",
+          "scheduled_at": "2026-06-11T09:00:00+00:00"
+        },
+        {
+          "match_id": "teamvitality-futesports-2026-06-11",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "Team Vitality",
+          "team_b": "FUT Esports",
+          "p_a": 0.2719,
+          "confidence": "moderate",
+          "scheduled_at": "2026-06-11T11:30:00+00:00"
+        },
+        {
+          "match_id": "mouz-legacy-2026-06-11",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "MOUZ",
+          "team_b": "Legacy",
+          "p_a": 0.737,
+          "confidence": "moderate",
+          "scheduled_at": "2026-06-11T11:30:00+00:00"
+        },
+        {
+          "match_id": "teamfalcons-g2esports-2026-06-11",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "Team Falcons",
+          "team_b": "G2 Esports",
+          "p_a": 0.4399,
+          "confidence": "coin-flip",
+          "scheduled_at": "2026-06-11T14:00:00+00:00"
+        },
+        {
+          "match_id": "furia-b8-2026-06-11",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "FURIA",
           "team_b": "B8",
-          "p_a": 0.3381,
+          "p_a": 0.654,
           "confidence": "lean",
-          "scheduled_at": "2026-06-09T17:00:00+00:00"
+          "scheduled_at": "2026-06-11T14:00:00+00:00"
+        },
+        {
+          "match_id": "natusvincere-teamspirit-2026-06-11",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "Natus Vincere",
+          "team_b": "Team Spirit",
+          "p_a": 0.1882,
+          "confidence": "strong",
+          "scheduled_at": "2026-06-11T16:30:00+00:00"
+        },
+        {
+          "match_id": "auroragaming-monte-2026-06-11",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "Aurora Gaming",
+          "team_b": "Monte",
+          "p_a": 0.5378,
+          "confidence": "coin-flip",
+          "scheduled_at": "2026-06-11T16:30:00+00:00"
         }
       ],
       "lol_matches": []
