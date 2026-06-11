@@ -813,6 +813,121 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "teamwe-bilibiligaming-2026-06-13",
+      "date": "2026-06-11",
+      "game": "lol",
+      "event": "LPL 2026 Split 2 · Lower Bracket Final",
+      "team_a": "Team WE",
+      "team_b": "Bilibili Gaming",
+      "p_a": 0.3908,
+      "p_map": 0.4267,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Bilibili Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "paperrex-leviatán-2026-06-12",
+      "date": "2026-06-11",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Upper Bracket Quarterfinals",
+      "team_a": "Paper Rex",
+      "team_b": "Leviatán",
+      "p_a": 0.929,
+      "p_map": 0.837,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 3.1781,
+        "form_diff": 0.2,
+        "map_diff": 0.0,
+        "player_diff": 0.518,
+        "h2h_diff": 0.0
+      },
+      "pick": "Paper Rex",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "teamheretics-teamvitality-2026-06-12",
+      "date": "2026-06-11",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Upper Bracket Quarterfinals",
+      "team_a": "Team Heretics",
+      "team_b": "Team Vitality",
+      "p_a": 0.8577,
+      "p_map": 0.7627,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 1.335,
+        "form_diff": 0.3,
+        "map_diff": 0.0,
+        "player_diff": 0.219,
+        "h2h_diff": 0.5
+      },
+      "pick": "Team Heretics",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "edwardgaming-futesports-2026-06-13",
+      "date": "2026-06-11",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Upper Bracket Quarterfinals",
+      "team_a": "EDward Gaming",
+      "team_b": "FUT Esports",
+      "p_a": 0.9101,
+      "p_map": 0.8151,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 2.3026,
+        "form_diff": 0.3,
+        "map_diff": 0.0,
+        "player_diff": 0.382,
+        "h2h_diff": 0.0
+      },
+      "pick": "EDward Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "g2esports-xlgesports-2026-06-13",
+      "date": "2026-06-11",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Upper Bracket Quarterfinals",
+      "team_a": "G2 Esports",
+      "team_b": "XLG Esports",
+      "p_a": 0.8606,
+      "p_map": 0.7653,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 1.7047,
+        "form_diff": 0.2,
+        "map_diff": 0.0,
+        "player_diff": 0.264,
+        "h2h_diff": 1.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
