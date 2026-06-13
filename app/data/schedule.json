@@ -1,51 +1,60 @@
 {
-  "generated_for": "2026-06-12",
+  "generated_for": "2026-06-13",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-12",
+      "date": "2026-06-13",
       "cs2_matches": [
         {
-          "match_id": "teamvitality-9zteam-2026-06-12",
+          "match_id": "teamspirit-9zteam-2026-06-13",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "Team Spirit",
+          "team_b": "9z Team",
+          "p_a": 0.6208,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-13T17:30:00+00:00"
+        },
+        {
+          "match_id": "betboomteam-furia-2026-06-13",
+          "event": "IEM Cologne 2026 Major",
+          "fmt": "BO3",
+          "team_a": "BetBoom Team",
+          "team_b": "FURIA",
+          "p_a": 0.417,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-13T17:30:00+00:00"
+        },
+        {
+          "match_id": "teamvitality-mouz-2026-06-13",
           "event": "IEM Cologne 2026 Major",
           "fmt": "BO3",
           "team_a": "Team Vitality",
-          "team_b": "9z Team",
-          "p_a": 0.3699,
+          "team_b": "MOUZ",
+          "p_a": 0.3996,
           "confidence": "lean",
-          "scheduled_at": "2026-06-12T16:45:00+00:00"
+          "scheduled_at": "2026-06-13T14:35:00+00:00"
         },
         {
-          "match_id": "auroragaming-teamspirit-2026-06-12",
+          "match_id": "parivision-legacy-2026-06-13",
           "event": "IEM Cologne 2026 Major",
           "fmt": "BO3",
-          "team_a": "Aurora Gaming",
-          "team_b": "Team Spirit",
-          "p_a": 0.2209,
-          "confidence": "moderate",
-          "scheduled_at": "2026-06-12T17:25:00+00:00"
+          "team_a": "PARIVISION",
+          "team_b": "Legacy",
+          "p_a": 0.3293,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-13T15:45:00+00:00"
         }
       ],
       "lol_matches": [
         {
-          "match_id": "teamwe-bilibiligaming-2026-06-13",
-          "event": "LPL 2026 Split 2 · Lower Bracket Final",
-          "fmt": "BO3",
-          "team_a": "Team WE",
-          "team_b": "Bilibili Gaming",
-          "p_a": 0.3908,
-          "confidence": "lean",
-          "league": "LPL",
-          "scheduled_at": "2026-06-13T08:00:00+00:00"
-        },
-        {
-          "match_id": "topesports-midseasoninvitational2026-2026-06-14",
+          "match_id": "topesports-bilibiligaming-2026-06-14",
           "event": "LPL 2026 Split 2 · Grand Final",
           "fmt": "BO5",
           "team_a": "Top Esports",
-          "team_b": "Mid-Season Invitational/2026",
-          "p_a": 0.5,
-          "confidence": "coin-flip",
+          "team_b": "Bilibili Gaming",
+          "p_a": 0.1721,
+          "confidence": "strong",
           "league": "LPL",
           "scheduled_at": "2026-06-14T08:00:00+00:00"
         }
