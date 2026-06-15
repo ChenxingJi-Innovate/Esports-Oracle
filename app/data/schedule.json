@@ -1,56 +1,19 @@
 {
-  "generated_for": "2026-06-14",
+  "generated_for": "2026-06-15",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-13",
-      "cs2_matches": [],
-      "lol_matches": [
-        {
-          "match_id": "topesports-bilibiligaming-2026-06-14",
-          "event": "LPL 2026 Split 2 · Grand Final",
-          "fmt": "BO5",
-          "team_a": "Top Esports",
-          "team_b": "Bilibili Gaming",
-          "p_a": 0.1721,
-          "confidence": "strong",
-          "league": "LPL",
-          "scheduled_at": "2026-06-14T08:00:00+00:00"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-14",
+      "date": "2026-06-15",
       "cs2_matches": [
         {
-          "match_id": "betboomteam-teamvitality-2026-06-14",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO3",
-          "team_a": "BetBoom Team",
-          "team_b": "Team Vitality",
-          "p_a": 0.5078,
-          "confidence": "coin-flip",
-          "scheduled_at": "2026-06-14T15:20:00+00:00"
-        },
-        {
-          "match_id": "natusvincere-teamfalcons-2026-06-14",
+          "match_id": "natusvincere-g2esports-2026-06-15",
           "event": "IEM Cologne 2026 Major",
           "fmt": "BO3",
           "team_a": "Natus Vincere",
-          "team_b": "Team Falcons",
-          "p_a": 0.3613,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-14T17:25:00+00:00"
-        },
-        {
-          "match_id": "g2esports-legacy-2026-06-14",
-          "event": "IEM Cologne 2026 Major",
-          "fmt": "BO3",
-          "team_a": "G2 Esports",
-          "team_b": "Legacy",
-          "p_a": 0.6931,
-          "confidence": "moderate",
-          "scheduled_at": "2026-06-14T17:00:00+00:00"
+          "team_b": "G2 Esports",
+          "p_a": 0.429,
+          "confidence": "coin-flip",
+          "scheduled_at": "2026-06-15T17:00:00+00:00"
         }
       ],
       "lol_matches": []

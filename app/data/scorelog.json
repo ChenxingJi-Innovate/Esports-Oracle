@@ -1296,6 +1296,75 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "natusvincere-g2esports-2026-06-15",
+      "date": "2026-06-15",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major",
+      "team_a": "Natus Vincere",
+      "team_b": "G2 Esports",
+      "p_a": 0.429,
+      "p_map": 0.4525,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": -0.5108,
+        "form_diff": -0.075,
+        "map_diff": 0.0,
+        "player_diff": -0.093,
+        "h2h_diff": 1.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "xlgesports-leviatán-2026-06-16",
+      "date": "2026-06-15",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Lower Bracket Quarterfinals",
+      "team_a": "XLG Esports",
+      "team_b": "Leviatán",
+      "p_a": 0.5609,
+      "p_map": 0.5407,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.7802,
+        "form_diff": -0.1,
+        "map_diff": 0.0,
+        "player_diff": 0.157,
+        "h2h_diff": 0.0
+      },
+      "pick": "XLG Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "teamvitality-futesports-2026-06-16",
+      "date": "2026-06-15",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Lower Bracket Quarterfinals",
+      "team_a": "Team Vitality",
+      "team_b": "FUT Esports",
+      "p_a": 0.6137,
+      "p_map": 0.5764,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.4568,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.113,
+        "h2h_diff": 0.5
+      },
+      "pick": "Team Vitality",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
