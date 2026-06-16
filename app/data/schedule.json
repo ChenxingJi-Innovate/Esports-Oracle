@@ -1,19 +1,29 @@
 {
-  "generated_for": "2026-06-15",
+  "generated_for": "2026-06-16",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-15",
+      "date": "2026-06-16",
       "cs2_matches": [
         {
-          "match_id": "natusvincere-g2esports-2026-06-15",
-          "event": "IEM Cologne 2026 Major",
+          "match_id": "auroragaming-betboomteam-2026-06-18",
+          "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
           "fmt": "BO3",
-          "team_a": "Natus Vincere",
-          "team_b": "G2 Esports",
-          "p_a": 0.429,
+          "team_a": "Aurora Gaming",
+          "team_b": "BetBoom Team",
+          "p_a": 0.4493,
           "confidence": "coin-flip",
-          "scheduled_at": "2026-06-15T17:00:00+00:00"
+          "scheduled_at": "2026-06-18T13:45:00+00:00"
+        },
+        {
+          "match_id": "9zteam-furia-2026-06-18",
+          "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
+          "fmt": "BO3",
+          "team_a": "9z Team",
+          "team_b": "FURIA",
+          "p_a": 0.3376,
+          "confidence": "lean",
+          "scheduled_at": "2026-06-18T17:00:00+00:00"
         }
       ],
       "lol_matches": []

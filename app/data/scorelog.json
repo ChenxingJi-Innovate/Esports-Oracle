@@ -1365,6 +1365,98 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "auroragaming-betboomteam-2026-06-18",
+      "date": "2026-06-16",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
+      "team_a": "Aurora Gaming",
+      "team_b": "BetBoom Team",
+      "p_a": 0.4493,
+      "p_map": 0.4662,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.3365,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.043,
+        "h2h_diff": 0.0
+      },
+      "pick": "BetBoom Team",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "9zteam-furia-2026-06-18",
+      "date": "2026-06-16",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
+      "team_a": "9z Team",
+      "team_b": "FURIA",
+      "p_a": 0.3376,
+      "p_map": 0.3899,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": -1.0986,
+        "form_diff": -0.1,
+        "map_diff": 0.0,
+        "player_diff": -0.138,
+        "h2h_diff": 0.0
+      },
+      "pick": "FURIA",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "prx-vit-2026-06-16",
+      "date": "2026-06-16",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters",
+      "team_a": "PRX",
+      "team_b": "VIT",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "PRX",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "xlg-lev-2026-06-16",
+      "date": "2026-06-16",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters",
+      "team_a": "XLG",
+      "team_b": "LEV",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "XLG",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
