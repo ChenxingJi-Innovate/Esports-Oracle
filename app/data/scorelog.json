@@ -1549,6 +1549,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "editsectionformat-teamspirit-2026-06-20",
+      "date": "2026-06-18",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
+      "team_a": "Edit section: Format",
+      "team_b": "Team Spirit",
+      "p_a": 0.1073,
+      "p_map": 0.2034,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": -4.0943,
+        "form_diff": -0.5,
+        "map_diff": 0.0,
+        "player_diff": -0.435,
+        "h2h_diff": 0.0
+      },
+      "pick": "Team Spirit",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "editsectionabout-futesports-2026-06-20",
+      "date": "2026-06-18",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Lower Bracket Final",
+      "team_a": "Edit section: About",
+      "team_b": "FUT Esports",
+      "p_a": 0.4658,
+      "p_map": 0.4772,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": -0.6931,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.025,
+        "h2h_diff": 0.0
+      },
+      "pick": "FUT Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

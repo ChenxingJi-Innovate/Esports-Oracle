@@ -1,20 +1,10 @@
 {
-  "generated_for": "2026-06-17",
+  "generated_for": "2026-06-18",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-17",
+      "date": "2026-06-18",
       "cs2_matches": [
-        {
-          "match_id": "auroragaming-betboomteam-2026-06-18",
-          "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
-          "fmt": "BO3",
-          "team_a": "Aurora Gaming",
-          "team_b": "BetBoom Team",
-          "p_a": 0.4493,
-          "confidence": "coin-flip",
-          "scheduled_at": "2026-06-18T13:45:00+00:00"
-        },
         {
           "match_id": "9zteam-furia-2026-06-18",
           "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
@@ -44,6 +34,16 @@
           "p_a": 0.4897,
           "confidence": "coin-flip",
           "scheduled_at": "2026-06-19T17:00:00+00:00"
+        },
+        {
+          "match_id": "editsectionformat-teamspirit-2026-06-20",
+          "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
+          "fmt": "BO3",
+          "team_a": "Edit section: Format",
+          "team_b": "Team Spirit",
+          "p_a": 0.1073,
+          "confidence": "strong",
+          "scheduled_at": "2026-06-20T17:00:00+00:00"
         }
       ],
       "lol_matches": []
