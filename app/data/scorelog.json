@@ -1595,6 +1595,75 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "auroragaming-furia-2026-06-20",
+      "date": "2026-06-19",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
+      "team_a": "Aurora Gaming",
+      "team_b": "FURIA",
+      "p_a": 0.3402,
+      "p_map": 0.3918,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": -0.9163,
+        "form_diff": -0.1,
+        "map_diff": 0.0,
+        "player_diff": -0.123,
+        "h2h_diff": 0.0
+      },
+      "pick": "FURIA",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "edwardgaming-leviatán-2026-06-20",
+      "date": "2026-06-19",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Lower Bracket Final",
+      "team_a": "EDward Gaming",
+      "team_b": "Leviatán",
+      "p_a": 0.852,
+      "p_map": 0.7574,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 2.0794,
+        "form_diff": 0.2,
+        "map_diff": 0.0,
+        "player_diff": 0.293,
+        "h2h_diff": 0.0
+      },
+      "pick": "EDward Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "paperrex-editsectionabout-2026-06-21",
+      "date": "2026-06-19",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Grand Final",
+      "team_a": "Paper Rex",
+      "team_b": "Edit section: About",
+      "p_a": 0.9656,
+      "p_map": 0.8888,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 4.0943,
+        "form_diff": 0.3,
+        "map_diff": 0.0,
+        "player_diff": 0.586,
+        "h2h_diff": 0.0
+      },
+      "pick": "Paper Rex",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
