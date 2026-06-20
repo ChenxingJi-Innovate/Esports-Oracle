@@ -1664,6 +1664,75 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "teamspirit-teamfalcons-2026-06-20",
+      "date": "2026-06-20",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
+      "team_a": "Team Spirit",
+      "team_b": "Team Falcons",
+      "p_a": 0.6184,
+      "p_map": 0.5796,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 1.0986,
+        "form_diff": 0.2,
+        "map_diff": 0.0,
+        "player_diff": 0.159,
+        "h2h_diff": 0.0
+      },
+      "pick": "Team Spirit",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "furia-teamspirit-2026-06-21",
+      "date": "2026-06-20",
+      "game": "cs2",
+      "event": "IEM Cologne 2026 Major · Playoffs · Grand Final",
+      "team_a": "FURIA",
+      "team_b": "Team Spirit",
+      "p_a": 0.2362,
+      "p_map": 0.3158,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -0.6931,
+        "form_diff": -0.2,
+        "map_diff": 0.0,
+        "player_diff": -0.076,
+        "h2h_diff": -1.0
+      },
+      "pick": "Team Spirit",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "paperrex-leviatán-2026-06-21",
+      "date": "2026-06-20",
+      "game": "val",
+      "event": "VCT 2026 · Stage 2 Masters · Grand Final",
+      "team_a": "Paper Rex",
+      "team_b": "Leviatán",
+      "p_a": 0.9295,
+      "p_map": 0.8377,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 3.1781,
+        "form_diff": 0.2,
+        "map_diff": 0.0,
+        "player_diff": 0.522,
+        "h2h_diff": 0.0
+      },
+      "pick": "Paper Rex",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

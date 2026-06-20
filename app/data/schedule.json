@@ -1,49 +1,29 @@
 {
-  "generated_for": "2026-06-19",
+  "generated_for": "2026-06-20",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-19",
+      "date": "2026-06-20",
       "cs2_matches": [
         {
-          "match_id": "teamspirit-g2esports-2026-06-19",
-          "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
+          "match_id": "teamspirit-teamfalcons-2026-06-20",
+          "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
           "fmt": "BO3",
           "team_a": "Team Spirit",
-          "team_b": "G2 Esports",
-          "p_a": 0.6907,
-          "confidence": "moderate",
-          "scheduled_at": "2026-06-19T13:45:00+00:00"
-        },
-        {
-          "match_id": "teamfalcons-teamvitality-2026-06-19",
-          "event": "IEM Cologne 2026 Major · Playoffs · Quarterfinals",
-          "fmt": "BO3",
-          "team_a": "Team Falcons",
-          "team_b": "Team Vitality",
-          "p_a": 0.4897,
-          "confidence": "coin-flip",
-          "scheduled_at": "2026-06-19T18:00:00+00:00"
-        },
-        {
-          "match_id": "auroragaming-furia-2026-06-20",
-          "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
-          "fmt": "BO3",
-          "team_a": "Aurora Gaming",
-          "team_b": "FURIA",
-          "p_a": 0.3402,
+          "team_b": "Team Falcons",
+          "p_a": 0.6184,
           "confidence": "lean",
-          "scheduled_at": "2026-06-20T13:45:00+00:00"
+          "scheduled_at": "2026-06-20T17:00:00+00:00"
         },
         {
-          "match_id": "editsectionformat-teamspirit-2026-06-20",
-          "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
+          "match_id": "furia-teamspirit-2026-06-21",
+          "event": "IEM Cologne 2026 Major · Playoffs · Grand Final",
           "fmt": "BO3",
-          "team_a": "Edit section: Format",
+          "team_a": "FURIA",
           "team_b": "Team Spirit",
-          "p_a": 0.1073,
-          "confidence": "strong",
-          "scheduled_at": "2026-06-20T17:00:00+00:00"
+          "p_a": 0.2362,
+          "confidence": "moderate",
+          "scheduled_at": "2026-06-21T15:00:00+00:00"
         }
       ],
       "lol_matches": []
