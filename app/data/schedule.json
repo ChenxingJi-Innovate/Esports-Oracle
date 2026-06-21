@@ -1,28 +1,18 @@
 {
-  "generated_for": "2026-06-20",
+  "generated_for": "2026-06-21",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-20",
+      "date": "2026-06-21",
       "cs2_matches": [
         {
-          "match_id": "teamspirit-teamfalcons-2026-06-20",
-          "event": "IEM Cologne 2026 Major · Playoffs · Semifinals",
-          "fmt": "BO3",
-          "team_a": "Team Spirit",
-          "team_b": "Team Falcons",
-          "p_a": 0.6184,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-20T17:00:00+00:00"
-        },
-        {
-          "match_id": "furia-teamspirit-2026-06-21",
+          "match_id": "teamfalcons-furia-2026-06-21",
           "event": "IEM Cologne 2026 Major · Playoffs · Grand Final",
           "fmt": "BO3",
-          "team_a": "FURIA",
-          "team_b": "Team Spirit",
-          "p_a": 0.2362,
-          "confidence": "moderate",
+          "team_a": "Team Falcons",
+          "team_b": "FURIA",
+          "p_a": 0.4123,
+          "confidence": "lean",
           "scheduled_at": "2026-06-21T15:00:00+00:00"
         }
       ],
