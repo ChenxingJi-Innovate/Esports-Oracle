@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-07-02",
+  "generated_for": "2026-07-03",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -75,11 +75,7 @@
       "brier": 0.2543
     },
     "val": {
-      "n_cases": 343,
-      "holdout_maps": 69,
-      "k": 25,
-      "accuracy": 0.4493,
-      "brier": 0.2573
+      "error": "corpus pending (no case base yet)"
     }
   },
   "slate": {
@@ -334,59 +330,6 @@
           "map_diff": 0.0,
           "player_diff": 0.522,
           "h2h_diff": 0.0
-        },
-        "similar_matches": [
-          {
-            "date": "2025-07-31",
-            "blue_team": "EDward Gaming",
-            "red_team": "JD Gaming",
-            "winner": "EDward Gaming",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.3425
-          },
-          {
-            "date": "2025-08-01",
-            "blue_team": "Trace Esports",
-            "red_team": "Titan Esports Club",
-            "winner": "Titan Esports Club",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.3966
-          },
-          {
-            "date": "2026-03-01",
-            "blue_team": "T1",
-            "red_team": "Team Liquid",
-            "winner": "Team Liquid",
-            "winner_side": "red",
-            "target": 0,
-            "distance": 0.4791
-          },
-          {
-            "date": "2025-08-10",
-            "blue_team": "Rex Regum Qeon",
-            "red_team": "Team Secret",
-            "winner": "Rex Regum Qeon",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.4819
-          },
-          {
-            "date": "2025-07-27",
-            "blue_team": "DRX",
-            "red_team": "Team Secret",
-            "winner": "DRX",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.5019
-          }
-        ],
-        "case_based": {
-          "p_blue_knn": 0.6,
-          "k": 25,
-          "outcome_rate": "3/5",
-          "note": "Valorant Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       }
     ]
