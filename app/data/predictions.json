@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-07-06",
+  "generated_for": "2026-07-07",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -290,45 +290,88 @@
     ],
     "val": [
       {
-        "match_id": "paperrex-leviatán-2026-06-21",
-        "event": "VCT 2026 · Stage 2 Masters · Grand Final",
-        "team_a": "Paper Rex",
-        "team_b": "Leviatán",
-        "p_map_a": 0.8377,
-        "p_a": 0.9295,
+        "match_id": "wolvesesports-titanesportsclub-2026-07-09",
+        "event": "VCT 2026 China · Stage 2 · July 9",
+        "team_a": "Wolves Esports",
+        "team_b": "Titan Esports Club",
+        "p_map_a": 0.6784,
+        "p_a": 0.7563,
         "fmt": "BO3",
-        "confidence": "strong",
+        "confidence": "moderate",
         "scoreline": {
           "pick": "2-0",
           "a": 2,
           "b": 0,
-          "p": 0.7018,
+          "p": 0.4602,
           "dist": [
             {
               "score": "2-0",
-              "p": 0.7018
+              "p": 0.4602
             },
             {
               "score": "2-1",
-              "p": 0.2278
+              "p": 0.296
             },
             {
               "score": "1-2",
-              "p": 0.0441
+              "p": 0.1403
             },
             {
               "score": "0-2",
-              "p": 0.0263
+              "p": 0.1034
             }
           ]
         },
-        "scheduled_at": "2026-06-21T14:30:00+00:00",
-        "date": "2026-06-21",
+        "scheduled_at": "2026-07-09T08:00:00+00:00",
+        "date": "2026-07-09",
         "features": {
-          "rating_diff": 3.1781,
-          "form_diff": 0.2,
+          "rating_diff": 2.1484,
+          "form_diff": 0.167,
           "map_diff": 0.0,
-          "player_diff": 0.522,
+          "player_diff": 0.036,
+          "h2h_diff": 0.0
+        }
+      },
+      {
+        "match_id": "dragonrangergaming-bilibiligaming-2026-07-09",
+        "event": "VCT 2026 China · Stage 2 · July 9",
+        "team_a": "Dragon Ranger Gaming",
+        "team_b": "Bilibili Gaming",
+        "p_map_a": 0.5205,
+        "p_a": 0.5307,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.2709,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.2709
+            },
+            {
+              "score": "2-1",
+              "p": 0.2598
+            },
+            {
+              "score": "1-2",
+              "p": 0.2393
+            },
+            {
+              "score": "0-2",
+              "p": 0.2299
+            }
+          ]
+        },
+        "scheduled_at": "2026-07-09T11:00:00+00:00",
+        "date": "2026-07-09",
+        "features": {
+          "rating_diff": -1.6094,
+          "form_diff": 0.167,
+          "map_diff": 0.0,
+          "player_diff": 0.045,
           "h2h_diff": 0.0
         }
       }
