@@ -1802,6 +1802,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "funplusphoenix-traceesports-2026-07-10",
+      "date": "2026-07-08",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 10",
+      "team_a": "FunPlus Phoenix",
+      "team_b": "Trace Esports",
+      "p_a": 0.7652,
+      "p_map": 0.6853,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -1.4553,
+        "form_diff": 0.5,
+        "map_diff": 0.0,
+        "player_diff": 0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "FunPlus Phoenix",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "jdgaming-tyloo-2026-07-10",
+      "date": "2026-07-08",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 10",
+      "team_a": "JD Gaming",
+      "team_b": "TYLOO",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "JD Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
