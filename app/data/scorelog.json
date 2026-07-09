@@ -1848,6 +1848,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "dragonrangergaming-titanesportsclub-2026-07-11",
+      "date": "2026-07-09",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 11",
+      "team_a": "Dragon Ranger Gaming",
+      "team_b": "Titan Esports Club",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Dragon Ranger Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "bilibiligaming-wolvesesports-2026-07-11",
+      "date": "2026-07-09",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 11",
+      "team_a": "Bilibili Gaming",
+      "team_b": "Wolves Esports",
+      "p_a": 0.1831,
+      "p_map": 0.2732,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": -0.539,
+        "form_diff": -0.334,
+        "map_diff": 0.0,
+        "player_diff": -0.081,
+        "h2h_diff": -1.0
+      },
+      "pick": "Wolves Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
