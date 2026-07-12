@@ -1940,6 +1940,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "wolvesesports-allgamers-2026-07-14",
+      "date": "2026-07-12",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 14",
+      "team_a": "Wolves Esports",
+      "team_b": "All Gamers",
+      "p_a": 0.7563,
+      "p_map": 0.6784,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 2.1484,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.036,
+        "h2h_diff": 0.0
+      },
+      "pick": "Wolves Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "xlgesports-titanesportsclub-2026-07-14",
+      "date": "2026-07-12",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 14",
+      "team_a": "XLG Esports",
+      "team_b": "Titan Esports Club",
+      "p_a": 0.2393,
+      "p_map": 0.3182,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 1.5294,
+        "form_diff": -0.5,
+        "map_diff": 0.0,
+        "player_diff": -0.078,
+        "h2h_diff": 0.0
+      },
+      "pick": "Titan Esports Club",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
