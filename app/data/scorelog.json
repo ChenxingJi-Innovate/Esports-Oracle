@@ -1986,6 +1986,98 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "futesports-natusvincere-2026-07-15",
+      "date": "2026-07-13",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · July 15",
+      "team_a": "FUT Esports",
+      "team_b": "Natus Vincere",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "FUT Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "teamliquid-eternalfire-2026-07-15",
+      "date": "2026-07-13",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · July 15",
+      "team_a": "Team Liquid",
+      "team_b": "Eternal Fire",
+      "p_a": 0.4174,
+      "p_map": 0.4447,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 1.2611,
+        "form_diff": -0.167,
+        "map_diff": 0.0,
+        "player_diff": -0.103,
+        "h2h_diff": 0.0
+      },
+      "pick": "Eternal Fire",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "jdgaming-funplusphoenix-2026-07-15",
+      "date": "2026-07-13",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 15",
+      "team_a": "JD Gaming",
+      "team_b": "FunPlus Phoenix",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "JD Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "edwardgaming-tyloo-2026-07-15",
+      "date": "2026-07-13",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 15",
+      "team_a": "EDward Gaming",
+      "team_b": "TYLOO",
+      "p_a": 0.616,
+      "p_map": 0.578,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 1.7918,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": -0.006,
+        "h2h_diff": 0.0
+      },
+      "pick": "EDward Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
