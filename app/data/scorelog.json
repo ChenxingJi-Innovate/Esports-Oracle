@@ -2814,6 +2814,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "titanesportsclub-allgamers-2026-07-20",
+      "date": "2026-07-18",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 20",
+      "team_a": "Titan Esports Club",
+      "team_b": "All Gamers",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Titan Esports Club",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "bilibiligaming-xlgesports-2026-07-20",
+      "date": "2026-07-18",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 20",
+      "team_a": "Bilibili Gaming",
+      "team_b": "XLG Esports",
+      "p_a": 0.7368,
+      "p_map": 0.6637,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 0.08,
+        "form_diff": 0.333,
+        "map_diff": 0.0,
+        "player_diff": 0.033,
+        "h2h_diff": 0.0
+      },
+      "pick": "Bilibili Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
