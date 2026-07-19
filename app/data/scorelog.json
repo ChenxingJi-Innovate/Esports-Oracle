@@ -2860,6 +2860,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "jdgaming-traceesports-2026-07-21",
+      "date": "2026-07-19",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 21",
+      "team_a": "JD Gaming",
+      "team_b": "Trace Esports",
+      "p_a": 0.7652,
+      "p_map": 0.6853,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -1.4553,
+        "form_diff": 0.5,
+        "map_diff": 0.0,
+        "player_diff": 0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "JD Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "edwardgaming-novaesports-2026-07-21",
+      "date": "2026-07-19",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · July 21",
+      "team_a": "EDward Gaming",
+      "team_b": "Nova Esports",
+      "p_a": 0.616,
+      "p_map": 0.578,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 1.7918,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": -0.006,
+        "h2h_diff": 0.0
+      },
+      "pick": "EDward Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
