@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-07-20",
+  "generated_for": "2026-07-21",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -294,6 +294,49 @@
     ],
     "val": [
       {
+        "match_id": "evilgeniuses-leviatán-2026-07-23",
+        "event": "VCT 2026 Americas · Stage 2 · July 23",
+        "team_a": "Evil Geniuses",
+        "team_b": "Leviatán",
+        "p_map_a": 0.5,
+        "p_a": 0.5,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.25,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.25
+            },
+            {
+              "score": "2-1",
+              "p": 0.25
+            },
+            {
+              "score": "0-2",
+              "p": 0.25
+            },
+            {
+              "score": "1-2",
+              "p": 0.25
+            }
+          ]
+        },
+        "scheduled_at": "2026-07-23T21:00:00+00:00",
+        "date": "2026-07-23",
+        "features": {
+          "rating_diff": 0.0,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.0
+        }
+      },
+      {
         "match_id": "futesports-pcificesports-2026-07-22",
         "event": "VCT 2026 EMEA · Stage 2 · July 22",
         "team_a": "FUT Esports",
@@ -380,42 +423,42 @@
         }
       },
       {
-        "match_id": "jdgaming-traceesports-2026-07-21",
-        "event": "VCT 2026 China · Stage 2 · July 21",
-        "team_a": "JD Gaming",
-        "team_b": "Trace Esports",
-        "p_map_a": 0.6853,
-        "p_a": 0.7652,
+        "match_id": "eternalfire-teamheretics-2026-07-23",
+        "event": "VCT 2026 EMEA · Stage 2 · July 23",
+        "team_a": "Eternal Fire",
+        "team_b": "Team Heretics",
+        "p_map_a": 0.6879,
+        "p_a": 0.7686,
         "fmt": "BO3",
         "confidence": "moderate",
         "scoreline": {
           "pick": "2-0",
           "a": 2,
           "b": 0,
-          "p": 0.4696,
+          "p": 0.4732,
           "dist": [
             {
               "score": "2-0",
-              "p": 0.4696
+              "p": 0.4732
             },
             {
               "score": "2-1",
-              "p": 0.2956
+              "p": 0.2954
             },
             {
               "score": "1-2",
-              "p": 0.1358
+              "p": 0.134
             },
             {
               "score": "0-2",
-              "p": 0.0991
+              "p": 0.0974
             }
           ]
         },
-        "scheduled_at": "2026-07-21T09:00:00+00:00",
-        "date": "2026-07-21",
+        "scheduled_at": "2026-07-23T15:00:00+00:00",
+        "date": "2026-07-23",
         "features": {
-          "rating_diff": -1.4553,
+          "rating_diff": -1.3863,
           "form_diff": 0.5,
           "map_diff": 0.0,
           "player_diff": 0.08,
@@ -429,7 +472,7 @@
             "winner": "Gentle Mates",
             "winner_side": "blue",
             "target": 1,
-            "distance": 0.373
+            "distance": 0.375
           },
           {
             "date": "2025-06-09",
@@ -438,7 +481,7 @@
             "winner": "Sentinels",
             "winner_side": "red",
             "target": 0,
-            "distance": 1.0239
+            "distance": 1.0245
           },
           {
             "date": "2026-03-01",
@@ -447,7 +490,7 @@
             "winner": "Team Liquid",
             "winner_side": "red",
             "target": 0,
-            "distance": 1.4476
+            "distance": 1.445
           },
           {
             "date": "2026-03-04",
@@ -456,7 +499,7 @@
             "winner": "NRG",
             "winner_side": "blue",
             "target": 1,
-            "distance": 2.0079
+            "distance": 2.0086
           },
           {
             "date": "2025-06-07",
@@ -465,7 +508,7 @@
             "winner": "Bilibili Gaming",
             "winner_side": "blue",
             "target": 1,
-            "distance": 2.0255
+            "distance": 2.0276
           }
         ],
         "case_based": {
@@ -476,45 +519,184 @@
         }
       },
       {
-        "match_id": "edwardgaming-novaesports-2026-07-21",
-        "event": "VCT 2026 China · Stage 2 · July 21",
-        "team_a": "EDward Gaming",
-        "team_b": "Nova Esports",
-        "p_map_a": 0.578,
-        "p_a": 0.616,
+        "match_id": "gentlemates-natusvincere-2026-07-23",
+        "event": "VCT 2026 EMEA · Stage 2 · July 23",
+        "team_a": "Gentle Mates",
+        "team_b": "Natus Vincere",
+        "p_map_a": 0.8392,
+        "p_a": 0.9307,
+        "fmt": "BO3",
+        "confidence": "strong",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.7042,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.7042
+            },
+            {
+              "score": "2-1",
+              "p": 0.2265
+            },
+            {
+              "score": "1-2",
+              "p": 0.0434
+            },
+            {
+              "score": "0-2",
+              "p": 0.0259
+            }
+          ]
+        },
+        "scheduled_at": "2026-07-23T18:00:00+00:00",
+        "date": "2026-07-23",
+        "features": {
+          "rating_diff": 3.4012,
+          "form_diff": 0.5,
+          "map_diff": 0.0,
+          "player_diff": 0.08,
+          "h2h_diff": 0.0
+        },
+        "similar_matches": [
+          {
+            "date": "2026-03-02",
+            "blue_team": "Gentle Mates",
+            "red_team": "Team Liquid",
+            "winner": "Gentle Mates",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.3768
+          },
+          {
+            "date": "2025-06-09",
+            "blue_team": "Bilibili Gaming",
+            "red_team": "Sentinels",
+            "winner": "Sentinels",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.025
+          },
+          {
+            "date": "2026-03-01",
+            "blue_team": "T1",
+            "red_team": "Team Liquid",
+            "winner": "Team Liquid",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 1.4428
+          },
+          {
+            "date": "2026-03-04",
+            "blue_team": "NRG",
+            "red_team": "Team Liquid",
+            "winner": "NRG",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 2.0092
+          },
+          {
+            "date": "2025-06-07",
+            "blue_team": "Bilibili Gaming",
+            "red_team": "Team Liquid",
+            "winner": "Bilibili Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 2.0295
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.6,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "Valorant Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "globalesports-fullsense-2026-07-23",
+        "event": "VCT 2026 Pacific · Stage 2 · July 23",
+        "team_a": "Global Esports",
+        "team_b": "FULL SENSE",
+        "p_map_a": 0.5,
+        "p_a": 0.5,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.25,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.25
+            },
+            {
+              "score": "2-1",
+              "p": 0.25
+            },
+            {
+              "score": "0-2",
+              "p": 0.25
+            },
+            {
+              "score": "1-2",
+              "p": 0.25
+            }
+          ]
+        },
+        "scheduled_at": "2026-07-23T08:00:00+00:00",
+        "date": "2026-07-23",
+        "features": {
+          "rating_diff": 0.0,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.0
+        }
+      },
+      {
+        "match_id": "t1-varrel-2026-07-23",
+        "event": "VCT 2026 Pacific · Stage 2 · July 23",
+        "team_a": "T1",
+        "team_b": "VARREL",
+        "p_map_a": 0.5836,
+        "p_a": 0.6242,
         "fmt": "BO3",
         "confidence": "lean",
         "scoreline": {
           "pick": "2-0",
           "a": 2,
           "b": 0,
-          "p": 0.3341,
+          "p": 0.3406,
           "dist": [
             {
               "score": "2-0",
-              "p": 0.3341
+              "p": 0.3406
             },
             {
               "score": "2-1",
-              "p": 0.282
+              "p": 0.2836
             },
             {
               "score": "1-2",
-              "p": 0.2059
+              "p": 0.2024
             },
             {
               "score": "0-2",
-              "p": 0.1781
+              "p": 0.1734
             }
           ]
         },
-        "scheduled_at": "2026-07-21T12:00:00+00:00",
-        "date": "2026-07-21",
+        "scheduled_at": "2026-07-23T11:00:00+00:00",
+        "date": "2026-07-23",
         "features": {
-          "rating_diff": 1.7918,
+          "rating_diff": 1.8971,
           "form_diff": 0.0,
           "map_diff": 0.0,
-          "player_diff": -0.006,
+          "player_diff": -0.003,
           "h2h_diff": 0.0
         },
         "similar_matches": [
@@ -525,25 +707,7 @@
             "winner": "Wolves Esports",
             "winner_side": "red",
             "target": 0,
-            "distance": 0.2992
-          },
-          {
-            "date": "2025-02-24",
-            "blue_team": "T1",
-            "red_team": "DRX",
-            "winner": "T1",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.3157
-          },
-          {
-            "date": "2025-02-21",
-            "blue_team": "Team Vitality",
-            "red_team": "T1",
-            "winner": "Team Vitality",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.3157
+            "distance": 0.0379
           },
           {
             "date": "2025-02-20",
@@ -552,7 +716,25 @@
             "winner": "EDward Gaming",
             "winner_side": "blue",
             "target": 1,
-            "distance": 0.3157
+            "distance": 0.0814
+          },
+          {
+            "date": "2025-02-21",
+            "blue_team": "Team Vitality",
+            "red_team": "T1",
+            "winner": "Team Vitality",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.0814
+          },
+          {
+            "date": "2025-02-20",
+            "blue_team": "DRX",
+            "red_team": "Sentinels",
+            "winner": "DRX",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.0814
           },
           {
             "date": "2025-02-22",
@@ -561,7 +743,7 @@
             "winner": "Team Vitality",
             "winner_side": "red",
             "target": 0,
-            "distance": 0.3157
+            "distance": 0.0814
           }
         ],
         "case_based": {
@@ -708,6 +890,145 @@
           "map_diff": 0.0,
           "player_diff": 0.0,
           "h2h_diff": 0.0
+        }
+      },
+      {
+        "match_id": "tyloo-novaesports-2026-07-23",
+        "event": "VCT 2026 China · Stage 2 · July 23",
+        "team_a": "TYLOO",
+        "team_b": "Nova Esports",
+        "p_map_a": 0.5,
+        "p_a": 0.5,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.25,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.25
+            },
+            {
+              "score": "2-1",
+              "p": 0.25
+            },
+            {
+              "score": "0-2",
+              "p": 0.25
+            },
+            {
+              "score": "1-2",
+              "p": 0.25
+            }
+          ]
+        },
+        "scheduled_at": "2026-07-23T09:00:00+00:00",
+        "date": "2026-07-23",
+        "features": {
+          "rating_diff": 0.0,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.0
+        }
+      },
+      {
+        "match_id": "funplusphoenix-edwardgaming-2026-07-23",
+        "event": "VCT 2026 China · Stage 2 · July 23",
+        "team_a": "FunPlus Phoenix",
+        "team_b": "EDward Gaming",
+        "p_map_a": 0.422,
+        "p_a": 0.384,
+        "fmt": "BO3",
+        "confidence": "lean",
+        "scoreline": {
+          "pick": "0-2",
+          "a": 0,
+          "b": 2,
+          "p": 0.3341,
+          "dist": [
+            {
+              "score": "0-2",
+              "p": 0.3341
+            },
+            {
+              "score": "1-2",
+              "p": 0.282
+            },
+            {
+              "score": "2-1",
+              "p": 0.2059
+            },
+            {
+              "score": "2-0",
+              "p": 0.1781
+            }
+          ]
+        },
+        "scheduled_at": "2026-07-23T12:00:00+00:00",
+        "date": "2026-07-23",
+        "features": {
+          "rating_diff": -1.7918,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": 0.006,
+          "h2h_diff": 0.0
+        },
+        "similar_matches": [
+          {
+            "date": "2026-03-04",
+            "blue_team": "G2 Esports",
+            "red_team": "T1",
+            "winner": "G2 Esports",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.1178
+          },
+          {
+            "date": "2025-06-10",
+            "blue_team": "Team Heretics",
+            "red_team": "Wolves Esports",
+            "winner": "Wolves Esports",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.2876
+          },
+          {
+            "date": "2025-02-20",
+            "blue_team": "EDward Gaming",
+            "red_team": "Team Liquid",
+            "winner": "EDward Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.3157
+          },
+          {
+            "date": "2025-02-20",
+            "blue_team": "DRX",
+            "red_team": "Sentinels",
+            "winner": "DRX",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.3157
+          },
+          {
+            "date": "2025-02-22",
+            "blue_team": "DRX",
+            "red_team": "Team Vitality",
+            "winner": "Team Vitality",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.3157
+          }
+        ],
+        "case_based": {
+          "p_blue_knn": 0.64,
+          "k": 25,
+          "outcome_rate": "3/5",
+          "note": "Valorant Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       }
     ]

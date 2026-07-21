@@ -234,7 +234,7 @@ date,ts,team_a,team_b,score_a,score_b,winner,event
 2026-06-02,1780396200,SINNERS Esports,FlyQuest,14,16,FlyQuest,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780400700,MIBR,THUNDERdOWNUNDER,6,13,THUNDERdOWNUNDER,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780401600,B8,TYLOO,13,6,B8,Intel Extreme Masters/2026/Cologne
-2026-06-02,1780404600,HEROIC,Sharks Esports,10,13,Sharks Esports,Intel Extreme Masters/2026/Cologne
+2026-06-02,1780404600,HEROIC,DENDELE CS,10,13,DENDELE CS,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780405500,GamerLegion,NRG,13,10,GamerLegion,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780408800,BetBoom Team,Gaimin Gladiators,13,4,BetBoom Team,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780410300,BIG,Team Liquid,10,13,Team Liquid,Intel Extreme Masters/2026/Cologne
@@ -242,12 +242,12 @@ date,ts,team_a,team_b,score_a,score_b,winner,event
 2026-06-02,1780414500,B8,THUNDERdOWNUNDER,13,11,B8,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780418700,MIBR,TYLOO,16,14,MIBR,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780418700,SINNERS Esports,NRG,6,13,NRG,Intel Extreme Masters/2026/Cologne
-2026-06-02,1780422300,M80,Sharks Esports,13,6,M80,Intel Extreme Masters/2026/Cologne
+2026-06-02,1780422300,M80,DENDELE CS,13,6,M80,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780423800,GamerLegion,FlyQuest,13,11,GamerLegion,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780426200,BIG,Gaimin Gladiators,13,1,BIG,Intel Extreme Masters/2026/Cologne
 2026-06-02,1780428600,BetBoom Team,Team Liquid,13,9,BetBoom Team,Intel Extreme Masters/2026/Cologne
 2026-06-03,1780489800,NRG,FlyQuest,13,10,NRG,Intel Extreme Masters/2026/Cologne
-2026-06-03,1780489800,Sharks Esports,Lynn Vision Gaming,5,13,Lynn Vision Gaming,Intel Extreme Masters/2026/Cologne
+2026-06-03,1780489800,DENDELE CS,Lynn Vision Gaming,5,13,Lynn Vision Gaming,Intel Extreme Masters/2026/Cologne
 2026-06-03,1780493700,THUNDERdOWNUNDER,BIG,7,13,BIG,Intel Extreme Masters/2026/Cologne
 2026-06-03,1780494000,Team Liquid,MIBR,10,13,MIBR,Intel Extreme Masters/2026/Cologne
 2026-06-03,1780497600,TYLOO,SINNERS Esports,2,0,TYLOO,Intel Extreme Masters/2026/Cologne
@@ -255,7 +255,7 @@ date,ts,team_a,team_b,score_a,score_b,winner,event
 2026-06-03,1780506000,M80,B8,0,2,B8,Intel Extreme Masters/2026/Cologne
 2026-06-03,1780506000,Gaimin Gladiators,HEROIC,0,2,HEROIC,Intel Extreme Masters/2026/Cologne
 2026-06-04,1780574400,THUNDERdOWNUNDER,FlyQuest,0,2,FlyQuest,Intel Extreme Masters/2026/Cologne
-2026-06-04,1780574400,TYLOO,Sharks Esports,2,1,TYLOO,Intel Extreme Masters/2026/Cologne
+2026-06-04,1780574400,TYLOO,DENDELE CS,2,1,TYLOO,Intel Extreme Masters/2026/Cologne
 2026-06-04,1780583400,GamerLegion,BIG,2,0,GamerLegion,Intel Extreme Masters/2026/Cologne
 2026-06-04,1780585500,Lynn Vision Gaming,MIBR,0,2,MIBR,Intel Extreme Masters/2026/Cologne
 2026-06-04,1780592400,M80,NRG,2,0,M80,Intel Extreme Masters/2026/Cologne
