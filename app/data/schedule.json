@@ -1,22 +1,34 @@
 {
-  "generated_for": "2026-07-21",
+  "generated_for": "2026-07-22",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-06-21",
-      "cs2_matches": [
+      "date": "2026-07-22",
+      "cs2_matches": [],
+      "lol_matches": [
         {
-          "match_id": "teamfalcons-furia-2026-06-21",
-          "event": "IEM Cologne 2026 Major · Playoffs · Grand Final",
+          "match_id": "movistarkoi-g2esports-2026-07-24",
+          "event": "LEC 2026 Summer · Week 1",
           "fmt": "BO3",
-          "team_a": "Team Falcons",
-          "team_b": "FURIA",
-          "p_a": 0.4123,
-          "confidence": "lean",
-          "scheduled_at": "2026-06-21T15:00:00+00:00"
+          "team_a": "Movistar KOI",
+          "team_b": "G2 Esports",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 1",
+          "scheduled_at": "2026-07-24T14:00:00+00:00"
+        },
+        {
+          "match_id": "karminecorp-teamvitality-2026-07-24",
+          "event": "LEC 2026 Summer · Week 1",
+          "fmt": "BO3",
+          "team_a": "Karmine Corp",
+          "team_b": "Team Vitality",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 1",
+          "scheduled_at": "2026-07-24T17:00:00+00:00"
         }
-      ],
-      "lol_matches": []
+      ]
     }
   ]
 }
