@@ -1,9 +1,9 @@
 {
-  "generated_for": "2026-07-22",
+  "generated_for": "2026-07-24",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-07-22",
+      "date": "2026-07-24",
       "cs2_matches": [],
       "lol_matches": [
         {
@@ -15,7 +15,7 @@
           "p_a": null,
           "confidence": null,
           "league": "LEC 2026 Summer · Week 1",
-          "scheduled_at": "2026-07-24T14:00:00+00:00"
+          "scheduled_at": "2026-07-24T14:30:00+00:00"
         },
         {
           "match_id": "karminecorp-teamvitality-2026-07-24",
@@ -27,6 +27,39 @@
           "confidence": null,
           "league": "LEC 2026 Summer · Week 1",
           "scheduled_at": "2026-07-24T17:00:00+00:00"
+        },
+        {
+          "match_id": "g2esports-teamvitality-2026-07-25",
+          "event": "LEC 2026 Summer · Week 1",
+          "fmt": "BO3",
+          "team_a": "G2 Esports",
+          "team_b": "Team Vitality",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 1",
+          "scheduled_at": "2026-07-25T14:00:00+00:00"
+        },
+        {
+          "match_id": "karminecorp-movistarkoi-2026-07-25",
+          "event": "LEC 2026 Summer · Week 1",
+          "fmt": "BO3",
+          "team_a": "Karmine Corp",
+          "team_b": "Movistar KOI",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 1",
+          "scheduled_at": "2026-07-25T17:00:00+00:00"
+        },
+        {
+          "match_id": "movistarkoi-teamvitality-2026-07-26",
+          "event": "LEC 2026 Summer · Week 1",
+          "fmt": "BO5",
+          "team_a": "Movistar KOI",
+          "team_b": "Team Vitality",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 1",
+          "scheduled_at": "2026-07-26T14:00:00+00:00"
         }
       ]
     }
