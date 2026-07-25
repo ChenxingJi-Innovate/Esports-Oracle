@@ -3665,6 +3665,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "furia-mibr-2026-07-27",
+      "date": "2026-07-25",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · July 26",
+      "team_a": "FURIA",
+      "team_b": "MIBR",
+      "p_a": 0.7726,
+      "p_map": 0.691,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -1.3218,
+        "form_diff": 0.5,
+        "map_diff": 0.0,
+        "player_diff": 0.082,
+        "h2h_diff": 0.0
+      },
+      "pick": "FURIA",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "teamheretics-karminecorp-2026-07-26",
+      "date": "2026-07-25",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · July 26",
+      "team_a": "Team Heretics",
+      "team_b": "Karmine Corp",
+      "p_a": 0.2314,
+      "p_map": 0.3121,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 1.3863,
+        "form_diff": -0.5,
+        "map_diff": 0.0,
+        "player_diff": -0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "Karmine Corp",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
