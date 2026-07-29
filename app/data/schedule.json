@@ -1,21 +1,32 @@
 {
-  "generated_for": "2026-07-28",
+  "generated_for": "2026-07-29",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-07-26",
+      "date": "2026-07-29",
       "cs2_matches": [],
       "lol_matches": [
         {
-          "match_id": "karminecorp-g2esports-2026-07-26",
-          "event": "LEC 2026 Summer · Week 1",
+          "match_id": "teamvitality-teamheretics-2026-07-31",
+          "event": "LEC 2026 Summer · Week 2",
           "fmt": "BO3",
-          "team_a": "Karmine Corp",
-          "team_b": "G2 Esports",
+          "team_a": "Team Vitality",
+          "team_b": "Team Heretics",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Week 1",
-          "scheduled_at": "2026-07-26T17:30:00+00:00"
+          "league": "LEC 2026 Summer · Week 2",
+          "scheduled_at": "2026-07-31T15:00:00+00:00"
+        },
+        {
+          "match_id": "movistarkoi-shifters-2026-07-31",
+          "event": "LEC 2026 Summer · Week 2",
+          "fmt": "BO3",
+          "team_a": "Movistar KOI",
+          "team_b": "Shifters",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 2",
+          "scheduled_at": "2026-07-31T17:15:00+00:00"
         }
       ]
     }
