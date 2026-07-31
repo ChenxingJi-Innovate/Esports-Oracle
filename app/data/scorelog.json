@@ -4171,6 +4171,121 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "leviatán-nrg-2026-08-02",
+      "date": "2026-07-31",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · August 1",
+      "team_a": "Leviatán",
+      "team_b": "NRG",
+      "p_a": 0.2348,
+      "p_map": 0.3147,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -2.3026,
+        "form_diff": -0.167,
+        "map_diff": 0.0,
+        "player_diff": -0.039,
+        "h2h_diff": 0.0
+      },
+      "pick": "NRG",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "g2esports-sentinels-2026-08-02",
+      "date": "2026-07-31",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · August 2",
+      "team_a": "G2 Esports",
+      "team_b": "Sentinels",
+      "p_a": 0.677,
+      "p_map": 0.6203,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.47,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.071,
+        "h2h_diff": 0.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "bblesports-pcificesports-2026-08-02",
+      "date": "2026-07-31",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · August 2",
+      "team_a": "BBL Esports",
+      "team_b": "PCIFIC Esports",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "BBL Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "varrel-drx-2026-08-02",
+      "date": "2026-07-31",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · August 2",
+      "team_a": "VARREL",
+      "team_b": "DRX",
+      "p_a": 0.5224,
+      "p_map": 0.5149,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": -1.6964,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.04,
+        "h2h_diff": 0.0
+      },
+      "pick": "VARREL",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "zetadivision-nongshimredforce-2026-08-02",
+      "date": "2026-07-31",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · August 2",
+      "team_a": "ZETA DIVISION",
+      "team_b": "Nongshim RedForce",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "ZETA DIVISION",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

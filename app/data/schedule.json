@@ -1,9 +1,9 @@
 {
-  "generated_for": "2026-07-30",
+  "generated_for": "2026-07-31",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-07-30",
+      "date": "2026-07-31",
       "cs2_matches": [],
       "lol_matches": [
         {
@@ -49,6 +49,17 @@
           "confidence": null,
           "league": "LEC 2026 Summer · Week 2",
           "scheduled_at": "2026-08-01T17:15:00+00:00"
+        },
+        {
+          "match_id": "skgaming-g2esports-2026-08-02",
+          "event": "LEC 2026 Summer · Week 2",
+          "fmt": "BO5",
+          "team_a": "SK Gaming",
+          "team_b": "G2 Esports",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 2",
+          "scheduled_at": "2026-08-02T15:00:00+00:00"
         }
       ]
     }
