@@ -4286,6 +4286,75 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "cloud9-krüesports-2026-08-02",
+      "date": "2026-08-01",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · August 2",
+      "team_a": "Cloud9",
+      "team_b": "KRÜ Esports",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Cloud9",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "g2esports-sentinels-2026-08-03",
+      "date": "2026-08-01",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · August 2",
+      "team_a": "G2 Esports",
+      "team_b": "Sentinels",
+      "p_a": 0.677,
+      "p_map": 0.6203,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 0.47,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.071,
+        "h2h_diff": 0.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "fnatic-teamheretics-2026-08-02",
+      "date": "2026-08-01",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · August 2",
+      "team_a": "Fnatic",
+      "team_b": "Team Heretics",
+      "p_a": 0.7686,
+      "p_map": 0.6879,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -1.3863,
+        "form_diff": 0.5,
+        "map_diff": 0.0,
+        "player_diff": 0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "Fnatic",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
