@@ -1,44 +1,11 @@
 {
-  "generated_for": "2026-08-01",
+  "generated_for": "2026-08-02",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "giantx-skgaming-2026-08-01",
-          "event": "LEC 2026 Summer · Week 2",
-          "fmt": "BO3",
-          "team_a": "GIANTX",
-          "team_b": "SK Gaming",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 2",
-          "scheduled_at": "2026-08-01T15:00:00+00:00"
-        },
-        {
-          "match_id": "karminecorp-natusvincere-2026-08-01",
-          "event": "LEC 2026 Summer · Week 2",
-          "fmt": "BO3",
-          "team_a": "Karmine Corp",
-          "team_b": "Natus Vincere",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 2",
-          "scheduled_at": "2026-08-01T17:15:00+00:00"
-        },
-        {
-          "match_id": "skgaming-g2esports-2026-08-02",
-          "event": "LEC 2026 Summer · Week 2",
-          "fmt": "BO3",
-          "team_a": "SK Gaming",
-          "team_b": "G2 Esports",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 2",
-          "scheduled_at": "2026-08-02T15:00:00+00:00"
-        },
         {
           "match_id": "fnatic-movistarkoi-2026-08-02",
           "event": "LEC 2026 Summer · Week 2",
@@ -53,13 +20,24 @@
         {
           "match_id": "natusvincere-shifters-2026-08-03",
           "event": "LEC 2026 Summer · Week 2",
-          "fmt": "BO5",
+          "fmt": "BO3",
           "team_a": "Natus Vincere",
           "team_b": "Shifters",
           "p_a": null,
           "confidence": null,
           "league": "LEC 2026 Summer · Week 2",
           "scheduled_at": "2026-08-03T15:00:00+00:00"
+        },
+        {
+          "match_id": "karminecorp-teamheretics-2026-08-03",
+          "event": "LEC 2026 Summer · Week 2",
+          "fmt": "BO3",
+          "team_a": "Karmine Corp",
+          "team_b": "Team Heretics",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 2",
+          "scheduled_at": "2026-08-03T17:15:00+00:00"
         }
       ]
     }
