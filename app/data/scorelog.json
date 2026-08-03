@@ -4355,6 +4355,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "traceesports-ateam-2026-08-05",
+      "date": "2026-08-03",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Upper Bracket Round 1",
+      "team_a": "Trace Esports",
+      "team_b": "A Team",
+      "p_a": 0.2348,
+      "p_map": 0.3147,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 1.4553,
+        "form_diff": -0.5,
+        "map_diff": 0.0,
+        "player_diff": -0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "A Team",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "titanesportsclub-keepbestgaming-2026-08-05",
+      "date": "2026-08-03",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Upper Bracket Round 1",
+      "team_a": "Titan Esports Club",
+      "team_b": "KeepBest Gaming",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Titan Esports Club",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

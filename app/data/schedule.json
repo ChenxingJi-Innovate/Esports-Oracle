@@ -1,22 +1,11 @@
 {
-  "generated_for": "2026-08-02",
+  "generated_for": "2026-08-03",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-02",
+      "date": "2026-08-03",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "fnatic-movistarkoi-2026-08-02",
-          "event": "LEC 2026 Summer · Week 2",
-          "fmt": "BO3",
-          "team_a": "Fnatic",
-          "team_b": "Movistar KOI",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 2",
-          "scheduled_at": "2026-08-02T17:15:00+00:00"
-        },
         {
           "match_id": "natusvincere-shifters-2026-08-03",
           "event": "LEC 2026 Summer · Week 2",
