@@ -1,32 +1,32 @@
 {
-  "generated_for": "2026-08-03",
+  "generated_for": "2026-08-05",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-03",
+      "date": "2026-08-05",
       "cs2_matches": [],
       "lol_matches": [
         {
-          "match_id": "natusvincere-shifters-2026-08-03",
-          "event": "LEC 2026 Summer · Week 2",
+          "match_id": "shifters-giantx-2026-08-07",
+          "event": "LEC 2026 Summer · Week 3",
           "fmt": "BO3",
-          "team_a": "Natus Vincere",
-          "team_b": "Shifters",
+          "team_a": "Shifters",
+          "team_b": "GIANTX",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Week 2",
-          "scheduled_at": "2026-08-03T15:00:00+00:00"
+          "league": "LEC 2026 Summer · Week 3",
+          "scheduled_at": "2026-08-07T15:00:00+00:00"
         },
         {
-          "match_id": "karminecorp-teamheretics-2026-08-03",
-          "event": "LEC 2026 Summer · Week 2",
+          "match_id": "teamheretics-fnatic-2026-08-07",
+          "event": "LEC 2026 Summer · Week 3",
           "fmt": "BO3",
-          "team_a": "Karmine Corp",
-          "team_b": "Team Heretics",
+          "team_a": "Team Heretics",
+          "team_b": "Fnatic",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Week 2",
-          "scheduled_at": "2026-08-03T17:15:00+00:00"
+          "league": "LEC 2026 Summer · Week 3",
+          "scheduled_at": "2026-08-07T17:15:00+00:00"
         }
       ]
     }
