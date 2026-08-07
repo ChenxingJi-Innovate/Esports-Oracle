@@ -1,9 +1,9 @@
 {
-  "generated_for": "2026-08-05",
+  "generated_for": "2026-08-07",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-05",
+      "date": "2026-08-07",
       "cs2_matches": [],
       "lol_matches": [
         {
@@ -27,6 +27,39 @@
           "confidence": null,
           "league": "LEC 2026 Summer · Week 3",
           "scheduled_at": "2026-08-07T17:15:00+00:00"
+        },
+        {
+          "match_id": "skgaming-natusvincere-2026-08-08",
+          "event": "LEC 2026 Summer · Week 3",
+          "fmt": "BO3",
+          "team_a": "SK Gaming",
+          "team_b": "Natus Vincere",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 3",
+          "scheduled_at": "2026-08-08T15:00:00+00:00"
+        },
+        {
+          "match_id": "movistarkoi-giantx-2026-08-08",
+          "event": "LEC 2026 Summer · Week 3",
+          "fmt": "BO3",
+          "team_a": "Movistar KOI",
+          "team_b": "GIANTX",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 3",
+          "scheduled_at": "2026-08-08T17:15:00+00:00"
+        },
+        {
+          "match_id": "teamheretics-g2esports-2026-08-09",
+          "event": "LEC 2026 Summer · Week 3",
+          "fmt": "BO5",
+          "team_a": "Team Heretics",
+          "team_b": "G2 Esports",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 3",
+          "scheduled_at": "2026-08-09T15:00:00+00:00"
         }
       ]
     }
