@@ -1,33 +1,11 @@
 {
-  "generated_for": "2026-08-07",
+  "generated_for": "2026-08-08",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-07",
+      "date": "2026-08-08",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "shifters-giantx-2026-08-07",
-          "event": "LEC 2026 Summer · Week 3",
-          "fmt": "BO3",
-          "team_a": "Shifters",
-          "team_b": "GIANTX",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 3",
-          "scheduled_at": "2026-08-07T15:00:00+00:00"
-        },
-        {
-          "match_id": "teamheretics-fnatic-2026-08-07",
-          "event": "LEC 2026 Summer · Week 3",
-          "fmt": "BO3",
-          "team_a": "Team Heretics",
-          "team_b": "Fnatic",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 3",
-          "scheduled_at": "2026-08-07T17:15:00+00:00"
-        },
         {
           "match_id": "skgaming-natusvincere-2026-08-08",
           "event": "LEC 2026 Summer · Week 3",
@@ -53,13 +31,35 @@
         {
           "match_id": "teamheretics-g2esports-2026-08-09",
           "event": "LEC 2026 Summer · Week 3",
-          "fmt": "BO5",
+          "fmt": "BO3",
           "team_a": "Team Heretics",
           "team_b": "G2 Esports",
           "p_a": null,
           "confidence": null,
           "league": "LEC 2026 Summer · Week 3",
           "scheduled_at": "2026-08-09T15:00:00+00:00"
+        },
+        {
+          "match_id": "fnatic-karminecorp-2026-08-09",
+          "event": "LEC 2026 Summer · Week 3",
+          "fmt": "BO3",
+          "team_a": "Fnatic",
+          "team_b": "Karmine Corp",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 3",
+          "scheduled_at": "2026-08-09T17:15:00+00:00"
+        },
+        {
+          "match_id": "skgaming-teamvitality-2026-08-10",
+          "event": "LEC 2026 Summer · Week 3",
+          "fmt": "BO5",
+          "team_a": "SK Gaming",
+          "team_b": "Team Vitality",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 3",
+          "scheduled_at": "2026-08-10T15:00:00+00:00"
         }
       ]
     }
