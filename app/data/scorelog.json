@@ -5160,6 +5160,121 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "gentlemates-eintrachtfrankfurt-2026-08-12",
+      "date": "2026-08-10",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · Lower Bracket Round 1",
+      "team_a": "Gentle Mates",
+      "team_b": "Eintracht Frankfurt",
+      "p_a": 0.9307,
+      "p_map": 0.8392,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 3.4012,
+        "form_diff": 0.5,
+        "map_diff": 0.0,
+        "player_diff": 0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "Gentle Mates",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "teamheretics-natusvincere-2026-08-12",
+      "date": "2026-08-10",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · Lower Bracket Round 1",
+      "team_a": "Team Heretics",
+      "team_b": "Natus Vincere",
+      "p_a": 0.2314,
+      "p_map": 0.3121,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 1.3863,
+        "form_diff": -0.5,
+        "map_diff": 0.0,
+        "player_diff": -0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "Natus Vincere",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "jdgaming-edwardgaming-2026-08-11",
+      "date": "2026-08-10",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Lower Bracket Semifinals",
+      "team_a": "JD Gaming",
+      "team_b": "EDward Gaming",
+      "p_a": 0.384,
+      "p_map": 0.422,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": -1.7918,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.006,
+        "h2h_diff": 0.0
+      },
+      "pick": "EDward Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "dragonrangergaming-traceesports-2026-08-11",
+      "date": "2026-08-10",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Lower Bracket Semifinals",
+      "team_a": "Dragon Ranger Gaming",
+      "team_b": "Trace Esports",
+      "p_a": 0.7652,
+      "p_map": 0.6853,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -1.4553,
+        "form_diff": 0.5,
+        "map_diff": 0.0,
+        "player_diff": 0.08,
+        "h2h_diff": 0.0
+      },
+      "pick": "Dragon Ranger Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "allgamers-titanesportsclub-2026-08-12",
+      "date": "2026-08-10",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Upper Ranking Match",
+      "team_a": "All Gamers",
+      "team_b": "Titan Esports Club",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "All Gamers",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
