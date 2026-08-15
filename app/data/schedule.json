@@ -1,33 +1,11 @@
 {
-  "generated_for": "2026-08-13",
+  "generated_for": "2026-08-15",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-13",
+      "date": "2026-08-15",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "shifters-skgaming-2026-08-14",
-          "event": "LEC 2026 Summer · Week 4",
-          "fmt": "BO3",
-          "team_a": "Shifters",
-          "team_b": "SK Gaming",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-14T15:00:00+00:00"
-        },
-        {
-          "match_id": "giantx-teamvitality-2026-08-14",
-          "event": "LEC 2026 Summer · Week 4",
-          "fmt": "BO3",
-          "team_a": "GIANTX",
-          "team_b": "Team Vitality",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-14T17:15:00+00:00"
-        },
         {
           "match_id": "skgaming-fnatic-2026-08-15",
           "event": "LEC 2026 Summer · Week 4",
@@ -49,6 +27,39 @@
           "confidence": null,
           "league": "LEC 2026 Summer · Week 4",
           "scheduled_at": "2026-08-15T17:15:00+00:00"
+        },
+        {
+          "match_id": "movistarkoi-natusvincere-2026-08-16",
+          "event": "LEC 2026 Summer · Week 4",
+          "fmt": "BO3",
+          "team_a": "Movistar KOI",
+          "team_b": "Natus Vincere",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 4",
+          "scheduled_at": "2026-08-16T15:00:00+00:00"
+        },
+        {
+          "match_id": "g2esports-fnatic-2026-08-16",
+          "event": "LEC 2026 Summer · Week 4",
+          "fmt": "BO3",
+          "team_a": "G2 Esports",
+          "team_b": "Fnatic",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 4",
+          "scheduled_at": "2026-08-16T17:15:00+00:00"
+        },
+        {
+          "match_id": "natusvincere-teamheretics-2026-08-17",
+          "event": "LEC 2026 Summer · Week 4",
+          "fmt": "BO5",
+          "team_a": "Natus Vincere",
+          "team_b": "Team Heretics",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 4",
+          "scheduled_at": "2026-08-17T15:00:00+00:00"
         }
       ]
     }
