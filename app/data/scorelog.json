@@ -5965,6 +5965,29 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "firefluxesports-joblife-2026-08-16",
+      "date": "2026-08-16",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · Lower Bracket Round 3",
+      "team_a": "Fire Flux Esports",
+      "team_b": "Joblife",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Fire Flux Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

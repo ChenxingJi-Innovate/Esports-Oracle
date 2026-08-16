@@ -1,33 +1,11 @@
 {
-  "generated_for": "2026-08-15",
+  "generated_for": "2026-08-16",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-15",
+      "date": "2026-08-16",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "skgaming-fnatic-2026-08-15",
-          "event": "LEC 2026 Summer · Week 4",
-          "fmt": "BO3",
-          "team_a": "SK Gaming",
-          "team_b": "Fnatic",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-15T15:00:00+00:00"
-        },
-        {
-          "match_id": "g2esports-shifters-2026-08-15",
-          "event": "LEC 2026 Summer · Week 4",
-          "fmt": "BO3",
-          "team_a": "G2 Esports",
-          "team_b": "Shifters",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-15T17:15:00+00:00"
-        },
         {
           "match_id": "movistarkoi-natusvincere-2026-08-16",
           "event": "LEC 2026 Summer · Week 4",
@@ -53,13 +31,24 @@
         {
           "match_id": "natusvincere-teamheretics-2026-08-17",
           "event": "LEC 2026 Summer · Week 4",
-          "fmt": "BO5",
+          "fmt": "BO3",
           "team_a": "Natus Vincere",
           "team_b": "Team Heretics",
           "p_a": null,
           "confidence": null,
           "league": "LEC 2026 Summer · Week 4",
           "scheduled_at": "2026-08-17T15:00:00+00:00"
+        },
+        {
+          "match_id": "giantx-karminecorp-2026-08-17",
+          "event": "LEC 2026 Summer · Week 4",
+          "fmt": "BO3",
+          "team_a": "GIANTX",
+          "team_b": "Karmine Corp",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 4",
+          "scheduled_at": "2026-08-17T17:15:00+00:00"
         }
       ]
     }
