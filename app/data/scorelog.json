@@ -5988,6 +5988,121 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "cloud9-bestia-2026-08-19",
+      "date": "2026-08-17",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Round 1",
+      "team_a": "Cloud9",
+      "team_b": "BESTIA",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Cloud9",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "teamsecret-onsidegaming-2026-08-19",
+      "date": "2026-08-17",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Lower Bracket Round 1",
+      "team_a": "Team Secret",
+      "team_b": "ONSIDE GAMING",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Team Secret",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "fullsense-rexregumqeon-2026-08-19",
+      "date": "2026-08-17",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Lower Bracket Round 1",
+      "team_a": "FULL SENSE",
+      "team_b": "Rex Regum Qeon",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "FULL SENSE",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "jdgaming-tyloo-2026-08-19",
+      "date": "2026-08-17",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Upper Bracket Semifinals",
+      "team_a": "JD Gaming",
+      "team_b": "TYLOO",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "JD Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "bilibiligaming-xlgesports-2026-08-19",
+      "date": "2026-08-17",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Upper Bracket Semifinals",
+      "team_a": "Bilibili Gaming",
+      "team_b": "XLG Esports",
+      "p_a": 0.7368,
+      "p_map": 0.6637,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 0.08,
+        "form_diff": 0.333,
+        "map_diff": 0.0,
+        "player_diff": 0.033,
+        "h2h_diff": 0.0
+      },
+      "pick": "Bilibili Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {

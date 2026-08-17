@@ -1,33 +1,11 @@
 {
-  "generated_for": "2026-08-16",
+  "generated_for": "2026-08-17",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-16",
+      "date": "2026-08-17",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "movistarkoi-natusvincere-2026-08-16",
-          "event": "LEC 2026 Summer · Week 4",
-          "fmt": "BO3",
-          "team_a": "Movistar KOI",
-          "team_b": "Natus Vincere",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-16T15:00:00+00:00"
-        },
-        {
-          "match_id": "g2esports-fnatic-2026-08-16",
-          "event": "LEC 2026 Summer · Week 4",
-          "fmt": "BO3",
-          "team_a": "G2 Esports",
-          "team_b": "Fnatic",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-16T17:15:00+00:00"
-        },
         {
           "match_id": "natusvincere-teamheretics-2026-08-17",
           "event": "LEC 2026 Summer · Week 4",
