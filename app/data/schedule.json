@@ -1,32 +1,32 @@
 {
-  "generated_for": "2026-08-18",
+  "generated_for": "2026-08-19",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-17",
+      "date": "2026-08-19",
       "cs2_matches": [],
       "lol_matches": [
         {
-          "match_id": "natusvincere-teamheretics-2026-08-17",
-          "event": "LEC 2026 Summer · Week 4",
+          "match_id": "teamheretics-skgaming-2026-08-21",
+          "event": "LEC 2026 Summer · Week 5",
           "fmt": "BO3",
-          "team_a": "Natus Vincere",
-          "team_b": "Team Heretics",
+          "team_a": "Team Heretics",
+          "team_b": "SK Gaming",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-17T15:00:00+00:00"
+          "league": "LEC 2026 Summer · Week 5",
+          "scheduled_at": "2026-08-21T15:00:00+00:00"
         },
         {
-          "match_id": "giantx-karminecorp-2026-08-17",
-          "event": "LEC 2026 Summer · Week 4",
+          "match_id": "teamvitality-natusvincere-2026-08-21",
+          "event": "LEC 2026 Summer · Week 5",
           "fmt": "BO3",
-          "team_a": "GIANTX",
-          "team_b": "Karmine Corp",
+          "team_a": "Team Vitality",
+          "team_b": "Natus Vincere",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Week 4",
-          "scheduled_at": "2026-08-17T17:15:00+00:00"
+          "league": "LEC 2026 Summer · Week 5",
+          "scheduled_at": "2026-08-21T17:15:00+00:00"
         }
       ]
     }
