@@ -1,9 +1,9 @@
 {
-  "generated_for": "2026-08-19",
+  "generated_for": "2026-08-20",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-19",
+      "date": "2026-08-20",
       "cs2_matches": [],
       "lol_matches": [
         {
@@ -27,6 +27,28 @@
           "confidence": null,
           "league": "LEC 2026 Summer · Week 5",
           "scheduled_at": "2026-08-21T17:15:00+00:00"
+        },
+        {
+          "match_id": "fnatic-shifters-2026-08-22",
+          "event": "LEC 2026 Summer · Week 5",
+          "fmt": "BO3",
+          "team_a": "Fnatic",
+          "team_b": "Shifters",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 5",
+          "scheduled_at": "2026-08-22T15:00:00+00:00"
+        },
+        {
+          "match_id": "skgaming-movistarkoi-2026-08-22",
+          "event": "LEC 2026 Summer · Week 5",
+          "fmt": "BO3",
+          "team_a": "SK Gaming",
+          "team_b": "Movistar KOI",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 5",
+          "scheduled_at": "2026-08-22T17:15:00+00:00"
         }
       ]
     }
