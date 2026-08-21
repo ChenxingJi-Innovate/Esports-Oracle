@@ -1,22 +1,11 @@
 {
-  "generated_for": "2026-08-20",
+  "generated_for": "2026-08-21",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "teamheretics-skgaming-2026-08-21",
-          "event": "LEC 2026 Summer · Week 5",
-          "fmt": "BO3",
-          "team_a": "Team Heretics",
-          "team_b": "SK Gaming",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 5",
-          "scheduled_at": "2026-08-21T15:00:00+00:00"
-        },
         {
           "match_id": "teamvitality-natusvincere-2026-08-21",
           "event": "LEC 2026 Summer · Week 5",
@@ -49,6 +38,28 @@
           "confidence": null,
           "league": "LEC 2026 Summer · Week 5",
           "scheduled_at": "2026-08-22T17:15:00+00:00"
+        },
+        {
+          "match_id": "teamheretics-giantx-2026-08-23",
+          "event": "LEC 2026 Summer · Week 5",
+          "fmt": "BO3",
+          "team_a": "Team Heretics",
+          "team_b": "GIANTX",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 5",
+          "scheduled_at": "2026-08-23T15:00:00+00:00"
+        },
+        {
+          "match_id": "shifters-karminecorp-2026-08-23",
+          "event": "LEC 2026 Summer · Week 5",
+          "fmt": "BO5",
+          "team_a": "Shifters",
+          "team_b": "Karmine Corp",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Week 5",
+          "scheduled_at": "2026-08-23T17:15:00+00:00"
         }
       ]
     }
