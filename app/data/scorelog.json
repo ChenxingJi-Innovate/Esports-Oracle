@@ -6793,6 +6793,98 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "enterpriseesports-teamliquid-2026-08-23",
+      "date": "2026-08-22",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · Lower Bracket Quarterfinals",
+      "team_a": "Enterprise Esports",
+      "team_b": "Team Liquid",
+      "p_a": 0.5826,
+      "p_map": 0.5553,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": -1.2611,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.103,
+        "h2h_diff": 0.0
+      },
+      "pick": "Enterprise Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "sharperesports-onsidegaming-2026-08-23",
+      "date": "2026-08-22",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Lower Bracket Round 3",
+      "team_a": "Sharper Esports",
+      "team_b": "ONSIDE GAMING",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Sharper Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "t1-detonationfocusme-2026-08-23",
+      "date": "2026-08-22",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Lower Bracket Round 3",
+      "team_a": "T1",
+      "team_b": "DetonatioN FocusMe",
+      "p_a": 0.6242,
+      "p_map": 0.5836,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": 1.8971,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": -0.003,
+        "h2h_diff": 0.0
+      },
+      "pick": "T1",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "jdgaming-tyloo-2026-08-23",
+      "date": "2026-08-22",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2 · Grand Final",
+      "team_a": "JD Gaming",
+      "team_b": "TYLOO",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "JD Gaming",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
