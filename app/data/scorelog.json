@@ -6885,6 +6885,98 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "envy-g2esports-2026-08-23",
+      "date": "2026-08-23",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Round 3",
+      "team_a": "ENVY",
+      "team_b": "G2 Esports",
+      "p_a": 0.2119,
+      "p_map": 0.2967,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -2.4849,
+        "form_diff": -0.167,
+        "map_diff": 0.0,
+        "player_diff": -0.078,
+        "h2h_diff": 0.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "evilgeniuses-krüesports-2026-08-24",
+      "date": "2026-08-23",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Round 3",
+      "team_a": "Evil Geniuses",
+      "team_b": "KRÜ Esports",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Evil Geniuses",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "bblesports-firefluxesports-2026-08-23",
+      "date": "2026-08-23",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · Lower Bracket Quarterfinals",
+      "team_a": "BBL Esports",
+      "team_b": "Fire Flux Esports",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "BBL Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "makematchpage-clickforadditionalplayerinformation-2026-08-23",
+      "date": "2026-08-23",
+      "game": "val",
+      "event": "VCT 2026 China · Stage 2",
+      "team_a": "Make match page",
+      "team_b": "Click for additional player information",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO5",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Make match page",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
