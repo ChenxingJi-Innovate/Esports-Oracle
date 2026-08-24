@@ -6977,6 +6977,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "paperrex-nongshimredforce-2026-08-26",
+      "date": "2026-08-24",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Upper Bracket Round 1",
+      "team_a": "Paper Rex",
+      "team_b": "Nongshim RedForce",
+      "p_a": 0.9058,
+      "p_map": 0.8105,
+      "fmt": "BO3",
+      "confidence": "strong",
+      "features": {
+        "rating_diff": 4.0943,
+        "form_diff": 0.3,
+        "map_diff": 0.0,
+        "player_diff": 0.117,
+        "h2h_diff": 0.0
+      },
+      "pick": "Paper Rex",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "globalesports-drx-2026-08-26",
+      "date": "2026-08-24",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Upper Bracket Round 1",
+      "team_a": "Global Esports",
+      "team_b": "DRX",
+      "p_a": 0.5224,
+      "p_map": 0.5149,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": -1.6964,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.04,
+        "h2h_diff": 0.0
+      },
+      "pick": "Global Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
