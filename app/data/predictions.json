@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-08-24",
+  "generated_for": "2026-08-25",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -72,7 +72,7 @@
       "holdout_maps": 66,
       "k": 25,
       "accuracy": 0.5,
-      "brier": 0.2538
+      "brier": 0.2543
     },
     "val": {
       "n_cases": 30,
@@ -183,6 +183,49 @@
     ],
     "lol": [],
     "val": [
+      {
+        "match_id": "loud-furia-2026-08-27",
+        "event": "VCT 2026 Americas · Stage 2 · Upper Bracket Round 1",
+        "team_a": "LOUD",
+        "team_b": "FURIA",
+        "p_map_a": 0.5,
+        "p_a": 0.5,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.25,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.25
+            },
+            {
+              "score": "2-1",
+              "p": 0.25
+            },
+            {
+              "score": "0-2",
+              "p": 0.25
+            },
+            {
+              "score": "1-2",
+              "p": 0.25
+            }
+          ]
+        },
+        "scheduled_at": "2026-08-27T21:00:00+00:00",
+        "date": "2026-08-27",
+        "features": {
+          "rating_diff": 0.0,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.0
+        }
+      },
       {
         "match_id": "paperrex-nongshimredforce-2026-08-26",
         "event": "VCT 2026 Pacific · Stage 2 · Upper Bracket Round 1",

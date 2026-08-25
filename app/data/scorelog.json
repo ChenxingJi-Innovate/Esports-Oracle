@@ -7023,6 +7023,29 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "loud-furia-2026-08-27",
+      "date": "2026-08-25",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Upper Bracket Round 1",
+      "team_a": "LOUD",
+      "team_b": "FURIA",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "LOUD",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
