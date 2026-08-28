@@ -7207,6 +7207,98 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "nrg-loud-2026-08-28",
+      "date": "2026-08-28",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Upper Bracket Semifinals",
+      "team_a": "NRG",
+      "team_b": "LOUD",
+      "p_a": 0.7652,
+      "p_map": 0.6853,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 2.3026,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.039,
+        "h2h_diff": 0.0
+      },
+      "pick": "NRG",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "furia-g2esports-2026-08-29",
+      "date": "2026-08-28",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Round 1",
+      "team_a": "FURIA",
+      "team_b": "G2 Esports",
+      "p_a": 0.2119,
+      "p_map": 0.2967,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": -2.4849,
+        "form_diff": -0.167,
+        "map_diff": 0.0,
+        "player_diff": -0.078,
+        "h2h_diff": 0.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "evilgeniuses-champions-2026-08-30",
+      "date": "2026-08-28",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Round 1",
+      "team_a": "Evil Geniuses",
+      "team_b": "Champions",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Evil Geniuses",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "editsectionabout-champions-2026-08-29",
+      "date": "2026-08-28",
+      "game": "val",
+      "event": "VCT 2026 EMEA · Stage 2 · Lower Bracket Final",
+      "team_a": "Edit section: About",
+      "team_b": "Champions",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Edit section: About",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
