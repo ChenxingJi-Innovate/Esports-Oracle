@@ -7460,6 +7460,98 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "nrg-100thieves-2026-09-04",
+      "date": "2026-09-02",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Upper Bracket Final",
+      "team_a": "NRG",
+      "team_b": "100 Thieves",
+      "p_a": 0.7652,
+      "p_map": 0.6853,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 2.3026,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.039,
+        "h2h_diff": 0.0
+      },
+      "pick": "NRG",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "g2esports-loud-2026-09-04",
+      "date": "2026-09-02",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Semifinals",
+      "team_a": "G2 Esports",
+      "team_b": "LOUD",
+      "p_a": 0.7881,
+      "p_map": 0.7033,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 2.4849,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.078,
+        "h2h_diff": 0.0
+      },
+      "pick": "G2 Esports",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "nongshimredforce-globalesports-2026-09-04",
+      "date": "2026-09-02",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Upper Bracket Final",
+      "team_a": "Nongshim RedForce",
+      "team_b": "Global Esports",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Nongshim RedForce",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "varrel-t1-2026-09-04",
+      "date": "2026-09-02",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Lower Bracket Semifinals",
+      "team_a": "VARREL",
+      "team_b": "T1",
+      "p_a": 0.3758,
+      "p_map": 0.4164,
+      "fmt": "BO3",
+      "confidence": "lean",
+      "features": {
+        "rating_diff": -1.8971,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.003,
+        "h2h_diff": 0.0
+      },
+      "pick": "T1",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
