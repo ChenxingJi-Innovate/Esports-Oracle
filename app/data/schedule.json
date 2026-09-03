@@ -1,65 +1,32 @@
 {
-  "generated_for": "2026-09-02",
+  "generated_for": "2026-09-03",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-08-29",
+      "date": "2026-09-03",
       "cs2_matches": [],
       "lol_matches": [
         {
-          "match_id": "karminecorp-skgaming-2026-08-29",
-          "event": "LEC 2026 Summer · Week 6",
+          "match_id": "teamvitality-g2esports-2026-09-05",
+          "event": "LEC 2026 Summer · Upper Bracket Semifinals",
+          "fmt": "BO3",
+          "team_a": "Team Vitality",
+          "team_b": "G2 Esports",
+          "p_a": null,
+          "confidence": null,
+          "league": "LEC 2026 Summer · Upper Bracket Semifinals",
+          "scheduled_at": "2026-09-05T10:00:00+00:00"
+        },
+        {
+          "match_id": "karminecorp-giantx-2026-09-05",
+          "event": "LEC 2026 Summer · Upper Bracket Semifinals",
           "fmt": "BO3",
           "team_a": "Karmine Corp",
-          "team_b": "SK Gaming",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 6",
-          "scheduled_at": "2026-08-29T15:00:00+00:00"
-        },
-        {
-          "match_id": "natusvincere-giantx-2026-08-29",
-          "event": "LEC 2026 Summer · Week 6",
-          "fmt": "BO3",
-          "team_a": "Natus Vincere",
           "team_b": "GIANTX",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Week 6",
-          "scheduled_at": "2026-08-29T17:15:00+00:00"
-        },
-        {
-          "match_id": "shifters-teamvitality-2026-08-30",
-          "event": "LEC 2026 Summer · Week 6",
-          "fmt": "BO3",
-          "team_a": "Shifters",
-          "team_b": "Team Vitality",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 6",
-          "scheduled_at": "2026-08-30T12:00:00+00:00"
-        },
-        {
-          "match_id": "movistarkoi-teamheretics-2026-08-30",
-          "event": "LEC 2026 Summer · Week 6",
-          "fmt": "BO3",
-          "team_a": "Movistar KOI",
-          "team_b": "Team Heretics",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 6",
-          "scheduled_at": "2026-08-30T14:15:00+00:00"
-        },
-        {
-          "match_id": "fnatic-giantx-2026-08-30",
-          "event": "LEC 2026 Summer · Week 6",
-          "fmt": "BO5",
-          "team_a": "Fnatic",
-          "team_b": "GIANTX",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Week 6",
-          "scheduled_at": "2026-08-30T16:30:00+00:00"
+          "league": "LEC 2026 Summer · Upper Bracket Semifinals",
+          "scheduled_at": "2026-09-05T15:00:00+00:00"
         }
       ]
     }

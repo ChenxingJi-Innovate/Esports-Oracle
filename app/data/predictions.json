@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-09-02",
+  "generated_for": "2026-09-03",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -72,7 +72,7 @@
       "holdout_maps": 66,
       "k": 25,
       "accuracy": 0.5,
-      "brier": 0.2538
+      "brier": 0.2543
     },
     "val": {
       "n_cases": 30,
@@ -376,6 +376,49 @@
         }
       },
       {
+        "match_id": "editsectionabout-champions-2026-09-05",
+        "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Final",
+        "team_a": "Edit section: About",
+        "team_b": "Champions",
+        "p_map_a": 0.5,
+        "p_a": 0.5,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.25,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.25
+            },
+            {
+              "score": "2-1",
+              "p": 0.25
+            },
+            {
+              "score": "0-2",
+              "p": 0.25
+            },
+            {
+              "score": "1-2",
+              "p": 0.25
+            }
+          ]
+        },
+        "scheduled_at": "2026-09-05T17:00:00+00:00",
+        "date": "2026-09-05",
+        "features": {
+          "rating_diff": 0.0,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.0
+        }
+      },
+      {
         "match_id": "nongshimredforce-globalesports-2026-09-04",
         "event": "VCT 2026 Pacific · Stage 2 · Upper Bracket Final",
         "team_a": "Nongshim RedForce",
@@ -512,6 +555,49 @@
           "k": 25,
           "outcome_rate": "3/5",
           "note": "Valorant Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
+        }
+      },
+      {
+        "match_id": "editsectionabout-champions-2026-09-05",
+        "event": "VCT 2026 Pacific · Stage 2 · Lower Bracket Final",
+        "team_a": "Edit section: About",
+        "team_b": "Champions",
+        "p_map_a": 0.5,
+        "p_a": 0.5,
+        "fmt": "BO3",
+        "confidence": "coin-flip",
+        "scoreline": {
+          "pick": "2-0",
+          "a": 2,
+          "b": 0,
+          "p": 0.25,
+          "dist": [
+            {
+              "score": "2-0",
+              "p": 0.25
+            },
+            {
+              "score": "2-1",
+              "p": 0.25
+            },
+            {
+              "score": "0-2",
+              "p": 0.25
+            },
+            {
+              "score": "1-2",
+              "p": 0.25
+            }
+          ]
+        },
+        "scheduled_at": "2026-09-05T08:00:00+00:00",
+        "date": "2026-09-05",
+        "features": {
+          "rating_diff": 0.0,
+          "form_diff": 0.0,
+          "map_diff": 0.0,
+          "player_diff": 0.0,
+          "h2h_diff": 0.0
         }
       }
     ]

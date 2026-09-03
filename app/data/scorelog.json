@@ -7552,6 +7552,52 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "editsectionabout-champions-2026-09-05",
+      "date": "2026-09-03",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Final",
+      "team_a": "Edit section: About",
+      "team_b": "Champions",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Edit section: About",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "editsectionabout-champions-2026-09-05",
+      "date": "2026-09-03",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Lower Bracket Final",
+      "team_a": "Edit section: About",
+      "team_b": "Champions",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Edit section: About",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
