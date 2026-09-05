@@ -1,32 +1,21 @@
 {
-  "generated_for": "2026-09-03",
+  "generated_for": "2026-09-05",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-09-03",
+      "date": "2026-09-05",
       "cs2_matches": [],
       "lol_matches": [
         {
-          "match_id": "teamvitality-g2esports-2026-09-05",
-          "event": "LEC 2026 Summer · Upper Bracket Semifinals",
+          "match_id": "karminecorp-g2esports-2026-09-06",
+          "event": "LEC 2026 Summer · Upper Bracket Final",
           "fmt": "BO3",
-          "team_a": "Team Vitality",
+          "team_a": "Karmine Corp",
           "team_b": "G2 Esports",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Upper Bracket Semifinals",
-          "scheduled_at": "2026-09-05T10:00:00+00:00"
-        },
-        {
-          "match_id": "karminecorp-giantx-2026-09-05",
-          "event": "LEC 2026 Summer · Upper Bracket Semifinals",
-          "fmt": "BO3",
-          "team_a": "Karmine Corp",
-          "team_b": "GIANTX",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Upper Bracket Semifinals",
-          "scheduled_at": "2026-09-05T15:00:00+00:00"
+          "league": "LEC 2026 Summer · Upper Bracket Final",
+          "scheduled_at": "2026-09-06T15:00:00+00:00"
         }
       ]
     }

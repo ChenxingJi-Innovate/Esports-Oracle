@@ -7598,6 +7598,75 @@
       "result": null,
       "map_score": null,
       "correct": null
+    },
+    {
+      "match_id": "nrg-loud-2026-09-05",
+      "date": "2026-09-05",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Lower Bracket Final",
+      "team_a": "NRG",
+      "team_b": "LOUD",
+      "p_a": 0.7652,
+      "p_map": 0.6853,
+      "fmt": "BO3",
+      "confidence": "moderate",
+      "features": {
+        "rating_diff": 2.3026,
+        "form_diff": 0.167,
+        "map_diff": 0.0,
+        "player_diff": 0.039,
+        "h2h_diff": 0.0
+      },
+      "pick": "NRG",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "100thieves-editsectionabout-2026-09-06",
+      "date": "2026-09-05",
+      "game": "val",
+      "event": "VCT 2026 Americas · Stage 2 · Grand Final",
+      "team_a": "100 Thieves",
+      "team_b": "Edit section: About",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "100 Thieves",
+      "result": null,
+      "map_score": null,
+      "correct": null
+    },
+    {
+      "match_id": "nongshimredforce-globalesports-2026-09-06",
+      "date": "2026-09-05",
+      "game": "val",
+      "event": "VCT 2026 Pacific · Stage 2 · Grand Final",
+      "team_a": "Nongshim RedForce",
+      "team_b": "Global Esports",
+      "p_a": 0.5,
+      "p_map": 0.5,
+      "fmt": "BO3",
+      "confidence": "coin-flip",
+      "features": {
+        "rating_diff": 0.0,
+        "form_diff": 0.0,
+        "map_diff": 0.0,
+        "player_diff": 0.0,
+        "h2h_diff": 0.0
+      },
+      "pick": "Nongshim RedForce",
+      "result": null,
+      "map_score": null,
+      "correct": null
     }
   ],
   "accuracy": {
