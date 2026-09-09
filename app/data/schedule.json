@@ -1,21 +1,21 @@
 {
-  "generated_for": "2026-09-07",
+  "generated_for": "2026-09-09",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-09-05",
+      "date": "2026-09-09",
       "cs2_matches": [],
       "lol_matches": [
         {
-          "match_id": "karminecorp-g2esports-2026-09-06",
-          "event": "LEC 2026 Summer · Upper Bracket Final",
+          "match_id": "giantx-natusvincere-2026-09-11",
+          "event": "LEC 2026 Summer · Lower Bracket Quarterfinals",
           "fmt": "BO3",
-          "team_a": "Karmine Corp",
-          "team_b": "G2 Esports",
+          "team_a": "GIANTX",
+          "team_b": "Natus Vincere",
           "p_a": null,
           "confidence": null,
-          "league": "LEC 2026 Summer · Upper Bracket Final",
-          "scheduled_at": "2026-09-06T15:00:00+00:00"
+          "league": "LEC 2026 Summer · Lower Bracket Quarterfinals",
+          "scheduled_at": "2026-09-11T15:00:00+00:00"
         }
       ]
     }
