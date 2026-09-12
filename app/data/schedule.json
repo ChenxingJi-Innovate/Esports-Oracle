@@ -1,22 +1,11 @@
 {
-  "generated_for": "2026-09-11",
+  "generated_for": "2026-09-12",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "cs2_matches": [],
       "lol_matches": [
-        {
-          "match_id": "giantx-natusvincere-2026-09-11",
-          "event": "LEC 2026 Summer · Lower Bracket Quarterfinals",
-          "fmt": "BO3",
-          "team_a": "GIANTX",
-          "team_b": "Natus Vincere",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Lower Bracket Quarterfinals",
-          "scheduled_at": "2026-09-11T15:00:00+00:00"
-        },
         {
           "match_id": "teamvitality-movistarkoi-2026-09-12",
           "event": "LEC 2026 Summer · Lower Bracket Quarterfinals",
