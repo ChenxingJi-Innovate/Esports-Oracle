@@ -1,28 +1,17 @@
 {
-  "generated_for": "2026-09-18",
+  "generated_for": "2026-09-19",
   "window_days": 5,
   "next_dates": [
     {
-      "date": "2026-09-18",
+      "date": "2026-09-19",
       "cs2_matches": [],
       "lol_matches": [
         {
-          "match_id": "karminecorp-movistarkoi-2026-09-19",
-          "event": "LEC 2026 Summer · Lower Bracket Final",
-          "fmt": "BO3",
-          "team_a": "Karmine Corp",
-          "team_b": "Movistar KOI",
-          "p_a": null,
-          "confidence": null,
-          "league": "LEC 2026 Summer · Lower Bracket Final",
-          "scheduled_at": "2026-09-19T15:00:00+00:00"
-        },
-        {
-          "match_id": "g2esports-lec-2026-09-20",
+          "match_id": "g2esports-movistarkoi-2026-09-20",
           "event": "LEC 2026 Summer · Grand Final",
           "fmt": "BO5",
           "team_a": "G2 Esports",
-          "team_b": "LEC",
+          "team_b": "Movistar KOI",
           "p_a": null,
           "confidence": null,
           "league": "LEC 2026 Summer · Grand Final",
