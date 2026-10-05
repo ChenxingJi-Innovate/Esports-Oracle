@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-10-04",
+  "generated_for": "2026-10-05",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -68,11 +68,11 @@
       "note": "OE kNN, 702-game holdout (static)"
     },
     "cs2": {
-      "n_cases": 345,
-      "holdout_maps": 69,
+      "n_cases": 354,
+      "holdout_maps": 71,
       "k": 25,
-      "accuracy": 0.5507,
-      "brier": 0.2481
+      "accuracy": 0.5775,
+      "brier": 0.2461
     },
     "val": {
       "n_cases": 30,
@@ -128,55 +128,55 @@
         },
         "similar_matches": [
           {
-            "date": "2025-09-15",
-            "blue_team": "G2 Esports",
-            "red_team": "Legacy",
-            "winner": "G2 Esports",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.0891
-          },
-          {
-            "date": "2025-02-14",
-            "blue_team": "MOUZ",
-            "red_team": "BIG",
-            "winner": "MOUZ",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.0989
-          },
-          {
-            "date": "2025-02-14",
-            "blue_team": "FaZe Clan",
-            "red_team": "SAW",
-            "winner": "FaZe Clan",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.0989
-          },
-          {
-            "date": "2025-02-14",
-            "blue_team": "3DMAX",
-            "red_team": "Virtus.pro",
-            "winner": "3DMAX",
-            "winner_side": "blue",
-            "target": 1,
-            "distance": 0.0989
-          },
-          {
-            "date": "2025-02-14",
+            "date": "2026-06-12",
             "blue_team": "The MongolZ",
-            "red_team": "Complexity",
+            "red_team": "B8",
             "winner": "The MongolZ",
             "winner_side": "blue",
             "target": 1,
-            "distance": 0.0989
+            "distance": 0.0498
+          },
+          {
+            "date": "2025-09-17",
+            "blue_team": "Astralis",
+            "red_team": "GamerLegion",
+            "winner": "Astralis",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.112
+          },
+          {
+            "date": "2025-06-09",
+            "blue_team": "PaiN Gaming",
+            "red_team": "Lynn Vision Gaming",
+            "winner": "PaiN Gaming",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.1187
+          },
+          {
+            "date": "2026-06-02",
+            "blue_team": "BetBoom Team",
+            "red_team": "Gaimin Gladiators",
+            "winner": "BetBoom Team",
+            "winner_side": "blue",
+            "target": 1,
+            "distance": 0.1674
+          },
+          {
+            "date": "2026-06-13",
+            "blue_team": "PARIVISION",
+            "red_team": "Legacy",
+            "winner": "Legacy",
+            "winner_side": "red",
+            "target": 0,
+            "distance": 0.2464
           }
         ],
         "case_based": {
-          "p_blue_knn": 0.8,
+          "p_blue_knn": 0.52,
           "k": 25,
-          "outcome_rate": "5/5",
+          "outcome_rate": "4/5",
           "note": "CS2 Elo/form/H2H kNN (k=25). Nearer = more similar on 4 derived features."
         }
       }
