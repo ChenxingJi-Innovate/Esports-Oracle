@@ -1,5 +1,5 @@
 {
-  "generated_for": "2026-10-09",
+  "generated_for": "2026-10-10",
   "window_days": 2,
   "accuracy": {
     "overall": {
@@ -71,8 +71,8 @@
       "n_cases": 363,
       "holdout_maps": 73,
       "k": 25,
-      "accuracy": 0.5753,
-      "brier": 0.2441
+      "accuracy": 0.589,
+      "brier": 0.2431
     },
     "val": {
       "n_cases": 30,
